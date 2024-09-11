@@ -1,0 +1,19 @@
+repos:
+  - name: di-apuntes
+    title: Apuntes DI
+    image: images/icon-repo-1.png
+    url: https://github.com/jgarciadeparedesh02/di-apuntes.git
+    branch: main
+  - name: dewc-apuntes
+    title: Apuntes DWEC
+    image: images/icon-repo-1.png
+    url: https://github.com/jgarciadeparedesh02/dwec-apuntes.git
+    branch: main
+    index_html: install/index.html
+element_id: multirepo
+target_dir: site
+repos_dir: src
+index_tpl: index.tpl
+extra_files:
+    - styles.css
+    - images/search.svg
