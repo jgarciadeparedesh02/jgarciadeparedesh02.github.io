@@ -46,6 +46,8 @@
       
     
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -637,52 +639,93 @@
 
   <h1>1. Introducción a la Usabilidad</h1>
 
+<p>Vamos a profundizar en la <strong>usabilidad</strong>, uno de los aspectos más importantes a la hora de diseñar aplicaciones. Quiero que entendáis que cuando hablamos de usabilidad, no solo nos referimos a que una aplicación "funcione", sino a que sea intuitiva, fácil de usar y agradable para los usuarios. Así que, ¿cómo logramos eso?</p>
 <h3 id="definicion-y-principios-basicos-de-usabilidad">Definición y Principios Básicos de Usabilidad</h3>
-<p>La <strong>usabilidad</strong> se refiere a la facilidad con la que un usuario puede interactuar con una aplicación o sistema para lograr sus objetivos de manera eficiente, efectiva y satisfactoria. Es un aspecto crucial en el diseño de interfaces, ya que influye directamente en la experiencia del usuario y en su percepción del producto.</p>
-<p>La usabilidad no solo se trata de que una aplicación funcione correctamente, sino también de que los usuarios puedan utilizarla sin problemas, sin confusión y con el mínimo esfuerzo posible. Para lograr esto, es esencial que el diseño se centre en el usuario y en cómo este interactuará con el software.</p>
-<p>Los <strong>principios básicos de usabilidad</strong> incluyen:</p>
+<p>La <strong>usabilidad</strong> es la capacidad que tiene un sistema o aplicación de ser usado con facilidad por los usuarios para alcanzar sus objetivos de forma efectiva, eficiente y satisfactoria. Imaginad, por ejemplo, que estáis utilizando una app como <strong>Google Maps</strong>. Lo que hace que sea tan útil no es solo que nos dé direcciones, sino que lo hace de una forma clara, rápida y sin complicaciones. Esa es la esencia de la usabilidad.</p>
+<p>Aquí os dejo los <strong>principios básicos</strong> que debemos tener en cuenta:</p>
+<div class="grid cards">
 <ul>
 <li>
-<p><strong>Aprendibilidad</strong>: La interfaz debe ser fácil de aprender para nuevos usuarios. Cuanto más rápido puedan los usuarios entender cómo funciona el sistema, mejor será su experiencia.</p>
+<p><strong>Aprendibilidad</strong></p>
+<ul>
+<li>La interfaz debe ser tan intuitiva que los nuevos usuarios puedan aprender a usarla rápidamente. </li>
+<li>Un buen ejemplo es <strong>WhatsApp</strong>, donde la primera vez que lo abres, ya entiendes cómo enviar un mensaje.</li>
+</ul>
 </li>
 <li>
-<p><strong>Eficiencia</strong>: Una vez que el usuario ha aprendido a usar la aplicación, debería poder realizar sus tareas con rapidez y sin obstáculos innecesarios.</p>
+<p><strong>Eficiencia</strong></p>
+<ul>
+<li>Para usuarios más experimentados, las tareas deben realizarse de manera fluida y rápida.</li>
+<li>Pensad en <strong>Slack</strong> o <strong>Trello</strong>, que te permiten organizar tu trabajo de manera eficiente una vez que te acostumbras a su funcionamiento.</li>
+</ul>
 </li>
 <li>
-<p><strong>Memorabilidad</strong>: Los usuarios ocasionales deben poder recordar cómo usar la aplicación tras un tiempo sin necesidad de reaprender su funcionamiento.</p>
+<p><strong>Memorabilidad</strong></p>
+<ul>
+<li>Los usuarios ocasionales deben ser capaces de recordar cómo usar la aplicación después de un tiempo sin usarla.</li>
+<li><strong>Spotify</strong> es un buen ejemplo: aunque no uses la app a diario, rápidamente te acuerdas de cómo hacer una playlist o buscar música.</li>
+</ul>
 </li>
 <li>
-<p><strong>Prevención de errores</strong>: Es fundamental diseñar la interfaz de forma que se minimicen los errores del usuario. En caso de que ocurran, el sistema debe ofrecer mensajes claros y soluciones sencillas.</p>
+<p><strong>Prevención de Errores</strong></p>
+<ul>
+<li>Debemos diseñar pensando en evitar errores comunes del usuario. En caso de que ocurran, el sistema debe proporcionar soluciones claras.</li>
+<li>Si has usado <strong>Google Drive</strong>, habrás notado cómo te avisa antes de borrar un archivo o una carpeta importante, minimizando errores.</li>
+</ul>
 </li>
 <li>
-<p><strong>Satisfacción del usuario</strong>: El sistema debe proporcionar una experiencia agradable. Las interfaces bien diseñadas no solo son funcionales, sino también visualmente atractivas y agradables de usar.</p>
+<p><strong>Satisfacción del Usuario</strong></p>
+<ul>
+<li>La interfaz debe ser agradable, funcional y estéticamente atractiva.</li>
+<li>Aquí podríamos pensar en <strong>Apple Music</strong> o <strong>Instagram</strong>, donde todo está diseñado para que el usuario disfrute tanto de la funcionalidad como del diseño.</li>
+</ul>
 </li>
 </ul>
-<hr />
+</div>
 <h3 id="importancia-de-la-usabilidad-en-el-desarrollo-de-software">Importancia de la Usabilidad en el Desarrollo de Software</h3>
-<p>La usabilidad es un componente clave en el éxito de cualquier software. Aunque un sistema tenga todas las funcionalidades necesarias, si no es fácil de usar, los usuarios se frustrarán y eventualmente abandonarán el producto. Por ello, se debe considerar la usabilidad desde las primeras fases del desarrollo de software.</p>
-<p>Algunas de las <strong>razones por las que la usabilidad es crucial</strong> son:</p>
+<p>Como os imaginaréis, la usabilidad no es solo "algo bueno", sino un requisito fundamental en el desarrollo de cualquier software. Si queréis que vuestra aplicación sea exitosa y tenga impacto, no basta con que funcione, tiene que ser fácil y agradable de usar.</p>
+<p>Voy a daros algunas <strong>razones clave</strong> de por qué es crucial:</p>
+<div class="grid cards">
 <ul>
 <li>
-<p><strong>Mejora la satisfacción del usuario</strong>: Una aplicación con buena usabilidad hace que el usuario se sienta cómodo y productivo. Esto aumenta la satisfacción y, por ende, la lealtad hacia el producto.</p>
+<p><strong>Mejora la satisfacción del usuario</strong>  </p>
+<ul>
+<li>Imaginad utilizar una app como <strong>Netflix</strong>, que te recomienda contenido de manera intuitiva. Si es fácil de usar, es probable que quieras seguir utilizando la aplicación.</li>
+</ul>
 </li>
 <li>
-<p><strong>Reduce el tiempo de aprendizaje</strong>: Un diseño usable minimiza el tiempo que los usuarios necesitan para familiarizarse con el sistema, lo que es esencial en entornos donde la eficiencia es primordial.</p>
+<p><strong>Reduce el tiempo de aprendizaje</strong>  </p>
+<ul>
+<li>Pensemos en <strong>Google Docs</strong>. Si es fácil de usar, la curva de aprendizaje es mínima, lo que resulta ideal en entornos donde la eficiencia es primordial.</li>
+</ul>
 </li>
 <li>
-<p><strong>Minimiza los errores</strong>: Las interfaces bien diseñadas previenen errores y permiten corregirlos fácilmente cuando ocurren. Esto no solo mejora la experiencia del usuario, sino que también reduce los costes de soporte técnico y mantenimiento.</p>
+<p><strong>Minimiza los errores</strong>  </p>
+<ul>
+<li>Una interfaz como la de <strong>Gmail</strong>, que te permite deshacer el envío de un correo en caso de error, demuestra cómo una buena usabilidad puede prevenir problemas.</li>
+</ul>
 </li>
 <li>
-<p><strong>Incrementa la productividad</strong>: En aplicaciones empresariales, una interfaz fácil de usar puede mejorar considerablemente la productividad de los empleados al reducir el tiempo que invierten en realizar tareas.</p>
+<p><strong>Incrementa la productividad</strong>  </p>
+<ul>
+<li>Aplicaciones como <strong>Notion</strong> o <strong>Asana</strong> están diseñadas para realizar tareas de manera rápida y eficiente, lo que mejora la productividad de sus usuarios.</li>
+</ul>
 </li>
 <li>
-<p><strong>Aumenta la competitividad del producto</strong>: En mercados donde hay múltiples opciones, la usabilidad puede ser un factor decisivo para que los usuarios elijan una aplicación sobre otra.</p>
+<p><strong>Aumenta la competitividad del producto</strong>  </p>
+<ul>
+<li>En un mercado lleno de opciones, como el de las aplicaciones de música, la usabilidad es lo que hace que <strong>Spotify</strong> sea la app elegida sobre otras.</li>
+</ul>
 </li>
 <li>
-<p><strong>Facilita la accesibilidad</strong>: La usabilidad también está estrechamente relacionada con la accesibilidad, lo que garantiza que personas con diferentes capacidades puedan usar la aplicación sin dificultades.</p>
+<p><strong>Facilita la accesibilidad</strong>  </p>
+<ul>
+<li>Aplicaciones como <strong>Zoom</strong> integran funciones de accesibilidad que permiten su uso por personas con discapacidades, asegurando que todos puedan interactuar con ellas.</li>
+</ul>
 </li>
 </ul>
-<p>En resumen, la <strong>usabilidad</strong> es un aspecto fundamental en el desarrollo de software, ya que no solo afecta directamente la experiencia del usuario, sino que también tiene un impacto significativo en el éxito del producto a largo plazo.</p>
+</div>
+<p>En resumen, la usabilidad no solo se trata de que una aplicación funcione, sino de que sea eficiente, fácil de aprender y satisfactoria para el usuario. A lo largo del curso, aprenderemos a aplicar estos principios en los proyectos que desarrollemos, para que nuestras interfaces sean intuitivas, accesibles y, sobre todo, agradables de usar. ¡Vamos a conseguir que nuestras aplicaciones sean las mejores!</p>
 
 
 
@@ -769,7 +812,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.path"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
