@@ -1,12 +1,12 @@
 repos:
   - name: di-apuntes
     title: Apuntes DI
-    image: images/icon-repo-1.png
+    image: images/icon-di.png
     url: https://github.com/jgarciadeparedesh02/di-apuntes.git
     branch: main
   - name: dewc-apuntes
     title: Apuntes DWEC
-    image: images/icon-repo-1.png
+    image: images/icon-dwec.png
     url: https://github.com/jgarciadeparedesh02/dwec-apuntes.git
     branch: main
     index_html: install/index.html

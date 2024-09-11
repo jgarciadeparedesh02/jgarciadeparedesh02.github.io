@@ -46,6 +46,8 @@
       
     
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -371,6 +373,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Etapas del Proceso de DCU">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etapas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etapas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -627,6 +644,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Etapas del Proceso de DCU">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etapas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etapas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -656,61 +688,92 @@
   <h1>2. Diseño Centrado en el Usuario (DCU)</h1>
 
 <h3 id="concepto-de-diseno-centrado-en-el-usuario">Concepto de Diseño Centrado en el Usuario</h3>
-<p>El <strong>Diseño Centrado en el Usuario (DCU)</strong> es un enfoque de diseño de interfaces que se enfoca en las necesidades, preferencias y limitaciones del usuario final durante todo el proceso de desarrollo de un producto. En lugar de centrarse únicamente en las funcionalidades técnicas o estéticas, el DCU pone al usuario como protagonista, asegurándose de que la interfaz sea intuitiva, fácil de usar y adecuada para su público objetivo.</p>
-<p>El DCU no solo trata de crear una interfaz atractiva, sino de garantizar que los usuarios puedan interactuar con ella de manera eficiente y satisfactoria. Este enfoque se basa en la premisa de que los productos exitosos son aquellos que se diseñan teniendo en cuenta las características y comportamientos del usuario.</p>
-<p>Los <strong>principios del DCU</strong> incluyen:</p>
+<p>El <strong>Diseño Centrado en el Usuario (DCU)</strong> es fundamental en todo proceso de desarrollo. Como profesor, siempre recalco que este enfoque pone al usuario en el centro, garantizando que la interfaz sea intuitiva y fácil de usar. Esto significa que el producto no solo debe ser visualmente atractivo, sino también eficiente y eficaz para quienes lo van a utilizar. Lo vemos claramente en aplicaciones como <strong>WhatsApp</strong>, donde todo gira alrededor de las necesidades de comunicación rápida del usuario.</p>
+<p>Los <strong>principios del DCU</strong> son claros:</p>
 <ul>
-<li><strong>Enfoque en el usuario desde el inicio</strong>: El usuario es el punto central de todas las decisiones de diseño.</li>
-<li><strong>Pruebas y retroalimentación continua</strong>: Se realizan pruebas con usuarios reales en varias etapas del desarrollo para mejorar el producto.</li>
-<li><strong>Iteración del diseño</strong>: El diseño se ajusta continuamente con base en los comentarios de los usuarios.</li>
+<li><strong>Enfoque en el usuario desde el inicio</strong>: Desde el principio, las decisiones de diseño giran en torno al usuario.</li>
+<li><strong>Pruebas y retroalimentación continua</strong>: A lo largo del desarrollo, realizamos pruebas con usuarios reales.</li>
+<li><strong>Iteración del diseño</strong>: Adaptamos el diseño continuamente basándonos en el feedback.</li>
 </ul>
-<hr />
 <h3 id="etapas-del-proceso-de-dcu">Etapas del Proceso de DCU</h3>
-<p>El <strong>proceso de Diseño Centrado en el Usuario</strong> generalmente sigue varias etapas clave, que se repiten a lo largo del ciclo de desarrollo. Estas etapas aseguran que el producto final cumpla con las expectativas y necesidades de los usuarios:</p>
+<p>El <strong>proceso de Diseño Centrado en el Usuario</strong> se estructura en varias etapas, que deben repetirse para asegurar un diseño centrado en las necesidades del usuario.</p>
+<pre class="mermaid"><code>graph TD;
+    A[Investigación del Usuario] --&gt; B[Definición de Requisitos]
+    B --&gt; C[Diseño de Prototipos]
+    C --&gt; D[Pruebas de Usabilidad]
+    D --&gt; E[Iteración]
+    E --&gt; F[Desarrollo y Lanzamiento]</code></pre>
+<h4 id="etapas">Etapas</h4>
 <ol>
 <li>
-<p><strong>Investigación del Usuario</strong>: El primer paso en el DCU es entender quiénes son los usuarios. Esto implica la creación de perfiles o personas de usuario, así como la identificación de sus necesidades, deseos y limitaciones. Las técnicas comunes incluyen entrevistas, encuestas, y estudios de comportamiento.</p>
+<p><strong>Investigación del Usuario</strong><br />
+   El primer paso es entender quién va a utilizar el producto. Usamos <strong>personas</strong>, que son representaciones de los usuarios reales, para crear perfiles detallados.</p>
 </li>
 <li>
-<p><strong>Definición de Requisitos</strong>: A partir de la investigación, se establecen los requisitos del sistema, que no solo incluyen funcionalidades, sino también aspectos relacionados con la experiencia del usuario (UX), como facilidad de uso, accesibilidad y satisfacción.</p>
+<p><strong>Definición de Requisitos</strong><br />
+   Basándonos en esa investigación, establecemos los requisitos que se alinean con la experiencia de usuario, como facilidad de uso o accesibilidad.</p>
 </li>
 <li>
-<p><strong>Diseño de Prototipos</strong>: Una vez definidos los requisitos, se crean prototipos que representan la interfaz del producto. Los prototipos pueden ser esbozos iniciales o versiones más detalladas, dependiendo de la fase del desarrollo. Estos prototipos permiten evaluar la usabilidad y hacer ajustes antes de llegar a la implementación.</p>
+<p><strong>Diseño de Prototipos</strong><br />
+   Creamos prototipos de baja o alta fidelidad (desde wireframes simples hasta simulaciones interactivas), lo que permite realizar pruebas tempranas.</p>
 </li>
 <li>
-<p><strong>Pruebas de Usabilidad</strong>: En esta etapa, se realizan pruebas con usuarios reales para identificar problemas de usabilidad o áreas que necesiten mejoras. Las pruebas proporcionan información valiosa sobre cómo interactúan los usuarios con el producto y cómo mejorar su experiencia.</p>
+<p><strong>Pruebas de Usabilidad</strong><br />
+   Evaluamos los prototipos con usuarios reales para identificar posibles problemas y hacer ajustes antes de la implementación definitiva.</p>
 </li>
 <li>
-<p><strong>Iteración</strong>: A lo largo del proceso, los resultados de las pruebas de usabilidad se utilizan para mejorar y ajustar el diseño. Esto asegura que el producto final sea verdaderamente centrado en el usuario y se adapte a sus necesidades.</p>
+<p><strong>Iteración</strong><br />
+   Mejoramos el diseño según los resultados de las pruebas, afinando hasta que sea óptimo para los usuarios.</p>
 </li>
 <li>
-<p><strong>Desarrollo y Lanzamiento</strong>: Una vez que el diseño ha sido aprobado y ajustado, se lleva a cabo la implementación técnica del producto. Incluso después del lanzamiento, se debe seguir recopilando feedback para realizar mejoras y mantener la satisfacción del usuario.</p>
+<p><strong>Desarrollo y Lanzamiento</strong><br />
+   Con el diseño validado, desarrollamos el producto y lo lanzamos al mercado. Aún después del lanzamiento, seguimos recopilando feedback.</p>
 </li>
 </ol>
-<hr />
 <h3 id="herramientas-y-tecnicas-para-aplicar-dcu">Herramientas y Técnicas para Aplicar DCU</h3>
-<p>El <strong>Diseño Centrado en el Usuario</strong> utiliza una serie de herramientas y técnicas que ayudan a comprender mejor las necesidades de los usuarios y a diseñar productos adecuados para ellos. Entre las más comunes se encuentran:</p>
-<ul>
-<li>
-<p><strong>Personas</strong>: Son perfiles ficticios que representan los tipos de usuarios que utilizarán el sistema. Las personas ayudan a visualizar las características, necesidades y objetivos de los usuarios finales, y sirven como guías para las decisiones de diseño.</p>
-</li>
-<li>
-<p><strong>Mapas de Empatía</strong>: Esta herramienta se utiliza para entender las emociones, pensamientos y deseos de los usuarios. Ayuda a profundizar en cómo los usuarios experimentan el producto.</p>
-</li>
-<li>
-<p><strong>Wireframes y Prototipos</strong>: Los wireframes son bocetos simples que muestran la estructura básica de una interfaz. Los prototipos, en cambio, son versiones más detalladas y funcionales de la interfaz que permiten realizar pruebas de usabilidad antes del desarrollo completo.</p>
-</li>
-<li>
-<p><strong>Pruebas de Usabilidad</strong>: Consisten en observar cómo los usuarios interactúan con el producto para identificar problemas y áreas de mejora. Estas pruebas suelen incluir la grabación de sesiones de usuario o el uso de herramientas de análisis de comportamiento.</p>
-</li>
-<li>
-<p><strong>Entrevistas y Encuestas</strong>: Para recopilar información directamente de los usuarios, se realizan entrevistas o encuestas que proporcionan datos valiosos sobre sus necesidades y experiencias con el producto.</p>
-</li>
-<li>
-<p><strong>Técnicas de Card Sorting</strong>: Es una técnica que ayuda a entender cómo los usuarios categorizan y organizan la información, lo que es útil para diseñar la estructura de navegación de una aplicación.</p>
-</li>
-</ul>
-<p>Al aplicar estas herramientas y técnicas, se asegura que el diseño no solo sea funcional, sino que esté alineado con las expectativas y comportamientos de los usuarios, lo que lleva a una mejor usabilidad y satisfacción.</p>
+<p>Durante el proceso de Diseño Centrado en el Usuario (DCU), utilizamos una serie de herramientas y técnicas que nos permiten entender mejor a nuestros usuarios y mejorar su experiencia. Aquí os dejo algunas de las más comunes:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Herramienta</strong></th>
+<th><strong>Descripción</strong></th>
+<th><strong>Imagen</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Personas</strong></td>
+<td>Perfiles ficticios que nos ayudan a visualizar las características y comportamientos de los usuarios.</td>
+<td><a class="glightbox" href="https://www.somoswaka.com/wp-content/uploads/2018/10/Munro.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Personas" src="https://www.somoswaka.com/wp-content/uploads/2018/10/Munro.png" /></a></td>
+</tr>
+<tr>
+<td><strong>Mapas de Empatía</strong></td>
+<td>Nos permiten profundizar en las emociones y pensamientos de los usuarios para comprender mejor sus necesidades.</td>
+<td><a class="glightbox" href="https://craed.cl/wp-content/uploads/2021/03/ddw-mapa-empatia-1024x517.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Mapas de Empatía" src="https://craed.cl/wp-content/uploads/2021/03/ddw-mapa-empatia-1024x517.png" /></a></td>
+</tr>
+<tr>
+<td><strong>Wireframes y Prototipos</strong></td>
+<td>Los wireframes son esquemas simples de la interfaz, y los prototipos permiten evaluar la interacción con el sistema.</td>
+<td><a class="glightbox" href="https://blog.ida.cl/wp-content/uploads/sites/5/2020/08/workshop-arquitecturadise%C3%B1o-blog-1024x735.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Wireframes" src="https://blog.ida.cl/wp-content/uploads/sites/5/2020/08/workshop-arquitecturadise%C3%B1o-blog-1024x735.png" /></a></td>
+</tr>
+<tr>
+<td><strong>Pruebas de Usabilidad</strong></td>
+<td>Observamos cómo interactúan los usuarios con el producto para identificar problemas y mejorar la experiencia.</td>
+<td><a class="glightbox" href="https://static.vecteezy.com/system/resources/previews/010/882/438/non_2x/usability-testing-mobile-screen-with-people-man-design-illustration-development-software-application-ui-and-ux-interface-page-user-coding-layout-site-test-project-form-flat-wireframe-create-vector.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Pruebas de Usabilidad" src="https://static.vecteezy.com/system/resources/previews/010/882/438/non_2x/usability-testing-mobile-screen-with-people-man-design-illustration-development-software-application-ui-and-ux-interface-page-user-coding-layout-site-test-project-form-flat-wireframe-create-vector.jpg" /></a></td>
+</tr>
+<tr>
+<td><strong>Entrevistas y Encuestas</strong></td>
+<td>Recopilamos información directamente de los usuarios para ajustar el producto según sus experiencias y necesidades.</td>
+<td><a class="glightbox" href="https://www.bizneo.com/blog/wp-content/uploads/2023/02/entrevista-de-seleccion-1.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Entrevistas" src="https://www.bizneo.com/blog/wp-content/uploads/2023/02/entrevista-de-seleccion-1.jpg" /></a></td>
+</tr>
+<tr>
+<td><strong>Card Sorting</strong></td>
+<td>Técnica que ayuda a entender cómo los usuarios organizan la información, útil para diseñar una navegación clara.</td>
+<td><a class="glightbox" href="https://images.ctfassets.net/crb83veve8xb/GJKO6HwSijXBP8Uh59S7A/cbacab0e3c89d902d10d717794df426f/card_sorting_ejemplo.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Card Sorting" src="https://images.ctfassets.net/crb83veve8xb/GJKO6HwSijXBP8Uh59S7A/cbacab0e3c89d902d10d717794df426f/card_sorting_ejemplo.png" /></a></td>
+</tr>
+</tbody>
+</table>
+<p>Estas herramientas son esenciales para asegurar que el diseño de las interfaces sea funcional, accesible y realmente centrado en las necesidades del usuario final.</p>
 
 
 
@@ -797,7 +860,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.path"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
