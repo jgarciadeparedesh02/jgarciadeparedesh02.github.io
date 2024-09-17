@@ -1,6 +1,6 @@
-[submodule "di-apuntes"]
-	path = /Users/justogarciadeparedeshaba/Desktop/EducacionNoSincronizado/apuntes/merge/src/di-apuntes
+[submodule "src/di-apuntes"]
+	path = src/di-apuntes
 	url = https://github.com/jgarciadeparedesh02/di-apuntes.git
-[submodule "dwec-apuntes"]
-	path = /Users/justogarciadeparedeshaba/Desktop/EducacionNoSincronizado/apuntes/merge/src/dwec-apuntes
+[submodule "src/dwec-apuntes"]
+	path = src/dwec-apuntes
 	url = https://github.com/jgarciadeparedesh02/dwec-apuntes.git
