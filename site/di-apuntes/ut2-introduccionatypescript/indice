@@ -1,0 +1,59 @@
+### Índice de Apartados: Introducción a TypeScript
+
+1. **¿Qué es TypeScript?**
+   - Definición y comparación con JavaScript.
+   - Historia y evolución de TypeScript.
+
+2. **Ventajas de Usar TypeScript**
+   - Tipado estático.
+   - Mejora en la mantenibilidad del código.
+   - Herramientas de desarrollo avanzadas (autocompletado, refactorización).
+   - Detección temprana de errores.
+
+3. **Instalación y Configuración de TypeScript**
+   - Instalación de Node.js y npm.
+   - Instalación de TypeScript a través de npm.
+   - Configuración del archivo `tsconfig.json`.
+
+4. **Primer Proyecto con TypeScript**
+   - Creación de un archivo TypeScript simple.
+   - Compilación de TypeScript a JavaScript.
+   - Ejecución del archivo compilado.
+
+5. **Tipos Básicos en TypeScript**
+   - Tipos primitivos (`string`, `number`, `boolean`, etc.).
+   - Tipos compuestos (`array`, `tuple`, `enum`).
+   - Tipos especiales (`any`, `unknown`, `never`, `void`).
+
+6. **Condicionales en TypeScript**
+   - Uso de `if`, `else if`, `else`.
+   - Operador ternario.
+   - Estructuras de control `switch`.
+
+7. **Bucles en TypeScript**
+   - `for`, `while`, `do-while`.
+   - Iteración sobre arrays y objetos con `for...of` y `for...in`.
+
+8. **Objetos en TypeScript**
+   - Definición y uso de objetos.
+   - Tipado de objetos con interfaces y tipos.
+   - Métodos y propiedades en objetos.
+
+9. **Funciones y Tipado de Parámetros**
+   - Declaración de funciones en TypeScript.
+   - Tipado de parámetros y retorno.
+   - Funciones opcionales y con parámetros predeterminados.
+
+10. **Interfaces y Tipos Personalizados**
+    - Definición de interfaces.
+    - Uso de interfaces para la tipificación de objetos.
+    - Creación de tipos personalizados.
+
+11. **Clases y Herencia en TypeScript**
+    - Declaración de clases y métodos.
+    - Propiedades privadas y públicas.
+    - Herencia y clases abstractas.
+
+12. **Modularización en TypeScript**
+    - Importaciones y exportaciones.
+    - Uso de módulos para organizar el código.
