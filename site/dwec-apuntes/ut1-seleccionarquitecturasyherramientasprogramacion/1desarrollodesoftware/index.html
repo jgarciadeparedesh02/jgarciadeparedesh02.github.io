@@ -1,0 +1,1238 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../planificacion/">
+      
+      
+        <link rel="next" href="../2tiposdeaplicaciones/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>1. Desarrollo de Software - Desarrollo Web en Entorno Cliente</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#etapas-del-desarrollo-de-software" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Desarrollo Web en Entorno Cliente" class="md-header__button md-logo" aria-label="Desarrollo Web en Entorno Cliente" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Desarrollo Web en Entorno Cliente
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1. Desarrollo de Software
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Quitar modo oscuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Quitar modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Desarrollo Web en Entorno Cliente" class="md-nav__button md-logo" aria-label="Desarrollo Web en Entorno Cliente" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Desarrollo Web en Entorno Cliente
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../planificacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Planificación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT 1. Selección de arquitecturas y herramientas de programación
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            UT 1. Selección de arquitecturas y herramientas de programación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    1. Desarrollo de Software
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    1. Desarrollo de Software
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#etapas-del-desarrollo-de-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etapas del Desarrollo de Software
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Etapas del Desarrollo de Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-planificacion-y-analisis-de-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Planificación y Análisis de Requisitos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-definicion-de-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Definición de Requisitos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Definición de Requisitos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requisitos-funcionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requisitos Funcionales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requisitos-no-funcionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requisitos No Funcionales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-diseno-de-la-arquitectura" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Diseño de la Arquitectura
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-implementacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Implementación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Pruebas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Pruebas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entornos-de-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entornos de Pruebas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qa-quality-assurance" class="md-nav__link">
+    <span class="md-ellipsis">
+      QA (Quality Assurance)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-despliegue-y-mantenimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Despliegue y Mantenimiento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodologias-agiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metodologías Ágiles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metodologías Ágiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodologia-scrum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metodología Scrum
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ciclo-scrum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ciclo Scrum
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ciclo Scrum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fases-del-ciclo-scrum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fases del Ciclo Scrum:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beneficios-de-scrum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beneficios de Scrum
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ciclo-de-retroalimentacion-continua" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ciclo de Retroalimentación Continua
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2tiposdeaplicaciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Tipos de aplicaciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3desarrollodeaplicacionesweb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Desarrollo de aplicaciones Web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4entornodedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Entorno de desarrollo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5integrarcodigojsenhtml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Integrar código JavaScript en HTML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6recursosyfaq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Recursos y FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT 2. Manejo de la sintaxis del lenguaje
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            UT 2. Manejo de la sintaxis del lenguaje
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut2-manejo-de-la-sintaxis-del-lenguaje/1variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#etapas-del-desarrollo-de-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etapas del Desarrollo de Software
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Etapas del Desarrollo de Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-planificacion-y-analisis-de-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Planificación y Análisis de Requisitos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-definicion-de-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Definición de Requisitos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Definición de Requisitos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requisitos-funcionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requisitos Funcionales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requisitos-no-funcionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requisitos No Funcionales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-diseno-de-la-arquitectura" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Diseño de la Arquitectura
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-implementacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Implementación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Pruebas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Pruebas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entornos-de-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entornos de Pruebas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qa-quality-assurance" class="md-nav__link">
+    <span class="md-ellipsis">
+      QA (Quality Assurance)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-despliegue-y-mantenimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Despliegue y Mantenimiento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodologias-agiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metodologías Ágiles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metodologías Ágiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodologia-scrum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metodología Scrum
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ciclo-scrum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ciclo Scrum
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ciclo Scrum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fases-del-ciclo-scrum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fases del Ciclo Scrum:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beneficios-de-scrum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beneficios de Scrum
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ciclo-de-retroalimentacion-continua" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ciclo de Retroalimentación Continua
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>1. Desarrollo de Software</h1>
+
+<p>El desarrollo de software puede parecer simple en un inicio: "Solo necesito una idea", pensamos. Sin embargo, en cuanto comenzamos a trabajar en un proyecto, nos damos cuenta de que surgen cientos de inconvenientes. El principal problema suele ser la <strong>falta de organización</strong>. Cuando un proyecto requiere varias pantallas o módulos, terminamos perdiendo mucho tiempo haciendo ajustes sobre la marcha. </p>
+<p>Para evitar esto, es fundamental seguir una serie de <strong>fases de desarrollo</strong> que nos ayuden a minimizar estos problemas desde el principio. A continuación, te presento las etapas clave del desarrollo de software, que suelen ser el pilar para cualquier proyecto bien gestionado.</p>
+<pre class="mermaid"><code>graph TD
+    A[Planificación y Análisis de Requisitos] --&gt; B[Definición de Requisitos]
+    B --&gt; C[Diseño de la Arquitectura]
+    C --&gt; D[Implementación]
+    D --&gt; E[Pruebas]
+    E --&gt; F[Despliegue y Mantenimiento]
+
+    F --&gt;|Soporte y actualizaciones| A</code></pre>
+<h2 id="etapas-del-desarrollo-de-software">Etapas del Desarrollo de Software</h2>
+<h3 id="1-planificacion-y-analisis-de-requisitos">1. Planificación y Análisis de Requisitos</h3>
+<p>Aquí es donde todo comienza. Junto al cliente, analizamos sus necesidades y definimos los objetivos del proyecto. Se trata de comprender a fondo qué funcionalidades debe tener el software y cómo estas se alinean con las expectativas del usuario. Esta etapa es crucial porque una buena planificación previene sorpresas y problemas más adelante.</p>
+<p>Si no hacemos este trabajo a conciencia, es probable que durante las revisiones posteriores, el cliente mencione características que pensaba que ya estaban incluidas. Esto puede generar retrasos importantes en el proyecto.</p>
+<div class="admonition warning">
+<p class="admonition-title">Ojo con los cambios</p>
+<p>Los clientes suelen ser caprichosos, y la mayoría no tiene conocimientos técnicos. A menudo, a mitad del proyecto o al ver el avance del producto, se les ocurre alguna nueva funcionalidad que desean implementar. Aquí es donde debes negociar con ellos para obtener más tiempo si esa nueva idea se va a llevar a cabo.</p>
+</div>
+<p>Aquí tienes la sección revisada con la explicación ampliada sobre los requisitos funcionales y no funcionales:</p>
+<hr />
+<h3 id="2-definicion-de-requisitos">2. Definición de Requisitos</h3>
+<p>Después de entender lo que el cliente necesita, se procede a documentar los <strong>requisitos específicos</strong> del sistema. Aquí definimos dos tipos principales de requisitos que guiarán el desarrollo del software:</p>
+<h4 id="requisitos-funcionales">Requisitos Funcionales</h4>
+<p><strong>Definición</strong>: Los requisitos funcionales describen <strong>qué debe hacer el software</strong>. Estos requisitos especifican las funcionalidades, características y comportamientos que el sistema debe implementar para cumplir con las necesidades del usuario. En otras palabras, definen las acciones que el sistema debe ser capaz de realizar.</p>
+<ul>
+<li><strong>Ejemplos</strong>:<ul>
+<li>El sistema debe permitir a los usuarios registrarse con una dirección de correo electrónico.</li>
+<li>El software debe permitir la búsqueda de productos por categoría y palabras clave.</li>
+<li>Los usuarios deben poder realizar pagos utilizando tarjetas de crédito y PayPal.</li>
+</ul>
+</li>
+</ul>
+<h4 id="requisitos-no-funcionales">Requisitos No Funcionales</h4>
+<p><strong>Definición</strong>: Los requisitos no funcionales se centran en <strong>cómo debe comportarse el software</strong> en términos de rendimiento, seguridad, usabilidad y otras características cualitativas. Estos requisitos son cruciales para garantizar que el sistema funcione de manera eficiente y satisfactoria en el entorno real.</p>
+<ul>
+<li><strong>Ejemplos</strong>:<ul>
+<li>El sistema debe ser capaz de manejar al menos 1000 usuarios simultáneamente sin degradar el rendimiento.</li>
+<li>La aplicación debe cumplir con los estándares de accesibilidad para usuarios con discapacidades.</li>
+<li>Las transacciones deben ser seguras y cumplir con las normativas de protección de datos.</li>
+</ul>
+</li>
+</ul>
+<p>Esta documentación de requisitos funcionales y no funcionales será nuestra guía durante el desarrollo para asegurarnos de que todos estemos alineados y que el software cumpla con las expectativas del cliente.</p>
+<h3 id="3-diseno-de-la-arquitectura">3. Diseño de la Arquitectura</h3>
+<p>En esta fase, se define cómo se va a organizar el software, qué componentes tendrá y cómo interactuarán entre sí. Un buen diseño de arquitectura facilita la implementación y, más adelante, el mantenimiento. </p>
+<div class="admonition info">
+<p class="admonition-title">Eligiendo la arquitectura adecuada</p>
+<p>Existen muchas arquitecturas de software. Las más tradicionales, como las <strong>arquitecturas monolíticas</strong>, han ido dando paso a <strong>arquitecturas de microservicios</strong>, donde cada parte del software se maneja de forma independiente. Esto facilita las modificaciones y la gestión de errores.</p>
+</div>
+<h3 id="4-implementacion">4. Implementación</h3>
+<p>Aquí es donde realmente nos ponemos manos a la obra con la codificación. Tomamos los requisitos y el diseño que ya hemos definido y los convertimos en código. Es fundamental seguir buenas prácticas de programación para garantizar que el software sea de calidad y no presente problemas en el futuro.</p>
+<h3 id="5-pruebas">5. Pruebas</h3>
+<p>Una vez que hemos desarrollado el software, es el momento de probarlo. Las pruebas son esenciales para verificar que el producto cumple con los requisitos que definimos al principio. Incluyen pruebas unitarias, de integración y de sistema, y nos ayudan a identificar y corregir errores antes de que el software sea lanzado al cliente.</p>
+<div class="admonition danger">
+<p class="admonition-title">No escatimes en pruebas</p>
+<p>En algunos enfoques ágiles, se minimiza la fase de pruebas, pero cuando el software crece en tamaño y complejidad, esta fase es crucial para evitar errores que nos costarán mucho más tiempo arreglar después.</p>
+</div>
+<h4 id="entornos-de-pruebas">Entornos de Pruebas</h4>
+<p>Para una evaluación efectiva del software, se utilizan varios entornos de pruebas, cada uno con un propósito específico:</p>
+<ol>
+<li>
+<p><strong>Entorno de Desarrollo</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Espacio donde los desarrolladores crean y modifican el código. Aquí se realizan pruebas unitarias y básicas de integración.</li>
+<li><strong>Características</strong>: Facilita el desarrollo y pruebas iniciales del código.</li>
+</ul>
+</li>
+<li>
+<p><strong>Entorno de Pruebas (QA)</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Entorno dedicado a la ejecución de pruebas exhaustivas del software, incluyendo pruebas de sistema y de aceptación del usuario.</li>
+<li><strong>Características</strong>: Replica el entorno de producción, sin afectar a los usuarios finales.</li>
+</ul>
+</li>
+<li>
+<p><strong>Entorno de Preproducción</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Último entorno antes del despliegue en producción, usado para la validación final del sistema en condiciones similares a producción.</li>
+<li><strong>Características</strong>: Permite pruebas finales de carga y rendimiento.</li>
+</ul>
+</li>
+<li>
+<p><strong>Entorno de Producción</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: El entorno real donde el software es utilizado por los usuarios finales.</li>
+<li><strong>Características</strong>: Los errores en este entorno pueden tener un impacto significativo, por lo que se deben hacer pruebas exhaustivas en los entornos anteriores.</li>
+</ul>
+</li>
+</ol>
+<h4 id="qa-quality-assurance">QA (Quality Assurance)</h4>
+<p>El aseguramiento de la calidad (QA) es un proceso integral que asegura que el software cumpla con los estándares de calidad. Incluye:</p>
+<ul>
+<li><strong>Prevención de Defectos</strong>: Implementación de prácticas y procesos para evitar errores.</li>
+<li><strong>Pruebas Sistemáticas</strong>: Ejecución de pruebas para identificar y corregir defectos antes del lanzamiento.</li>
+<li><strong>Documentación y Gestión</strong>: Registro y seguimiento de defectos encontrados y su resolución.</li>
+</ul>
+<p>QA es crucial no solo para encontrar errores, sino para garantizar que el software sea robusto y fiable desde el principio hasta el final del ciclo de desarrollo.</p>
+<h3 id="6-despliegue-y-mantenimiento">6. Despliegue y Mantenimiento</h3>
+<p>Finalmente, llega el momento de poner el software en funcionamiento en el entorno de <strong>producción</strong>. Esto puede incluir la instalación del software en los sistemas del cliente y capacitar a los usuarios. Después de la entrega, el mantenimiento es una actividad continua que abarca la corrección de errores y la actualización del sistema conforme el cliente lo requiera. En esta fase, el desarrollador suele seguir recibiendo una remuneración por el soporte y las mejoras del software.</p>
+<h2 id="metodologias-agiles">Metodologías Ágiles</h2>
+<p>Las metodologías ágiles son un conjunto de principios y prácticas para gestionar proyectos de desarrollo de software. Se centran en la <strong>colaboración continua</strong> con el cliente, la <strong>flexibilidad</strong> para adaptarse a cambios, y la entrega frecuente de software funcional.</p>
+<p>Una de las metodologías ágiles más populares es <strong>Scrum</strong>, que organiza el desarrollo en ciclos cortos e iterativos llamados <strong>sprints</strong>.</p>
+<h3 id="metodologia-scrum">Metodología Scrum</h3>
+<p>Scrum es una metodología ágil que se enfoca en la <strong>entrega rápida y continua</strong> de software funcional. Cada <strong>sprint</strong> suele durar entre 1 y 4 semanas, y en ese tiempo se desarrollan características completas que pueden ser probadas y revisadas. El equipo de Scrum se organiza en tres roles principales:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Rol</strong></th>
+<th><strong>Descripción</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Product Owner</strong></td>
+<td>Define la visión del producto y prioriza las características.</td>
+</tr>
+<tr>
+<td><strong>Scrum Master</strong></td>
+<td>Facilita el proceso Scrum, asegurando que se siga el marco metodológico.</td>
+</tr>
+<tr>
+<td><strong>Equipo de Desarrollo</strong></td>
+<td>Desarrolla, prueba y entrega las funcionalidades acordadas en cada sprint.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ciclo-scrum">Ciclo Scrum</h3>
+<pre class="mermaid"><code>graph TD
+    A[Product Backlog] --&gt; B[Sprint Planning]
+    B --&gt; C(Sprint Backlog)
+    C --&gt; D[Daily Scrum]
+    D --&gt; E(Incremento de Software)
+    E --&gt; F[Revisión del Sprint]
+    F --&gt; G[Retrospectiva]
+    G --&gt; B
+
+    subgraph Ciclo de un Sprint
+        C --&gt; E
+    end</code></pre>
+<h4 id="fases-del-ciclo-scrum">Fases del Ciclo Scrum:</h4>
+<ol>
+<li>
+<p><strong>Product Backlog</strong>: Es una lista priorizada de todas las características o tareas que el producto debe incluir. El <strong>Product Owner</strong> es el responsable de mantener y priorizar este backlog.</p>
+</li>
+<li>
+<p><strong>Sprint Planning</strong>: El equipo selecciona las tareas más importantes del backlog que puedan completarse durante el sprint. Estas tareas forman el <strong>Sprint Backlog</strong>.</p>
+</li>
+<li>
+<p><strong>Sprint</strong>: El equipo trabaja en las tareas seleccionadas durante el tiempo del sprint, realizando <strong>Daily Scrums</strong> (reuniones diarias de seguimiento) para discutir el progreso y resolver impedimentos.</p>
+</li>
+<li>
+<p><strong>Incremento de Software</strong>: Al final del sprint, el equipo debe entregar un incremento de software funcional que puede ser revisado.</p>
+</li>
+<li>
+<p><strong>Revisión del Sprint</strong>: El equipo muestra lo que se ha desarrollado durante el sprint a los interesados y obtiene feedback.</p>
+</li>
+<li>
+<p><strong>Retrospectiva del Sprint</strong>: El equipo analiza lo que funcionó bien y lo que no, y define acciones de mejora para futuros sprints.</p>
+</li>
+</ol>
+<h4 id="beneficios-de-scrum">Beneficios de Scrum</h4>
+<ul>
+<li><strong>Adaptabilidad</strong>: Permite cambios y ajustes en función de los comentarios del cliente o del mercado.</li>
+<li><strong>Colaboración</strong>: Fomenta la interacción constante entre el equipo de desarrollo y los interesados.</li>
+<li><strong>Entrega rápida</strong>: Los sprints cortos garantizan entregas frecuentes de software funcional.</li>
+</ul>
+<h4 id="sprints">Sprints</h4>
+<p>Cada sprint tiene una duración fija y produce un resultado que se puede mostrar al cliente. Esto asegura que se ve progreso de manera constante y que el producto se desarrolla de manera iterativa. El equipo tiene la libertad de ajustar la carga de trabajo en función del feedback recibido al final de cada sprint.</p>
+<ul>
+<li><strong>Duración</strong>: De 1 a 4 semanas.</li>
+<li><strong>Objetivo</strong>: Completar una serie de tareas del <strong>Sprint Backlog</strong> que tengan valor para el usuario final.</li>
+</ul>
+<h4 id="ciclo-de-retroalimentacion-continua">Ciclo de Retroalimentación Continua</h4>
+<p>Scrum está diseñado para recibir y procesar retroalimentación de forma continua, lo que permite mejorar tanto el producto como el proceso de desarrollo. La <strong>retroalimentación constante</strong> durante y al final de cada sprint ayuda a asegurar que el software se ajuste a las necesidades del cliente.</p>
+<p>Scrum es ideal para proyectos donde los requisitos no están completamente definidos desde el principio y donde se espera que haya muchos cambios a lo largo del tiempo.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../planificacion/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Planificación">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Planificación
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../2tiposdeaplicaciones/" class="md-footer__link md-footer__link--next" aria-label="Next: 2. Tipos de aplicaciones">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                2. Tipos de aplicaciones
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
