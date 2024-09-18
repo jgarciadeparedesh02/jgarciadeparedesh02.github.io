@@ -1,6 +1,8 @@
 [submodule "src/di-apuntes"]
 	path = src/di-apuntes
 	url = https://github.com/jgarciadeparedesh02/di-apuntes.git
+	branch = main
 [submodule "src/dwec-apuntes"]
 	path = src/dwec-apuntes
 	url = https://github.com/jgarciadeparedesh02/dwec-apuntes.git
+	branch = main

@@ -4,7 +4,7 @@ repos:
     image: images/icon-di.png
     url: https://github.com/jgarciadeparedesh02/di-apuntes.git
     branch: main
-  - name: dewc-apuntes
+  - name: dwec-apuntes
     title: Apuntes DWEC
     image: images/icon-dwec.png
     url: https://github.com/jgarciadeparedesh02/dwec-apuntes.git
@@ -15,5 +15,5 @@ target_dir: site
 repos_dir: src
 index_tpl: index.tpl
 extra_files:
-    - styles.css
-    - images/search.svg
+  - styles.css
+  - images/search.svg
