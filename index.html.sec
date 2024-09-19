@@ -106,9 +106,9 @@
     <main>
         <h2>Bienvenidos al Repositorio de Apuntes</h2>
         <ul>
-            <li><a href="di-apuntes/index.html"><img src="images/icon-di.png" alt="Icono DI" /><span>Apuntes
+            <li><a href="di-apuntes/index.html"><img src="/images/icon-di.png" alt="Icono DI" /><span>Apuntes
                         DI</span></a></li>
-            <li><a href="dewc-apuntes/index.html"><img src="images/icon-dwec.png" alt="Icono DWEC" /><span>Apuntes
+            <li><a href="dwec-apuntes/index.html"><img src="/images/icon-dwec.png" alt="Icono DWEC" /><span>Apuntes
                         DWEC</span></a></li>
         </ul>
     </main>
