@@ -797,7 +797,7 @@
         
   
   <span class="md-ellipsis">
-    Debug En TypeScript
+    Recursos y FAQ
   </span>
   
 
@@ -885,9 +885,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#recursos-extra" class="md-nav__link">
+  <a href="#ampliaciones" class="md-nav__link">
     <span class="md-ellipsis">
-      Recursos extra:
+      Ampliaciones
     </span>
   </a>
   
@@ -921,80 +921,72 @@
 <ol>
 <li>
 <p><strong>Define una clase general <code>Pokemon</code>:</strong></p>
-</li>
-<li>
-<p>Esta clase debe incluir propiedades como <code>nombre</code>, <code>hp</code> (puntos de vida), <code>hpMax</code> (puntos de vida máximos), <code>ataque</code>, <code>defensa</code>, y un array de <code>movimientos</code> que contiene objetos con el nombre del ataque y el daño asociado.</p>
-</li>
+<ul>
+<li>Esta clase debe incluir propiedades como <code>nombre</code>, <code>hp</code> (puntos de vida), <code>hpMax</code> (puntos de vida máximos), <code>ataque</code>, <code>defensa</code>, y un array de <code>movimientos</code> que contiene objetos con el nombre del ataque y el daño asociado.</li>
 <li>Incluye un método <code>atacar()</code> que reciba un oponente y un movimiento como argumentos. El método debe calcular el daño basado en el ataque del Pokémon, la defensa del oponente, y el daño del movimiento seleccionado.</li>
-<li>
-<p>Incluye un método <code>curar()</code> que permita al Pokémon recuperar una cantidad fija de HP, siempre que su HP actual no sea igual a <code>hpMax</code>.</p>
+<li>Incluye un método <code>curar()</code> que permita al Pokémon recuperar una cantidad fija de HP, siempre que su HP actual no sea igual a <code>hpMax</code>.</li>
+</ul>
 </li>
 <li>
 <p><strong>Crea un JSON con una lista de Pokémon disponibles:</strong></p>
-</li>
-<li>
-<p>Define un archivo JSON con diferentes Pokémon, cada uno con sus atributos (<code>nombre</code>, <code>hp</code>, <code>ataque</code>, <code>defensa</code>, <code>movimientos</code>, etc.).</p>
-</li>
-<li>
-<p>Al iniciar la batalla, se seleccionará aleatoriamente un Pokémon para el usuario y uno para el oponente de esta lista.</p>
+<ul>
+<li>Define un archivo JSON con diferentes Pokémon, cada uno con sus atributos (<code>nombre</code>, <code>hp</code>, <code>ataque</code>, <code>defensa</code>, <code>movimientos</code>, etc.).</li>
+<li>Al iniciar la batalla, se seleccionará aleatoriamente un Pokémon para el usuario y uno para el oponente de esta lista.</li>
+</ul>
 </li>
 <li>
 <p><strong>Implementa la lógica de simulación de batalla:</strong></p>
-</li>
-<li>
-<p>Los jugadores (o el sistema) pueden elegir movimientos en cada turno, que incluyen atacar con un movimiento específico o curarse.</p>
-</li>
+<ul>
+<li>Los jugadores (o el sistema) pueden elegir movimientos en cada turno, que incluyen atacar con un movimiento específico o curarse.</li>
 <li>El jugador elige los ataques manualmente, mientras que el oponente selecciona sus ataques de forma aleatoria.</li>
-<li>
-<p>La batalla continúa hasta que uno de los Pokémon sea derrotado (su HP llegue a 0 o menos).</p>
+<li>La batalla continúa hasta que uno de los Pokémon sea derrotado (su HP llegue a 0 o menos).</li>
+</ul>
 </li>
 <li>
 <p><strong>Crea una función que maneje el flujo del juego:</strong></p>
-</li>
+<ul>
 <li>Muestra el estado actual de los Pokémon en cada turno.</li>
 <li>Permite al jugador seleccionar un movimiento y aplica la lógica de combate.</li>
 <li>El Pokémon del oponente elige sus ataques de manera aleatoria.</li>
 <li>Verifica si alguno de los Pokémon ha sido derrotado y declara un ganador.</li>
+</ul>
+</li>
 </ol>
 <h4 id="explicacion-del-flujo-de-cada-turno">Explicación del Flujo de Cada Turno:</h4>
 <ol>
 <li>
 <p><strong>Inicio del Turno:</strong></p>
-</li>
-<li>
-<p>Se muestra el estado actual de ambos Pokémon, incluyendo su nombre y puntos de vida (HP).</p>
+<ul>
+<li>Se muestra el estado actual de ambos Pokémon, incluyendo su nombre y puntos de vida (HP).</li>
+</ul>
 </li>
 <li>
 <p><strong>Selección de Acción del Usuario:</strong></p>
-</li>
-<li>
-<p>El usuario selecciona un movimiento disponible de su Pokémon o decide curarse.</p>
-</li>
-<li>
-<p>Si el usuario selecciona "curar" y el HP del Pokémon ya está al máximo, se le notifica que elige otra acción.</p>
+<ul>
+<li>El usuario selecciona un movimiento disponible de su Pokémon o decide curarse.</li>
+<li>Si el usuario selecciona "curar" y el HP del Pokémon ya está al máximo, se le notifica que elige otra acción.</li>
+</ul>
 </li>
 <li>
 <p><strong>Aplicación del Movimiento del Usuario:</strong></p>
-</li>
-<li>
-<p>Si el usuario selecciona un ataque, se aplica el daño correspondiente al oponente.</p>
-</li>
-<li>
-<p>Si selecciona "curar", el Pokémon recupera una cantidad fija de HP.</p>
+<ul>
+<li>Si el usuario selecciona un ataque, se aplica el daño correspondiente al oponente.</li>
+<li>Si selecciona "curar", el Pokémon recupera una cantidad fija de HP.</li>
+</ul>
 </li>
 <li>
 <p><strong>Acción del Oponente:</strong></p>
-</li>
-<li>
-<p>El Pokémon oponente elige su movimiento de manera aleatoria entre sus movimientos disponibles.</p>
-</li>
-<li>
-<p>Se aplica el movimiento seleccionado contra el Pokémon del usuario.</p>
+<ul>
+<li>El Pokémon oponente elige su movimiento de manera aleatoria entre sus movimientos disponibles.</li>
+<li>Se aplica el movimiento seleccionado contra el Pokémon del usuario.</li>
+</ul>
 </li>
 <li>
 <p><strong>Comprobación de Fin de Batalla:</strong></p>
-</li>
+<ul>
 <li>Después de cada turno, se verifica si alguno de los Pokémon ha sido derrotado (HP ≤ 0). Si es así, se declara al ganador y termina la batalla.</li>
+</ul>
+</li>
 </ol>
 <h4 id="ejemplo-de-json-de-pokemon">Ejemplo de JSON de Pokémon:</h4>
 <div class="highlight"><pre><span></span><code><span class="p">[</span>
@@ -1041,11 +1033,20 @@
 <li>Utiliza una única clase <code>Pokemon</code> para crear diferentes Pokémon con configuraciones personalizadas.</li>
 <li>Emplea condicionales y bucles para manejar la lógica del combate y determinar el ganador.</li>
 <li>Asegúrate de que los métodos como <code>atacar()</code> y <code>curar()</code> funcionen correctamente, considerando los atributos del Pokémon y el daño del movimiento.</li>
+<li>El pokemon sólo puede curarse una vez por combate.</li>
 <li>La selección aleatoria de los ataques del oponente debe estar bien implementada para que la simulación sea realista.</li>
 </ul>
-<h4 id="recursos-extra">Recursos extra:</h4>
+<h4 id="ampliaciones">Ampliaciones</h4>
 <ul>
-<li>Si se desea pintar a los pokemon elegidos, puede hacerse mediante texto. Mirar esta página: https://emojicombos.com/pikachu-text-art</li>
+<li>
+<p>Si se desea se puede ampliar para que el combate se realice en vez de un pokemon contra un pokemon, de 6 contra 6.</p>
+</li>
+<li>
+<p>Si se desea pintar a los pokemon elegidos, puede hacerse mediante texto. Mirar esta página: https://emojicombos.com/pikachu-text-art</p>
+</li>
+<li>
+<p>Cualquier otra ampliación sugerida.</p>
+</li>
 </ul>
 
 

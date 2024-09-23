@@ -1,0 +1,1162 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>Extra ejercicios basicos poo sol - Desarrollo de Interfaces</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ejercicios" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Desarrollo de Interfaces" class="md-header__button md-logo" aria-label="Desarrollo de Interfaces" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Desarrollo de Interfaces
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Extra ejercicios basicos poo sol
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="amber"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="amber" data-md-color-accent="amber"  aria-label="Quitar modo oscuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Quitar modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Desarrollo de Interfaces" class="md-nav__button md-logo" aria-label="Desarrollo de Interfaces" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Desarrollo de Interfaces
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT 1: Desarrollo de Interfaces de Usuario. Usabilidad
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            UT 1: Desarrollo de Interfaces de Usuario. Usabilidad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut1-desarrollodeinterfacesdeusuario-usabilidad/1introduccionalausabilidad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Introducción a la Usabilidad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut1-desarrollodeinterfacesdeusuario-usabilidad/2dise%C3%B1ocentradoenelusuario/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Diseño Centrado en el Usuario (DCU)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut1-desarrollodeinterfacesdeusuario-usabilidad/3principiosdeusabilidad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Principios de Usabilidad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut1-desarrollodeinterfacesdeusuario-usabilidad/4patronesdedise%C3%B1odeinterfaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Patrones de Diseño de Interfaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut1-desarrollodeinterfacesdeusuario-usabilidad/5evaluacionheuristica/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Evaluación Heurística
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut1-desarrollodeinterfacesdeusuario-usabilidad/6interfacesmultidispositivo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Interfaces Multidispositivo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut1-desarrollodeinterfacesdeusuario-usabilidad/7elementosdeinteraccioneninterfaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Elementos de Interacción en interfaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut1-desarrollodeinterfacesdeusuario-usabilidad/8flujosdeusuario/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Flujos de Usuario
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut1-desarrollodeinterfacesdeusuario-usabilidad/9prototipadoywireframing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Prototipado y Wireframing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut1-desarrollodeinterfacesdeusuario-usabilidad/10accesibilidadeinterfacesdeusuario/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Accesibilidad en Interfaces de Usuario
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT2: Introducción a TypeScript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            UT2: Introducción a TypeScript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1queestypescript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. ¿Qué es TypeScript?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2ventajasdeusartypescript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Ventajas de usar TypeScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3instalacionyconfiguraciondetypescript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Instalación y Configuración de TypeScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4primerproyecto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Primer Proyecto con TypeScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5tiposbasicos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Tipos Básicos en TypeScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6condicionales/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Condicionales en TypeScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7bucles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Bucles en TypeScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8objetos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Objetos en TypeScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../9funcionesyparametros/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Funciones y parámetros en TypeScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10interfacesyobjetos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Interfaces y Tipos personalizados en TypeScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11clasesyherencia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Clases y Herencia en TypeScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12modularizaciondecodigo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Modularización de código en TypeScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13recursos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recursos y FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#programacion-orientada-a-objetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programación Orientada a Objetos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Programación Orientada a Objetos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-clase-persona-y-metodo-para-saludar" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Clase Persona y Método para Saludar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-sistema-de-gestion-de-productos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Sistema de Gestión de Productos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-herencia-y-polimorfismo-con-vehiculos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Herencia y Polimorfismo con Vehículos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-sistema-de-gestion-de-estudiantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Sistema de Gestión de Estudiantes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Extra ejercicios basicos poo sol</h1>
+
+<p>Aquí tienes los ejercicios junto con sus soluciones en TypeScript, organizados según cada enunciado y su respectiva respuesta:</p>
+<h2 id="ejercicios">Ejercicios</h2>
+<h3 id="programacion-orientada-a-objetos">Programación Orientada a Objetos</h3>
+<h4 id="1-clase-persona-y-metodo-para-saludar">1. <strong>Clase <code>Persona</code> y Método para Saludar</strong></h4>
+<p><strong>Enunciado:</strong><br />
+Crea una clase llamada <code>Persona</code> que tenga las propiedades <code>nombre</code> (string) y <code>edad</code> (number). Incluye un método <code>saludar()</code> que muestre en la consola un mensaje como "Hola, mi nombre es [nombre] y tengo [edad] años". Instancia un objeto de la clase y llama al método <code>saludar()</code>.</p>
+<p><strong>Solución:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">Persona</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">edad</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">edad</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">edad</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nx">saludar</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Hola, mi nombre es </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="si">}</span><span class="sb"> y tengo </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">edad</span><span class="si">}</span><span class="sb"> años.`</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Crear una instancia de Persona y llamar al método saludar</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">persona1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Persona</span><span class="p">(</span><span class="s1">&#39;Juan&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">);</span>
+<span class="nx">persona1</span><span class="p">.</span><span class="nx">saludar</span><span class="p">();</span>
+</code></pre></div>
+<h4 id="2-sistema-de-gestion-de-productos">2. <strong>Sistema de Gestión de Productos</strong></h4>
+<p><strong>Enunciado:</strong><br />
+Crea una clase <code>Producto</code> con las propiedades <code>nombre</code>, <code>precio</code> y <code>cantidad</code>. Luego, crea una clase <code>CarritoDeCompras</code> que tenga una lista de productos y métodos para agregar un producto, eliminar un producto y calcular el total del carrito. Muestra en la consola el contenido del carrito y el total después de agregar y eliminar productos.</p>
+<p><strong>Solución:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">Producto</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">precio</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">cantidad</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">precio</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">cantidad</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">precio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">precio</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">cantidad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">cantidad</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">CarritoDeCompras</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">productos</span><span class="o">:</span><span class="w"> </span><span class="kt">Producto</span><span class="p">[];</span>
+
+<span class="w">  </span><span class="kr">constructor</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">productos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nx">agregarProducto</span><span class="p">(</span><span class="nx">producto</span><span class="o">:</span><span class="w"> </span><span class="kt">Producto</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">productos</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">producto</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nx">eliminarProducto</span><span class="p">(</span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">productos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">productos</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">prod</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">prod</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="nx">nombre</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nx">calcularTotal</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">productos</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">total</span><span class="p">,</span><span class="w"> </span><span class="nx">prod</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">prod</span><span class="p">.</span><span class="nx">precio</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">prod</span><span class="p">.</span><span class="nx">cantidad</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nx">mostrarCarrito</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Contenido del carrito:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">productos</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">prod</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Producto: </span><span class="si">${</span><span class="nx">prod</span><span class="p">.</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">, Precio: </span><span class="si">${</span><span class="nx">prod</span><span class="p">.</span><span class="nx">precio</span><span class="si">}</span><span class="sb">, Cantidad: </span><span class="si">${</span><span class="nx">prod</span><span class="p">.</span><span class="nx">cantidad</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Total: </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">calcularTotal</span><span class="p">()</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Ejemplo de uso del CarritoDeCompras</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">carrito</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CarritoDeCompras</span><span class="p">();</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">producto1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Producto</span><span class="p">(</span><span class="s1">&#39;Laptop&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">1000</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">producto2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Producto</span><span class="p">(</span><span class="s1">&#39;Mouse&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
+
+<span class="nx">carrito</span><span class="p">.</span><span class="nx">agregarProducto</span><span class="p">(</span><span class="nx">producto1</span><span class="p">);</span>
+<span class="nx">carrito</span><span class="p">.</span><span class="nx">agregarProducto</span><span class="p">(</span><span class="nx">producto2</span><span class="p">);</span>
+<span class="nx">carrito</span><span class="p">.</span><span class="nx">mostrarCarrito</span><span class="p">();</span>
+
+<span class="nx">carrito</span><span class="p">.</span><span class="nx">eliminarProducto</span><span class="p">(</span><span class="s1">&#39;Mouse&#39;</span><span class="p">);</span>
+<span class="nx">carrito</span><span class="p">.</span><span class="nx">mostrarCarrito</span><span class="p">();</span>
+</code></pre></div>
+<h4 id="3-herencia-y-polimorfismo-con-vehiculos">3. <strong>Herencia y Polimorfismo con Vehículos</strong></h4>
+<p><strong>Enunciado:</strong><br />
+Crea una clase base <code>Vehiculo</code> con propiedades como <code>marca</code>, <code>modelo</code> y <code>velocidadMaxima</code>, y un método <code>acelerar()</code> que muestra la aceleración del vehículo en la consola. Luego, crea dos clases derivadas <code>Coche</code> y <code>Moto</code>, cada una con un método adicional único (<code>abrirMaletero()</code> para <code>Coche</code> y <code>hacerCaballito()</code> para <code>Moto</code>). Instancia objetos de ambas clases y demuestra el uso de la herencia y polimorfismo llamando a sus métodos.</p>
+<p><strong>Solución:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">Vehiculo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">marca</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">modelo</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">velocidadMaxima</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">marca</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">modelo</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">velocidadMaxima</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">marca</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">marca</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">modelo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">modelo</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">velocidadMaxima</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">velocidadMaxima</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nx">acelerar</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">marca</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">modelo</span><span class="si">}</span><span class="sb"> está acelerando hasta </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">velocidadMaxima</span><span class="si">}</span><span class="sb"> km/h.`</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">Coche</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Vehiculo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">abrirMaletero</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`El maletero del </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">marca</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">modelo</span><span class="si">}</span><span class="sb"> está abierto.`</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">Moto</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Vehiculo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">hacerCaballito</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">marca</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">modelo</span><span class="si">}</span><span class="sb"> está haciendo un caballito.`</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Ejemplo de uso de Coche y Moto</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">coche</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Coche</span><span class="p">(</span><span class="s1">&#39;Toyota&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Corolla&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">180</span><span class="p">);</span>
+<span class="nx">coche</span><span class="p">.</span><span class="nx">acelerar</span><span class="p">();</span>
+<span class="nx">coche</span><span class="p">.</span><span class="nx">abrirMaletero</span><span class="p">();</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">moto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Moto</span><span class="p">(</span><span class="s1">&#39;Yamaha&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;R1&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">299</span><span class="p">);</span>
+<span class="nx">moto</span><span class="p">.</span><span class="nx">acelerar</span><span class="p">();</span>
+<span class="nx">moto</span><span class="p">.</span><span class="nx">hacerCaballito</span><span class="p">();</span>
+</code></pre></div>
+<h4 id="4-sistema-de-gestion-de-estudiantes">4. <strong>Sistema de Gestión de Estudiantes</strong></h4>
+<p><strong>Enunciado:</strong><br />
+Crea una clase <code>Estudiante</code> con las propiedades <code>nombre</code>, <code>edad</code>, y <code>notas</code> (array de números). Incluye métodos para agregar una nota y calcular el promedio de las notas del estudiante. Luego, crea una clase <code>Curso</code> que gestione un grupo de estudiantes con métodos para agregar estudiantes y calcular el promedio general del curso.</p>
+<p><strong>Solución:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">Estudiante</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">edad</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">notas</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">[];</span>
+
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">edad</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">edad</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">notas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nx">agregarNota</span><span class="p">(</span><span class="nx">nota</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">notas</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">nota</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nx">calcularPromedio</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">notas</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span><span class="w"> </span><span class="nx">nota</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">acc</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">nota</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">notas</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">this.notas.length</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">0</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">Curso</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">estudiantes</span><span class="o">:</span><span class="w"> </span><span class="kt">Estudiante</span><span class="p">[];</span>
+
+<span class="w">  </span><span class="kr">constructor</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">estudiantes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nx">agregarEstudiante</span><span class="p">(</span><span class="nx">estudiante</span><span class="o">:</span><span class="w"> </span><span class="kt">Estudiante</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">estudiantes</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">estudiante</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nx">calcularPromedioGeneral</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">totalPromedios</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">estudiantes</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span><span class="w"> </span><span class="nx">estudiante</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">acc</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">estudiante</span><span class="p">.</span><span class="nx">calcularPromedio</span><span class="p">(),</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">estudiantes</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">totalPromedios</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">this.estudiantes.length</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">0</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Ejemplo de uso de la clase Curso</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">estudiante1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Estudiante</span><span class="p">(</span><span class="s1">&#39;Ana&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">);</span>
+<span class="nx">estudiante1</span><span class="p">.</span><span class="nx">agregarNota</span><span class="p">(</span><span class="mf">85</span><span class="p">);</span>
+<span class="nx">estudiante1</span><span class="p">.</span><span class="nx">agregarNota</span><span class="p">(</span><span class="mf">90</span><span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">estudiante2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Estudiante</span><span class="p">(</span><span class="s1">&#39;Luis&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">22</span><span class="p">);</span>
+<span class="nx">estudiante2</span><span class="p">.</span><span class="nx">agregarNota</span><span class="p">(</span><span class="mf">70</span><span class="p">);</span>
+<span class="nx">estudiante2</span><span class="p">.</span><span class="nx">agregarNota</span><span class="p">(</span><span class="mf">75</span><span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">curso</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Curso</span><span class="p">();</span>
+<span class="nx">curso</span><span class="p">.</span><span class="nx">agregarEstudiante</span><span class="p">(</span><span class="nx">estudiante1</span><span class="p">);</span>
+<span class="nx">curso</span><span class="p">.</span><span class="nx">agregarEstudiante</span><span class="p">(</span><span class="nx">estudiante2</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Promedio de </span><span class="si">${</span><span class="nx">estudiante1</span><span class="p">.</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">: </span><span class="si">${</span><span class="nx">estudiante1</span><span class="p">.</span><span class="nx">calcularPromedio</span><span class="p">()</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Promedio de </span><span class="si">${</span><span class="nx">estudiante2</span><span class="p">.</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">: </span><span class="si">${</span><span class="nx">estudiante2</span><span class="p">.</span><span class="nx">calcularPromedio</span><span class="p">()</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Promedio general del curso: </span><span class="si">${</span><span class="nx">curso</span><span class="p">.</span><span class="nx">calcularPromedioGeneral</span><span class="p">()</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.path"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
