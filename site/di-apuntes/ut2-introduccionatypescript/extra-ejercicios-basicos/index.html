@@ -797,7 +797,7 @@
         
   
   <span class="md-ellipsis">
-    Debug En TypeScript
+    Recursos y FAQ
   </span>
   
 
@@ -1076,67 +1076,41 @@
 <p>Usa un bucle <code>while</code> para imprimir el factorial de un número entero dado. El factorial de 5 (5!) es 5×4×3×2×1=120.</p>
 <h4 id="3-bucle-dowhile-para-entrada-de-usuario">3. Bucle <code>do...while</code> para Entrada de Usuario</h4>
 <p>Escribe un programa que use un bucle <code>do...while</code> para pedir al usuario un número entre 1 y 10. Continúa solicitando hasta que el usuario introduzca un número válido.</p>
-<p><strong>Pista:</strong>  Utiliza la instrucción prompt() para solicitar datos al usuario en TypeScript. Esta función abre un cuadro de diálogo que permite al usuario introducir una cadena de texto. Para obtener datos numéricos, convierte la entrada del usuario usando parseInt() o parseFloat() según sea necesario. Asegúrate de manejar posibles entradas no válidas mediante condicionales if o un bucle while para solicitar repetidamente la entrada hasta que sea correcta.</p>
+<p><strong>Pista:</strong> Utiliza la instrucción prompt() para solicitar datos al usuario en TypeScript. Esta función abre un cuadro de diálogo que permite al usuario introducir una cadena de texto. Para obtener datos numéricos, convierte la entrada del usuario usando parseInt() o parseFloat() según sea necesario. Asegúrate de manejar posibles entradas no válidas mediante condicionales if o un bucle while para solicitar repetidamente la entrada hasta que sea correcta.</p>
 <h4 id="4-bucle-forof-para-iterar-sobre-arreglo">4. Bucle <code>for...of</code> para Iterar sobre Arreglo</h4>
 <p>Dado un array de nombres, usa un bucle <code>for...of</code> para imprimir cada nombre en mayúsculas.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Carlos&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Marta&quot;</span><span class="p">];</span>
-<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">names</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">());</span>
-<span class="p">}</span>
-</code></pre></div>
 <h4 id="5-bucle-forin-para-contar-propiedades-de-un-objeto">5. Bucle <code>for...in</code> para Contar Propiedades de un Objeto</h4>
 <p>Crea un objeto que contenga algunas propiedades simples, como <code>a</code>, <code>b</code> y <code>c</code>. Usa un bucle <code>for...in</code> para contar el número total de propiedades en el objeto e imprimir el resultado.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">simpleObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">a</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="kt">2</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">c</span><span class="o">:</span><span class="w"> </span><span class="kt">3</span>
-<span class="p">};</span>
-
-<span class="kd">let</span><span class="w"> </span><span class="nx">propertyCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-
-<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">simpleObject</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">propertyCount</span><span class="o">++</span><span class="p">;</span><span class="w">  </span><span class="c1">// Incrementa el contador por cada propiedad</span>
-<span class="p">}</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`El número total de propiedades es: </span><span class="si">${</span><span class="nx">propertyCount</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-</code></pre></div>
 <h4 id="6-metodo-foreach-para-sumar-elementos-de-un-arreglo">6. Método <code>forEach</code> para Sumar Elementos de un Arreglo</h4>
 <p>Dado un array de números, usa el método <code>forEach</code> para calcular y mostrar la suma de todos los números.</p>
 <p><strong>Pista:</strong> Usa el método <code>forEach()</code> en TypeScript para iterar sobre los elementos de un array y ejecutar una función para cada elemento.</p>
-<p><strong>Ejemplo:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">];</span>
-
-<span class="nx">numeros</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">numero</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numero</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span><span class="w">  </span><span class="c1">// Multiplica cada número por 2 y lo imprime</span>
-<span class="p">});</span>
-</code></pre></div>
 <h4 id="otros-ejercicios">Otros ejercicios</h4>
 <h5 id="1-triangulo-rectangulo">1. Triángulo Rectángulo</h5>
 <p>Dibuja un triángulo rectángulo con <code>*</code> de <code>n</code> filas. Cada fila debe contener un número creciente de asteriscos, comenzando con 1 en la primera fila y aumentando en 1 en cada fila subsiguiente.</p>
-<p><strong>Ejemplo para <code>n = 5</code>:</strong>
+<p><strong>Ejemplo para <code>n = 5</code>:</strong></p>
 <div class="highlight"><pre><span></span><code>*
 **
 ***
 ****
 *****
-</code></pre></div></p>
+</code></pre></div>
 <h4 id="2-cuadrado-de-asteriscos">2. Cuadrado de Asteriscos</h4>
 <p>Dibuja un cuadrado de <code>n x n</code> asteriscos. Cada fila debe tener exactamente <code>n</code> asteriscos.</p>
-<p><strong>Ejemplo para <code>n = 4</code>:</strong>
+<p><strong>Ejemplo para <code>n = 4</code>:</strong></p>
 <div class="highlight"><pre><span></span><code>****
 ****
 ****
 ****
-</code></pre></div></p>
+</code></pre></div>
 <h4 id="3-piramide-de-asteriscos">3. Pirámide de Asteriscos</h4>
 <p>Dibuja una pirámide de <code>n</code> filas. La primera fila tiene un asterisco centrado, y cada fila subsiguiente tiene dos asteriscos más, formando una pirámide.</p>
-<p><strong>Ejemplo para <code>n = 5</code>:</strong>
+<p><strong>Ejemplo para <code>n = 5</code>:</strong></p>
 <div class="highlight"><pre><span></span><code>    *
    ***
   *****
  *******
 *********
-</code></pre></div></p>
+</code></pre></div>
 
 
 
