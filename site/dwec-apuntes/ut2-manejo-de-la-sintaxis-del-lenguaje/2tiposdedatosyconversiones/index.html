@@ -655,6 +655,30 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#date-fechas" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Date (Fechas)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Date (Fechas)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principales-operaciones-con-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principales Operaciones con Date
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -860,7 +884,7 @@
         
   
   <span class="md-ellipsis">
-    9. Objetos y Arrays
+    9. Arrays
   </span>
   
 
@@ -903,6 +927,90 @@
   
   <span class="md-ellipsis">
     11. Recursos y FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT 3. Objetos predefinidos del lenguaje
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            UT 3. Objetos predefinidos del lenguaje
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut3-objetos-predefinidos-del-lenguaje/1introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Introducción a los Objetos Predefinidos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut3-objetos-predefinidos-del-lenguaje/2objetosnativosdellenguaje/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Objetos Nativos del Lenguaje
   </span>
   
 
@@ -1051,6 +1159,30 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#date-fechas" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Date (Fechas)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Date (Fechas)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principales-operaciones-con-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principales Operaciones con Date
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1191,6 +1323,48 @@
 <p><strong>Ejemplo:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">colores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;rojo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;verde&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;azul&quot;</span><span class="p">];</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">colores</span><span class="p">);</span><span class="w"> </span><span class="c1">// Output: [ &#39;rojo&#39;, &#39;verde&#39;, &#39;azul&#39; ]</span>
+</code></pre></div>
+<h4 id="date-fechas">🔹 <code>Date</code> (Fechas)</h4>
+<p>El tipo <code>Date</code> en JavaScript se utiliza para manejar fechas y horas, permitiéndote crear, manipular y formatear fechas fácilmente. </p>
+<h5 id="principales-operaciones-con-date">Principales Operaciones con <code>Date</code></h5>
+<ul>
+<li>
+<p><strong>Crear una Fecha Actual</strong>
+    Para obtener la fecha y hora actuales, puedes usar el constructor <code>Date()</code> sin parámetros.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">fechaActual</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fechaActual</span><span class="p">);</span><span class="w"> </span><span class="c1">// Output: fecha y hora actuales</span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>Crear una Fecha Específica</strong>
+   Puedes crear una fecha específica pasando una cadena de texto o valores de año, mes, día, etc.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">fechaEspecifica</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="s1">&#39;2023-09-27&#39;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fechaEspecifica</span><span class="p">);</span><span class="w"> </span><span class="c1">// Output: Wed Sep 27 2023</span>
+</code></pre></div>
+<ul>
+<li><strong>Obtener Partes de la Fecha</strong>
+   Usa métodos como <code>getFullYear()</code>, <code>getMonth()</code>, <code>getDate()</code>, <code>getDay()</code> para extraer partes específicas de la fecha.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">anio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fechaActual</span><span class="p">.</span><span class="nx">getFullYear</span><span class="p">();</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">mes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fechaActual</span><span class="p">.</span><span class="nx">getMonth</span><span class="p">();</span><span class="w"> </span><span class="c1">// Nota: Enero es 0</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">dia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fechaActual</span><span class="p">.</span><span class="nx">getDate</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Año: </span><span class="si">${</span><span class="nx">anio</span><span class="si">}</span><span class="sb">, Mes: </span><span class="si">${</span><span class="nx">mes</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="si">}</span><span class="sb">, Día: </span><span class="si">${</span><span class="nx">dia</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span><span class="w"> </span><span class="c1">// Output: Año, Mes y Día</span>
+</code></pre></div>
+<ul>
+<li><strong>Modificar Fechas</strong>
+   Puedes modificar una fecha usando métodos <code>setFullYear()</code>, <code>setMonth()</code>, <code>setDate()</code>, entre otros.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nx">fechaActual</span><span class="p">.</span><span class="nx">setFullYear</span><span class="p">(</span><span class="mf">2025</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fechaActual</span><span class="p">);</span><span class="w"> </span><span class="c1">// Output: Nueva fecha con año modificado a 2025</span>
+</code></pre></div>
+<ul>
+<li><strong>Formatear Fechas</strong>
+   Usa <code>toLocaleDateString()</code> o <code>toISOString()</code> para mostrar fechas en formatos específicos.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fechaActual</span><span class="p">.</span><span class="nx">toLocaleDateString</span><span class="p">());</span><span class="w"> </span><span class="c1">// Output: formato local de la fecha</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fechaActual</span><span class="p">.</span><span class="nx">toISOString</span><span class="p">());</span><span class="w"> </span><span class="c1">// Output: formato ISO 8601</span>
 </code></pre></div>
 <h3 id="conversion-de-tipos-de-datos">🛠️ Conversión de Tipos de Datos</h3>
 <p>La <strong>conversión de tipos</strong> (type casting) es el proceso de cambiar un tipo de dato a otro. Esto es útil cuando necesitas manipular datos de diferentes formas en tu programa.</p>

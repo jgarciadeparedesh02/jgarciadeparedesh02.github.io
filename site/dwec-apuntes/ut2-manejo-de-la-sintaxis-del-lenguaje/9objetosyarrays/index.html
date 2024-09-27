@@ -20,7 +20,7 @@
     
     
       
-        <title>9. Objetos y Arrays - Desarrollo Web en Entorno Cliente</title>
+        <title>9. Arrays - Desarrollo Web en Entorno Cliente</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#trabajando-con-objetos-json-y-matrices-en-javascript" class="md-skip">
+        <a href="#guia-basica-de-arrays-en-javascript-manipula-tus-datos-con-estilo" class="md-skip">
           Skip to content
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              9. Objetos y Arrays
+              9. Arrays
             
           </span>
         </div>
@@ -664,7 +664,7 @@
           
   
   <span class="md-ellipsis">
-    9. Objetos y Arrays
+    9. Arrays
   </span>
   
 
@@ -675,7 +675,7 @@
         
   
   <span class="md-ellipsis">
-    9. Objetos y Arrays
+    9. Arrays
   </span>
   
 
@@ -697,127 +697,73 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#que-es-json-javascript-object-notation" class="md-nav__link">
+  <a href="#operaciones-basicas-con-arrays-en-javascript" class="md-nav__link">
     <span class="md-ellipsis">
-      📌 ¿Qué es JSON? (JavaScript Object Notation)
+      🛠️ Operaciones Básicas con Arrays en JavaScript
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📌 ¿Qué es JSON? (JavaScript Object Notation)">
+    <nav class="md-nav" aria-label="🛠️ Operaciones Básicas con Arrays en JavaScript">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#estructura-de-un-objeto-json" class="md-nav__link">
+  <a href="#1-anadir-un-elemento-al-final-del-array-push" class="md-nav__link">
     <span class="md-ellipsis">
-      📋 Estructura de un Objeto JSON
+      1. ➕ Añadir un Elemento al Final del Array (push())
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#uso-de-json-en-aplicaciones" class="md-nav__link">
+  <a href="#2-anadir-un-elemento-al-inicio-del-array-unshift" class="md-nav__link">
     <span class="md-ellipsis">
-      📥 Uso de JSON en Aplicaciones
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#que-es-una-matriz-array-en-javascript" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔄 ¿Qué es una Matriz (Array) en JavaScript?
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔄 ¿Qué es una Matriz (Array) en JavaScript?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#creacion-y-manipulacion-de-arrays" class="md-nav__link">
-    <span class="md-ellipsis">
-      📋 Creación y Manipulación de Arrays
+      2. ⏪ Añadir un Elemento al Inicio del Array (unshift())
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#arrays-multidimensionales" class="md-nav__link">
+  <a href="#3-eliminar-el-ultimo-elemento-del-array-pop" class="md-nav__link">
     <span class="md-ellipsis">
-      🌟 Arrays Multidimensionales
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tecnicas-avanzadas-para-manipular-objetos-json-y-arrays" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 Técnicas Avanzadas para Manipular Objetos JSON y Arrays
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🚀 Técnicas Avanzadas para Manipular Objetos JSON y Arrays">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-mapeo-de-datos-con-map" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Mapeo de Datos con map()
+      3. ❌ Eliminar el Último Elemento del Array (pop())
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-filtrado-con-filter" class="md-nav__link">
+  <a href="#4-eliminar-el-primer-elemento-del-array-shift" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Filtrado con filter()
+      4. 🗑️ Eliminar el Primer Elemento del Array (shift())
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-reducir-datos-con-reduce" class="md-nav__link">
+  <a href="#5-eliminar-un-elemento-en-una-posicion-especifica-splice" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Reducir Datos con reduce()
+      5. ✂️ Eliminar un Elemento en una Posición Específica (splice())
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manipulacion-de-objetos-json-con-funciones-avanzadas" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔧 Manipulación de Objetos JSON con Funciones Avanzadas
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔧 Manipulación de Objetos JSON con Funciones Avanzadas">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#uso-de-objectkeys-objectvalues-y-objectentries" class="md-nav__link">
+  <a href="#6-seleccionar-un-elemento-especifico-por-su-indice" class="md-nav__link">
     <span class="md-ellipsis">
-      Uso de Object.keys(), Object.values() y Object.entries()
+      6. 🔍 Seleccionar un Elemento Específico por su Índice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-seleccionar-un-elemento-aleatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 🎲 Seleccionar un Elemento Aleatorio
     </span>
   </a>
   
@@ -886,6 +832,90 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT 3. Objetos predefinidos del lenguaje
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            UT 3. Objetos predefinidos del lenguaje
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut3-objetos-predefinidos-del-lenguaje/1introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Introducción a los Objetos Predefinidos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut3-objetos-predefinidos-del-lenguaje/2objetosnativosdellenguaje/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Objetos Nativos del Lenguaje
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -913,127 +943,73 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#que-es-json-javascript-object-notation" class="md-nav__link">
+  <a href="#operaciones-basicas-con-arrays-en-javascript" class="md-nav__link">
     <span class="md-ellipsis">
-      📌 ¿Qué es JSON? (JavaScript Object Notation)
+      🛠️ Operaciones Básicas con Arrays en JavaScript
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📌 ¿Qué es JSON? (JavaScript Object Notation)">
+    <nav class="md-nav" aria-label="🛠️ Operaciones Básicas con Arrays en JavaScript">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#estructura-de-un-objeto-json" class="md-nav__link">
+  <a href="#1-anadir-un-elemento-al-final-del-array-push" class="md-nav__link">
     <span class="md-ellipsis">
-      📋 Estructura de un Objeto JSON
+      1. ➕ Añadir un Elemento al Final del Array (push())
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#uso-de-json-en-aplicaciones" class="md-nav__link">
+  <a href="#2-anadir-un-elemento-al-inicio-del-array-unshift" class="md-nav__link">
     <span class="md-ellipsis">
-      📥 Uso de JSON en Aplicaciones
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#que-es-una-matriz-array-en-javascript" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔄 ¿Qué es una Matriz (Array) en JavaScript?
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔄 ¿Qué es una Matriz (Array) en JavaScript?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#creacion-y-manipulacion-de-arrays" class="md-nav__link">
-    <span class="md-ellipsis">
-      📋 Creación y Manipulación de Arrays
+      2. ⏪ Añadir un Elemento al Inicio del Array (unshift())
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#arrays-multidimensionales" class="md-nav__link">
+  <a href="#3-eliminar-el-ultimo-elemento-del-array-pop" class="md-nav__link">
     <span class="md-ellipsis">
-      🌟 Arrays Multidimensionales
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tecnicas-avanzadas-para-manipular-objetos-json-y-arrays" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 Técnicas Avanzadas para Manipular Objetos JSON y Arrays
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🚀 Técnicas Avanzadas para Manipular Objetos JSON y Arrays">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-mapeo-de-datos-con-map" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Mapeo de Datos con map()
+      3. ❌ Eliminar el Último Elemento del Array (pop())
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-filtrado-con-filter" class="md-nav__link">
+  <a href="#4-eliminar-el-primer-elemento-del-array-shift" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Filtrado con filter()
+      4. 🗑️ Eliminar el Primer Elemento del Array (shift())
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-reducir-datos-con-reduce" class="md-nav__link">
+  <a href="#5-eliminar-un-elemento-en-una-posicion-especifica-splice" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Reducir Datos con reduce()
+      5. ✂️ Eliminar un Elemento en una Posición Específica (splice())
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manipulacion-de-objetos-json-con-funciones-avanzadas" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔧 Manipulación de Objetos JSON con Funciones Avanzadas
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔧 Manipulación de Objetos JSON con Funciones Avanzadas">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#uso-de-objectkeys-objectvalues-y-objectentries" class="md-nav__link">
+  <a href="#6-seleccionar-un-elemento-especifico-por-su-indice" class="md-nav__link">
     <span class="md-ellipsis">
-      Uso de Object.keys(), Object.values() y Object.entries()
+      6. 🔍 Seleccionar un Elemento Específico por su Índice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-seleccionar-un-elemento-aleatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 🎲 Seleccionar un Elemento Aleatorio
     </span>
   </a>
   
@@ -1059,106 +1035,69 @@
                   
 
 
-<h1 id="trabajando-con-objetos-json-y-matrices-en-javascript">Trabajando con Objetos JSON y Matrices en JavaScript 🚀</h1>
-<p>JavaScript, siendo uno de los lenguajes más utilizados en el desarrollo web, se destaca por su capacidad de manejar estructuras de datos de manera eficiente, siendo los objetos JSON y las matrices (arrays) dos de los pilares fundamentales. En este artículo, exploraremos en profundidad qué son los objetos JSON y las matrices, cómo se utilizan, y presentaremos algunas técnicas avanzadas para sacar el máximo provecho de estas estructuras.</p>
-<h3 id="que-es-json-javascript-object-notation">📌 ¿Qué es JSON? (JavaScript Object Notation)</h3>
-<p><strong>JSON (JavaScript Object Notation)</strong> es un formato ligero de intercambio de datos que es fácil de leer y escribir tanto para humanos como para máquinas. Se utiliza ampliamente para transmitir datos entre un servidor y una aplicación web como texto sin formato que se puede convertir fácilmente en objetos JavaScript.</p>
-<h4 id="estructura-de-un-objeto-json">📋 Estructura de un Objeto JSON</h4>
-<p>Los objetos JSON están compuestos por pares clave-valor. Las claves son cadenas de texto (strings) y los valores pueden ser de varios tipos: cadenas, números, arrays, otros objetos, booleanos, o incluso <code>null</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Ejemplo de un objeto JSON en JavaScript</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">usuario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Juan&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">edad</span><span class="o">:</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;juan@example.com&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">activo</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">direccion</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">calle</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Av. Siempre Viva&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nx">ciudad</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Springfield&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nx">habilidades</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;JavaScript&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;React&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Node.js&quot;</span><span class="p">]</span>
-<span class="p">};</span>
+<h1 id="guia-basica-de-arrays-en-javascript-manipula-tus-datos-con-estilo">📚 Guía Básica de Arrays en JavaScript: Manipula tus Datos con Estilo 🚀</h1>
+<p>Trabajar con arrays es una de las habilidades esenciales para cualquier desarrollador JavaScript. Las operaciones básicas como añadir, eliminar y seleccionar elementos son la base de muchas aplicaciones y scripts. Aquí te mostramos cómo hacerlo de manera clara y visualmente atractiva, ¡para que le saques el máximo provecho a tus datos! 🧑‍💻</p>
+<h2 id="operaciones-basicas-con-arrays-en-javascript">🛠️ Operaciones Básicas con Arrays en JavaScript</h2>
+<p>Los arrays son listas ordenadas de elementos, y aprender a manipularlos es clave. Vamos a ver cómo puedes trabajar con ellos con ejemplos prácticos y fáciles de seguir. 🎯</p>
+<h3 id="1-anadir-un-elemento-al-final-del-array-push">1. ➕ Añadir un Elemento al Final del Array (<code>push()</code>)</h3>
+<p>¿Quieres agregar algo al final de tu lista? <code>push()</code> es tu mejor amigo.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">frutas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;manzana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;banana&quot;</span><span class="p">];</span>
+<span class="nx">frutas</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&quot;naranja&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Añade &quot;naranja&quot; al final</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">frutas</span><span class="p">);</span><span class="w"> </span><span class="c1">// [&quot;manzana&quot;, &quot;banana&quot;, &quot;naranja&quot;]</span>
 </code></pre></div>
-<p>En este ejemplo, el objeto <code>usuario</code> tiene varias propiedades, incluidas otras estructuras como arrays y objetos anidados.</p>
-<h4 id="uso-de-json-en-aplicaciones">📥 Uso de JSON en Aplicaciones</h4>
-<p>JSON se utiliza principalmente para intercambiar datos entre un cliente y un servidor. Es comúnmente utilizado en APIs RESTful donde los datos se envían y reciben en formato JSON.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Convertir un objeto JavaScript en una cadena JSON</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">jsonString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">usuario</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">jsonString</span><span class="p">);</span>
-
-<span class="c1">// Convertir una cadena JSON de vuelta a un objeto JavaScript</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">objetoUsuario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">jsonString</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">objetoUsuario</span><span class="p">);</span>
+<p><strong>Diagrama:</strong></p>
+<pre class="mermaid"><code>graph TD;
+    A[manzana] --&gt; B[banana];
+    B --&gt; C[naranja];</code></pre>
+<h3 id="2-anadir-un-elemento-al-inicio-del-array-unshift">2. ⏪ Añadir un Elemento al Inicio del Array (<code>unshift()</code>)</h3>
+<p>Si necesitas insertar un elemento al principio, <code>unshift()</code> lo hace por ti.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">frutas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;manzana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;banana&quot;</span><span class="p">];</span>
+<span class="nx">frutas</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="s2">&quot;uva&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Añade &quot;uva&quot; al inicio</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">frutas</span><span class="p">);</span><span class="w"> </span><span class="c1">// [&quot;uva&quot;, &quot;manzana&quot;, &quot;banana&quot;]</span>
 </code></pre></div>
-<h3 id="que-es-una-matriz-array-en-javascript">🔄 ¿Qué es una Matriz (Array) en JavaScript?</h3>
-<p>Las <strong>matrices</strong> son colecciones ordenadas de elementos que permiten almacenar múltiples valores en un solo lugar. Cada elemento en una matriz tiene un índice, comenzando desde 0, lo que facilita el acceso y manipulación de los datos.</p>
-<h4 id="creacion-y-manipulacion-de-arrays">📋 Creación y Manipulación de Arrays</h4>
-<p>Los arrays pueden contener cualquier tipo de dato, incluidos números, strings, otros arrays y objetos JSON.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Ejemplo básico de un array</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">frutas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;manzana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;cereza&quot;</span><span class="p">];</span>
-
-<span class="c1">// Acceder a un elemento</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">frutas</span><span class="p">[</span><span class="mf">1</span><span class="p">]);</span><span class="w"> </span><span class="c1">// Output: banana</span>
-
-<span class="c1">// Añadir un elemento al final</span>
-<span class="nx">frutas</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&quot;naranja&quot;</span><span class="p">);</span>
-
-<span class="c1">// Eliminar el último elemento</span>
-<span class="nx">frutas</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+<p><strong>Diagrama:</strong></p>
+<pre class="mermaid"><code>graph TD;
+    U[uva] --&gt; M[manzana];
+    M --&gt; B[banana];</code></pre>
+<h3 id="3-eliminar-el-ultimo-elemento-del-array-pop">3. ❌ Eliminar el Último Elemento del Array (<code>pop()</code>)</h3>
+<p>Para eliminar el último elemento de tu array, <code>pop()</code> es la función indicada.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">frutas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;manzana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;naranja&quot;</span><span class="p">];</span>
+<span class="nx">frutas</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span><span class="w"> </span><span class="c1">// Elimina &quot;naranja&quot;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">frutas</span><span class="p">);</span><span class="w"> </span><span class="c1">// [&quot;manzana&quot;, &quot;banana&quot;]</span>
 </code></pre></div>
-<h4 id="arrays-multidimensionales">🌟 Arrays Multidimensionales</h4>
-<p>Las matrices también pueden ser multidimensionales, es decir, pueden contener otros arrays, permitiendo la creación de estructuras complejas como tablas o listas de listas.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Array bidimensional (matriz)</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">matriz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">],</span>
-<span class="w">    </span><span class="p">[</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">6</span><span class="p">],</span>
-<span class="w">    </span><span class="p">[</span><span class="mf">7</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span><span class="w"> </span><span class="mf">9</span><span class="p">]</span>
-<span class="p">];</span>
-
-<span class="c1">// Acceso a elementos en una matriz</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">matriz</span><span class="p">[</span><span class="mf">1</span><span class="p">][</span><span class="mf">2</span><span class="p">]);</span><span class="w"> </span><span class="c1">// Output: 6</span>
+<h3 id="4-eliminar-el-primer-elemento-del-array-shift">4. 🗑️ Eliminar el Primer Elemento del Array (<code>shift()</code>)</h3>
+<p>Si deseas deshacerte del primer elemento, utiliza <code>shift()</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">frutas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;manzana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;naranja&quot;</span><span class="p">];</span>
+<span class="nx">frutas</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span><span class="w"> </span><span class="c1">// Elimina &quot;manzana&quot;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">frutas</span><span class="p">);</span><span class="w"> </span><span class="c1">// [&quot;banana&quot;, &quot;naranja&quot;]</span>
 </code></pre></div>
-<h3 id="tecnicas-avanzadas-para-manipular-objetos-json-y-arrays">🚀 Técnicas Avanzadas para Manipular Objetos JSON y Arrays</h3>
-<p>Para aprovechar al máximo los objetos JSON y las matrices, es útil conocer algunos métodos avanzados que JavaScript ofrece para la manipulación de datos.</p>
-<h4 id="1-mapeo-de-datos-con-map">1. <strong>Mapeo de Datos con <code>map()</code></strong></h4>
-<p>La función <code>map()</code> transforma cada elemento de un array según una función de callback, devolviendo un nuevo array.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Ejemplo de mapeo de un array de objetos</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">productos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Laptop&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">precio</span><span class="o">:</span><span class="w"> </span><span class="mf">800</span><span class="w"> </span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Teclado&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">precio</span><span class="o">:</span><span class="w"> </span><span class="mf">50</span><span class="w"> </span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Ratón&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">precio</span><span class="o">:</span><span class="w"> </span><span class="mf">25</span><span class="w"> </span><span class="p">}</span>
-<span class="p">];</span>
-
-<span class="kd">const</span><span class="w"> </span><span class="nx">nombresProductos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">productos</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">producto</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">producto</span><span class="p">.</span><span class="nx">nombre</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nombresProductos</span><span class="p">);</span><span class="w"> </span><span class="c1">// [&quot;Laptop&quot;, &quot;Teclado&quot;, &quot;Ratón&quot;]</span>
+<h3 id="5-eliminar-un-elemento-en-una-posicion-especifica-splice">5. ✂️ Eliminar un Elemento en una Posición Específica (<code>splice()</code>)</h3>
+<p><code>splice()</code> te permite eliminar elementos en una posición específica.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">frutas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;manzana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;naranja&quot;</span><span class="p">];</span>
+<span class="nx">frutas</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// Elimina &quot;banana&quot; en la posición 1</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">frutas</span><span class="p">);</span><span class="w"> </span><span class="c1">// [&quot;manzana&quot;, &quot;naranja&quot;]</span>
 </code></pre></div>
-<h4 id="2-filtrado-con-filter">2. <strong>Filtrado con <code>filter()</code></strong></h4>
-<p>El método <code>filter()</code> permite crear un nuevo array que contiene solo los elementos que cumplen con una condición específica.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Filtrar productos cuyo precio sea mayor a 30</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">productosCaros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">productos</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">producto</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">producto</span><span class="p">.</span><span class="nx">precio</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">30</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">productosCaros</span><span class="p">);</span><span class="w"> </span><span class="c1">// [{ id: 1, nombre: &quot;Laptop&quot;, precio: 800 }, { id: 2, nombre: &quot;Teclado&quot;, precio: 50 }]</span>
+<p><strong>Diagrama:</strong></p>
+<pre class="mermaid"><code>graph TD;
+    M[manzana] --&gt; N[naranja];</code></pre>
+<h3 id="6-seleccionar-un-elemento-especifico-por-su-indice">6. 🔍 Seleccionar un Elemento Específico por su Índice</h3>
+<p>Accede directamente a cualquier elemento por su índice. Fácil y rápido.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">frutas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;manzana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;naranja&quot;</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">frutas</span><span class="p">[</span><span class="mf">0</span><span class="p">]);</span><span class="w"> </span><span class="c1">// Selecciona &quot;manzana&quot;</span>
 </code></pre></div>
-<h4 id="3-reducir-datos-con-reduce">3. <strong>Reducir Datos con <code>reduce()</code></strong></h4>
-<p><code>reduce()</code> permite combinar todos los elementos de un array en un solo valor, útil para cálculos acumulativos.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Sumar los precios de los productos</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">totalPrecio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">productos</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">total</span><span class="p">,</span><span class="w"> </span><span class="nx">producto</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">producto</span><span class="p">.</span><span class="nx">precio</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Total: $</span><span class="si">${</span><span class="nx">totalPrecio</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span><span class="w"> </span><span class="c1">// Total: $875</span>
+<h3 id="7-seleccionar-un-elemento-aleatorio">7. 🎲 Seleccionar un Elemento Aleatorio</h3>
+<p>Para seleccionar un elemento aleatorio, combina <code>Math.random()</code> y <code>Math.floor()</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">frutas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;manzana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;naranja&quot;</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">randomIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">frutas</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">frutas</span><span class="p">[</span><span class="nx">randomIndex</span><span class="p">]);</span><span class="w"> </span><span class="c1">// Selecciona un elemento aleatorio</span>
 </code></pre></div>
-<h3 id="manipulacion-de-objetos-json-con-funciones-avanzadas">🔧 Manipulación de Objetos JSON con Funciones Avanzadas</h3>
-<p>Los objetos JSON también pueden ser manipulados usando funciones avanzadas que permiten recorrer y modificar los datos de manera eficiente.</p>
-<h4 id="uso-de-objectkeys-objectvalues-y-objectentries"><strong>Uso de <code>Object.keys()</code>, <code>Object.values()</code> y <code>Object.entries()</code></strong></h4>
-<p>Estas funciones permiten extraer las claves, valores o ambos de un objeto JSON.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Obtener las claves de un objeto</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">claves</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">usuario</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">claves</span><span class="p">);</span><span class="w"> </span><span class="c1">// [&quot;nombre&quot;, &quot;edad&quot;, &quot;email&quot;, &quot;activo&quot;, &quot;direccion&quot;, &quot;habilidades&quot;]</span>
-
-<span class="c1">// Obtener los valores</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">valores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Object</span><span class="p">.</span><span class="nx">values</span><span class="p">(</span><span class="nx">usuario</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">valores</span><span class="p">);</span>
-
-<span class="c1">// Obtener pares clave-valor</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">pares</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Object</span><span class="p">.</span><span class="nx">entries</span><span class="p">(</span><span class="nx">usuario</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">pares</span><span class="p">);</span>
-</code></pre></div>
+<p><strong>Diagrama:</strong></p>
+<pre class="mermaid"><code>graph TD;
+    R[Random Index] --&gt; F1[manzana];
+    R --&gt; F2[banana];
+    R --&gt; F3[naranja];</code></pre>
+<hr />
+<p>Estas son las operaciones básicas que necesitas para manipular arrays en JavaScript sin complicaciones. ¡Practica estas técnicas y tendrás el control total de tus datos! 💡</p>
 
 
 
