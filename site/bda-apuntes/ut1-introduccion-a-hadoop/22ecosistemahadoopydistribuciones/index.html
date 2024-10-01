@@ -1,0 +1,1116 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../21queesapachehadoop/">
+      
+      
+        <link rel="next" href="../23arquitectura/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>2.2. Ecosistema Hadoop y sus Distribuciones - Big Data Aplicado</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="light-green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ecosistema-hadoop-y-distribuciones" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Big Data Aplicado" class="md-header__button md-logo" aria-label="Big Data Aplicado" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Big Data Aplicado
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2.2. Ecosistema Hadoop y sus Distribuciones
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="light-green"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="light-green" data-md-color-accent="light-green"  aria-label="Quitar modo oscuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Quitar modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Big Data Aplicado" class="md-nav__button md-logo" aria-label="Big Data Aplicado" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Big Data Aplicado
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../planificacion.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Planificación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT1. Introducción a Big Data Aplicado y Hadoop
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            UT1. Introducción a Big Data Aplicado y Hadoop
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1motivacionyorigen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Motivación y Origen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2. Apache Hadoop a Alto Nivel
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            2. Apache Hadoop a Alto Nivel
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21queesapachehadoop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.1. ¿Qué es Apache Hadoop?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2.2. Ecosistema Hadoop y sus Distribuciones
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    2.2. Ecosistema Hadoop y sus Distribuciones
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-el-ecosistema-hadoop" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 ¿Qué es el Ecosistema Hadoop?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 ¿Qué es el Ecosistema Hadoop?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#componentes-clave-del-ecosistema-hadoop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes Clave del Ecosistema Hadoop 🛠️
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distribuciones-populares-de-hadoop" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌐 Distribuciones Populares de Hadoop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 Distribuciones Populares de Hadoop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-cloudera-distribution-for-hadoop-cdh" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Cloudera Distribution for Hadoop (CDH) 🏢
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-hortonworks-data-platform-hdp" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Hortonworks Data Platform (HDP) 🐘
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-mapr" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. MapR 🌲
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-amazon-emr-elastic-mapreduce" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Amazon EMR (Elastic MapReduce) ☁️
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#casos-de-uso-del-ecosistema-hadoop" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚦 Casos de Uso del Ecosistema Hadoop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚦 Casos de Uso del Ecosistema Hadoop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-analisis-de-redes-sociales" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Análisis de Redes Sociales 🗨️
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-recomendacion-de-productos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Recomendación de Productos 🛍️
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-prevencion-de-fraudes-financieros" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Prevención de Fraudes Financieros 🏦
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-monitoreo-de-infraestructuras" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Monitoreo de Infraestructuras 📡
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-completo-de-integracion-del-ecosistema-hadoop-en-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Ejemplo Completo de Integración del Ecosistema Hadoop en JavaScript
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌟 Conclusión
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../23arquitectura/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3. Arquitectura
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../24beneficiosdesventajasydificultades/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4. Beneficios, Desventajas y Dificultades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-el-ecosistema-hadoop" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 ¿Qué es el Ecosistema Hadoop?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 ¿Qué es el Ecosistema Hadoop?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#componentes-clave-del-ecosistema-hadoop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes Clave del Ecosistema Hadoop 🛠️
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distribuciones-populares-de-hadoop" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌐 Distribuciones Populares de Hadoop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 Distribuciones Populares de Hadoop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-cloudera-distribution-for-hadoop-cdh" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Cloudera Distribution for Hadoop (CDH) 🏢
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-hortonworks-data-platform-hdp" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Hortonworks Data Platform (HDP) 🐘
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-mapr" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. MapR 🌲
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-amazon-emr-elastic-mapreduce" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Amazon EMR (Elastic MapReduce) ☁️
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#casos-de-uso-del-ecosistema-hadoop" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚦 Casos de Uso del Ecosistema Hadoop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚦 Casos de Uso del Ecosistema Hadoop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-analisis-de-redes-sociales" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Análisis de Redes Sociales 🗨️
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-recomendacion-de-productos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Recomendación de Productos 🛍️
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-prevencion-de-fraudes-financieros" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Prevención de Fraudes Financieros 🏦
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-monitoreo-de-infraestructuras" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Monitoreo de Infraestructuras 📡
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-completo-de-integracion-del-ecosistema-hadoop-en-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Ejemplo Completo de Integración del Ecosistema Hadoop en JavaScript
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌟 Conclusión
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="ecosistema-hadoop-y-distribuciones">Ecosistema Hadoop y Distribuciones 🌐🚀</h1>
+<p>El <strong>ecosistema Hadoop</strong> ha revolucionado la forma en que las organizaciones manejan y procesan datos a gran escala. Hadoop no es solo un software; es un ecosistema completo de herramientas y tecnologías que trabajan juntas para resolver los desafíos del Big Data. A medida que el volumen, la variedad y la velocidad de los datos continúan creciendo, el ecosistema Hadoop se expande para incluir múltiples componentes y distribuciones diseñadas para aprovechar al máximo esta revolución de datos.</p>
+<h2 id="que-es-el-ecosistema-hadoop">🧠 ¿Qué es el Ecosistema Hadoop?</h2>
+<p>El ecosistema Hadoop es una colección de proyectos y herramientas que interactúan entre sí para proporcionar una plataforma integral para el almacenamiento, procesamiento y análisis de grandes volúmenes de datos. Este ecosistema incluye componentes para la ingestión de datos, el procesamiento en tiempo real, el análisis avanzado y la gestión de recursos.</p>
+<pre class="mermaid"><code>graph LR
+    A[Hadoop Ecosystem] --&gt; B[HDFS]
+    A --&gt; C[YARN]
+    A --&gt; D[MapReduce]
+    A --&gt; E[Spark]
+    A --&gt; F[Hive]
+    A --&gt; G[HBase]
+    A --&gt; H[Pig]
+    A --&gt; I[Oozie]
+    A --&gt; J[Sqoop]
+    A --&gt; K[Flume]</code></pre>
+<h3 id="componentes-clave-del-ecosistema-hadoop">Componentes Clave del Ecosistema Hadoop 🛠️</h3>
+<ol>
+<li>
+<p><strong>HDFS (Hadoop Distributed File System)</strong> 📂: El sistema de archivos distribuido que almacena grandes volúmenes de datos de manera eficiente y segura.</p>
+</li>
+<li>
+<p><strong>YARN (Yet Another Resource Negotiator)</strong> 🎯: Gestor de recursos que asigna y administra las tareas dentro del clúster Hadoop.</p>
+</li>
+<li>
+<p><strong>MapReduce</strong> 🛠️: Modelo de programación que permite el procesamiento paralelo de datos en un entorno distribuido.</p>
+</li>
+<li>
+<p><strong>Apache Spark</strong> ⚡: Motor de procesamiento rápido y en memoria que ofrece una alternativa más ágil a MapReduce para el análisis de datos en tiempo real.</p>
+</li>
+<li>
+<p><strong>Apache Hive</strong> 🐝: Herramienta que facilita la consulta y el análisis de datos almacenados en HDFS utilizando un lenguaje similar a SQL, conocido como HiveQL.</p>
+</li>
+<li>
+<p><strong>Apache HBase</strong> 📊: Base de datos NoSQL de alto rendimiento que proporciona acceso en tiempo real a grandes volúmenes de datos distribuidos.</p>
+</li>
+<li>
+<p><strong>Apache Pig</strong> 🐷: Lenguaje de alto nivel para el procesamiento de grandes conjuntos de datos que simplifica la escritura de scripts complejos en comparación con MapReduce.</p>
+</li>
+<li>
+<p><strong>Apache Oozie</strong> 📅: Coordinador de flujos de trabajo que permite programar y gestionar trabajos en Hadoop.</p>
+</li>
+<li>
+<p><strong>Apache Sqoop</strong> 🔄: Herramienta que facilita la transferencia de datos entre Hadoop y bases de datos relacionales.</p>
+</li>
+<li>
+<p><strong>Apache Flume</strong> 📥: Sistema de ingestión de datos que permite recopilar, agregar y mover grandes cantidades de datos de eventos a Hadoop.</p>
+</li>
+</ol>
+<hr />
+<h3 id="distribuciones-populares-de-hadoop">🌐 Distribuciones Populares de Hadoop</h3>
+<p>Las distribuciones de Hadoop son paquetes que integran el ecosistema de herramientas Hadoop con características adicionales de administración y soporte. Estas distribuciones están diseñadas para simplificar la implementación, configuración y mantenimiento de clústeres Hadoop. Aquí te presentamos algunas de las más populares:</p>
+<h4 id="1-cloudera-distribution-for-hadoop-cdh">1. <strong>Cloudera Distribution for Hadoop (CDH)</strong> 🏢</h4>
+<p>Cloudera es una de las distribuciones comerciales más reconocidas de Hadoop. Ofrece una versión completa del ecosistema Hadoop con herramientas adicionales para la gestión, seguridad y análisis de datos.</p>
+<ul>
+<li><strong>Gestión Simplificada</strong>: Cloudera Manager permite gestionar y monitorear el clúster de forma centralizada.</li>
+<li><strong>Seguridad Mejorada</strong>: Ofrece encriptación de datos y autenticación avanzada.</li>
+<li><strong>Optimización de Desempeño</strong>: Ajustes automáticos que mejoran la eficiencia de las tareas.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">// Ejemplo de conexión a un clúster de Hadoop usando Cloudera</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">cloudera</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;cloudera-api&#39;</span><span class="p">);</span>
+
+<span class="c1">// Conectar al clúster de Cloudera</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">cloudera</span><span class="p">.</span><span class="nx">Cluster</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">hostname</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;cloudera-cluster.local&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">username</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;admin&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">password</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;password&#39;</span>
+<span class="p">});</span>
+
+<span class="nx">client</span><span class="p">.</span><span class="nx">getStatus</span><span class="p">((</span><span class="nx">err</span><span class="p">,</span><span class="w"> </span><span class="nx">status</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error conectando al clúster:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Estado del clúster:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">status</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<h4 id="2-hortonworks-data-platform-hdp">2. <strong>Hortonworks Data Platform (HDP)</strong> 🐘</h4>
+<p>Hortonworks, ahora parte de Cloudera, ofrece una distribución de Hadoop completamente de código abierto. HDP se enfoca en la integración de datos y proporciona un sólido conjunto de herramientas para el análisis y la gestión de datos.</p>
+<ul>
+<li><strong>Soporte 100% Open Source</strong>: Fomenta la innovación y permite la personalización completa de la plataforma.</li>
+<li><strong>Integración con la Nube</strong>: Compatible con implementaciones en la nube y en entornos híbridos.</li>
+<li><strong>Simplificación de Operaciones</strong>: Herramientas para la automatización de flujos de trabajo y la gestión de datos.</li>
+</ul>
+<h4 id="3-mapr">3. <strong>MapR</strong> 🌲</h4>
+<p>MapR destaca por su arquitectura única que combina Hadoop con un sistema de archivos distribuido patentado y una base de datos NoSQL integrada. Ofrece una alta disponibilidad y rendimiento superior en comparación con otras distribuciones.</p>
+<ul>
+<li><strong>MapR XD y MapR DB</strong>: Proporcionan almacenamiento y gestión de datos avanzados con capacidades empresariales.</li>
+<li><strong>Soporte de Contenedores y Microservicios</strong>: Compatible con Kubernetes para la implementación de aplicaciones modernas.</li>
+<li><strong>Procesamiento en Tiempo Real</strong>: Capacidades para análisis de flujos de datos en tiempo real.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">// Ejemplo de integración con MapR usando JavaScript</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">mapr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mapr-streams&#39;</span><span class="p">);</span>
+
+<span class="c1">// Configuración de una conexión de flujo de datos en tiempo real</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">stream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">mapr</span><span class="p">.</span><span class="nx">createStream</span><span class="p">(</span><span class="s1">&#39;/path/to/stream&#39;</span><span class="p">);</span>
+
+<span class="nx">stream</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">message</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Mensaje recibido:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">message</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+<span class="p">});</span>
+
+<span class="nx">stream</span><span class="p">.</span><span class="nx">write</span><span class="p">({</span><span class="w"> </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;sensor1&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;temperatura: 22°C&#39;</span><span class="w"> </span><span class="p">});</span>
+</code></pre></div>
+<h4 id="4-amazon-emr-elastic-mapreduce">4. <strong>Amazon EMR (Elastic MapReduce)</strong> ☁️</h4>
+<p>Amazon EMR es la distribución basada en la nube de Hadoop ofrecida por AWS. Permite escalar fácilmente el clúster y ajustar los recursos según la demanda de procesamiento de datos.</p>
+<ul>
+<li><strong>Escalabilidad Automática</strong>: Ajusta la capacidad del clúster en función de la carga de trabajo.</li>
+<li><strong>Integración con Servicios AWS</strong>: Fácil integración con S3, Redshift y otras soluciones de AWS.</li>
+<li><strong>Costos Bajo Demanda</strong>: Paga solo por lo que usas, optimizando los costos operativos.</li>
+</ul>
+<hr />
+<h3 id="casos-de-uso-del-ecosistema-hadoop">🚦 Casos de Uso del Ecosistema Hadoop</h3>
+<p>El ecosistema Hadoop no solo almacena datos; lo transforma en valor accionable. A continuación, se presentan algunos casos de uso donde las empresas utilizan Hadoop y sus herramientas para generar impacto:</p>
+<h4 id="1-analisis-de-redes-sociales"><strong>1. Análisis de Redes Sociales</strong> 🗨️</h4>
+<p>Las empresas analizan millones de interacciones en redes sociales para entender las tendencias del mercado y la opinión del cliente. Herramientas como Spark y Hive se utilizan para procesar estos datos rápidamente.</p>
+<h4 id="2-recomendacion-de-productos"><strong>2. Recomendación de Productos</strong> 🛍️</h4>
+<p>Las plataformas de e-commerce utilizan algoritmos de aprendizaje automático en Hadoop para analizar el comportamiento del usuario y recomendar productos personalizados en tiempo real.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Ejemplo de recomendación de productos usando Spark y JavaScript</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">spark</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;apache-spark&#39;</span><span class="p">);</span>
+
+<span class="c1">// Crear un modelo de recomendación basado en el historial de compras del usuario</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">recommendations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">spark</span><span class="p">.</span><span class="nx">mllib</span><span class="p">.</span><span class="nx">recommendation</span><span class="p">.</span><span class="nx">ALS</span><span class="p">.</span><span class="nx">train</span><span class="p">(</span><span class="nx">usersPurchases</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">0.01</span><span class="p">);</span>
+
+<span class="nx">recommendations</span><span class="p">.</span><span class="nx">predict</span><span class="p">(</span><span class="nx">user</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="w"> </span><span class="nx">products</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error generando recomendaciones:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Productos recomendados:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">products</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<h4 id="3-prevencion-de-fraudes-financieros"><strong>3. Prevención de Fraudes Financieros</strong> 🏦</h4>
+<p>Bancos y aseguradoras usan Hadoop para analizar transacciones en tiempo real y detectar patrones sospechosos. Hadoop permite combinar múltiples fuentes de datos para una detección de fraudes más precisa y rápida.</p>
+<h4 id="4-monitoreo-de-infraestructuras"><strong>4. Monitoreo de Infraestructuras</strong> 📡</h4>
+<p>Las empresas de telecomunicaciones utilizan el ecosistema Hadoop para monitorear sus infraestructuras de red, detectando fallos y optimizando el rendimiento en tiempo real.</p>
+<hr />
+<h3 id="ejemplo-completo-de-integracion-del-ecosistema-hadoop-en-javascript">🛠️ Ejemplo Completo de Integración del Ecosistema Hadoop en JavaScript</h3>
+<p>Para entender cómo funciona el ecosistema Hadoop en la práctica, consideremos un ejemplo completo que integra varios componentes:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">hdfs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;hdfs&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">spark</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;apache-spark&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">hive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;hive-client&#39;</span><span class="p">);</span>
+
+<span class="c1">// Configuración de HDFS</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">hdfsClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">hdfs</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">protocol</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;http&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">hostname</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">port</span><span class="o">:</span><span class="w"> </span><span class="mf">9870</span>
+<span class="p">});</span>
+
+<span class="c1">// Subir datos a HDFS</span>
+<span class="nx">hdfsClient</span><span class="p">.</span><span class="nx">createFile</span><span class="p">(</span><span class="s1">&#39;/user/data.txt&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Datos para análisis&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error al subir archivo:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Archivo subido a HDFS correctamente.&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+
+<span class="c1">// Consultar datos en Hive</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">hiveClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">hive</span><span class="p">.</span><span class="nx">createClient</span><span class="p">({</span><span class="w"> </span><span class="nx">host</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">port</span><span class="o">:</span><span class="w"> </span><span class="mf">10000</span><span class="w"> </span><span class="p">});</span>
+
+<span class="nx">hiveClient</span><span class="p">.</span><span class="nx">connect</span><span class="p">().</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">hiveClient</span><span class="p">.</span><span class="nx">query</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM logs WHERE event=&quot;error&quot;;&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="w"> </span><span class="nx">results</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error en la consulta Hive:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+
+
+<span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Resultados de la consulta:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">results</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">});</span>
+
+<span class="c1">// Procesar datos con Spark</span>
+<span class="nx">spark</span><span class="p">.</span><span class="nx">session</span><span class="p">.</span><span class="nx">builder</span><span class="p">().</span><span class="nx">getOrCreate</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="nx">session</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">dataFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">session</span><span class="p">.</span><span class="nx">read</span><span class="p">().</span><span class="nx">format</span><span class="p">(</span><span class="s1">&#39;csv&#39;</span><span class="p">).</span><span class="nx">load</span><span class="p">(</span><span class="s1">&#39;/user/data.txt&#39;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="nx">dataFrame</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">dataFrame</span><span class="p">.</span><span class="nx">col</span><span class="p">(</span><span class="s1">&#39;event&#39;</span><span class="p">).</span><span class="nx">equalTo</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">))</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">session</span><span class="p">.</span><span class="nx">stop</span><span class="p">());</span>
+<span class="p">});</span>
+</code></pre></div>
+<hr />
+<h3 id="conclusion">🌟 Conclusión</h3>
+<p>El ecosistema Hadoop y sus diversas distribuciones son fundamentales para cualquier estrategia de Big Data moderna. Ofrecen una solución integral para almacenar, procesar y analizar datos a gran escala, permitiendo a las empresas tomar decisiones informadas basadas en datos. Con la flexibilidad para manejar todo tipo de datos y la capacidad de escalar a cualquier tamaño de clúster, Hadoop continúa liderando la transformación digital en todo el mundo. ¡Explora el poder del ecosistema Hadoop y descubre cómo puede revolucionar tu gestión de datos! 🚀📊</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../21queesapachehadoop/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2.1. ¿Qué es Apache Hadoop?">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                2.1. ¿Qué es Apache Hadoop?
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../23arquitectura/" class="md-footer__link md-footer__link--next" aria-label="Next: 2.3. Arquitectura">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                2.3. Arquitectura
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
