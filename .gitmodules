@@ -6,3 +6,7 @@
 	path = src/dwec-apuntes
 	url = https://github.com/jgarciadeparedesh02/dwec-apuntes.git
 	branch = main
+[submodule "src/bda-apuntes"]
+	path = src/bda-apuntes
+	url = https://github.com/jgarciadeparedesh02/bda-apuntes.git
+	branch = main

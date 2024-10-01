@@ -9,7 +9,13 @@ repos:
     image: images/icon-dwec.png
     url: https://github.com/jgarciadeparedesh02/dwec-apuntes.git
     branch: main
-    index_html: install/index.html
+    index_html: index.html
+  - name: bda-apuntes
+    title: Apuntes BDA
+    image: images/icon-bda.png
+    url: https://github.com/jgarciadeparedesh02/bda-apuntes.git
+    branch: main
+    index_html: index.html
 element_id: multirepo
 target_dir: site
 repos_dir: src

@@ -996,9 +996,54 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejemplo-con-ngif-y-ngfor" class="md-nav__link">
+  <a href="#directiva-ngif" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejemplo con ngIf y ngFor:
+      Directiva ngIf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nueva-sintaxis-if-en-angular-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nueva sintaxis @if en Angular 18
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directiva-ngfor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directiva ngFor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nueva-sintaxis-for-en-angular-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nueva sintaxis @for en Angular 18
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directiva-ngswitch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directiva ngSwitch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-con-if-y-for-en-angular-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo con @if y @for en Angular 18:
     </span>
   </a>
   
@@ -1374,9 +1419,54 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejemplo-con-ngif-y-ngfor" class="md-nav__link">
+  <a href="#directiva-ngif" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejemplo con ngIf y ngFor:
+      Directiva ngIf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nueva-sintaxis-if-en-angular-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nueva sintaxis @if en Angular 18
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directiva-ngfor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directiva ngFor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nueva-sintaxis-for-en-angular-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nueva sintaxis @for en Angular 18
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directiva-ngswitch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directiva ngSwitch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-con-if-y-for-en-angular-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo con @if y @for en Angular 18:
     </span>
   </a>
   
@@ -1559,22 +1649,70 @@
 <p>En este ejemplo, las <strong>doble llaves</strong> (<code>{{ }}</code>) se utilizan para la <strong>interpolación</strong> de datos.</p>
 <hr />
 <h2 id="directivas-ngif-ngfor-ngswitch">Directivas: ngIf, ngFor, ngSwitch ⚙️</h2>
-<p>Las <strong>directivas</strong> son instrucciones especiales que le dicen a Angular cómo manipular el DOM. Hay tres tipos de directivas: de atributos, estructurales y componentes.</p>
+<p>En Angular 18, las <strong>directivas</strong> siguen siendo una parte fundamental para controlar la visualización y la interacción de los componentes con el DOM. Las directivas estructurales como <code>ngIf</code> y <code>ngFor</code> permiten modificar la estructura del DOM dinámicamente en función de las condiciones y las listas de elementos. Angular 18 introduce nuevas formas de trabajar con estas directivas, haciendo el código más legible y fácil de escribir.</p>
+<p>Las <strong>directivas</strong> en Angular se dividen en tres tipos:</p>
 <ul>
-<li><strong>ngIf</strong>: Renderiza elementos basados en una condición.</li>
-<li><strong>ngFor</strong>: Itera sobre una lista de elementos.</li>
-<li><strong>ngSwitch</strong>: Muestra un elemento de entre varios posibles, según una condición.</li>
+<li><strong>Directivas de atributos</strong>: Modifican la apariencia o comportamiento de un elemento (por ejemplo, <code>ngClass</code>, <code>ngStyle</code>).</li>
+<li><strong>Directivas estructurales</strong>: Modifican la estructura del DOM (por ejemplo, <code>ngIf</code>, <code>ngFor</code>, <code>ngSwitch</code>).</li>
+<li><strong>Directivas de componentes</strong>: Extienden o reutilizan la lógica de componentes.</li>
 </ul>
-<h3 id="ejemplo-con-ngif-y-ngfor">Ejemplo con ngIf y ngFor:</h3>
+<h3 id="directiva-ngif">Directiva <code>ngIf</code></h3>
+<p><code>ngIf</code> es una directiva estructural que se utiliza para renderizar o eliminar un elemento del DOM en función de una condición booleana.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span> <span class="err">*</span><span class="na">ngIf</span><span class="o">=</span><span class="s">&quot;isLoggedIn&quot;</span><span class="p">&gt;</span>¡Bienvenido, usuario!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="err">*</span><span class="na">ngIf</span><span class="o">=</span><span class="s">&quot;!isLoggedIn&quot;</span><span class="p">&gt;</span>Por favor, inicia sesión.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>En este ejemplo, si la variable <code>isLoggedIn</code> es <code>true</code>, se muestra el mensaje de bienvenida. Si es <code>false</code>, se muestra un mensaje para que el usuario inicie sesión.</p>
+<h3 id="nueva-sintaxis-if-en-angular-18">Nueva sintaxis @if en Angular 18</h3>
+<p>En Angular 18, se ha introducido una nueva forma de manejar condicionales en las plantillas: la sintaxis <code>@if</code>. Aunque sigue siendo una funcionalidad interna que se traduce a <code>ngIf</code>, permite escribir condicionales de forma más concisa y clara, especialmente cuando tienes varios bloques condicionales en la misma plantilla.</p>
+<div class="highlight"><pre><span></span><code>@if (isLoggedIn) {
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>¡Bienvenido, usuario!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+} @else {
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Por favor, inicia sesión.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+}
+</code></pre></div>
+<h3 id="directiva-ngfor">Directiva <code>ngFor</code></h3>
+<p><code>ngFor</code> es otra directiva estructural que se utiliza para iterar sobre una lista de elementos y generar un elemento DOM para cada ítem de la lista.</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">li</span> <span class="err">*</span><span class="na">ngFor</span><span class="o">=</span><span class="s">&quot;let item of items&quot;</span><span class="p">&gt;</span>
     {{ item }}
   <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">p</span> <span class="err">*</span><span class="na">ngIf</span><span class="o">=</span><span class="s">&quot;items.length === 0&quot;</span><span class="p">&gt;</span>No hay elementos disponibles.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>Aquí, <code>ngFor</code> se utiliza para generar una lista dinámica, y <code>ngIf</code> solo muestra el mensaje si no hay elementos en la lista.</p>
+<p>Este código genera una lista dinámica de elementos basados en el array <code>items</code>. Cada elemento del array se muestra dentro de un <code>&lt;li&gt;</code>.</p>
+<h3 id="nueva-sintaxis-for-en-angular-18">Nueva sintaxis @for en Angular 18</h3>
+<p>Al igual que <code>@if</code>, Angular 18 introduce la sintaxis <code>@for</code> como una alternativa más moderna para <code>ngFor</code>. Esta nueva sintaxis es útil cuando deseas un código más legible y estructurado, especialmente en plantillas largas o complejas.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+  @for (let item of items) {
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>{{ item }}<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  }
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>En este caso, Angular convierte automáticamente la sintaxis <code>@for</code> en la directiva <code>ngFor</code>, haciendo que el código sea más limpio y fácil de leer.</p>
+<h3 id="directiva-ngswitch">Directiva <code>ngSwitch</code></h3>
+<p>La directiva <code>ngSwitch</code> es útil cuando necesitas mostrar uno de varios elementos posibles, dependiendo de una condición. Es similar a un <code>switch</code> en programación, pero aplicado al DOM.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="err">[</span><span class="na">ngSwitch</span><span class="err">]=&quot;</span><span class="na">color</span><span class="err">&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span> <span class="err">*</span><span class="na">ngSwitchCase</span><span class="o">=</span><span class="s">&quot;&#39;red&#39;&quot;</span><span class="p">&gt;</span>El color es rojo.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span> <span class="err">*</span><span class="na">ngSwitchCase</span><span class="o">=</span><span class="s">&quot;&#39;blue&#39;&quot;</span><span class="p">&gt;</span>El color es azul.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span> <span class="err">*</span><span class="na">ngSwitchDefault</span><span class="p">&gt;</span>El color es desconocido.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>En este ejemplo, dependiendo del valor de <code>color</code>, se mostrará uno de los párrafos correspondientes. Si el valor no coincide con ningún <code>ngSwitchCase</code>, se muestra el contenido de <code>ngSwitchDefault</code>.</p>
+<hr />
+<h3 id="ejemplo-con-if-y-for-en-angular-18">Ejemplo con @if y @for en Angular 18:</h3>
+<p>Aquí tienes un ejemplo completo que combina las nuevas directivas <code>@if</code> y <code>@for</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+  @if (items.length &gt; 0) {
+    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+      @for (let item of items) {
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>{{ item }}<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      }
+    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+  } @else {
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>No hay elementos disponibles.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  }
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>En este ejemplo, si el array <code>items</code> contiene elementos, se renderiza una lista con cada uno de ellos. Si no hay elementos, se muestra el mensaje "No hay elementos disponibles".</p>
 <hr />
 <h2 id="enlaces-de-datos-data-binding">Enlaces de Datos (Data Binding) 🔄</h2>
 <p>Angular ofrece varias formas de enlazar los datos entre el modelo y la vista. Los principales tipos de <strong>data binding</strong> son:</p>

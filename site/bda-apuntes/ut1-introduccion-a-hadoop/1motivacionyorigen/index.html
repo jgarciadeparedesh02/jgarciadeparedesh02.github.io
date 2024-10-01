@@ -1,0 +1,1442 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../21queesapachehadoop/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>1. Motivación y Origen - Big Data Aplicado</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="light-green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#big-data-motivacion-almacenamiento-y-procesamiento" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Big Data Aplicado" class="md-header__button md-logo" aria-label="Big Data Aplicado" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Big Data Aplicado
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1. Motivación y Origen
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="light-green"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="light-green" data-md-color-accent="light-green"  aria-label="Quitar modo oscuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Quitar modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Big Data Aplicado" class="md-nav__button md-logo" aria-label="Big Data Aplicado" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Big Data Aplicado
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../planificacion.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Planificación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT1. Introducción a Big Data Aplicado y Hadoop
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            UT1. Introducción a Big Data Aplicado y Hadoop
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    1. Motivación y Origen
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    1. Motivación y Origen
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#motivacion-del-big-data-y-su-origen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌟 Motivación del Big Data y su Origen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌟 Motivación del Big Data y su Origen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#por-que-es-importante-el-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Por qué es Importante el Big Data?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#almacenamiento-masivo-de-datos-las-4vs-del-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏢 Almacenamiento Masivo de Datos: Las 4Vs del Big Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏢 Almacenamiento Masivo de Datos: Las 4Vs del Big Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-volumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Volumen 📦:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-velocidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Velocidad ⚡:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-variedad" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Variedad 🌈:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-valor" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Valor 💰:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sistemas-de-almacenamiento-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      📂 Sistemas de Almacenamiento de Datos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📂 Sistemas de Almacenamiento de Datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dispositivos-mas-usados-actualmente" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Dispositivos Más Usados Actualmente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-avanzados-de-almacenamiento-clusters" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Métodos Avanzados de Almacenamiento: Clusters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procesamiento-de-datos-de-la-recoleccion-a-la-visualizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Procesamiento de Datos: De la Recolección a la Visualización
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔍 Procesamiento de Datos: De la Recolección a la Visualización">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-recoleccion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Recolección de Datos 📥:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-recopilacion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Recopilación de Datos:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-preprocesamiento-o-limpieza-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Preprocesamiento o Limpieza de Datos 🧹:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-procesamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Procesamiento 🖥️:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-interpretacion-y-salida" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Interpretación y Salida 📊:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-visualizacion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Visualización de Datos 📈:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-analisis" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Análisis 🧠:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-almacenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Almacenamiento:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elementos-del-procesamiento-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Elementos del Procesamiento de Datos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ Elementos del Procesamiento de Datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mineria-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Minería de Datos ⛏️
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datos-no-estructurados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datos No Estructurados 📑
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problemas-de-datos-no-compatibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problemas de Datos No Compatibles ❌
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calidad-y-seguridad-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calidad y Seguridad de Datos 🔒
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extraccion-de-datos-completa-o-incremental" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extracción de Datos Completa o Incremental
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procesamiento-en-clusters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procesamiento en Clusters 🚦
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analitica-de-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      📈 Analítica de Big Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📈 Analítica de Big Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iot-internet-of-things" class="md-nav__link">
+    <span class="md-ellipsis">
+      IoT (Internet of Things) 🌐
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analitica-en-tiempo-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analítica en Tiempo Real ⏱️
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#big-data-y-cloud-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      ☁️ Big Data y Cloud Computing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="☁️ Big Data y Cloud Computing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ventajas-del-cloud-computing-para-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ventajas del Cloud Computing para Big Data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Conclusión
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2. Apache Hadoop a Alto Nivel
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            2. Apache Hadoop a Alto Nivel
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21queesapachehadoop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.1. ¿Qué es Apache Hadoop?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../22ecosistemahadoopydistribuciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2. Ecosistema Hadoop y sus Distribuciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../23arquitectura/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3. Arquitectura
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../24beneficiosdesventajasydificultades/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4. Beneficios, Desventajas y Dificultades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#motivacion-del-big-data-y-su-origen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌟 Motivación del Big Data y su Origen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌟 Motivación del Big Data y su Origen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#por-que-es-importante-el-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Por qué es Importante el Big Data?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#almacenamiento-masivo-de-datos-las-4vs-del-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏢 Almacenamiento Masivo de Datos: Las 4Vs del Big Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏢 Almacenamiento Masivo de Datos: Las 4Vs del Big Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-volumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Volumen 📦:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-velocidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Velocidad ⚡:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-variedad" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Variedad 🌈:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-valor" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Valor 💰:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sistemas-de-almacenamiento-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      📂 Sistemas de Almacenamiento de Datos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📂 Sistemas de Almacenamiento de Datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dispositivos-mas-usados-actualmente" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Dispositivos Más Usados Actualmente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-avanzados-de-almacenamiento-clusters" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Métodos Avanzados de Almacenamiento: Clusters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procesamiento-de-datos-de-la-recoleccion-a-la-visualizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Procesamiento de Datos: De la Recolección a la Visualización
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔍 Procesamiento de Datos: De la Recolección a la Visualización">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-recoleccion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Recolección de Datos 📥:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-recopilacion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Recopilación de Datos:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-preprocesamiento-o-limpieza-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Preprocesamiento o Limpieza de Datos 🧹:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-procesamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Procesamiento 🖥️:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-interpretacion-y-salida" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Interpretación y Salida 📊:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-visualizacion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Visualización de Datos 📈:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-analisis" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Análisis 🧠:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-almacenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Almacenamiento:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elementos-del-procesamiento-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Elementos del Procesamiento de Datos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ Elementos del Procesamiento de Datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mineria-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Minería de Datos ⛏️
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datos-no-estructurados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datos No Estructurados 📑
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problemas-de-datos-no-compatibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problemas de Datos No Compatibles ❌
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calidad-y-seguridad-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calidad y Seguridad de Datos 🔒
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extraccion-de-datos-completa-o-incremental" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extracción de Datos Completa o Incremental
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procesamiento-en-clusters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procesamiento en Clusters 🚦
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analitica-de-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      📈 Analítica de Big Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📈 Analítica de Big Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iot-internet-of-things" class="md-nav__link">
+    <span class="md-ellipsis">
+      IoT (Internet of Things) 🌐
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analitica-en-tiempo-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analítica en Tiempo Real ⏱️
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#big-data-y-cloud-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      ☁️ Big Data y Cloud Computing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="☁️ Big Data y Cloud Computing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ventajas-del-cloud-computing-para-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ventajas del Cloud Computing para Big Data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Conclusión
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="big-data-motivacion-almacenamiento-y-procesamiento">Big Data: Motivación, Almacenamiento y Procesamiento 🚀📊</h1>
+<p>El término <strong>Big Data</strong> ha tomado un protagonismo inmenso en la era digital. No solo se trata de manejar grandes volúmenes de datos, sino de extraer valor de ellos para tomar decisiones más informadas y estratégicas. Desde sus orígenes hasta su integración con tecnologías avanzadas como el Cloud Computing, el Big Data ha revolucionado la forma en que las organizaciones operan en todos los sectores.</p>
+<h2 id="motivacion-del-big-data-y-su-origen">🌟 Motivación del Big Data y su Origen</h2>
+<p>El <strong>Big Data</strong> surgió como respuesta a la necesidad de manejar cantidades masivas de datos generados por dispositivos digitales, redes sociales, sensores IoT y más. Empresas como Google y Facebook fueron pioneras en el uso de técnicas de almacenamiento y procesamiento masivo para analizar estos datos y extraer información valiosa.</p>
+<h3 id="por-que-es-importante-el-big-data">¿Por qué es Importante el Big Data?</h3>
+<ol>
+<li>
+<p><strong>Tomar Decisiones Basadas en Datos</strong>: Las empresas ahora pueden analizar grandes conjuntos de datos para identificar patrones y tendencias, permitiendo decisiones más rápidas y acertadas.</p>
+</li>
+<li>
+<p><strong>Optimización de Procesos</strong>: Desde la cadena de suministro hasta el marketing, el análisis de Big Data permite optimizar operaciones y reducir costos.</p>
+</li>
+<li>
+<p><strong>Innovación y Desarrollo de Nuevos Productos</strong>: El análisis de datos ayuda a identificar nuevas oportunidades de mercado y a desarrollar productos que satisfagan mejor las necesidades del cliente.</p>
+</li>
+</ol>
+<hr />
+<h2 id="almacenamiento-masivo-de-datos-las-4vs-del-big-data">🏢 Almacenamiento Masivo de Datos: Las 4Vs del Big Data</h2>
+<p>El almacenamiento de datos es una piedra angular del Big Data. Para entender su complejidad, es esencial conocer las 4Vs: <strong>Volumen, Velocidad, Variedad y Valor</strong>.</p>
+<pre class="mermaid"><code>graph TD
+    A[Big Data] --&gt; B[Volumen]
+    A --&gt; C[Velocidad]
+    A --&gt; D[Variedad]
+    A --&gt; E[Valor]</code></pre>
+<h3 id="1-volumen">1. <strong>Volumen</strong> 📦:</h3>
+<p>Cantidades masivas de datos generados cada segundo, desde redes sociales hasta sensores IoT.</p>
+<h3 id="2-velocidad">2. <strong>Velocidad</strong> ⚡:</h3>
+<p>La rapidez con la que se generan y deben procesarse los datos para obtener valor en tiempo real.</p>
+<h3 id="3-variedad">3. <strong>Variedad</strong> 🌈:</h3>
+<p>Datos en múltiples formatos, tanto estructurados como no estructurados, incluyendo texto, imágenes y videos.</p>
+<h3 id="4-valor">4. <strong>Valor</strong> 💰:</h3>
+<p>La capacidad de transformar los datos en información útil y aplicable para la toma de decisiones.</p>
+<hr />
+<h2 id="sistemas-de-almacenamiento-de-datos">📂 Sistemas de Almacenamiento de Datos</h2>
+<p>Los sistemas de almacenamiento deben cumplir con ciertos requisitos clave para manejar Big Data:</p>
+<ol>
+<li><strong>Capacidad</strong>: Deben soportar el crecimiento continuo de los datos sin comprometer el rendimiento.</li>
+<li><strong>Rendimiento</strong>: Capacidad de acceder y procesar datos rápidamente.</li>
+<li><strong>Fiabilidad</strong>: Asegurar que los datos están protegidos contra pérdidas y fallos del sistema.</li>
+<li><strong>Recuperabilidad</strong>: Facilitar la recuperación de datos tras una falla o pérdida accidental.</li>
+</ol>
+<h3 id="dispositivos-mas-usados-actualmente">🚀 Dispositivos Más Usados Actualmente</h3>
+<ol>
+<li>
+<p><strong>Discos (HDD, SSD, RAID)</strong>: </p>
+<ul>
+<li>Los discos duros HDD ofrecen almacenamiento de alta capacidad a bajo costo.</li>
+<li>Los SSD son más rápidos y eficientes, ideales para aplicaciones que requieren alta velocidad.</li>
+<li>Los arreglos RAID mejoran la fiabilidad y el rendimiento al combinar varios discos en una configuración redundante.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cintas Magnéticas</strong> 🧲: Aunque puede parecer una tecnología antigua, sigue siendo utilizada para archivado de grandes volúmenes de datos debido a su bajo costo.</p>
+</li>
+<li>
+<p><strong>Almacenamiento en Red (NAS, SAN)</strong> 🌐: Permite compartir almacenamiento a través de una red, facilitando el acceso a datos desde múltiples dispositivos.</p>
+</li>
+<li>
+<p><strong>Almacenamiento en la Nube</strong> ☁️: Ofrece escalabilidad, flexibilidad y recuperación de datos en caso de fallos.</p>
+</li>
+</ol>
+<hr />
+<h3 id="metodos-avanzados-de-almacenamiento-clusters">🛠️ Métodos Avanzados de Almacenamiento: Clusters</h3>
+<p>Los clusters y sistemas distribuidos permiten manejar datos masivos de manera más eficiente y segura.</p>
+<ul>
+<li>
+<p><strong>Tipos de RAID</strong>: Desde RAID 0 hasta RAID 10, ofrecen diferentes niveles de redundancia y rendimiento.</p>
+</li>
+<li>
+<p><strong>GlusterFS y MooseFS</strong>: Sistemas de archivos distribuidos que permiten el almacenamiento y la gestión eficiente de grandes volúmenes de datos en clusters.</p>
+</li>
+<li>
+<p><strong>CephFileSystem</strong>: Ofrece almacenamiento distribuido altamente escalable con capacidades avanzadas de recuperación y auto-reparación.</p>
+</li>
+<li>
+<p><strong>DRBD (Distributed Replicated Block Device)</strong>: Proporciona replicación de datos en tiempo real, asegurando que los datos estén siempre disponibles y sincronizados.</p>
+</li>
+</ul>
+<hr />
+<h2 id="procesamiento-de-datos-de-la-recoleccion-a-la-visualizacion">🔍 Procesamiento de Datos: De la Recolección a la Visualización</h2>
+<p>El procesamiento de datos en Big Data implica una serie de etapas clave para transformar los datos brutos en información valiosa.</p>
+<pre class="mermaid"><code>graph LR
+    A[Recolección de Datos] --&gt; B[Recopilación de Datos]
+    B --&gt; C[Preprocesamiento]
+    C --&gt; D[Procesamiento]
+    D --&gt; E[Interpretación]
+    E --&gt; F[Visualización]
+    F --&gt; G[Análisis]
+    G --&gt; H[Almacenamiento]</code></pre>
+<h3 id="1-recoleccion-de-datos">1. <strong>Recolección de Datos</strong> 📥:</h3>
+<p>Recoger datos de diversas fuentes como sensores, redes sociales y bases de datos.</p>
+<h3 id="2-recopilacion-de-datos">2. <strong>Recopilación de Datos</strong>:</h3>
+<p>Consolidar los datos recolectados en una base central para su procesamiento.</p>
+<h3 id="3-preprocesamiento-o-limpieza-de-datos">3. <strong>Preprocesamiento o Limpieza de Datos</strong> 🧹:</h3>
+<p>Eliminar datos redundantes, inconsistentes o incompletos para mejorar la calidad.</p>
+<h3 id="4-procesamiento">4. <strong>Procesamiento</strong> 🖥️:</h3>
+<p>Aplicar algoritmos de análisis y transformación para extraer patrones y conocimiento de los datos.</p>
+<h3 id="5-interpretacion-y-salida">5. <strong>Interpretación y Salida</strong> 📊:</h3>
+<p>Convertir los resultados del procesamiento en informes o visualizaciones comprensibles.</p>
+<h3 id="6-visualizacion-de-datos">6. <strong>Visualización de Datos</strong> 📈:</h3>
+<p>Utilizar gráficos, dashboards y otros medios visuales para presentar los hallazgos.</p>
+<h3 id="7-analisis">7. <strong>Análisis</strong> 🧠:</h3>
+<p>Profundizar en los datos procesados para descubrir insights que guíen la toma de decisiones.</p>
+<h3 id="8-almacenamiento">8. <strong>Almacenamiento</strong>:</h3>
+<p>Guardar los resultados de análisis para futuros usos o auditorías.</p>
+<hr />
+<h2 id="elementos-del-procesamiento-de-datos">⚙️ Elementos del Procesamiento de Datos</h2>
+<p>Los elementos clave en el procesamiento de datos incluyen servidores de procesamiento, algoritmos de análisis y herramientas de integración que permiten a los sistemas trabajar juntos eficientemente.</p>
+<h3 id="mineria-de-datos">Minería de Datos ⛏️</h3>
+<p>La minería de datos extrae patrones significativos de grandes conjuntos de datos, ayudando a predecir tendencias y comportamientos futuros.</p>
+<h3 id="datos-no-estructurados">Datos No Estructurados 📑</h3>
+<p>Una gran parte de los datos generados son no estructurados (e.g., texto, video, imágenes) y requieren técnicas avanzadas de análisis y procesamiento.</p>
+<h3 id="problemas-de-datos-no-compatibles">Problemas de Datos No Compatibles ❌</h3>
+<p>La heterogeneidad de los datos y la falta de estándares pueden dificultar su integración y análisis, creando desafíos en la calidad y compatibilidad.</p>
+<h3 id="calidad-y-seguridad-de-datos">Calidad y Seguridad de Datos 🔒</h3>
+<p>La integridad y seguridad de los datos son fundamentales para garantizar que los análisis sean fiables y se mantenga la privacidad de la información.</p>
+<h3 id="extraccion-de-datos-completa-o-incremental">Extracción de Datos Completa o Incremental</h3>
+<p>La extracción completa procesa todos los datos disponibles, mientras que la incremental solo analiza los cambios recientes, ahorrando tiempo y recursos.</p>
+<h3 id="procesamiento-en-clusters">Procesamiento en Clusters 🚦</h3>
+<p>El procesamiento distribuido permite que múltiples nodos trabajen en paralelo para manejar grandes volúmenes de datos de manera eficiente.</p>
+<hr />
+<h2 id="analitica-de-big-data">📈 Analítica de Big Data</h2>
+<p>La analítica de Big Data permite a las empresas aprovechar los datos en tiempo real para mejorar la toma de decisiones y la eficiencia operativa.</p>
+<h3 id="iot-internet-of-things"><strong>IoT (Internet of Things)</strong> 🌐</h3>
+<p>Los dispositivos IoT generan una cantidad masiva de datos que se analizan en tiempo real para optimizar operaciones como la gestión de flotas o el mantenimiento predictivo.</p>
+<h3 id="analitica-en-tiempo-real"><strong>Analítica en Tiempo Real</strong> ⏱️</h3>
+<p>Permite responder instantáneamente a eventos como transacciones financieras o cambios en la demanda del mercado, proporcionando una ventaja competitiva significativa.</p>
+<hr />
+<h2 id="big-data-y-cloud-computing">☁️ Big Data y Cloud Computing</h2>
+<p>La combinación de Big Data con Cloud Computing ha abierto nuevas posibilidades para las empresas, proporcionando escalabilidad, flexibilidad y reducción de costos.</p>
+<h3 id="ventajas-del-cloud-computing-para-big-data">Ventajas del Cloud Computing para Big Data</h3>
+<ul>
+<li><strong>Escalabilidad Ilimitada</strong>: Permite ajustar los recursos en función de las necesidades sin comprometer el rendimiento.</li>
+<li><strong>Costos Bajo Demanda</strong>: Paga solo por los recursos que utilizas, optimizando los costos operativos.</li>
+<li><strong>Accesibilidad Global</strong>: Los datos y las aplicaciones pueden ser accesibles desde cualquier lugar, facilitando la colaboración.</li>
+<li><strong>Seguridad y Recuperación</strong>: Ofrece soluciones avanzadas para la recuperación de desastres y la seguridad de los datos.</li>
+</ul>
+<hr />
+<h2 id="conclusion">🚀 Conclusión</h2>
+<p>El Big Data ha transformado la forma en que las organizaciones capturan, almacenan y procesan datos. Desde los orígenes del Big Data hasta las avanzadas soluciones de Cloud Computing, esta tecnología ha proporcionado una plataforma poderosa para la innovación y la toma de decisiones estratégicas. La combinación de almacenamiento masivo, procesamiento distribuido y análisis en tiempo real está remodelando industrias enteras y allanando el camino hacia un futuro basado en datos. ¡Aprovecha el poder del Big Data para llevar tu organización al siguiente nivel! 📊🌟</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Inicio">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Inicio
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../21queesapachehadoop/" class="md-footer__link md-footer__link--next" aria-label="Next: 2.1. ¿Qué es Apache Hadoop?">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                2.1. ¿Qué es Apache Hadoop?
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

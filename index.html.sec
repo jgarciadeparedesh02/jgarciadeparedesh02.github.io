@@ -31,12 +31,6 @@
             align-items: center;
         }
 
-        header .logo svg {
-            height: 40px;
-            width: 40px;
-            margin-right: 10px;
-        }
-
         header h1 {
             font-size: 1.5rem;
             margin: 0;
@@ -58,26 +52,39 @@
             margin-bottom: 1.5rem;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
+        /* Estilo del contenedor de cartas */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
         }
 
-        ul li {
-            margin-bottom: 1rem;
+        /* Estilo para cada tarjeta */
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
         }
 
-        ul li a {
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card a {
             text-decoration: none;
             color: #3f51b5;
             font-weight: 700;
-            display: flex;
-            align-items: center;
+            display: block;
+            margin-top: 1rem;
+            font-size: 1.2rem;
         }
 
-        ul li a img {
-            width: 24px;
-            margin-right: 10px;
+        .card img {
+            width: 64px;
+            margin-bottom: 1rem;
         }
 
         footer {
@@ -105,12 +112,20 @@
 
     <main>
         <h2>Bienvenidos al Repositorio de Apuntes</h2>
-        <ul>
-            <li><a href="di-apuntes/index.html"><img src="images/icon-di.png" alt="Icono DI" /><span>Apuntes
-                        DI</span></a></li>
-            <li><a href="dwec-apuntes/index.html"><img src="images/icon-dwec.png" alt="Icono DWEC" /><span>Apuntes
-                        DWEC</span></a></li>
-        </ul>
+        <div class="card-container">
+            <div class="card">
+                <img src="images/icon-di.png" alt="Icono DI" />
+                <a href="di-apuntes/index.html">Apuntes DI</a>
+            </div>
+            <div class="card">
+                <img src="images/icon-dwec.png" alt="Icono DWEC" />
+                <a href="dwec-apuntes/index.html">Apuntes DWEC</a>
+            </div>
+            <div class="card">
+                <img src="images/icon-bda.png" alt="Icono BDA" />
+                <a href="bda-apuntes/index.html">Apuntes BDA</a>
+            </div>
+        </div>
     </main>
 
     <footer>

@@ -1,4 +1,5 @@
-# Update all submodules
-mkdocs-multirepo --update 
+# Actualizar submódulos
+git submodule update --remote
 
-- 
+# Generar site nuevo
+mkdocs-multirepo --build
