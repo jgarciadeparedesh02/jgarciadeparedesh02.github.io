@@ -1,0 +1,786 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>Práctica Guiada: Implementación de un Nodo Hadoop con Docker - Big Data Aplicado</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-3VWRJDCQS9"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-3VWRJDCQS9",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-3VWRJDCQS9",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="light-green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#practica-guiada-implementacion-de-un-nodo-hadoop-con-docker" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Big Data Aplicado" class="md-header__button md-logo" aria-label="Big Data Aplicado" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Big Data Aplicado
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Práctica Guiada: Implementación de un Nodo Hadoop con Docker
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="light-green"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="light-green" data-md-color-accent="light-green"  aria-label="Quitar modo oscuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Quitar modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Big Data Aplicado" class="md-nav__button md-logo" aria-label="Big Data Aplicado" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Big Data Aplicado
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT1. Introducción a Big Data Aplicado y Hadoop
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            UT1. Introducción a Big Data Aplicado y Hadoop
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1motivacionyorigen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Motivación y Origen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2. Apache Hadoop a Alto Nivel
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            2. Apache Hadoop a Alto Nivel
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../21queesapachehadoop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.1. ¿Qué es Apache Hadoop?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../22ecosistemahadoopydistribuciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2. Ecosistema Hadoop y sus Distribuciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../23arquitectura/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3. Arquitectura
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../24beneficiosdesventajasydificultades/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4. Beneficios, Desventajas y Dificultades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introducción
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-requisitos-previos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Requisitos Previos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-clonar-el-repositorio-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clonar el repositorio del proyecto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-construir-la-imagen-docker-de-hadoop" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Construir la imagen Docker de Hadoop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-crear-y-correr-el-contenedor-hadoop" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Crear y correr el contenedor Hadoop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-abrir-una-terminal-dentro-del-contenedor" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Abrir una terminal dentro del contenedor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-probar-hadoop-y-hdfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Probar Hadoop y HDFS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-acceder-a-la-interfaz-web-de-hadoop" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Acceder a la interfaz web de Hadoop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-apagar-el-contenedor" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Apagar el contenedor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Conclusión
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="practica-guiada-implementacion-de-un-nodo-hadoop-con-docker"><strong>Práctica Guiada: Implementación de un Nodo Hadoop con Docker</strong></h1>
+<h4 id="1-introduccion"><strong>1. Introducción</strong></h4>
+<p>En esta práctica, vas a configurar un clúster Hadoop de un solo nodo utilizando Docker. Hadoop es un framework que permite el procesamiento de grandes cantidades de datos distribuidos en varios nodos. Para fines educativos, configuraremos un clúster de un solo nodo. Docker facilitará el proceso de instalación, ya que encapsula todo en un contenedor aislado del sistema operativo principal.</p>
+<h4 id="2-requisitos-previos"><strong>2. Requisitos Previos</strong></h4>
+<ul>
+<li><strong>Docker instalado</strong>: Asegúrate de tener Docker instalado y funcionando en tu máquina. Si no lo tienes instalado, puedes descargarlo desde <a href="https://www.docker.com/products/docker-desktop">https://www.docker.com/products/docker-desktop</a>.</li>
+<li><strong>Git instalado</strong>: Se necesita Git para clonar el repositorio de configuración.</li>
+</ul>
+<h4 id="3-clonar-el-repositorio-del-proyecto"><strong>3. Clonar el repositorio del proyecto</strong></h4>
+<p>Para empezar, vamos a clonar el repositorio donde ya está configurada la imagen de Hadoop. Este repositorio contiene un archivo <code>Dockerfile</code>, que es un script que define cómo se debe crear la imagen de Docker con todos los servicios y configuraciones de Hadoop.</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/rancavil/hadoop-single-node-cluster.git
+<span class="nb">cd</span><span class="w"> </span>hadoop-single-node-cluster
+</code></pre></div>
+<ul>
+<li><strong>¿Qué es esto?</strong>: El comando <code>git clone</code> descarga una copia local del repositorio alojado en GitHub, y <code>cd</code> te lleva al directorio recién clonado.</li>
+</ul>
+<h4 id="4-construir-la-imagen-docker-de-hadoop"><strong>4. Construir la imagen Docker de Hadoop</strong></h4>
+<p>Ahora que tenemos los archivos de configuración, es momento de construir una imagen Docker. Esta imagen contendrá todo lo necesario para correr Hadoop, incluyendo Java, Hadoop y las configuraciones necesarias para un nodo único.</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>hadoop<span class="w"> </span>.
+</code></pre></div>
+<ul>
+<li><strong>Explicación</strong>: <ul>
+<li><code>docker build</code> es el comando que construye una imagen a partir de un archivo <code>Dockerfile</code>.</li>
+<li><code>-t hadoop</code> asigna la etiqueta "hadoop" a esta imagen, lo que nos facilitará su referencia más adelante.</li>
+<li>El <code>.</code> indica que el contexto para la construcción es el directorio actual.</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-crear-y-correr-el-contenedor-hadoop"><strong>5. Crear y correr el contenedor Hadoop</strong></h4>
+<p>Una vez que la imagen está construida, vamos a ejecutar un contenedor basado en ella. Un contenedor es una instancia de la imagen, ejecutándose como si fuera una pequeña máquina virtual, pero más ligera y eficiente.</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>--name<span class="w"> </span>hadoop-container<span class="w"> </span>-p<span class="w"> </span><span class="m">9864</span>:9864<span class="w"> </span>-p<span class="w"> </span><span class="m">9870</span>:9870<span class="w"> </span>-p<span class="w"> </span><span class="m">8088</span>:8088<span class="w"> </span>-p<span class="w"> </span><span class="m">9000</span>:9000<span class="w"> </span>--hostname<span class="w"> </span>hadoop<span class="w"> </span>hadoop
+</code></pre></div>
+<ul>
+<li><strong>Explicación</strong>:<ul>
+<li><code>docker run</code>: Este comando crea y corre un contenedor.</li>
+<li><code>--name hadoop-container</code>: Asigna el nombre "hadoop-container" al contenedor.</li>
+<li><code>-p 9864:9864 -p 9870:9870 -p 8088:8088 -p 9000:9000</code>: Mapea los puertos del contenedor a tu máquina local. Esto te permite acceder a la interfaz web de Hadoop desde tu navegador y establecer la conexión entre el contenedor y tu máquina para el uso de HDFS.<ul>
+<li><code>9864</code>: Puerto del DataNode.</li>
+<li><code>9870</code>: Puerto del NameNode (UI para monitoreo de HDFS).</li>
+<li><code>8088</code>: Puerto del ResourceManager (UI para monitoreo de trabajos en YARN).</li>
+<li><code>9000</code>: Puerto de HDFS para el NameNode.</li>
+</ul>
+</li>
+<li><code>--hostname hadoop</code>: Asigna el nombre de host "hadoop" al contenedor.</li>
+</ul>
+</li>
+</ul>
+<h4 id="6-abrir-una-terminal-dentro-del-contenedor"><strong>6. Abrir una terminal dentro del contenedor</strong></h4>
+<p>Para interactuar con Hadoop dentro del contenedor, necesitas abrir una terminal en su interior. Hay dos formas de hacerlo:</p>
+<ul>
+<li>
+<p><strong>Modo gráfico</strong>: Si estás usando Docker Desktop, puedes acceder al contenedor desde la interfaz gráfica seleccionando el contenedor "hadoop-container" y abriendo una terminal desde ahí.</p>
+</li>
+<li>
+<p><strong>Modo terminal</strong>: Si prefieres usar la terminal, ejecuta el siguiente comando:</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-i<span class="w"> </span>-t<span class="w"> </span>hadoop-container<span class="w"> </span>/bin/bash
+</code></pre></div>
+<ul>
+<li><strong>Explicación</strong>:<ul>
+<li><code>docker exec</code>: Permite ejecutar comandos dentro de un contenedor en ejecución.</li>
+<li><code>-i -t</code>: Estas opciones te permiten interactuar de manera interactiva con el contenedor (modo terminal).</li>
+<li><code>hadoop-container</code>: Es el nombre del contenedor que ejecutaste anteriormente.</li>
+<li><code>/bin/bash</code>: Especifica que quieres abrir una shell Bash dentro del contenedor.</li>
+</ul>
+</li>
+</ul>
+<h4 id="7-probar-hadoop-y-hdfs"><strong>7. Probar Hadoop y HDFS</strong></h4>
+<p>Ahora que estás dentro del contenedor, es momento de probar que Hadoop y su sistema de archivos HDFS están funcionando correctamente. Comienza creando un directorio en HDFS.</p>
+<div class="highlight"><pre><span></span><code>hdfs<span class="w"> </span>dfs<span class="w"> </span>-mkdir<span class="w"> </span>/user
+</code></pre></div>
+<p>Luego, lista los archivos del sistema de archivos HDFS recursivamente:</p>
+<div class="highlight"><pre><span></span><code>hdfs<span class="w"> </span>dfs<span class="w"> </span>-ls<span class="w"> </span>-R<span class="w"> </span>/
+</code></pre></div>
+<ul>
+<li><strong>Explicación</strong>:<ul>
+<li><code>hdfs dfs</code>: Este es el comando que utilizas para interactuar con el sistema de archivos distribuido de Hadoop (HDFS).</li>
+<li><code>-mkdir /user</code>: Crea un directorio llamado "user" en el sistema de archivos HDFS.</li>
+<li><code>-ls -R /</code>: Lista de manera recursiva todos los archivos en HDFS, comenzando desde la raíz.</li>
+</ul>
+</li>
+</ul>
+<h4 id="8-acceder-a-la-interfaz-web-de-hadoop"><strong>8. Acceder a la interfaz web de Hadoop</strong></h4>
+<p>Puedes acceder a las interfaces de monitoreo de Hadoop desde tu navegador utilizando las siguientes direcciones:</p>
+<ul>
+<li><strong>NameNode (HDFS)</strong>: <a href="http://localhost:9870">http://localhost:9870</a></li>
+<li><strong>ResourceManager (YARN)</strong>: <a href="http://localhost:8088">http://localhost:8088</a></li>
+</ul>
+<p>Estas interfaces te permiten ver el estado del clúster, los nodos disponibles, y los trabajos que se están ejecutando.</p>
+<h4 id="9-apagar-el-contenedor"><strong>9. Apagar el contenedor</strong></h4>
+<p>Cuando termines de trabajar, puedes detener y eliminar el contenedor. Para detener el contenedor sin eliminarlo, ejecuta:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>stop<span class="w"> </span>hadoop-container
+</code></pre></div>
+<p>Si deseas eliminar el contenedor completamente:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>rm<span class="w"> </span>hadoop-container
+</code></pre></div>
+<ul>
+<li><strong>Explicación</strong>:<ul>
+<li><code>docker stop</code>: Detiene el contenedor en ejecución.</li>
+<li><code>docker rm</code>: Elimina el contenedor de Docker, liberando espacio.</li>
+</ul>
+</li>
+</ul>
+<h4 id="10-conclusion"><strong>10. Conclusión</strong></h4>
+<p>Has completado la práctica para configurar un clúster Hadoop de un solo nodo usando Docker. Este entorno te permite experimentar con las funcionalidades principales de Hadoop sin necesidad de una configuración compleja de varios nodos o sistemas distribuidos. Con este entorno, puedes practicar la gestión de archivos en HDFS, ejecutar trabajos en YARN y familiarizarte con las interfaces de monitoreo de Hadoop.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        <a href='https://ko-fi.com/jgarciadeparedesh02' title='Invítame a un café en ko-fi.com' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi2.png?v=3' border='0' alt='Invítame a un café en ko-fi.com' /></a>
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="Esta página es genial" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="Podría mejorar" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.footer"], "search": "../../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
