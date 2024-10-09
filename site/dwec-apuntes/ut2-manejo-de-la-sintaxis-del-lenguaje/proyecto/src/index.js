@@ -4,6 +4,33 @@ const Pokemon = require('./Pokemon');
 const Move = require('./Move');
 const Types = require('./Types');
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Crear movimientos
 const flamethrower = new Move('Lanzallamas', 40);
 const waterGun = new Move('Pistola Agua', 30);
