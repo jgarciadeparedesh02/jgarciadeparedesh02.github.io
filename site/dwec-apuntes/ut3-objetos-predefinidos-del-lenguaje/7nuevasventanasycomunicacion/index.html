@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../2objetosnativosdellenguaje/">
+        <link rel="prev" href="../6gestiondelaaparienciadelaventana/">
       
       
-        <link rel="next" href="../4generaciondehtmldesdecodigo/">
+        <link rel="next" href="../8cookies/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>3. Interacción con el Navegador - Desarrollo Web en Entorno Cliente</title>
+        <title>7. Creación de ventanas y comunicación - Desarrollo Web en Entorno Cliente</title>
       
     
     
@@ -93,7 +93,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#interaccion-con-el-navegador-objetos-predefinidos-asociados" class="md-skip">
+        <a href="#creacion-de-nuevas-ventanas-y-comunicacion-entre-ventanas-en-javascript" class="md-skip">
           Skip to content
         </a>
       
@@ -129,7 +129,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              3. Interacción con el Navegador
+              7. Creación de ventanas y comunicación
             
           </span>
         </div>
@@ -805,30 +805,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    3. Interacción con el Navegador
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../3interaccionconelnavegador/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -837,209 +817,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-window-el-contenedor-global-del-navegador" class="md-nav__link">
-    <span class="md-ellipsis">
-      🌟 1. window: El Contenedor Global del Navegador
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🌟 1. window: El Contenedor Global del Navegador">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#control-de-ventanas-con-window" class="md-nav__link">
-    <span class="md-ellipsis">
-      🖼️ Control de Ventanas con window
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🖼️ Control de Ventanas con window">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-abrir-una-nueva-ventana-windowopen" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Abrir una nueva ventana: window.open()
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-cerrar-la-ventana-actual-windowclose" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Cerrar la ventana actual: window.close()
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-mover-la-ventana-windowmoveto" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Mover la ventana: window.moveTo()
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-cambiar-el-tamano-de-la-ventana-windowresizeto" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Cambiar el tamaño de la ventana: window.resizeTo()
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#interaccion-con-el-usuario-alertas-confirmaciones-y-prompts" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔔 Interacción con el Usuario: Alertas, Confirmaciones y Prompts
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔔 Interacción con el Usuario: Alertas, Confirmaciones y Prompts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-mostrar-una-alerta-windowalert" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Mostrar una alerta: window.alert()
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-solicitar-confirmacion-windowconfirm" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Solicitar confirmación: window.confirm()
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-solicitar-entrada-del-usuario-windowprompt" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Solicitar entrada del usuario: window.prompt()
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-document-manipulando-el-dom" class="md-nav__link">
-    <span class="md-ellipsis">
-      🏗️ 2. document: Manipulando el DOM
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🏗️ 2. document: Manipulando el DOM">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#metodos-clave-del-objeto-document" class="md-nav__link">
-    <span class="md-ellipsis">
-      Métodos clave del objeto document:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-navigator-informacion-sobre-el-navegador" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔄 3. navigator: Información sobre el Navegador
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔄 3. navigator: Información sobre el Navegador">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#propiedades-clave-de-navigator" class="md-nav__link">
-    <span class="md-ellipsis">
-      Propiedades clave de navigator:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-history-control-del-historial-de-navegacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⏳ 4. history: Control del Historial de Navegación
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-location-manipulacion-de-la-url" class="md-nav__link">
-    <span class="md-ellipsis">
-      🌍 5. location: Manipulación de la URL
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 Conclusión
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1112,10 +889,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../7nuevasventanasycomunicacion/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    7. Creación de ventanas y comunicación
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1124,6 +921,254 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-creacion-de-nuevas-ventanas-windowopen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌟 1. Creación de Nuevas Ventanas: window.open()
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌟 1. Creación de Nuevas Ventanas: window.open()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintaxis-basica-de-windowopen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🖼️ Sintaxis Básica de window.open()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parámetros:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parámetros:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-practico-ventana-emergente" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌍 Ejemplo Práctico: Ventana Emergente
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-del-flujo-de-windowopen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Diagrama del Flujo de window.open()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-comunicacion-entre-ventanas-windowopener-y-postmessage" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 2. Comunicación Entre Ventanas: window.opener y postMessage()
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔗 2. Comunicación Entre Ventanas: window.opener y postMessage()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-comunicacion-con-windowopener" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 2.1. Comunicación con window.opener
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 2.1. Comunicación con window.opener">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-interactuando-con-la-ventana-padre" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌍 Ejemplo: Interactuando con la Ventana Padre
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-de-comunicacion-con-windowopener" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Diagrama de Comunicación con window.opener
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-comunicacion-segura-con-postmessage" class="md-nav__link">
+    <span class="md-ellipsis">
+      📡 2.2. Comunicación Segura con postMessage()
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📡 2.2. Comunicación Segura con postMessage()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-postmessage" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌍 Ejemplo de postMessage()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-de-comunicacion-con-postmessage" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Diagrama de Comunicación con postMessage()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-ejemplos-de-comunicacion-dinamica-entre-ventanas" class="md-nav__link">
+    <span class="md-ellipsis">
+      🖇️ 3. Ejemplos de Comunicación Dinámica Entre Ventanas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🖇️ 3. Ejemplos de Comunicación Dinámica Entre Ventanas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-1-cambiar-el-contenido-de-la-ventana-principal-desde-la-ventana-hija" class="md-nav__link">
+    <span class="md-ellipsis">
+      📧 Ejemplo 1: Cambiar el Contenido de la Ventana Principal desde la Ventana Hija
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-del-flujo-del-ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Diagrama del Flujo del Ejemplo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-cerrar-una-ventana-desde-otra" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌟 4. Cerrar una Ventana Desde Otra
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌟 4. Cerrar una Ventana Desde Otra">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-cierre-de-ventana" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de Cierre de Ventana:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Conclusión
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Conclusión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resumen-de-metodos-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧑‍💻 Resumen de Métodos Clave
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-general-del-flujo-de-comunicacion-entre-ventanas" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Diagrama General del Flujo de Comunicación Entre Ventanas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1184,56 +1229,38 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-window-el-contenedor-global-del-navegador" class="md-nav__link">
+  <a href="#1-creacion-de-nuevas-ventanas-windowopen" class="md-nav__link">
     <span class="md-ellipsis">
-      🌟 1. window: El Contenedor Global del Navegador
+      🌟 1. Creación de Nuevas Ventanas: window.open()
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🌟 1. window: El Contenedor Global del Navegador">
+    <nav class="md-nav" aria-label="🌟 1. Creación de Nuevas Ventanas: window.open()">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#control-de-ventanas-con-window" class="md-nav__link">
+  <a href="#sintaxis-basica-de-windowopen" class="md-nav__link">
     <span class="md-ellipsis">
-      🖼️ Control de Ventanas con window
+      🖼️ Sintaxis Básica de window.open()
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🖼️ Control de Ventanas con window">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parámetros:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parámetros:">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-abrir-una-nueva-ventana-windowopen" class="md-nav__link">
+  <a href="#ejemplo-practico-ventana-emergente" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Abrir una nueva ventana: window.open()
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-cerrar-la-ventana-actual-windowclose" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Cerrar la ventana actual: window.close()
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-mover-la-ventana-windowmoveto" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Mover la ventana: window.moveTo()
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-cambiar-el-tamano-de-la-ventana-windowresizeto" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Cambiar el tamaño de la ventana: window.resizeTo()
+      🌍 Ejemplo Práctico: Ventana Emergente
     </span>
   </a>
   
@@ -1245,66 +1272,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#interaccion-con-el-usuario-alertas-confirmaciones-y-prompts" class="md-nav__link">
+  <a href="#diagrama-del-flujo-de-windowopen" class="md-nav__link">
     <span class="md-ellipsis">
-      🔔 Interacción con el Usuario: Alertas, Confirmaciones y Prompts
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔔 Interacción con el Usuario: Alertas, Confirmaciones y Prompts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-mostrar-una-alerta-windowalert" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Mostrar una alerta: window.alert()
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-solicitar-confirmacion-windowconfirm" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Solicitar confirmación: window.confirm()
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-solicitar-entrada-del-usuario-windowprompt" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Solicitar entrada del usuario: window.prompt()
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-document-manipulando-el-dom" class="md-nav__link">
-    <span class="md-ellipsis">
-      🏗️ 2. document: Manipulando el DOM
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🏗️ 2. document: Manipulando el DOM">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#metodos-clave-del-objeto-document" class="md-nav__link">
-    <span class="md-ellipsis">
-      Métodos clave del objeto document:
+      🧩 Diagrama del Flujo de window.open()
     </span>
   </a>
   
@@ -1316,19 +1286,76 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-navigator-informacion-sobre-el-navegador" class="md-nav__link">
+  <a href="#2-comunicacion-entre-ventanas-windowopener-y-postmessage" class="md-nav__link">
     <span class="md-ellipsis">
-      🔄 3. navigator: Información sobre el Navegador
+      🔗 2. Comunicación Entre Ventanas: window.opener y postMessage()
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔄 3. navigator: Información sobre el Navegador">
+    <nav class="md-nav" aria-label="🔗 2. Comunicación Entre Ventanas: window.opener y postMessage()">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#propiedades-clave-de-navigator" class="md-nav__link">
+  <a href="#21-comunicacion-con-windowopener" class="md-nav__link">
     <span class="md-ellipsis">
-      Propiedades clave de navigator:
+      🔄 2.1. Comunicación con window.opener
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 2.1. Comunicación con window.opener">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-interactuando-con-la-ventana-padre" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌍 Ejemplo: Interactuando con la Ventana Padre
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-de-comunicacion-con-windowopener" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Diagrama de Comunicación con window.opener
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-comunicacion-segura-con-postmessage" class="md-nav__link">
+    <span class="md-ellipsis">
+      📡 2.2. Comunicación Segura con postMessage()
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📡 2.2. Comunicación Segura con postMessage()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-postmessage" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌍 Ejemplo de postMessage()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-de-comunicacion-con-postmessage" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Diagrama de Comunicación con postMessage()
     </span>
   </a>
   
@@ -1340,20 +1367,59 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-history-control-del-historial-de-navegacion" class="md-nav__link">
+  <a href="#3-ejemplos-de-comunicacion-dinamica-entre-ventanas" class="md-nav__link">
     <span class="md-ellipsis">
-      ⏳ 4. history: Control del Historial de Navegación
+      🖇️ 3. Ejemplos de Comunicación Dinámica Entre Ventanas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🖇️ 3. Ejemplos de Comunicación Dinámica Entre Ventanas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-1-cambiar-el-contenido-de-la-ventana-principal-desde-la-ventana-hija" class="md-nav__link">
+    <span class="md-ellipsis">
+      📧 Ejemplo 1: Cambiar el Contenido de la Ventana Principal desde la Ventana Hija
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#5-location-manipulacion-de-la-url" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-del-flujo-del-ejemplo" class="md-nav__link">
     <span class="md-ellipsis">
-      🌍 5. location: Manipulación de la URL
+      🧩 Diagrama del Flujo del Ejemplo
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-cerrar-una-ventana-desde-otra" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌟 4. Cerrar una Ventana Desde Otra
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌟 4. Cerrar una Ventana Desde Otra">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-cierre-de-ventana" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de Cierre de Ventana:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1363,6 +1429,30 @@
       🚀 Conclusión
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="🚀 Conclusión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resumen-de-metodos-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧑‍💻 Resumen de Métodos Clave
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-general-del-flujo-de-comunicacion-entre-ventanas" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Diagrama General del Flujo de Comunicación Entre Ventanas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1381,110 +1471,138 @@
                   
 
 
-<h1 id="interaccion-con-el-navegador-objetos-predefinidos-asociados">Interacción con el Navegador: Objetos Predefinidos Asociados</h1>
-<p>JavaScript nos permite una interacción rica con el navegador gracias a <strong>objetos predefinidos</strong>. Estos objetos nos permiten manipular el entorno del navegador, controlar ventanas emergentes, gestionar la navegación y mucho más. A continuación, exploramos los principales objetos y métodos que podemos utilizar.</p>
-<h2 id="1-window-el-contenedor-global-del-navegador">🌟 <strong>1. <code>window</code>: El Contenedor Global del Navegador</strong></h2>
-<p>El objeto <code>window</code> es el contenedor global donde se ejecuta todo el código JavaScript en el navegador. Nos da acceso a funcionalidades como la apertura de nuevas ventanas, la interacción con el usuario y la manipulación del estado de la ventana actual.</p>
-<h3 id="control-de-ventanas-con-window">🖼️ <strong>Control de Ventanas con <code>window</code></strong></h3>
-<h4 id="1-abrir-una-nueva-ventana-windowopen">1. <strong>Abrir una nueva ventana</strong>: <code>window.open()</code></h4>
-<p>Este método permite abrir una nueva ventana o pestaña en el navegador.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;https://www.ejemplo.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;_blank&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;width=600,height=400&#39;</span><span class="p">);</span>
+<h1 id="creacion-de-nuevas-ventanas-y-comunicacion-entre-ventanas-en-javascript">🪟 Creación de Nuevas Ventanas y Comunicación entre Ventanas en JavaScript</h1>
+<p>JavaScript te permite <strong>abrir nuevas ventanas</strong>, controlar su contenido y, lo que es aún más emocionante, <strong>comunicarte entre las diferentes ventanas abiertas</strong>. Estas funcionalidades son ideales cuando necesitas trabajar con varias vistas o procesos en paralelo dentro de una aplicación web. En este artículo, exploraremos cómo crear ventanas dinámicas y cómo intercambiar datos entre ellas de manera fluida. ¡Vamos a verlo! 🚀</p>
+<hr />
+<h2 id="1-creacion-de-nuevas-ventanas-windowopen">🌟 <strong>1. Creación de Nuevas Ventanas: <code>window.open()</code></strong></h2>
+<p>El método <strong><code>window.open()</code></strong> es tu mejor amigo cuando quieres abrir una nueva ventana o pestaña en el navegador. Este método no solo abre una ventana nueva, sino que también te permite personalizar su tamaño, posición y características.</p>
+<h3 id="sintaxis-basica-de-windowopen">🖼️ <strong>Sintaxis Básica de <code>window.open()</code></strong></h3>
+<div class="highlight"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;https://www.ejemplo.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;_blank&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;width=800,height=600&#39;</span><span class="p">);</span>
 </code></pre></div>
-<p>Parámetros:</p>
+<h3 id="parametros">Parámetros:</h3>
 <ul>
-<li><strong>URL</strong>: La dirección que se abrirá.</li>
-<li><strong>Target</strong>: El destino (<code>_blank</code> abre una nueva pestaña, <code>_self</code> abre en la pestaña actual).</li>
-<li><strong>Características</strong>: Como el tamaño de la ventana, barras de desplazamiento, etc.</li>
+<li><strong>URL</strong>: La dirección que deseas abrir en la nueva ventana.</li>
+<li><strong>Target</strong>: Puedes usar valores como <code>_blank</code> para abrir una nueva pestaña o <code>_self</code> para abrir en la misma ventana.</li>
+<li><strong>Características</strong>: Puedes especificar atributos como el tamaño (<code>width</code>, <code>height</code>), si la ventana es redimensionable (<code>resizable</code>) y más.</li>
 </ul>
-<h4 id="2-cerrar-la-ventana-actual-windowclose">2. <strong>Cerrar la ventana actual</strong>: <code>window.close()</code></h4>
-<p>Permite cerrar la ventana o pestaña actual, o bien una ventana abierta previamente por <code>window.open()</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<h4 id="ejemplo-practico-ventana-emergente">🌍 <strong>Ejemplo Práctico: Ventana Emergente</strong></h4>
+<p>Imagina que deseas abrir una ventana emergente pequeña con información adicional:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">ventanaInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;https://www.info.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ventanaInfo&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;width=400,height=300&#39;</span><span class="p">);</span>
 </code></pre></div>
-<blockquote>
-<p>⚠️ Este método solo funciona en ventanas que fueron abiertas por <code>window.open()</code> y puede estar restringido por algunos navegadores por razones de seguridad.</p>
-</blockquote>
-<h4 id="3-mover-la-ventana-windowmoveto">3. <strong>Mover la ventana</strong>: <code>window.moveTo()</code></h4>
-<p>Este método permite mover la ventana a una nueva posición en la pantalla, definiendo las coordenadas X e Y.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">moveTo</span><span class="p">(</span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="mf">150</span><span class="p">);</span><span class="w"> </span><span class="c1">// Mueve la ventana a la posición (100, 150) en la pantalla</span>
-</code></pre></div>
-<h4 id="4-cambiar-el-tamano-de-la-ventana-windowresizeto">4. <strong>Cambiar el tamaño de la ventana</strong>: <code>window.resizeTo()</code></h4>
-<p>Permite ajustar el tamaño de la ventana del navegador a un valor específico de ancho y alto.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">resizeTo</span><span class="p">(</span><span class="mf">800</span><span class="p">,</span><span class="w"> </span><span class="mf">600</span><span class="p">);</span><span class="w"> </span><span class="c1">// Cambia el tamaño de la ventana a 800px de ancho y 600px de alto</span>
-</code></pre></div>
-<h3 id="interaccion-con-el-usuario-alertas-confirmaciones-y-prompts">🔔 <strong>Interacción con el Usuario: Alertas, Confirmaciones y Prompts</strong></h3>
-<h4 id="1-mostrar-una-alerta-windowalert">1. <strong>Mostrar una alerta</strong>: <code>window.alert()</code></h4>
-<p>Muestra un cuadro de alerta simple con un mensaje. El usuario debe cerrarlo para continuar.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Este es un mensaje de alerta.&#39;</span><span class="p">);</span>
-</code></pre></div>
-<p>Es ideal para mostrar mensajes informativos rápidos, aunque su uso frecuente puede ser molesto para los usuarios.</p>
-<h4 id="2-solicitar-confirmacion-windowconfirm">2. <strong>Solicitar confirmación</strong>: <code>window.confirm()</code></h4>
-<p>Este método muestra un cuadro de diálogo con un mensaje y botones de confirmación ("Aceptar" o "Cancelar"). Retorna <code>true</code> si el usuario presiona "Aceptar" y <code>false</code> si presiona "Cancelar".</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">decision</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">confirm</span><span class="p">(</span><span class="s1">&#39;¿Estás seguro de que deseas continuar?&#39;</span><span class="p">);</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">decision</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;El usuario aceptó&#39;</span><span class="p">);</span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;El usuario canceló&#39;</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>Útil cuando necesitas que el usuario confirme una acción importante, como eliminar un archivo.</p>
-<h4 id="3-solicitar-entrada-del-usuario-windowprompt">3. <strong>Solicitar entrada del usuario</strong>: <code>window.prompt()</code></h4>
-<p>Este método muestra un cuadro de diálogo que solicita al usuario una entrada de texto. Retorna el texto ingresado o <code>null</code> si el usuario cancela la operación.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">prompt</span><span class="p">(</span><span class="s1">&#39;¿Cuál es tu nombre?&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Nombre por defecto&#39;</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;El nombre ingresado es: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">nombre</span><span class="p">);</span>
-</code></pre></div>
-<p>Puedes usarlo para recolectar datos rápidos, aunque es preferible usar formularios HTML para entradas más complejas.</p>
+<h3 id="diagrama-del-flujo-de-windowopen">🧩 <strong>Diagrama del Flujo de <code>window.open()</code></strong></h3>
+<pre class="mermaid"><code>flowchart TD
+    A[Usuario hace clic en el botón] --&gt; B[window.open()]
+    B --&gt; C[Se abre una nueva ventana/pestaña]
+    C --&gt; D[Se carga el contenido especificado en la URL]</code></pre>
 <hr />
-<h2 id="2-document-manipulando-el-dom">🏗️ <strong>2. <code>document</code>: Manipulando el DOM</strong></h2>
-<p>El objeto <code>document</code> nos proporciona una interfaz para manipular la estructura del DOM (Document Object Model), que es esencialmente la estructura de la página web. Podemos seleccionar, crear y modificar elementos HTML directamente desde JavaScript.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Cambiar el contenido de un elemento con ID &quot;titulo&quot;</span>
-<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;titulo&#39;</span><span class="p">).</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;¡Hola, Mundo!&#39;</span><span class="p">;</span>
+<h2 id="2-comunicacion-entre-ventanas-windowopener-y-postmessage">🔗 <strong>2. Comunicación Entre Ventanas: <code>window.opener</code> y <code>postMessage()</code></strong></h2>
+<p>Abrir ventanas es solo la mitad del trabajo. En muchas aplicaciones web, es necesario <strong>enviar datos entre ventanas</strong>. JavaScript te permite hacer esto de dos maneras principales: <strong><code>window.opener</code></strong> y <strong><code>postMessage()</code></strong>.</p>
+<h3 id="21-comunicacion-con-windowopener">🔄 <strong>2.1. Comunicación con <code>window.opener</code></strong></h3>
+<p>Cuando una nueva ventana es creada con <code>window.open()</code>, esta ventana tiene una referencia a su ventana "padre" mediante el objeto <strong><code>window.opener</code></strong>. Esto permite que la nueva ventana interactúe directamente con la ventana que la abrió.</p>
+<h4 id="ejemplo-interactuando-con-la-ventana-padre">🌍 <strong>Ejemplo: Interactuando con la Ventana Padre</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// En la ventana hija:</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">opener</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;mensaje&#39;</span><span class="p">).</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;¡Mensaje desde la ventana hija!&#39;</span><span class="p">;</span>
 </code></pre></div>
-<h3 id="metodos-clave-del-objeto-document">Métodos clave del objeto <code>document</code>:</h3>
-<ul>
-<li><strong><code>getElementById()</code></strong>: Selecciona un elemento por su ID.</li>
-<li><strong><code>querySelector()</code></strong>: Selecciona el primer elemento que coincida con un selector CSS.</li>
-<li><strong><code>createElement()</code></strong>: Crea un nuevo elemento HTML.</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="c1">// Crear un nuevo párrafo y añadirlo al cuerpo</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">parrafo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">);</span>
-<span class="nx">parrafo</span><span class="p">.</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Este es un nuevo párrafo.&#39;</span><span class="p">;</span>
-<span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">parrafo</span><span class="p">);</span>
+<p>Este código permite a la ventana hija cambiar el contenido de un elemento en la ventana principal.</p>
+<h3 id="diagrama-de-comunicacion-con-windowopener">🧩 <strong>Diagrama de Comunicación con <code>window.opener</code></strong></h3>
+<pre class="mermaid"><code>flowchart TD
+    A[Ventana Padre abre Ventana Hija] --&gt; B[Ventana Hija usa window.opener]
+    B --&gt; C[Ventana Padre recibe datos o cambios]</code></pre>
+<h3 id="22-comunicacion-segura-con-postmessage">📡 <strong>2.2. Comunicación Segura con <code>postMessage()</code></strong></h3>
+<p>Si deseas comunicarte de forma <strong>más segura</strong> entre ventanas (especialmente si las ventanas están en dominios diferentes), puedes utilizar <strong><code>postMessage()</code></strong>. Este método permite enviar mensajes específicos entre ventanas, con el beneficio de poder especificar de dónde aceptas los mensajes para evitar problemas de seguridad.</p>
+<h4 id="ejemplo-de-postmessage">🌍 <strong>Ejemplo de <code>postMessage()</code></strong></h4>
+<p><strong>En la ventana principal:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nuevaVentana</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;https://www.ejemplo.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;_blank&#39;</span><span class="p">);</span>
+
+<span class="c1">// Enviar un mensaje a la nueva ventana</span>
+<span class="nx">nuevaVentana</span><span class="p">.</span><span class="nx">postMessage</span><span class="p">(</span><span class="s1">&#39;Hola desde la ventana principal&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;https://www.ejemplo.com&#39;</span><span class="p">);</span>
 </code></pre></div>
+<p><strong>En la ventana hija (receptora):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">origin</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s1">&#39;https://www.ejemplo.com&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"> </span><span class="c1">// Evitar mensajes de fuentes no confiables</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Mensaje recibido:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">event</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<h3 id="diagrama-de-comunicacion-con-postmessage">🧩 <strong>Diagrama de Comunicación con <code>postMessage()</code></strong></h3>
+<pre class="mermaid"><code>flowchart TD
+    A[Ventana Principal envía mensaje] --&gt; B[window.postMessage()]
+    B --&gt; C[Ventana Hija recibe el mensaje y lo procesa]</code></pre>
+<p>Este flujo permite un <strong>intercambio seguro</strong> de mensajes entre ventanas, asegurando que los datos solo provengan de fuentes confiables.</p>
 <hr />
-<h2 id="3-navigator-informacion-sobre-el-navegador">🔄 <strong>3. <code>navigator</code>: Información sobre el Navegador</strong></h2>
-<p>El objeto <code>navigator</code> proporciona información sobre el navegador y el dispositivo que está utilizando el usuario, como la geolocalización, si está en línea y su idioma preferido.</p>
-<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">userAgent</span><span class="p">);</span><span class="w"> </span><span class="c1">// Información sobre el navegador y el sistema</span>
+<h2 id="3-ejemplos-de-comunicacion-dinamica-entre-ventanas">🖇️ <strong>3. Ejemplos de Comunicación Dinámica Entre Ventanas</strong></h2>
+<h3 id="ejemplo-1-cambiar-el-contenido-de-la-ventana-principal-desde-la-ventana-hija">📧 <strong>Ejemplo 1: Cambiar el Contenido de la Ventana Principal desde la Ventana Hija</strong></h3>
+<p><strong>Ventana principal:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ventana Principal<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;titulo&quot;</span><span class="p">&gt;</span>Hola desde la Ventana Principal<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;btnAbrirHija&quot;</span><span class="p">&gt;</span>Abrir Ventana Hija<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;btnAbrirHija&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;ventanaHija.html&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ventanaHija&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;width=400,height=300&#39;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-<h3 id="propiedades-clave-de-navigator">Propiedades clave de <code>navigator</code>:</h3>
-<ul>
-<li><strong><code>navigator.geolocation</code></strong>: Acceso a la geolocalización del dispositivo.</li>
-<li><strong><code>navigator.onLine</code></strong>: Saber si el usuario tiene conexión a Internet.</li>
-<li><strong><code>navigator.language</code></strong>: El idioma preferido del navegador.</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">onLine</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Conexión a Internet disponible.&quot;</span><span class="p">);</span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Estás desconectado.&quot;</span><span class="p">);</span>
-<span class="p">}</span>
+<p><strong>Ventana hija (<code>ventanaHija.html</code>):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ventana Hija<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Ventana Hija<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;btnEnviarMensaje&quot;</span><span class="p">&gt;</span>Enviar Mensaje a Principal<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;btnEnviarMensaje&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nb">window</span><span class="p">.</span><span class="nx">opener</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;titulo&#39;</span><span class="p">).</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;¡Mensaje desde la Ventana Hija!&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
+<h3 id="diagrama-del-flujo-del-ejemplo">🧩 <strong>Diagrama del Flujo del Ejemplo</strong></h3>
+<pre class="mermaid"><code>flowchart TD
+    A[Ventana Principal] --&gt; B[Abre Ventana Hija]
+    B --&gt; C[Ventana Hija interactúa con Ventana Principal usando window.opener]
+    C --&gt; D[Ventana Principal actualiza su contenido]</code></pre>
 <hr />
-<h2 id="4-history-control-del-historial-de-navegacion">⏳ <strong>4. <code>history</code>: Control del Historial de Navegación</strong></h2>
-<p>El objeto <code>history</code> permite navegar hacia adelante o hacia atrás en el historial del navegador, sin necesidad de recargar la página. También puedes manipular el historial para gestionar aplicaciones SPA (Single Page Applications).</p>
-<div class="highlight"><pre><span></span><code><span class="nx">history</span><span class="p">.</span><span class="nx">back</span><span class="p">();</span><span class="w">  </span><span class="c1">// Regresar a la página anterior</span>
-<span class="nx">history</span><span class="p">.</span><span class="nx">forward</span><span class="p">();</span><span class="w">  </span><span class="c1">// Avanzar a la siguiente página</span>
-</code></pre></div>
-<p>También puedes añadir estados personalizados al historial mediante:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">history</span><span class="p">.</span><span class="nx">pushState</span><span class="p">({</span><span class="w"> </span><span class="nx">page</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s1">&#39;Título&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;/pagina2&#39;</span><span class="p">);</span>
-</code></pre></div>
-<hr />
-<h2 id="5-location-manipulacion-de-la-url">🌍 <strong>5. <code>location</code>: Manipulación de la URL</strong></h2>
-<p>El objeto <code>location</code> permite trabajar con la URL de la página actual. Puedes cambiar la URL, redirigir al usuario o recargar la página sin necesidad de recargar todo el documento.</p>
-<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">);</span><span class="w">  </span><span class="c1">// URL completa actual</span>
-<span class="nx">location</span><span class="p">.</span><span class="nx">reload</span><span class="p">();</span><span class="w">  </span><span class="c1">// Recargar la página</span>
+<h2 id="4-cerrar-una-ventana-desde-otra">🌟 <strong>4. Cerrar una Ventana Desde Otra</strong></h2>
+<p>A veces, es necesario cerrar una ventana desde la ventana que la abrió. Esto es posible utilizando <strong><code>window.close()</code></strong>, pero solo si la ventana fue abierta mediante <strong><code>window.open()</code></strong>.</p>
+<h3 id="ejemplo-de-cierre-de-ventana">Ejemplo de Cierre de Ventana:</h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// En la ventana principal</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">ventanaHija</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;ventanaHija.html&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;_blank&#39;</span><span class="p">);</span>
+
+<span class="c1">// Después de unos segundos, cerrar la ventana hija</span>
+<span class="nx">setTimeout</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">ventanaHija</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<span class="p">},</span><span class="w"> </span><span class="mf">5000</span><span class="p">);</span><span class="w">  </span><span class="c1">// Cierra la ventana después de 5 segundos</span>
 </code></pre></div>
 <hr />
 <h2 id="conclusion">🚀 <strong>Conclusión</strong></h2>
-<p>Los objetos predefinidos como <code>window</code>, <code>document</code>, <code>navigator</code>, <code>history</code> y <code>location</code> en JavaScript ofrecen una rica interfaz para interactuar con el navegador y el DOM. Estos métodos te permiten controlar las ventanas, interactuar con los usuarios mediante cuadros de diálogo y gestionar el historial de navegación de manera efectiva. ¡Con estas herramientas, puedes crear experiencias de usuario más dinámicas e interactivas!</p>
+<p>La <strong>creación de nuevas ventanas</strong> y la <strong>comunicación entre ellas</strong> son características poderosas de JavaScript que permiten crear aplicaciones web interactivas y dinámicas. Con <strong><code>window.open()</code></strong>, puedes abrir ventanas personalizadas, y con <strong><code>window.opener</code></strong> y <strong><code>postMessage()</code></strong>, puedes establecer <strong>canales de comunicación eficientes y seguros</strong> entre ellas.</p>
+<p>¡Pon en práctica estos métodos para mejorar la experiencia de usuario en tus aplicaciones! 🌍🎉</p>
+<h3 id="resumen-de-metodos-clave">🧑‍💻 <strong>Resumen de Métodos Clave</strong></h3>
+<ul>
+<li><code>window.open()</code>: Abre una nueva ventana o pestaña.</li>
+<li><code>window.opener</code>: Permite que la ventana hija se comunique con la ventana que la abrió.</li>
+<li><code>postMessage()</code>: Envía mensajes entre ventanas de manera segura.</li>
+<li><code>window.close()</code>: Cierra la ventana actual.</li>
+</ul>
+<h3 id="diagrama-general-del-flujo-de-comunicacion-entre-ventanas">🧩 <strong>Diagrama General del Flujo de Comunicación Entre Ventanas</strong></h3>
+<pre class="mermaid"><code>graph TD
+    A[Ventana Principal] --&gt; B[window.open()]
+    B --&gt; C[Ventana Hija creada]
+    C --&gt; D[Comunicación usando window.opener o postMessage]
+    D --&gt; E[Ventana Principal actualiza su estado]</code></pre>
 
 
 
@@ -1556,7 +1674,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../2objetosnativosdellenguaje/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2. Objetos Nativos del Lenguaje">
+          <a href="../6gestiondelaaparienciadelaventana/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 6. Gestión de la apariencia de la ventana">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1566,20 +1684,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                2. Objetos Nativos del Lenguaje
+                6. Gestión de la apariencia de la ventana
               </div>
             </div>
           </a>
         
         
           
-          <a href="../4generaciondehtmldesdecodigo/" class="md-footer__link md-footer__link--next" aria-label="Next: 4. Generación de HTML desde código">
+          <a href="../8cookies/" class="md-footer__link md-footer__link--next" aria-label="Next: 8. Cookies">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                4. Generación de HTML desde código
+                8. Cookies
               </div>
             </div>
             <div class="md-footer__button md-icon">
