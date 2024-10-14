@@ -1,0 +1,930 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9372656274060799"
+    crossorigin="anonymous"></script>
+
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+  
+  
+  
+  
+  
+  <link rel="icon" href="../../../../../../assets/images/favicon.png">
+  <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+  
+  
+  
+  <title>Instalación de Hadoop en AWS (EC2) - Big Data Aplicado</title>
+  
+  
+  
+  <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.35f28582.min.css">
+  
+  
+  <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
+  
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+  <style>
+    :root {
+      --md-text-font:"Roboto";
+      --md-code-font:"Roboto Mono"
+    }
+  </style>
+  
+  
+  
+  <link rel="stylesheet" href="../../../../../../stylesheets/extra.css">
+  
+  <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+  
+  
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-3VWRJDCQS9"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-3VWRJDCQS9",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-3VWRJDCQS9",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+  
+  
+  
+ <link href="../../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../../../assets/javascripts/glightbox.min.js"></script></head>
+
+
+
+
+
+
+
+
+
+
+<body dir="ltr" data-md-color-scheme="default"
+  data-md-color-primary="light-green" data-md-color-accent="light-green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+      
+      <a href="#instalacion-de-hadoop-en-aws-ec2" class="md-skip">
+        Skip to content
+      </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+    
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../../.." title="Big Data Aplicado" class="md-header__button md-logo" aria-label="Big Data Aplicado" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Big Data Aplicado
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Instalación de Hadoop en AWS (EC2)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="light-green"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="light-green" data-md-color-accent="light-green"  aria-label="Quitar modo oscuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Quitar modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+      
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+          
+          
+          <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="Big Data Aplicado" class="md-nav__button md-logo" aria-label="Big Data Aplicado" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Big Data Aplicado
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT1. Introducción a Big Data Aplicado y Hadoop
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            UT1. Introducción a Big Data Aplicado y Hadoop
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../1motivacionyorigen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Motivación y Origen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2. Apache Hadoop a Alto Nivel
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            2. Apache Hadoop a Alto Nivel
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../21queesapachehadoop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.1. ¿Qué es Apache Hadoop?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../22ecosistemahadoopydistribuciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2. Ecosistema Hadoop y sus Distribuciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../23arquitectura/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3. Arquitectura
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../24beneficiosdesventajasydificultades/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4. Beneficios, Desventajas y Dificultades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../indicedetareas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prácticas y Tareas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+          
+          
+          
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#paso-1-conectate-a-la-instancia-ec2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 1: Conéctate a la instancia EC2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-2-actualiza-el-sistema-e-instala-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 2: Actualiza el sistema e instala Java
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-3-descarga-e-instala-hadoop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 3: Descarga e instala Hadoop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-4-configura-variables-de-entorno" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 4: Configura variables de entorno
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-5-configura-hadoop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 5: Configura Hadoop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-6-configura-los-archivos-core-sitexml-y-hdfs-sitexml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 6: Configura los archivos core-site.xml y hdfs-site.xml
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-6-formatea-el-sistema-de-archivos-de-hadoop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 6: Formatea el sistema de archivos de Hadoop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-7-inicia-hadoop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 7: Inicia Hadoop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-9-deten-hadoop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 9: Detén Hadoop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#posibles-errores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Posibles errores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Posibles errores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permission-denied-publickey" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permission denied (publickey).
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Permission denied (publickey).">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-configura-ssh-sin-contrasena" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 1: Configura SSH sin contraseña
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2-inicia-yarn-de-nuevo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 2: Inicia YARN de nuevo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+              </div>
+            </div>
+          </div>
+          
+          
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+              
+
+
+<h1 id="instalacion-de-hadoop-en-aws-ec2">Instalación de Hadoop en AWS (EC2)</h1>
+<h3 id="paso-1-conectate-a-la-instancia-ec2">Paso 1: Conéctate a la instancia EC2</h3>
+<p>Primero, conéctate a tu instancia de EC2 mediante SSH:</p>
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>-i<span class="w"> </span>/path/to/your-key.pem<span class="w"> </span>ubuntu@&lt;IP_de_la_instancia&gt;
+</code></pre></div>
+<h3 id="paso-2-actualiza-el-sistema-e-instala-java">Paso 2: Actualiza el sistema e instala Java</h3>
+<p>Hadoop requiere Java, así que primero instala Java antes de continuar.</p>
+<ol>
+<li>Actualiza los paquetes de la instancia EC2:
+   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
+</code></pre></div></li>
+<li>Instala Java (Hadoop requiere Java 8):
+   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openjdk-8-jdk<span class="w"> </span>-y
+</code></pre></div></li>
+<li>Verifica la instalación de Java:
+   <div class="highlight"><pre><span></span><code>java<span class="w"> </span>-version
+</code></pre></div></li>
+</ol>
+<h3 id="paso-3-descarga-e-instala-hadoop">Paso 3: Descarga e instala Hadoop</h3>
+<ol>
+<li>Descarga la última versión de Hadoop desde el sitio oficial de Apache:
+   <div class="highlight"><pre><span></span><code>wget<span class="w"> </span>https://downloads.apache.org/hadoop/common/hadoop-3.3.5/hadoop-3.3.5.tar.gz
+</code></pre></div></li>
+<li>Extrae el archivo descargado:
+   <div class="highlight"><pre><span></span><code>tar<span class="w"> </span>-xzvf<span class="w"> </span>hadoop-3.3.5.tar.gz
+</code></pre></div></li>
+<li>Mueve Hadoop a una ubicación adecuada, por ejemplo, <code>/usr/local/</code>:
+   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mv<span class="w"> </span>hadoop-3.3.5<span class="w"> </span>/usr/local/hadoop
+</code></pre></div></li>
+</ol>
+<h3 id="paso-4-configura-variables-de-entorno">Paso 4: Configura variables de entorno</h3>
+<p>Configura las variables de entorno necesarias para Hadoop.</p>
+<ol>
+<li>Edita el archivo <code>.bashrc</code> del usuario actual:
+   <div class="highlight"><pre><span></span><code>nano<span class="w"> </span>~/.bashrc
+</code></pre></div></li>
+<li>Agrega las siguientes líneas al final del archivo:
+   <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">HADOOP_HOME</span><span class="o">=</span>/usr/local/hadoop
+<span class="nb">export</span><span class="w"> </span><span class="nv">HADOOP_INSTALL</span><span class="o">=</span><span class="nv">$HADOOP_HOME</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">HADOOP_MAPRED_HOME</span><span class="o">=</span><span class="nv">$HADOOP_HOME</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">HADOOP_COMMON_HOME</span><span class="o">=</span><span class="nv">$HADOOP_HOME</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">HADOOP_HDFS_HOME</span><span class="o">=</span><span class="nv">$HADOOP_HOME</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">YARN_HOME</span><span class="o">=</span><span class="nv">$HADOOP_HOME</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">HADOOP_COMMON_LIB_NATIVE_DIR</span><span class="o">=</span><span class="nv">$HADOOP_HOME</span>/lib/native
+<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HADOOP_HOME</span>/sbin:<span class="nv">$HADOOP_HOME</span>/bin
+<span class="nb">export</span><span class="w"> </span><span class="nv">JAVA_HOME</span><span class="o">=</span>/usr/lib/jvm/java-8-openjdk-amd64
+</code></pre></div></li>
+<li>
+<p>Guarda y cierra el archivo.</p>
+</li>
+<li>
+<p>Aplica los cambios:
+   <div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>~/.bashrc
+</code></pre></div></p>
+</li>
+</ol>
+<h3 id="paso-5-configura-hadoop">Paso 5: Configura Hadoop</h3>
+<p>Ahora edita los archivos de configuración de Hadoop.</p>
+<ol>
+<li>Edita el archivo <code>hadoop-env.sh</code> para configurar <code>JAVA_HOME</code>:
+   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/usr/local/hadoop/etc/hadoop/hadoop-env.sh
+</code></pre></div></li>
+<li>Asegúrate de que la variable <code>JAVA_HOME</code> esté configurada correctamente:
+   <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">JAVA_HOME</span><span class="o">=</span>/usr/lib/jvm/java-8-openjdk-amd64
+</code></pre></div></li>
+</ol>
+<h3 id="paso-6-configura-los-archivos-core-sitexml-y-hdfs-sitexml">Paso 6: Configura los archivos core-site.xml y hdfs-site.xml</h3>
+<ol>
+<li>Edita el archivo <code>core-site.xml</code>:
+   <div class="highlight"><pre><span></span><code>nano<span class="w"> </span>/usr/local/hadoop/etc/hadoop/core-site.xml
+</code></pre></div>
+   <div class="highlight"><pre><span></span><code><span class="nt">&lt;configuration&gt;</span>
+<span class="w">   </span><span class="nt">&lt;property&gt;</span>
+<span class="w">      </span><span class="nt">&lt;name&gt;</span>fs.defaultFS<span class="nt">&lt;/name&gt;</span>
+<span class="w">      </span><span class="nt">&lt;value&gt;</span>hdfs://localhost:9000<span class="nt">&lt;/value&gt;</span>
+<span class="w">      </span><span class="nt">&lt;description&gt;</span>NameNode<span class="w"> </span>URI<span class="nt">&lt;/description&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">   </span><span class="nt">&lt;property&gt;</span>
+<span class="w">      </span><span class="nt">&lt;name&gt;</span>hadoop.tmp.dir<span class="nt">&lt;/name&gt;</span>
+<span class="w">      </span><span class="nt">&lt;value&gt;</span>/usr/local/hadoop/tmp<span class="nt">&lt;/value&gt;</span>
+<span class="w">      </span><span class="nt">&lt;description&gt;</span>Directorio<span class="w"> </span>temporal<span class="w"> </span>de<span class="w"> </span>Hadoop<span class="nt">&lt;/description&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/property&gt;</span>
+<span class="nt">&lt;/configuration&gt;</span>
+</code></pre></div></li>
+<li>Edita el archivo <code>hdfs-site.xml</code>:
+   <div class="highlight"><pre><span></span><code>nano<span class="w"> </span>/usr/local/hadoop/etc/hadoop/hdfs-site.xml
+</code></pre></div>
+   <div class="highlight"><pre><span></span><code><span class="nt">&lt;configuration&gt;</span>
+<span class="w">   </span><span class="nt">&lt;property&gt;</span>
+<span class="w">      </span><span class="nt">&lt;name&gt;</span>dfs.replication<span class="nt">&lt;/name&gt;</span>
+<span class="w">      </span><span class="nt">&lt;value&gt;</span>1<span class="nt">&lt;/value&gt;</span>
+<span class="w">      </span><span class="nt">&lt;description&gt;</span>Factor<span class="w"> </span>de<span class="w"> </span>replicación<span class="w"> </span>de<span class="w"> </span>HDFS<span class="w"> </span>(para<span class="w"> </span>modo<span class="w"> </span>pseudo-distribuido<span class="w"> </span>es<span class="w"> </span>1)<span class="nt">&lt;/description&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/property&gt;</span>
+
+<span class="w">   </span><span class="nt">&lt;property&gt;</span>
+<span class="w">      </span><span class="nt">&lt;name&gt;</span>dfs.namenode.name.dir<span class="nt">&lt;/name&gt;</span>
+<span class="w">      </span><span class="nt">&lt;value&gt;</span>file:///usr/local/hadoop/hdfs/namenode<span class="nt">&lt;/value&gt;</span>
+<span class="w">      </span><span class="nt">&lt;description&gt;</span>Directorio<span class="w"> </span>para<span class="w"> </span>los<span class="w"> </span>archivos<span class="w"> </span>del<span class="w"> </span>NameNode<span class="nt">&lt;/description&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/property&gt;</span>
+
+<span class="w">   </span><span class="nt">&lt;property&gt;</span>
+<span class="w">      </span><span class="nt">&lt;name&gt;</span>dfs.datanode.data.dir<span class="nt">&lt;/name&gt;</span>
+<span class="w">      </span><span class="nt">&lt;value&gt;</span>file:///usr/local/hadoop/hdfs/datanode<span class="nt">&lt;/value&gt;</span>
+<span class="w">      </span><span class="nt">&lt;description&gt;</span>Directorio<span class="w"> </span>para<span class="w"> </span>los<span class="w"> </span>bloques<span class="w"> </span>de<span class="w"> </span>datos<span class="w"> </span>del<span class="w"> </span>DataNode<span class="nt">&lt;/description&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/property&gt;</span>
+
+<span class="w">   </span><span class="nt">&lt;property&gt;</span>
+<span class="w">      </span><span class="nt">&lt;name&gt;</span>dfs.permissions<span class="nt">&lt;/name&gt;</span>
+<span class="w">      </span><span class="nt">&lt;value&gt;</span>false<span class="nt">&lt;/value&gt;</span>
+<span class="w">      </span><span class="nt">&lt;description&gt;</span>Desactiva<span class="w"> </span>los<span class="w"> </span>permisos<span class="w"> </span>de<span class="w"> </span>HDFS<span class="w"> </span>para<span class="w"> </span>simplificar<span class="w"> </span>la<span class="w"> </span>configuración<span class="nt">&lt;/description&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/property&gt;</span>
+<span class="nt">&lt;/configuration&gt;</span>
+</code></pre></div></li>
+<li>Crea las carpetas <code>hdfs/namenode</code> y <code>hdfs/datanode</code>:
+   <div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>/usr/local/hadoop/tmp
+mkdir<span class="w"> </span>-p<span class="w"> </span>/usr/local/hadoop/hdfs/namenode
+mkdir<span class="w"> </span>-p<span class="w"> </span>/usr/local/hadoop/hdfs/datanode
+</code></pre></div></li>
+</ol>
+<h3 id="paso-6-formatea-el-sistema-de-archivos-de-hadoop">Paso 6: Formatea el sistema de archivos de Hadoop</h3>
+<p>Antes de iniciar Hadoop, necesitas formatear el sistema de archivos.</p>
+<ol>
+<li>Ejecuta el siguiente comando para formatear el sistema de archivos de HDFS:
+   <div class="highlight"><pre><span></span><code>hdfs<span class="w"> </span>namenode<span class="w"> </span>-format
+</code></pre></div></li>
+</ol>
+<h3 id="paso-7-inicia-hadoop">Paso 7: Inicia Hadoop</h3>
+<p>Para iniciar Hadoop, ejecuta los siguientes comandos:</p>
+<ol>
+<li>Inicia el NameNode y el DataNode:
+   <div class="highlight"><pre><span></span><code>start-dfs.sh
+</code></pre></div></li>
+<li>Inicia YARN:
+   <div class="highlight"><pre><span></span><code>start-yarn.sh
+</code></pre></div></li>
+</ol>
+<h3 id="paso-9-deten-hadoop">Paso 9: Detén Hadoop</h3>
+<p>Para detener Hadoop, usa los siguientes comandos:</p>
+<ol>
+<li>Detén HDFS:
+   <div class="highlight"><pre><span></span><code>stop-dfs.sh
+</code></pre></div></li>
+<li>Detén YARN:
+   <div class="highlight"><pre><span></span><code>stop-yarn.sh
+</code></pre></div></li>
+</ol>
+<h2 id="posibles-errores">Posibles errores</h2>
+<h3 id="permission-denied-publickey">Permission denied (publickey).</h3>
+<p>El error "Permission denied (publickey)" al ejecutar <code>start-yarn.sh</code> o similar indica que el sistema está intentando iniciar los nodemanagers y resourcemanager en los nodos locales de Hadoop, pero está fallando la autenticación SSH.</p>
+<p>Hadoop, por defecto, intenta comunicarse entre nodos a través de SSH para iniciar YARN, y parece que no se ha configurado correctamente el acceso SSH entre nodos. Si estás ejecutando un clúster pseudo-distribuido (es decir, en una sola máquina), necesitarás configurar SSH para que el usuario actual pueda conectarse a localhost sin contraseña. Aquí están los pasos para solucionar este problema:</p>
+<h4 id="paso-1-configura-ssh-sin-contrasena">Paso 1: Configura SSH sin contraseña</h4>
+<ol>
+<li>
+<p><strong>Genera un par de claves SSH si no tienes uno ya creado</strong>:
+   Ejecuta el siguiente comando y acepta los valores predeterminados:
+   <div class="highlight"><pre><span></span><code>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> </span>-P<span class="w"> </span><span class="s2">&quot;&quot;</span>
+</code></pre></div>
+   Esto creará una clave SSH pública y privada en el directorio <code>~/.ssh/</code> (por defecto).</p>
+</li>
+<li>
+<p><strong>Agrega la clave pública al archivo <code>authorized_keys</code></strong> para permitir la autenticación SSH sin contraseña en localhost:
+   <div class="highlight"><pre><span></span><code>cat<span class="w"> </span>~/.ssh/id_rsa.pub<span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.ssh/authorized_keys
+</code></pre></div></p>
+</li>
+<li><strong>Asegúrate de que los permisos sean correctos</strong>:
+   <div class="highlight"><pre><span></span><code>chmod<span class="w"> </span><span class="m">700</span><span class="w"> </span>~/.ssh
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/authorized_keys
+</code></pre></div></li>
+<li><strong>Prueba la conexión SSH a localhost</strong> para verificar que puedas conectarte sin contraseña:
+   <div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>localhost
+</code></pre></div></li>
+</ol>
+<p>Si no te pide una contraseña y te deja entrar, la configuración es correcta. Puedes salir de la sesión con <code>exit</code>.</p>
+<h4 id="paso-2-inicia-yarn-de-nuevo">Paso 2: Inicia YARN de nuevo</h4>
+<p>Después de configurar SSH, intenta iniciar YARN de nuevo:</p>
+<div class="highlight"><pre><span></span><code>start-yarn.sh
+</code></pre></div>
+<p>Esto debería iniciar correctamente tanto el ResourceManager como los NodeManagers sin el error de "Permission denied".</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        <a href='https://ko-fi.com/jgarciadeparedesh02' title='Invítame a un café en ko-fi.com' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi2.png?v=3' border='0' alt='Invítame a un café en ko-fi.com' /></a>
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="Esta página es genial" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="Podría mejorar" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+              
+            </article>
+          </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+      <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.footer"], "search": "../../../../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+    <script src="../../../../../../assets/javascripts/bundle.56dfad97.min.js"></script>
+    
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+
+</html>
