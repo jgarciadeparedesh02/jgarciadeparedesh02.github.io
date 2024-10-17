@@ -20,7 +20,7 @@
   
   
   
-  <title>Instalación de Hadoop en AWS (EC2) - Big Data Aplicado</title>
+  <title>Práctica real con comandos de HDFS en EC2 - Big Data Aplicado</title>
   
   
   
@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
       
-      <a href="#instalacion-de-hadoop-en-aws-ec2" class="md-skip">
+      <a href="#practica-real-con-comandos-de-hdfs-en-ec2" class="md-skip">
         Skip to content
       </a>
       
@@ -136,7 +136,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Instalación de Hadoop en AWS (EC2)
+              Práctica real con comandos de HDFS en EC2
             
           </span>
         </div>
@@ -506,126 +506,111 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#paso-1-conectate-a-la-instancia-ec2" class="md-nav__link">
+  <a href="#1-crear-un-directorio-en-hdfs" class="md-nav__link">
     <span class="md-ellipsis">
-      Paso 1: Conéctate a la instancia EC2
+      1. Crear un directorio en HDFS
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#paso-2-actualiza-el-sistema-e-instala-java" class="md-nav__link">
+  <a href="#2-subir-un-archivo-desde-el-sistema-local-a-hdfs" class="md-nav__link">
     <span class="md-ellipsis">
-      Paso 2: Actualiza el sistema e instala Java
+      2. Subir un archivo desde el sistema local a HDFS
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#paso-3-descarga-e-instala-hadoop" class="md-nav__link">
+  <a href="#3-listar-los-archivos-en-un-directorio-de-hdfs" class="md-nav__link">
     <span class="md-ellipsis">
-      Paso 3: Descarga e instala Hadoop
+      3. Listar los archivos en un directorio de HDFS
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#paso-4-configura-variables-de-entorno" class="md-nav__link">
+  <a href="#4-ver-el-contenido-de-un-archivo-en-hdfs" class="md-nav__link">
     <span class="md-ellipsis">
-      Paso 4: Configura variables de entorno
+      4. Ver el contenido de un archivo en HDFS
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#paso-5-configura-hadoop" class="md-nav__link">
+  <a href="#5-mover-o-renombrar-un-archivo-en-hdfs" class="md-nav__link">
     <span class="md-ellipsis">
-      Paso 5: Configura Hadoop
+      5. Mover o renombrar un archivo en HDFS
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#paso-6-configura-los-archivos-core-sitexml-y-hdfs-sitexml" class="md-nav__link">
+  <a href="#6-descargar-un-archivo-desde-hdfs-al-sistema-local" class="md-nav__link">
     <span class="md-ellipsis">
-      Paso 6: Configura los archivos core-site.xml y hdfs-site.xml
+      6. Descargar un archivo desde HDFS al sistema local
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#paso-6-formatea-el-sistema-de-archivos-de-hadoop" class="md-nav__link">
+  <a href="#7-eliminar-un-archivo-de-hdfs" class="md-nav__link">
     <span class="md-ellipsis">
-      Paso 6: Formatea el sistema de archivos de Hadoop
+      7. Eliminar un archivo de HDFS
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#paso-7-inicia-hadoop" class="md-nav__link">
+  <a href="#8-eliminar-un-directorio-en-hdfs" class="md-nav__link">
     <span class="md-ellipsis">
-      Paso 7: Inicia Hadoop
+      8. Eliminar un directorio en HDFS
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#paso-9-deten-hadoop" class="md-nav__link">
+  <a href="#opcional-comandos-adicionales-para-profundizar" class="md-nav__link">
     <span class="md-ellipsis">
-      Paso 9: Detén Hadoop
+      Opcional: Comandos adicionales para profundizar
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#posibles-errores" class="md-nav__link">
-    <span class="md-ellipsis">
-      Posibles errores
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Posibles errores">
+    <nav class="md-nav" aria-label="Opcional: Comandos adicionales para profundizar">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#permission-denied-publickey" class="md-nav__link">
+  <a href="#ver-informacion-sobre-el-espacio-disponible-en-hdfs" class="md-nav__link">
     <span class="md-ellipsis">
-      Permission denied (publickey).
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Permission denied (publickey).">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#paso-1-configura-ssh-sin-contrasena" class="md-nav__link">
-    <span class="md-ellipsis">
-      Paso 1: Configura SSH sin contraseña
+      Ver información sobre el espacio disponible en HDFS
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#paso-2-inicia-yarn-de-nuevo" class="md-nav__link">
+  <a href="#contar-archivos-directorios-y-tamano-total-de-un-directorio-en-hdfs" class="md-nav__link">
     <span class="md-ellipsis">
-      Paso 2: Inicia YARN de nuevo
+      Contar archivos, directorios y tamaño total de un directorio en HDFS
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#comprobar-bloques-de-un-archivo-en-hdfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprobar bloques de un archivo en HDFS
+    </span>
+  </a>
   
 </li>
         
@@ -649,187 +634,56 @@
               
 
 
-<h1 id="instalacion-de-hadoop-en-aws-ec2">Instalación de Hadoop en AWS (EC2)</h1>
-<h3 id="paso-1-conectate-a-la-instancia-ec2">Paso 1: Conéctate a la instancia EC2</h3>
-<p>Primero, conéctate a tu instancia de EC2 mediante SSH:</p>
-<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>-i<span class="w"> </span>/path/to/your-key.pem<span class="w"> </span>ubuntu@&lt;IP_de_la_instancia&gt;
+<h1 id="practica-real-con-comandos-de-hdfs-en-ec2">Práctica real con comandos de HDFS en EC2</h1>
+<h2 id="1-crear-un-directorio-en-hdfs">1. Crear un directorio en HDFS</h2>
+<p>Crea un directorio llamado <code>/practica_hdfs</code> dentro del sistema de archivos distribuido (HDFS).</p>
+<div class="highlight"><pre><span></span><code>hdfs<span class="w"> </span>dfs<span class="w"> </span>-mkdir<span class="w"> </span>/practica_hdfs
 </code></pre></div>
-<h3 id="paso-2-actualiza-el-sistema-e-instala-java">Paso 2: Actualiza el sistema e instala Java</h3>
-<p>Hadoop requiere Java, así que primero instala Java antes de continuar.</p>
-<ol>
-<li>Actualiza los paquetes de la instancia EC2:
-   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
-</code></pre></div></li>
-<li>Instala Java (Hadoop requiere Java 8):
-   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openjdk-8-jdk<span class="w"> </span>-y
-</code></pre></div></li>
-<li>Verifica la instalación de Java:
-   <div class="highlight"><pre><span></span><code>java<span class="w"> </span>-version
-</code></pre></div></li>
-</ol>
-<h3 id="paso-3-descarga-e-instala-hadoop">Paso 3: Descarga e instala Hadoop</h3>
-<ol>
-<li>Descarga la última versión de Hadoop desde el sitio oficial de Apache:
-   <div class="highlight"><pre><span></span><code>wget<span class="w"> </span>https://downloads.apache.org/hadoop/common/hadoop-3.3.5/hadoop-3.3.5.tar.gz
-</code></pre></div></li>
-<li>Extrae el archivo descargado:
-   <div class="highlight"><pre><span></span><code>tar<span class="w"> </span>-xzvf<span class="w"> </span>hadoop-3.3.5.tar.gz
-</code></pre></div></li>
-<li>Mueve Hadoop a una ubicación adecuada, por ejemplo, <code>/usr/local/</code>:
-   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mv<span class="w"> </span>hadoop-3.3.5<span class="w"> </span>/usr/local/hadoop
-</code></pre></div></li>
-</ol>
-<h3 id="paso-4-configura-variables-de-entorno">Paso 4: Configura variables de entorno</h3>
-<p>Configura las variables de entorno necesarias para Hadoop.</p>
-<ol>
-<li>Edita el archivo <code>.bashrc</code> del usuario actual:
-   <div class="highlight"><pre><span></span><code>nano<span class="w"> </span>~/.bashrc
-</code></pre></div></li>
-<li>Agrega las siguientes líneas al final del archivo:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">HADOOP_HOME</span><span class="o">=</span>/usr/local/hadoop
-<span class="nb">export</span><span class="w"> </span><span class="nv">HADOOP_INSTALL</span><span class="o">=</span><span class="nv">$HADOOP_HOME</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">HADOOP_MAPRED_HOME</span><span class="o">=</span><span class="nv">$HADOOP_HOME</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">HADOOP_COMMON_HOME</span><span class="o">=</span><span class="nv">$HADOOP_HOME</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">HADOOP_HDFS_HOME</span><span class="o">=</span><span class="nv">$HADOOP_HOME</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">YARN_HOME</span><span class="o">=</span><span class="nv">$HADOOP_HOME</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">HADOOP_COMMON_LIB_NATIVE_DIR</span><span class="o">=</span><span class="nv">$HADOOP_HOME</span>/lib/native
-<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HADOOP_HOME</span>/sbin:<span class="nv">$HADOOP_HOME</span>/bin
-<span class="nb">export</span><span class="w"> </span><span class="nv">JAVA_HOME</span><span class="o">=</span>/usr/lib/jvm/java-8-openjdk-amd64
-<span class="nb">export</span><span class="w"> </span><span class="nv">HADOOP_OPTS</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HADOOP_OPTS</span><span class="s2"> -Djava.library.path=</span><span class="nv">$HADOOP_HOME</span><span class="s2">/lib/native&quot;</span>
+<h2 id="2-subir-un-archivo-desde-el-sistema-local-a-hdfs">2. Subir un archivo desde el sistema local a HDFS</h2>
+<p>Primero, crea un archivo de texto de prueba en tu sistema local:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Este es un archivo de prueba para HDFS&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>archivo_prueba.txt
 </code></pre></div>
-<ol>
-<li>
-<p>Guarda y cierra el archivo.</p>
-</li>
-<li>
-<p>Aplica los cambios:
-   <div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>~/.bashrc
-</code></pre></div></p>
-</li>
-</ol>
-<h3 id="paso-5-configura-hadoop">Paso 5: Configura Hadoop</h3>
-<p>Ahora edita los archivos de configuración de Hadoop.</p>
-<ol>
-<li>Edita el archivo <code>hadoop-env.sh</code> para configurar <code>JAVA_HOME</code>:
-   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/usr/local/hadoop/etc/hadoop/hadoop-env.sh
-</code></pre></div></li>
-<li>Asegúrate de que la variable <code>JAVA_HOME</code> esté configurada correctamente:
-   <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">JAVA_HOME</span><span class="o">=</span>/usr/lib/jvm/java-8-openjdk-amd64
-</code></pre></div></li>
-</ol>
-<h3 id="paso-6-configura-los-archivos-core-sitexml-y-hdfs-sitexml">Paso 6: Configura los archivos core-site.xml y hdfs-site.xml</h3>
-<ol>
-<li>Edita el archivo <code>core-site.xml</code>:
-   <div class="highlight"><pre><span></span><code>nano<span class="w"> </span>/usr/local/hadoop/etc/hadoop/core-site.xml
+<p>Luego, sube el archivo a HDFS dentro del directorio <code>/practica_hdfs</code>:</p>
+<div class="highlight"><pre><span></span><code>hdfs<span class="w"> </span>dfs<span class="w"> </span>-put<span class="w"> </span>archivo_prueba.txt<span class="w"> </span>/practica_hdfs/
 </code></pre></div>
-   <div class="highlight"><pre><span></span><code><span class="nt">&lt;configuration&gt;</span>
-<span class="w">   </span><span class="nt">&lt;property&gt;</span>
-<span class="w">      </span><span class="nt">&lt;name&gt;</span>fs.defaultFS<span class="nt">&lt;/name&gt;</span>
-<span class="w">      </span><span class="nt">&lt;value&gt;</span>hdfs://localhost:9000<span class="nt">&lt;/value&gt;</span>
-<span class="w">      </span><span class="nt">&lt;description&gt;</span>NameNode<span class="w"> </span>URI<span class="nt">&lt;/description&gt;</span>
-<span class="w">   </span><span class="nt">&lt;/property&gt;</span>
-<span class="w">   </span><span class="nt">&lt;property&gt;</span>
-<span class="w">      </span><span class="nt">&lt;name&gt;</span>hadoop.tmp.dir<span class="nt">&lt;/name&gt;</span>
-<span class="w">      </span><span class="nt">&lt;value&gt;</span>/usr/local/hadoop/tmp<span class="nt">&lt;/value&gt;</span>
-<span class="w">      </span><span class="nt">&lt;description&gt;</span>Directorio<span class="w"> </span>temporal<span class="w"> </span>de<span class="w"> </span>Hadoop<span class="nt">&lt;/description&gt;</span>
-<span class="w">   </span><span class="nt">&lt;/property&gt;</span>
-<span class="nt">&lt;/configuration&gt;</span>
-</code></pre></div></li>
-<li>Edita el archivo <code>hdfs-site.xml</code>:</li>
-</ol>
-<div class="highlight"><pre><span></span><code>nano<span class="w"> </span>/usr/local/hadoop/etc/hadoop/hdfs-site.xml
+<h2 id="3-listar-los-archivos-en-un-directorio-de-hdfs">3. Listar los archivos en un directorio de HDFS</h2>
+<p>Verifica que el archivo fue subido correctamente listando los contenidos del directorio <code>/practica_hdfs</code>:</p>
+<div class="highlight"><pre><span></span><code>hdfs<span class="w"> </span>dfs<span class="w"> </span>-ls<span class="w"> </span>/practica_hdfs
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;configuration&gt;</span>
-<span class="w">   </span><span class="nt">&lt;property&gt;</span>
-<span class="w">      </span><span class="nt">&lt;name&gt;</span>dfs.replication<span class="nt">&lt;/name&gt;</span>
-<span class="w">      </span><span class="nt">&lt;value&gt;</span>1<span class="nt">&lt;/value&gt;</span>
-<span class="w">      </span><span class="nt">&lt;description&gt;</span>Factor<span class="w"> </span>de<span class="w"> </span>replicación<span class="w"> </span>de<span class="w"> </span>HDFS<span class="w"> </span>(para<span class="w"> </span>modo<span class="w"> </span>pseudo-distribuido<span class="w"> </span>es<span class="w"> </span>1)<span class="nt">&lt;/description&gt;</span>
-<span class="w">   </span><span class="nt">&lt;/property&gt;</span>
-
-<span class="w">   </span><span class="nt">&lt;property&gt;</span>
-<span class="w">      </span><span class="nt">&lt;name&gt;</span>dfs.namenode.name.dir<span class="nt">&lt;/name&gt;</span>
-<span class="w">      </span><span class="nt">&lt;value&gt;</span>file:///usr/local/hadoop/hdfs/namenode<span class="nt">&lt;/value&gt;</span>
-<span class="w">      </span><span class="nt">&lt;description&gt;</span>Directorio<span class="w"> </span>para<span class="w"> </span>los<span class="w"> </span>archivos<span class="w"> </span>del<span class="w"> </span>NameNode<span class="nt">&lt;/description&gt;</span>
-<span class="w">   </span><span class="nt">&lt;/property&gt;</span>
-
-<span class="w">   </span><span class="nt">&lt;property&gt;</span>
-<span class="w">      </span><span class="nt">&lt;name&gt;</span>dfs.datanode.data.dir<span class="nt">&lt;/name&gt;</span>
-<span class="w">      </span><span class="nt">&lt;value&gt;</span>file:///usr/local/hadoop/hdfs/datanode<span class="nt">&lt;/value&gt;</span>
-<span class="w">      </span><span class="nt">&lt;description&gt;</span>Directorio<span class="w"> </span>para<span class="w"> </span>los<span class="w"> </span>bloques<span class="w"> </span>de<span class="w"> </span>datos<span class="w"> </span>del<span class="w"> </span>DataNode<span class="nt">&lt;/description&gt;</span>
-<span class="w">   </span><span class="nt">&lt;/property&gt;</span>
-
-<span class="w">   </span><span class="nt">&lt;property&gt;</span>
-<span class="w">      </span><span class="nt">&lt;name&gt;</span>dfs.permissions<span class="nt">&lt;/name&gt;</span>
-<span class="w">      </span><span class="nt">&lt;value&gt;</span>false<span class="nt">&lt;/value&gt;</span>
-<span class="w">      </span><span class="nt">&lt;description&gt;</span>Desactiva<span class="w"> </span>los<span class="w"> </span>permisos<span class="w"> </span>de<span class="w"> </span>HDFS<span class="w"> </span>para<span class="w"> </span>simplificar<span class="w"> </span>la<span class="w"> </span>configuración<span class="nt">&lt;/description&gt;</span>
-<span class="w">   </span><span class="nt">&lt;/property&gt;</span>
-<span class="nt">&lt;/configuration&gt;</span>
+<h2 id="4-ver-el-contenido-de-un-archivo-en-hdfs">4. Ver el contenido de un archivo en HDFS</h2>
+<p>Muestra el contenido del archivo directamente en la terminal:</p>
+<div class="highlight"><pre><span></span><code>hdfs<span class="w"> </span>dfs<span class="w"> </span>-cat<span class="w"> </span>/practica_hdfs/archivo_prueba.txt
 </code></pre></div>
-<ol>
-<li>Crea las carpetas <code>hdfs/namenode</code> y <code>hdfs/datanode</code>:</li>
-</ol>
-<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>/usr/local/hadoop/tmp
-mkdir<span class="w"> </span>-p<span class="w"> </span>/usr/local/hadoop/hdfs/namenode
-mkdir<span class="w"> </span>-p<span class="w"> </span>/usr/local/hadoop/hdfs/datanode
+<h2 id="5-mover-o-renombrar-un-archivo-en-hdfs">5. Mover o renombrar un archivo en HDFS</h2>
+<p>Renombra o mueve el archivo dentro del directorio de HDFS:</p>
+<div class="highlight"><pre><span></span><code>hdfs<span class="w"> </span>dfs<span class="w"> </span>-mv<span class="w"> </span>/practica_hdfs/archivo_prueba.txt<span class="w"> </span>/practica_hdfs/archivo_renombrado.txt
 </code></pre></div>
-<h3 id="paso-6-formatea-el-sistema-de-archivos-de-hadoop">Paso 6: Formatea el sistema de archivos de Hadoop</h3>
-<p>Antes de iniciar Hadoop, necesitas formatear el sistema de archivos.</p>
-<ol>
-<li>Ejecuta el siguiente comando para formatear el sistema de archivos de HDFS:
-   <div class="highlight"><pre><span></span><code>hdfs<span class="w"> </span>namenode<span class="w"> </span>-format
-</code></pre></div></li>
-</ol>
-<h3 id="paso-7-inicia-hadoop">Paso 7: Inicia Hadoop</h3>
-<p>Para iniciar Hadoop, ejecuta los siguientes comandos:</p>
-<ol>
-<li>Inicia el NameNode y el DataNode:
-   <div class="highlight"><pre><span></span><code>start-dfs.sh
-</code></pre></div></li>
-<li>Inicia YARN:
-   <div class="highlight"><pre><span></span><code>start-yarn.sh
-</code></pre></div></li>
-</ol>
-<h3 id="paso-9-deten-hadoop">Paso 9: Detén Hadoop</h3>
-<p>Para detener Hadoop, usa los siguientes comandos:</p>
-<ol>
-<li>Detén HDFS:
-   <div class="highlight"><pre><span></span><code>stop-dfs.sh
-</code></pre></div></li>
-<li>Detén YARN:
-   <div class="highlight"><pre><span></span><code>stop-yarn.sh
-</code></pre></div></li>
-</ol>
-<h2 id="posibles-errores">Posibles errores</h2>
-<h3 id="permission-denied-publickey">Permission denied (publickey).</h3>
-<p>El error "Permission denied (publickey)" al ejecutar <code>start-yarn.sh</code> o similar indica que el sistema está intentando iniciar los nodemanagers y resourcemanager en los nodos locales de Hadoop, pero está fallando la autenticación SSH.</p>
-<p>Hadoop, por defecto, intenta comunicarse entre nodos a través de SSH para iniciar YARN, y parece que no se ha configurado correctamente el acceso SSH entre nodos. Si estás ejecutando un clúster pseudo-distribuido (es decir, en una sola máquina), necesitarás configurar SSH para que el usuario actual pueda conectarse a localhost sin contraseña. Aquí están los pasos para solucionar este problema:</p>
-<h4 id="paso-1-configura-ssh-sin-contrasena">Paso 1: Configura SSH sin contraseña</h4>
-<ol>
-<li><strong>Genera un par de claves SSH si no tienes uno ya creado</strong>:
-   Ejecuta el siguiente comando y acepta los valores predeterminados:</li>
-</ol>
-<div class="highlight"><pre><span></span><code>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> </span>-P<span class="w"> </span><span class="s2">&quot;&quot;</span>
+<h2 id="6-descargar-un-archivo-desde-hdfs-al-sistema-local">6. Descargar un archivo desde HDFS al sistema local</h2>
+<p>Descarga el archivo desde HDFS a tu sistema de archivos local (EC2):</p>
+<div class="highlight"><pre><span></span><code>hdfs<span class="w"> </span>dfs<span class="w"> </span>-get<span class="w"> </span>/practica_hdfs/archivo_renombrado.txt<span class="w"> </span>archivo_descargado.txt
 </code></pre></div>
-<p>Esto creará una clave SSH pública y privada en el directorio <code>~/.ssh/</code> (por defecto).</p>
-<ol>
-<li><strong>Agrega la clave pública al archivo <code>authorized_keys</code></strong> para permitir la autenticación SSH sin contraseña en localhost:
-   <div class="highlight"><pre><span></span><code>cat<span class="w"> </span>~/.ssh/id_rsa.pub<span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.ssh/authorized_keys
-</code></pre></div></li>
-<li><strong>Asegúrate de que los permisos sean correctos</strong>:
-   <div class="highlight"><pre><span></span><code>chmod<span class="w"> </span><span class="m">700</span><span class="w"> </span>~/.ssh
-chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/authorized_keys
-</code></pre></div></li>
-<li><strong>Prueba la conexión SSH a localhost</strong> para verificar que puedas conectarte sin contraseña:</li>
-</ol>
-<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>localhost
+<h2 id="7-eliminar-un-archivo-de-hdfs">7. Eliminar un archivo de HDFS</h2>
+<p>Elimina el archivo de HDFS:</p>
+<div class="highlight"><pre><span></span><code>hdfs<span class="w"> </span>dfs<span class="w"> </span>-rm<span class="w"> </span>/practica_hdfs/archivo_renombrado.txt
 </code></pre></div>
-<p>Si no te pide una contraseña y te deja entrar, la configuración es correcta. Puedes salir de la sesión con <code>exit</code>.</p>
-<h4 id="paso-2-inicia-yarn-de-nuevo">Paso 2: Inicia YARN de nuevo</h4>
-<p>Después de configurar SSH, intenta iniciar YARN de nuevo:</p>
-<div class="highlight"><pre><span></span><code>start-yarn.sh
+<h2 id="8-eliminar-un-directorio-en-hdfs">8. Eliminar un directorio en HDFS</h2>
+<p>Elimina el directorio <code>/practica_hdfs</code>:</p>
+<div class="highlight"><pre><span></span><code>hdfs<span class="w"> </span>dfs<span class="w"> </span>-rm<span class="w"> </span>-r<span class="w"> </span>/practica_hdfs
 </code></pre></div>
-<p>Esto debería iniciar correctamente tanto el ResourceManager como los NodeManagers sin el error de "Permission denied".</p>
+<hr />
+<h2 id="opcional-comandos-adicionales-para-profundizar">Opcional: Comandos adicionales para profundizar</h2>
+<h3 id="ver-informacion-sobre-el-espacio-disponible-en-hdfs">Ver información sobre el espacio disponible en HDFS</h3>
+<p>Verifica el uso de espacio en HDFS en formato legible:</p>
+<div class="highlight"><pre><span></span><code>hdfs<span class="w"> </span>dfs<span class="w"> </span>-df<span class="w"> </span>-h
+</code></pre></div>
+<h3 id="contar-archivos-directorios-y-tamano-total-de-un-directorio-en-hdfs">Contar archivos, directorios y tamaño total de un directorio en HDFS</h3>
+<p>Usa este comando para contar el número de archivos, directorios y el tamaño total en un directorio específico de HDFS:</p>
+<div class="highlight"><pre><span></span><code>hdfs<span class="w"> </span>dfs<span class="w"> </span>-count<span class="w"> </span>/practica_hdfs
+</code></pre></div>
+<h3 id="comprobar-bloques-de-un-archivo-en-hdfs">Comprobar bloques de un archivo en HDFS</h3>
+<p>Obtén detalles sobre los bloques que forman un archivo:</p>
+<div class="highlight"><pre><span></span><code>hdfs<span class="w"> </span>fsck<span class="w"> </span>/practica_hdfs/archivo_renombrado.txt<span class="w"> </span>-files<span class="w"> </span>-blocks
+</code></pre></div>
 
 
 
