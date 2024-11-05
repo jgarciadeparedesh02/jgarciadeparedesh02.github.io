@@ -13,23 +13,21 @@
   
   
   
-  <link rel="prev" href="../2mapreduce/">
   
   
-  
-  <link rel="icon" href="../../assets/images/favicon.png">
+  <link rel="icon" href="../../../../../assets/images/favicon.png">
   <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
   
   
   
-  <title>Prácticas y Tareas - Big Data Aplicado</title>
+  <title>Ejercicio de MapReduce en Python: Análisis de Días y Horarios de Visualización en Netflix - Big Data Aplicado</title>
   
   
   
-  <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
+  <link rel="stylesheet" href="../../../../../assets/stylesheets/main.35f28582.min.css">
   
   
-  <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+  <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
   
   
 
@@ -53,9 +51,9 @@
   
   
   
-  <link rel="stylesheet" href="../../stylesheets/extra.css">
+  <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
   
-  <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+  <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
   
   
   
@@ -72,7 +70,7 @@
   
   
   
- <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+ <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -81,7 +79,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
 
 
 
@@ -102,7 +100,7 @@
     <div data-md-component="skip">
       
       
-      <a href="#indice-de-practicas-y-tareas" class="md-skip">
+      <a href="#ejercicio-de-mapreduce-en-python-analisis-de-dias-y-horarios-de-visualizacion-en-netflix" class="md-skip">
         Skip to content
       </a>
       
@@ -118,7 +116,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Big Data Aplicado" class="md-header__button md-logo" aria-label="Big Data Aplicado" data-md-component="logo">
+    <a href="../../../../.." title="Big Data Aplicado" class="md-header__button md-logo" aria-label="Big Data Aplicado" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -138,7 +136,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Prácticas y Tareas
+              Ejercicio de MapReduce en Python: Análisis de Días y Horarios de Visualización en Netflix
             
           </span>
         </div>
@@ -239,7 +237,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Big Data Aplicado" class="md-nav__button md-logo" aria-label="Big Data Aplicado" data-md-component="logo">
+    <a href="../../../../.." title="Big Data Aplicado" class="md-nav__button md-logo" aria-label="Big Data Aplicado" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -257,7 +255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -312,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ut1-introduccion-a-hadoop/1motivacionyorigen/" class="md-nav__link">
+      <a href="../../../../../ut1-introduccion-a-hadoop/1motivacionyorigen/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -368,7 +366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ut1-introduccion-a-hadoop/21queesapachehadoop/" class="md-nav__link">
+      <a href="../../../../../ut1-introduccion-a-hadoop/21queesapachehadoop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -389,7 +387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ut1-introduccion-a-hadoop/22ecosistemahadoopydistribuciones/" class="md-nav__link">
+      <a href="../../../../../ut1-introduccion-a-hadoop/22ecosistemahadoopydistribuciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -410,7 +408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ut1-introduccion-a-hadoop/23arquitectura/" class="md-nav__link">
+      <a href="../../../../../ut1-introduccion-a-hadoop/23arquitectura/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -439,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ut1-introduccion-a-hadoop/indicedetareas/" class="md-nav__link">
+      <a href="../../../../../ut1-introduccion-a-hadoop/indicedetareas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -464,19 +462,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -490,7 +486,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             UT2. Almacenamiento y Procesamiento en Hadoop
@@ -504,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1hdfs/" class="md-nav__link">
+      <a href="../../../../1hdfs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -525,7 +521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2mapreduce/" class="md-nav__link">
+      <a href="../../../../2mapreduce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -543,30 +539,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Prácticas y Tareas
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -575,35 +551,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#practicas-guiadas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prácticas guiadas
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -643,9 +590,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#practicas-guiadas" class="md-nav__link">
+  <a href="#estructura-de-los-datos" class="md-nav__link">
     <span class="md-ellipsis">
-      Prácticas guiadas
+      Estructura de los Datos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pasos-para-resolver-el-ejercicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pasos para Resolver el Ejercicio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-de-salida-esperada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de Salida Esperada
     </span>
   </a>
   
@@ -666,51 +631,43 @@
               
 
 
-<h1 id="indice-de-practicas-y-tareas">Índice de prácticas y tareas</h1>
-<p>Este índice incluye todas las prácticas guiadas y tareas correspondientes al curso. Asegúrate de seguir las instrucciones cuidadosamente para cada práctica y tarea, y consulta los materiales de apoyo cuando sea necesario.</p>
-<h2 id="practicas-guiadas">Prácticas guiadas</h2>
-<p>Las prácticas guiadas están diseñadas para que sigas un conjunto de instrucciones paso a paso y te familiarices con el entorno y las herramientas utilizadas en Big Data. Cada práctica cubre un aspecto clave del entorno de Hadoop y su ecosistema.</p>
+<h1 id="ejercicio-de-mapreduce-en-python-analisis-de-dias-y-horarios-de-visualizacion-en-netflix"><strong>Ejercicio de MapReduce en Python: Análisis de Días y Horarios de Visualización en Netflix</strong></h1>
+<p><strong>Objetivo:</strong><br />
+El objetivo de este ejercicio es desarrollar un programa en Python que use el paradigma MapReduce para analizar los datos de visualización de contenido en Netflix. Queremos identificar los días de la semana y las franjas horarias en las que los usuarios realizan más visualizaciones. El programa debe procesar los datos de visualización y devolver una tabla con el número de visualizaciones agrupadas por día de la semana y franja horaria.</p>
+<h3 id="estructura-de-los-datos">Estructura de los Datos</h3>
+<p>Para este ejercicio, trabajaremos con un archivo de datos CSV que contiene las siguientes columnas relevantes para el análisis:</p>
 <ul>
+<li><strong>day_of_week</strong>: Día de la semana en el que se realizó la visualización (por ejemplo, "Monday", "Tuesday", etc.).</li>
+<li><strong>time_of_day</strong>: Franja horaria en la que se realizó la visualización ("Morning", "Afternoon", "Evening", "Night").</li>
+</ul>
+<p>Un ejemplo de fila de datos podría verse así:
+<div class="highlight"><pre><span></span><code>day_of_week,time_of_day,other_columns...
+Monday,Evening,...
+Tuesday,Morning,...
+...
+</code></pre></div></p>
+<h3 id="pasos-para-resolver-el-ejercicio">Pasos para Resolver el Ejercicio</h3>
+<ol>
 <li>
-<p><a href="mapreduce/wordcount-sample/"><strong>WORDCOUNT en Hadoop con MapReduce</strong></a></p>
-<ul>
-<li><strong>Descripción:</strong> En esta práctica aprenderás a ejecutar el ejemplo clásico de <strong>WordCount</strong> utilizando Hadoop MapReduce. El objetivo es procesar un archivo de texto para contar la cantidad de veces que aparece cada palabra.</li>
-<li><strong>Objetivos:</strong><ul>
-<li>Subir un archivo de texto a HDFS.</li>
-<li>Ejecutar un trabajo de MapReduce para contar palabras.</li>
-<li>Verificar la salida del proceso en HDFS.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><a href="mapreduce/category-cost-python-sample/"><strong>Análisis de costos por categoría con MapReduce en Python</strong></a></p>
-<ul>
-<li><strong>Descripción:</strong> En esta práctica aprenderás a implementar y ejecutar un ejemplo de MapReduce utilizando Python para analizar datos de compras. El objetivo es procesar un archivo de transacciones, agrupar las ventas por tipo de producto y calcular el total de ventas para cada categoría.</li>
-<li><strong>Objetivos:</strong><ul>
-<li>Descargar el proyecto de ejemplo desde Google Drive.</li>
-<li>Ejecutar un script de shell para descargar los datos de prueba.</li>
-<li>Explicar el funcionamiento de los archivos <code>mapper.py</code> y <code>reducer.py</code>.</li>
-<li>Ejecutar el <code>mapper.py</code> para observar la salida intermedia.</li>
-<li>Ejecutar <code>mapper.py</code> y <code>reducer.py</code> juntos para obtener el total de ventas por categoría.</li>
-</ul>
-</li>
-</ul>
+<p><strong>Función Map:</strong><br />
+   La función <code>map</code> debe leer cada línea del archivo de datos y extraer las columnas <code>day_of_week</code> y <code>time_of_day</code>. Por cada entrada, la función emitirá una clave-valor en el formato <code>(day_of_week, time_of_day) -&gt; 1</code>, donde <code>1</code> representa una visualización.</p>
 </li>
 <li>
-<p><a href="./mapreduce/netflix/enunciado/"><strong>Análisis de Visualización en Netflix con MapReduce en Python</strong></a></p>
-<ul>
-<li><strong>Descripción:</strong> En esta tarea, desarrollarás un programa en Python utilizando el paradigma de MapReduce para analizar los datos de visualización en Netflix. El objetivo es identificar los días de la semana y las franjas horarias con mayor número de visualizaciones.</li>
-<li><strong>Objetivos:</strong><ul>
-<li>Implementar una función <code>map</code> que procese las columnas <code>day_of_week</code> y <code>time_of_day</code>.</li>
-<li>Implementar una función <code>reduce</code> que acumule el número total de visualizaciones para cada combinación de día y franja horaria.</li>
-<li>Ejecutar el programa para obtener un resumen del patrón de visualización.</li>
-<li>Interpretar los resultados y explicar qué días y horarios tienen más visualizaciones.</li>
-</ul>
+<p><strong>Función Reduce:</strong><br />
+   La función <code>reduce</code> debe tomar todas las claves <code>(day_of_week, time_of_day)</code> emitidas por la fase de <code>map</code> y sumar los valores asociados para obtener el total de visualizaciones para cada combinación de día y franja horaria.</p>
 </li>
-</ul>
+<li>
+<p><strong>Formato de Salida:</strong><br />
+   El programa debe generar un informe que muestre las combinaciones de <code>day_of_week</code> y <code>time_of_day</code>, junto con la cantidad total de visualizaciones. El formato de salida puede ser un archivo CSV o una tabla impresa en pantalla con las columnas <code>day_of_week</code>, <code>time_of_day</code> y <code>count</code>.</p>
 </li>
-</ul>
+</ol>
+<h3 id="ejemplo-de-salida-esperada">Ejemplo de Salida Esperada</h3>
+<div class="highlight"><pre><span></span><code>day_of_week, time_of_day, count
+Monday, Evening, 450
+Monday, Morning, 300
+Tuesday, Afternoon, 350
+...
+</code></pre></div>
 
 
 
@@ -778,28 +735,6 @@
       <footer class="md-footer">
   
     
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../2mapreduce/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2. MapReduce">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                2. MapReduce
-              </div>
-            </div>
-          </a>
-        
-        
-      </nav>
-    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -823,10 +758,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.footer"], "search": "../../../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-    <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+    <script src="../../../../../assets/javascripts/bundle.56dfad97.min.js"></script>
     
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
