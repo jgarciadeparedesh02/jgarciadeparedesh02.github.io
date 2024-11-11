@@ -1,0 +1,1314 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9372656274060799"
+    crossorigin="anonymous"></script>
+
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+  
+  
+  
+  <link rel="prev" href="../../1introduccion/">
+  
+  
+  <link rel="next" href="../../tareas/">
+  
+  
+  <link rel="icon" href="../../../assets/images/favicon.png">
+  <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+  
+  
+  
+  <title>2.1. Apache Pig - Big Data Aplicado</title>
+  
+  
+  
+  <link rel="stylesheet" href="../../../assets/stylesheets/main.35f28582.min.css">
+  
+  
+  <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+  
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+  <style>
+    :root {
+      --md-text-font:"Roboto";
+      --md-code-font:"Roboto Mono"
+    }
+  </style>
+  
+  
+  
+  <link rel="stylesheet" href="../../../stylesheets/extra.css">
+  
+  <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+  
+  
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-3VWRJDCQS9"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-3VWRJDCQS9",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-3VWRJDCQS9",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+  
+  
+  
+ <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+
+
+
+
+
+
+
+
+
+
+<body dir="ltr" data-md-color-scheme="default"
+  data-md-color-primary="light-green" data-md-color-accent="light-green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+      
+      <a href="#apache-pig-procesamiento-de-datos-a-gran-escala-en-hadoop" class="md-skip">
+        Skip to content
+      </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+    
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Big Data Aplicado" class="md-header__button md-logo" aria-label="Big Data Aplicado" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Big Data Aplicado
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2.1. Apache Pig
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="light-green"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="light-green" data-md-color-accent="light-green"  aria-label="Quitar modo oscuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Quitar modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+      
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+          
+          
+          <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Big Data Aplicado" class="md-nav__button md-logo" aria-label="Big Data Aplicado" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Big Data Aplicado
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT1. Introducción a Big Data Aplicado y Hadoop
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            UT1. Introducción a Big Data Aplicado y Hadoop
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ut1-introduccion-a-hadoop/1motivacionyorigen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Motivación y Origen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2. Apache Hadoop a Alto Nivel
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            2. Apache Hadoop a Alto Nivel
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ut1-introduccion-a-hadoop/21queesapachehadoop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.1. ¿Qué es Apache Hadoop?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ut1-introduccion-a-hadoop/22ecosistemahadoopydistribuciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2. Ecosistema Hadoop y sus Distribuciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ut1-introduccion-a-hadoop/23arquitectura/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3. Arquitectura
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ut1-introduccion-a-hadoop/indicedetareas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prácticas y Tareas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT2. Almacenamiento y Procesamiento en Hadoop
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            UT2. Almacenamiento y Procesamiento en Hadoop
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ut2-almacenamiento-y-procesamiento-en-hadoop/1hdfs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. HDFS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ut2-almacenamiento-y-procesamiento-en-hadoop/2mapreduce/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. MapReduce
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ut2-almacenamiento-y-procesamiento-en-hadoop/tareas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prácticas y Tareas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT3. Ecosistema de Hadoop
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            UT3. Ecosistema de Hadoop
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Introducción al Ecosistema de Hadoop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2. Componentes de Acceso y Procesamiento
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            2. Componentes de Acceso y Procesamiento
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2.1. Apache Pig
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    2.1. Apache Pig
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ventajas-clave-de-apache-pig-para-profesionales-de-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Ventajas Clave de Apache Pig para Profesionales de Big Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componentes-de-pig" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes de Pig 🧩
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-complejo-de-operaciones-en-apache-pig" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠 Flujo Complejo de Operaciones en Apache Pig
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-de-datos-en-pig-profundizacion-en-la-jerarquia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo de Datos en Pig: Profundización en la Jerarquía 💾
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modos-de-ejecucion-avanzados-de-pig" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modos de Ejecución Avanzados de Pig 🧑‍💻
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactividad-en-pig-modos-de-ejecucion-interactivos-y-en-lote" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactividad en Pig: Modos de Ejecución Interactivos y en Lote
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparacion-profunda-pig-latin-vs-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparación Profunda: Pig Latin vs SQL 🔍
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guia-de-comandos-principales-en-apache-pig" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guía de Comandos Principales en Apache Pig 🛠️
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplos-basicos-de-scripts-en-pig" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos Básicos de Scripts en Pig 🖥️
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tareas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prácticas y Tareas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+          
+          
+          
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ventajas-clave-de-apache-pig-para-profesionales-de-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Ventajas Clave de Apache Pig para Profesionales de Big Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componentes-de-pig" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes de Pig 🧩
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-complejo-de-operaciones-en-apache-pig" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠 Flujo Complejo de Operaciones en Apache Pig
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-de-datos-en-pig-profundizacion-en-la-jerarquia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo de Datos en Pig: Profundización en la Jerarquía 💾
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modos-de-ejecucion-avanzados-de-pig" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modos de Ejecución Avanzados de Pig 🧑‍💻
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactividad-en-pig-modos-de-ejecucion-interactivos-y-en-lote" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactividad en Pig: Modos de Ejecución Interactivos y en Lote
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparacion-profunda-pig-latin-vs-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparación Profunda: Pig Latin vs SQL 🔍
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guia-de-comandos-principales-en-apache-pig" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guía de Comandos Principales en Apache Pig 🛠️
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplos-basicos-de-scripts-en-pig" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos Básicos de Scripts en Pig 🖥️
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+              </div>
+            </div>
+          </div>
+          
+          
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+              
+
+
+<h1 id="apache-pig-procesamiento-de-datos-a-gran-escala-en-hadoop">Apache Pig: Procesamiento de Datos a Gran Escala en Hadoop 🐖</h1>
+<p><a class="glightbox" href="https://upload.wikimedia.org/wikipedia/en/b/bc/Apache_Pig_Logo.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://upload.wikimedia.org/wikipedia/en/b/bc/Apache_Pig_Logo.svg" /></a></p>
+<p>Apache Pig es una plataforma de análisis de datos de alto nivel en Hadoop, diseñada para procesar y transformar grandes volúmenes de datos de manera eficiente. Mediante el lenguaje <strong>Pig Latin</strong>, permite descripciones detalladas y expresivas de transformaciones complejas y flujos de datos. Además, soporta el análisis de datos no estructurados y semi-estructurados, optimizando automáticamente la ejecución de los scripts en Hadoop y permitiendo una mayor flexibilidad y potencia en el procesamiento de datos a gran escala sin necesidad de MapReduce en Java.</p>
+<hr />
+<h3 id="ventajas-clave-de-apache-pig-para-profesionales-de-big-data">🚀 Ventajas Clave de Apache Pig para Profesionales de Big Data</h3>
+<ol>
+<li><strong>Optimización Automática de Consultas</strong>: Pig optimiza los flujos de trabajo durante la fase de compilación del plan de ejecución, mejorando la eficiencia y reduciendo el tiempo de procesamiento.</li>
+<li><strong>Interoperabilidad con HDFS y HCatalog</strong>: Apache Pig facilita la lectura y escritura directa en Hadoop Distributed File System (HDFS) y en HCatalog, permitiendo una integración fluida con otros servicios y herramientas de datos.</li>
+<li><strong>Extensibilidad y Funciones Definidas por el Usuario (UDFs)</strong>: Los usuarios avanzados pueden personalizar Pig mediante UDFs en varios lenguajes, como Java, Python y JavaScript, adaptándolo a casos de procesamiento de datos específicos.</li>
+</ol>
+<hr />
+<h3 id="componentes-de-pig">Componentes de Pig 🧩</h3>
+<p><a class="glightbox" href="https://imgr.whimsical.com/thumbnails/YHxVMYULPLJWbekkoqXgMh/XtNSkpi1ypzRkGmn5W9x9b" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Componentes de Pig" src="https://imgr.whimsical.com/thumbnails/YHxVMYULPLJWbekkoqXgMh/XtNSkpi1ypzRkGmn5W9x9b" /></a></p>
+<p><strong>Explicación de los Componentes</strong>:</p>
+<ul>
+<li><strong>Parser</strong>: Interpreta el script de Pig Latin y genera un árbol lógico que define las operaciones solicitadas por el usuario.</li>
+<li><strong>Optimizer</strong>: A partir del árbol lógico, aplica optimizaciones como el reordenamiento de operaciones, el filtrado en proyección y la reducción de datos redundantes.</li>
+<li><strong>Compiler</strong>: Convierte el plan lógico optimizado en un plan físico, donde cada operación se traduce en tareas de MapReduce u operaciones en modo local.</li>
+<li><strong>Execution Engine</strong>: Ejecuta el plan físico, organizando las tareas y gestionando la comunicación entre nodos del clúster Hadoop, y genera el resultado final.</li>
+</ul>
+<hr />
+<h3 id="flujo-complejo-de-operaciones-en-apache-pig">🛠 Flujo Complejo de Operaciones en Apache Pig</h3>
+<p><pre class="mermaid"><code>sequenceDiagram
+    participant Usuario
+    participant Parser
+    participant Optimizer
+    participant Compiler
+    participant ExecutionEngine
+    Usuario-&gt;&gt;Parser: Cargar y Crear Script en Pig Latin
+    Parser-&gt;&gt;Optimizer: Generar árbol lógico
+    Optimizer-&gt;&gt;Compiler: Optimización del plan de ejecución
+    Compiler-&gt;&gt;ExecutionEngine: Traducción a tareas MapReduce
+    ExecutionEngine-&gt;&gt;Usuario: Resultados en pantalla o HDFS</code></pre>
+Apache Pig ejecuta sus tareas mediante un flujo estructurado de operaciones avanzadas:</p>
+<ol>
+<li><strong>Carga de datos y creación del script en Pig Latin</strong>: permite importar datos de distintas fuentes, facilitando el procesamiento y la transformación.</li>
+<li><strong>Optimización y planificación</strong>: Pig transforma el script en un plan de ejecución optimizado, utilizando técnicas avanzadas como <strong>proyección anticipada</strong> y <strong>reordenamiento de operaciones</strong> para maximizar la eficiencia.</li>
+<li><strong>Ejecución del plan de ejecución</strong>: Pig realiza las tareas en Hadoop, mostrando los resultados en pantalla o almacenándolos en HDFS.</li>
+</ol>
+<hr />
+<h3 id="modelo-de-datos-en-pig-profundizacion-en-la-jerarquia">Modelo de Datos en Pig: Profundización en la Jerarquía 💾</h3>
+<p>Apache Pig maneja un modelo de datos jerárquico, ideal para gestionar datos no estructurados y semi-estructurados. Este modelo incluye las siguientes estructuras:</p>
+<ul>
+<li><strong>Atom</strong>: Representa valores individuales (números, cadenas, etc.).</li>
+<li><strong>Tuple</strong>: Un conjunto ordenado de valores, semejante a una fila en una tabla de datos.</li>
+<li><strong>Bag</strong>: Colección no ordenada de tuplas, útil para agrupar datos y realizar análisis de agregación.</li>
+<li><strong>Map</strong>: Estructura clave-valor que permite almacenar pares de valores asociados.</li>
+</ul>
+<p>Ejemplo de datos complejos en Pig:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Modelo de datos avanzado en Pig</span>
+<span class="nx">tupla_compleja</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mf">42</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Big Data&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[(</span><span class="s2">&quot;clave1&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;valor1&quot;</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;clave2&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;valor2&quot;</span><span class="p">)]);</span>
+<span class="nx">mi_bag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{(</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;cherry&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">)};</span>
+<span class="nx">mi_map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="s2">&quot;1001&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;nombre&quot;</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;edad&quot;</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="mf">30</span><span class="p">];</span>
+</code></pre></div>
+<hr />
+<h3 id="modos-de-ejecucion-avanzados-de-pig">Modos de Ejecución Avanzados de Pig 🧑‍💻</h3>
+<p><pre class="mermaid"><code>flowchart LR
+    Local[Modo Local] --&gt; |Ideal para pruebas| Pig;
+    MapReduce[Modo MapReduce] --&gt; |Distribuido en clúster de Hadoop| Pig;</code></pre>
+Apache Pig puede ejecutarse en dos modos distintos, adaptándose a diferentes necesidades de procesamiento:</p>
+<ol>
+<li><strong>Modo Local</strong>: Ejecuta los scripts en la máquina local, ideal para pruebas y desarrollo.</li>
+<li><strong>Modo MapReduce</strong>: Ejecuta el flujo de trabajo como tareas distribuidas en un clúster de Hadoop, optimizando el procesamiento a gran escala.</li>
+</ol>
+<h3 id="interactividad-en-pig-modos-de-ejecucion-interactivos-y-en-lote">Interactividad en Pig: Modos de Ejecución Interactivos y en Lote</h3>
+<ul>
+<li><strong>Modo Interactivo (Grunt Shell)</strong>: Permite ejecutar comandos de Pig en tiempo real, facilitando el análisis exploratorio y la depuración de errores.
+<div class="highlight"><pre><span></span><code>grunt&gt;<span class="w"> </span><span class="nv">registros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>LOAD<span class="w"> </span><span class="s1">&#39;data.csv&#39;</span><span class="w"> </span>AS<span class="w"> </span><span class="o">(</span>nombre:chararray,<span class="w"> </span>edad:int<span class="o">)</span><span class="p">;</span>
+grunt&gt;<span class="w"> </span><span class="nv">adultos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>FILTER<span class="w"> </span>registros<span class="w"> </span>BY<span class="w"> </span>edad<span class="w"> </span>&gt;<span class="o">=</span><span class="w"> </span><span class="m">18</span><span class="p">;</span>
+grunt&gt;<span class="w"> </span>DUMP<span class="w"> </span>adultos<span class="p">;</span>
+</code></pre></div></li>
+<li><strong>Modo Batch</strong>: Ejecuta scripts completos de Pig sin intervención, ideal para flujos de procesamiento automatizados y pipelines de datos.
+<div class="highlight"><pre><span></span><code>pig<span class="w"> </span>-x<span class="w"> </span>mapreduce<span class="w"> </span>mi_script.pig
+</code></pre></div></li>
+</ul>
+<hr />
+<h3 id="comparacion-profunda-pig-latin-vs-sql">Comparación Profunda: Pig Latin vs SQL 🔍</h3>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Pig Latin</th>
+<th>SQL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Paradigma</td>
+<td>Flujo de datos</td>
+<td>Declarativo</td>
+</tr>
+<tr>
+<td>Estructura de datos</td>
+<td>Basado en Bag y Tuples</td>
+<td>Basado en Tablas</td>
+</tr>
+<tr>
+<td>Flexibilidad</td>
+<td>Alta, con soporte para datos jerárquicos</td>
+<td>Limitada a datos relacionales</td>
+</tr>
+<tr>
+<td>Tareas soportadas</td>
+<td>ETL, transformación compleja</td>
+<td>Consultas de bases de datos</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="guia-de-comandos-principales-en-apache-pig">Guía de Comandos Principales en Apache Pig 🛠️</h3>
+<p>Apache Pig ofrece una serie de comandos básicos para cargar, transformar, filtrar y almacenar datos. A continuación, se presenta una guía rápida de los comandos esenciales de Pig Latin:</p>
+<ol>
+<li>
+<p><strong>Cargar Datos</strong> (<code>LOAD</code>): Importa datos desde archivos externos en HDFS.
+   <div class="highlight"><pre><span></span><code><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">LOAD</span><span class="w"> </span><span class="s1">&#39;ruta/del/archivo.csv&#39;</span><span class="w"> </span><span class="nx">USING</span><span class="w"> </span><span class="nx">PigStorage</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span><span class="w"> </span><span class="nx">AS</span><span class="w"> </span><span class="p">(</span><span class="nx">columna1</span><span class="o">:</span><span class="nx">tipo</span><span class="p">,</span><span class="w"> </span><span class="nx">columna2</span><span class="o">:</span><span class="nx">tipo</span><span class="p">);</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Almacenar Datos</strong> (<code>STORE</code>): Guarda los datos procesados en HDFS.
+   <div class="highlight"><pre><span></span><code><span class="nx">STORE</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="nx">INTO</span><span class="w"> </span><span class="s1">&#39;ruta/de/salida&#39;</span><span class="w"> </span><span class="nx">USING</span><span class="w"> </span><span class="nx">PigStorage</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">);</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Filtrar Datos</strong> (<code>FILTER</code>): Filtra los datos en función de una condición.
+   <div class="highlight"><pre><span></span><code><span class="nx">filtered_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">FILTER</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="nx">BY</span><span class="w"> </span><span class="nx">columna1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Agrupar Datos</strong> (<code>GROUP</code>): Agrupa los datos en función de una o varias columnas.
+   <div class="highlight"><pre><span></span><code><span class="nx">grouped_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">GROUP</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="nx">BY</span><span class="w"> </span><span class="nx">columna1</span><span class="p">;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Aplicar Transformaciones</strong> (<code>FOREACH ... GENERATE</code>): Genera un nuevo conjunto de datos transformando los datos existentes.
+   <div class="highlight"><pre><span></span><code><span class="nx">transformed_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">FOREACH</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="nx">GENERATE</span><span class="w"> </span><span class="nx">columna1</span><span class="p">,</span><span class="w"> </span><span class="nx">columna2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Ordenar Datos</strong> (<code>ORDER BY</code>): Ordena los datos en función de una columna en orden ascendente o descendente.
+   <div class="highlight"><pre><span></span><code><span class="nx">ordered_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ORDER</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="nx">BY</span><span class="w"> </span><span class="nx">columna1</span><span class="w"> </span><span class="nx">DESC</span><span class="p">;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Unir Tablas</strong> (<code>JOIN</code>): Une dos o más conjuntos de datos en función de una clave común.
+   <div class="highlight"><pre><span></span><code><span class="nx">joined_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">JOIN</span><span class="w"> </span><span class="nx">data1</span><span class="w"> </span><span class="nx">BY</span><span class="w"> </span><span class="nx">columna1</span><span class="p">,</span><span class="w"> </span><span class="nx">data2</span><span class="w"> </span><span class="nx">BY</span><span class="w"> </span><span class="nx">columna1</span><span class="p">;</span>
+</code></pre></div></p>
+</li>
+</ol>
+<hr />
+<h3 id="ejemplos-basicos-de-scripts-en-pig">Ejemplos Básicos de Scripts en Pig 🖥️</h3>
+<p>Estos ejemplos ilustran cómo aplicar los comandos de Pig Latin para realizar operaciones comunes en el procesamiento de datos:</p>
+<ol>
+<li>
+<p><strong>Cargar y Filtrar Datos</strong>:
+   <div class="highlight"><pre><span></span><code><span class="c1">// Cargar el archivo y filtrar por edades mayores de 18</span>
+<span class="nx">usuarios</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">LOAD</span><span class="w"> </span><span class="s1">&#39;usuarios.csv&#39;</span><span class="w"> </span><span class="nx">AS</span><span class="w"> </span><span class="p">(</span><span class="nx">nombre</span><span class="o">:</span><span class="nx">chararray</span><span class="p">,</span><span class="w"> </span><span class="nx">edad</span><span class="o">:</span><span class="kr">int</span><span class="p">);</span>
+<span class="nx">adultos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">FILTER</span><span class="w"> </span><span class="nx">usuarios</span><span class="w"> </span><span class="nx">BY</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">18</span><span class="p">;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Contar Palabras en Documentos</strong>:
+   <div class="highlight"><pre><span></span><code><span class="c1">// Tokenizar las palabras y contar su frecuencia</span>
+<span class="nx">documentos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">LOAD</span><span class="w"> </span><span class="s1">&#39;docs.txt&#39;</span><span class="w"> </span><span class="nx">AS</span><span class="w"> </span><span class="p">(</span><span class="nx">linea</span><span class="o">:</span><span class="nx">chararray</span><span class="p">);</span>
+<span class="nx">palabras</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">FOREACH</span><span class="w"> </span><span class="nx">documentos</span><span class="w"> </span><span class="nx">GENERATE</span><span class="w"> </span><span class="nx">FLATTEN</span><span class="p">(</span><span class="nx">TOKENIZE</span><span class="p">(</span><span class="nx">linea</span><span class="p">))</span><span class="w"> </span><span class="nx">AS</span><span class="w"> </span><span class="nx">palabra</span><span class="p">;</span>
+<span class="nx">grupo_palabras</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">GROUP</span><span class="w"> </span><span class="nx">palabras</span><span class="w"> </span><span class="nx">BY</span><span class="w"> </span><span class="nx">palabra</span><span class="p">;</span>
+<span class="nx">frecuencia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">FOREACH</span><span class="w"> </span><span class="nx">grupo_palabras</span><span class="w"> </span><span class="nx">GENERATE</span><span class="w"> </span><span class="nx">group</span><span class="w"> </span><span class="nx">AS</span><span class="w"> </span><span class="nx">palabra</span><span class="p">,</span><span class="w"> </span><span class="nx">COUNT</span><span class="p">(</span><span class="nx">palabras</span><span class="p">)</span><span class="w"> </span><span class="nx">AS</span><span class="w"> </span><span class="nx">total</span><span class="p">;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Calcular el Total de Ventas por Producto</strong>:
+   <div class="highlight"><pre><span></span><code><span class="c1">// Cargar y calcular el total de ventas</span>
+<span class="nx">ventas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">LOAD</span><span class="w"> </span><span class="s1">&#39;ventas.csv&#39;</span><span class="w"> </span><span class="nx">AS</span><span class="w"> </span><span class="p">(</span><span class="nx">producto</span><span class="o">:</span><span class="nx">chararray</span><span class="p">,</span><span class="w"> </span><span class="nx">cantidad</span><span class="o">:</span><span class="kr">int</span><span class="p">,</span><span class="w"> </span><span class="nx">precio</span><span class="o">:</span><span class="kr">float</span><span class="p">);</span>
+<span class="nx">total_ventas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">FOREACH</span><span class="w"> </span><span class="p">(</span><span class="nx">GROUP</span><span class="w"> </span><span class="nx">ventas</span><span class="w"> </span><span class="nx">BY</span><span class="w"> </span><span class="nx">producto</span><span class="p">)</span><span class="w"> </span><span class="nx">GENERATE</span><span class="w"> </span><span class="nx">group</span><span class="w"> </span><span class="nx">AS</span><span class="w"> </span><span class="nx">producto</span><span class="p">,</span><span class="w"> </span><span class="nx">SUM</span><span class="p">(</span><span class="nx">ventas</span><span class="p">.</span><span class="nx">cantidad</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">ventas</span><span class="p">.</span><span class="nx">precio</span><span class="p">)</span><span class="w"> </span><span class="nx">AS</span><span class="w"> </span><span class="nx">total</span><span class="p">;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Ordenar los Datos de Ventas</strong>:
+   <div class="highlight"><pre><span></span><code><span class="c1">// Ordenar las ventas por total en orden descendente</span>
+<span class="nx">ventas_ordenadas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ORDER</span><span class="w"> </span><span class="nx">total_ventas</span><span class="w"> </span><span class="nx">BY</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="nx">DESC</span><span class="p">;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Pipeline de ETL Simple</strong>:
+   <div class="highlight"><pre><span></span><code><span class="c1">// ETL: Cargar, filtrar, transformar y almacenar resultados</span>
+<span class="nx">raw_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">LOAD</span><span class="w"> </span><span class="s1">&#39;raw_data.csv&#39;</span><span class="w"> </span><span class="nx">AS</span><span class="w"> </span><span class="p">(</span><span class="nx">id</span><span class="o">:</span><span class="kr">int</span><span class="p">,</span><span class="w"> </span><span class="nx">valor</span><span class="o">:</span><span class="kr">float</span><span class="p">);</span>
+<span class="nx">filtered_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">FILTER</span><span class="w"> </span><span class="nx">raw_data</span><span class="w"> </span><span class="nx">BY</span><span class="w"> </span><span class="nx">valor</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">50</span><span class="p">;</span>
+<span class="nx">transformed_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">FOREACH</span><span class="w"> </span><span class="nx">filtered_data</span><span class="w"> </span><span class="nx">GENERATE</span><span class="w"> </span><span class="nx">id</span><span class="p">,</span><span class="w"> </span><span class="nx">valor</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.8</span><span class="w"> </span><span class="nx">AS</span><span class="w"> </span><span class="nx">valor_transformado</span><span class="p">;</span>
+<span class="nx">STORE</span><span class="w"> </span><span class="nx">transformed_data</span><span class="w"> </span><span class="nx">INTO</span><span class="w"> </span><span class="s1">&#39;datos_procesados&#39;</span><span class="w"> </span><span class="nx">USING</span><span class="w"> </span><span class="nx">PigStorage</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">);</span>
+</code></pre></div></p>
+</li>
+</ol>
+<h3 id="conclusion">Conclusión</h3>
+<p>Apache Pig es una herramienta poderosa y flexible para el procesamiento avanzado de datos en Big Data, ofreciendo un entorno optimizado y adaptable para transformar grandes volúmenes de información. Con su capacidad para optimizar consultas, integrar UDFs y manejar modelos de datos jerárquicos, Pig se convierte en un componente esencial para los profesionales de datos que trabajan en Hadoop, permitiendo la transformación de datos de manera eficiente sin la complejidad de MapReduce manual.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        <a href='https://ko-fi.com/jgarciadeparedesh02' title='Invítame a un café en ko-fi.com' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi2.png?v=3' border='0' alt='Invítame a un café en ko-fi.com' /></a>
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="Esta página es genial" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="Podría mejorar" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+              
+            </article>
+          </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+      <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../1introduccion/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 1. Introducción al Ecosistema de Hadoop">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                1. Introducción al Ecosistema de Hadoop
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../tareas/" class="md-footer__link md-footer__link--next" aria-label="Next: Prácticas y Tareas">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Prácticas y Tareas
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer"], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+    <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
+    
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+
+</html>
