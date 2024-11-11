@@ -13,25 +13,21 @@
   
   
   
-  <link rel="prev" href="../23arquitectura/">
   
   
-  <link rel="next" href="../../ut2-almacenamiento-y-procesamiento-en-hadoop/1hdfs/">
-  
-  
-  <link rel="icon" href="../../assets/images/favicon.png">
+  <link rel="icon" href="../../../../assets/images/favicon.png">
   <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
   
   
   
-  <title>Prácticas y Tareas - Big Data Aplicado</title>
+  <title>Práctica: Introducción a Apache Pig en Modo Local - Big Data Aplicado</title>
   
   
   
-  <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
+  <link rel="stylesheet" href="../../../../assets/stylesheets/main.35f28582.min.css">
   
   
-  <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+  <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
   
   
 
@@ -55,9 +51,9 @@
   
   
   
-  <link rel="stylesheet" href="../../stylesheets/extra.css">
+  <link rel="stylesheet" href="../../../../stylesheets/extra.css">
   
-  <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+  <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
   
   
   
@@ -74,7 +70,7 @@
   
   
   
- <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+ <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -83,7 +79,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
 
 
 
@@ -104,7 +100,7 @@
     <div data-md-component="skip">
       
       
-      <a href="#indice-de-practicas-y-tareas" class="md-skip">
+      <a href="#practica-introduccion-a-apache-pig-en-modo-local" class="md-skip">
         Skip to content
       </a>
       
@@ -120,7 +116,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Big Data Aplicado" class="md-header__button md-logo" aria-label="Big Data Aplicado" data-md-component="logo">
+    <a href="../../../.." title="Big Data Aplicado" class="md-header__button md-logo" aria-label="Big Data Aplicado" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -140,7 +136,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Prácticas y Tareas
+              Práctica: Introducción a Apache Pig en Modo Local
             
           </span>
         </div>
@@ -241,7 +237,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Big Data Aplicado" class="md-nav__button md-logo" aria-label="Big Data Aplicado" data-md-component="logo">
+    <a href="../../../.." title="Big Data Aplicado" class="md-nav__button md-logo" aria-label="Big Data Aplicado" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -259,7 +255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -276,19 +272,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -302,7 +296,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             UT1. Introducción a Big Data Aplicado y Hadoop
@@ -316,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1motivacionyorigen/" class="md-nav__link">
+      <a href="../../../../ut1-introduccion-a-hadoop/1motivacionyorigen/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -372,7 +366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../21queesapachehadoop/" class="md-nav__link">
+      <a href="../../../../ut1-introduccion-a-hadoop/21queesapachehadoop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -393,7 +387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../22ecosistemahadoopydistribuciones/" class="md-nav__link">
+      <a href="../../../../ut1-introduccion-a-hadoop/22ecosistemahadoopydistribuciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -414,7 +408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../23arquitectura/" class="md-nav__link">
+      <a href="../../../../ut1-introduccion-a-hadoop/23arquitectura/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -440,30 +434,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Prácticas y Tareas
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../../ut1-introduccion-a-hadoop/indicedetareas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -472,44 +446,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#practicas-guiadas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prácticas guiadas
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tareas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tareas
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -564,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ut2-almacenamiento-y-procesamiento-en-hadoop/1hdfs/" class="md-nav__link">
+      <a href="../../../../ut2-almacenamiento-y-procesamiento-en-hadoop/1hdfs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -585,7 +521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ut2-almacenamiento-y-procesamiento-en-hadoop/2mapreduce/" class="md-nav__link">
+      <a href="../../../../ut2-almacenamiento-y-procesamiento-en-hadoop/2mapreduce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -606,7 +542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ut2-almacenamiento-y-procesamiento-en-hadoop/tareas/" class="md-nav__link">
+      <a href="../../../../ut2-almacenamiento-y-procesamiento-en-hadoop/tareas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -669,7 +605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ut3-ecosistema-hadoop/1introduccion/" class="md-nav__link">
+      <a href="../../../1introduccion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -725,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ut3-ecosistema-hadoop/2componentes-acceso-procesamiento/21apache-pig/" class="md-nav__link">
+      <a href="../../../2componentes-acceso-procesamiento/21apache-pig/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -754,7 +690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ut3-ecosistema-hadoop/tareas/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -802,20 +738,173 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#practicas-guiadas" class="md-nav__link">
+  <a href="#objetivo" class="md-nav__link">
     <span class="md-ellipsis">
-      Prácticas guiadas
+      Objetivo
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tareas" class="md-nav__link">
+  <a href="#descripcion" class="md-nav__link">
     <span class="md-ellipsis">
-      Tareas
+      Descripción
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requisitos-previos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requisitos previos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instrucciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instrucciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instrucciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-archivo-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Archivo de datos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-objetivos-del-script-de-pig" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Objetivos del script de Pig
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-ejecucion-linea-por-linea-en-modo-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Ejecución línea por línea en modo local
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Ejecución línea por línea en modo local">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cargar-el-archivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cargar el archivo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtrar-usuarios-con-mas-de-10-publicaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtrar usuarios con más de 10 publicaciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ordenar-por-numero-de-publicaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordenar por número de publicaciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guardar-los-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guardar los resultados
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-verificar-los-resultados-en-el-sistema-de-archivos-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Verificar los resultados en el sistema de archivos local
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#script-de-pig-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Script de Pig Completo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#posibles-errores-y-soluciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Posibles errores y soluciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Posibles errores y soluciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-error-output-directory-already-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Error: output directory already exists
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-error-cannot-cast-from-chararray-to-int" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Error: Cannot cast from chararray to int
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-error-file-not-found-usuarioscsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Error: File not found: usuarios.csv
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -834,50 +923,118 @@
               
 
 
-<h1 id="indice-de-practicas-y-tareas">Índice de prácticas y tareas</h1>
-<p>Este índice incluye todas las prácticas guiadas y tareas correspondientes al curso. Asegúrate de seguir las instrucciones cuidadosamente para cada práctica y tarea, y consulta los materiales de apoyo cuando sea necesario.</p>
-<h2 id="practicas-guiadas">Prácticas guiadas</h2>
-<p>Las prácticas guiadas están diseñadas para que sigas un conjunto de instrucciones paso a paso y te familiarices con el entorno y las herramientas utilizadas en Big Data. Cada práctica cubre un aspecto clave del entorno de Hadoop y su ecosistema.</p>
-<ol>
-<li>
-<p><a href="/site/bda-apuntes/ut1-introduccion-a-hadoop/tareas/hadoop/1instalacionhadoop"><strong>Práctica Instalación Hadoop Single Node</strong></a></p>
+<h1 id="practica-introduccion-a-apache-pig-en-modo-local"><strong>Práctica: Introducción a Apache Pig en Modo Local</strong></h1>
+<h2 id="objetivo">Objetivo</h2>
+<p>Crear un script de Pig que procese un conjunto de datos sencillo y realice operaciones básicas de filtrado y ordenación, ejecutándose línea por línea en modo local.</p>
+<h2 id="descripcion">Descripción</h2>
+<p>En esta práctica, el estudiante desarrollará un script en Apache Pig para analizar un archivo de datos de muestra. El objetivo es comprender la estructura de un script en Pig y familiarizarse con funciones básicas como <code>LOAD</code>, <code>FILTER</code>, <code>ORDER</code>, y <code>STORE</code>, ejecutándolo en modo local (<code>pig -x local</code>).</p>
+<h2 id="requisitos-previos">Requisitos previos</h2>
 <ul>
-<li><strong>Descripción:</strong> Esta práctica cubre el proceso de instalación de Hadoop en un entorno de un solo nodo. El objetivo es configurar un clúster Hadoop básico en modo pseudo-distribuido en tu máquina local.</li>
-<li><strong>Objetivos:</strong> <ul>
-<li>Configurar Hadoop en un único nodo.</li>
-<li>Ejecutar comandos básicos de HDFS.</li>
-<li>Verificar la instalación utilizando los servicios de Hadoop.</li>
+<li>Conocimientos básicos de Hadoop.</li>
+<li>Apache Pig instalado en el entorno local.</li>
+<li>Archivo de datos de ejemplo en formato CSV cargado en el sistema de archivos local.</li>
 </ul>
-</li>
-</ul>
-</li>
-<li>
-<p><a href="/site/bda-apuntes/ut1-introduccion-a-hadoop/tareas/hadoop/hdfs/1practicainicial"><strong>Práctica Inicial HDFS</strong></a></p>
+<hr />
+<h2 id="instrucciones">Instrucciones</h2>
+<h3 id="1-archivo-de-datos">1. Archivo de datos</h3>
+<p>Crea un archivo llamado <code>usuarios.csv</code> con el siguiente contenido, que contiene datos sobre usuarios de una red social (sin la columna "genero" y sin tildes).</p>
+<div class="highlight"><pre><span></span><code>nombre,edad,localidad,publicaciones
+Juan,25,Madrid,8
+Maria,30,Valencia,15
+Jose,22,Barcelona,5
+Ana,28,Sevilla,12
+Pedro,33,Malaga,9
+Luisa,29,Zaragoza,4
+</code></pre></div>
+<p>Guarda el archivo en el sistema de archivos local, en la misma carpeta desde la cual ejecutarás Pig.</p>
+<hr />
+<h3 id="2-objetivos-del-script-de-pig">2. Objetivos del script de Pig</h3>
+<p>El script de Pig debe realizar las siguientes operaciones en el archivo <code>usuarios.csv</code>:</p>
 <ul>
-<li><strong>Descripción:</strong> Esta práctica introduce el sistema de archivos distribuido de Hadoop (HDFS). Aprenderás a subir y descargar archivos en el sistema y a utilizar comandos básicos para manipular los datos.</li>
-<li><strong>Objetivos:</strong> <ul>
-<li>Subir, descargar y listar archivos en HDFS.</li>
-<li>Utilizar comandos esenciales como <code>hdfs dfs -put</code>, <code>hdfs dfs -get</code>, y <code>hdfs dfs -ls</code>.</li>
-<li>Verificar la replicación de los bloques y la ubicación de los archivos en HDFS.</li>
+<li><strong>Cargar los datos</strong>: Utiliza la instrucción <code>LOAD</code> para cargar el archivo <code>usuarios.csv</code> y define los tipos de datos correspondientes.</li>
+<li><strong>Filtrar los datos</strong>: Filtra los registros de usuarios que tengan más de 10 publicaciones.</li>
+<li><strong>Ordenar por número de publicaciones</strong>: Ordena los usuarios en función de la cantidad de publicaciones en orden descendente.</li>
+<li><strong>Guardar los resultados</strong>: Guarda los resultados filtrados y ordenados en el sistema de archivos local.</li>
 </ul>
-</li>
+<hr />
+<h3 id="3-ejecucion-linea-por-linea-en-modo-local">3. Ejecución línea por línea en modo local</h3>
+<p>Para ejecutar cada línea del script en modo local, abre la terminal y ejecuta <code>pig -x local</code>. Asegúrate de que estás en el directorio donde se encuentra <code>usuarios.csv</code> y ejecuta cada línea del script una a una en el shell de Pig.</p>
+<h4 id="cargar-el-archivo">Cargar el archivo</h4>
+<div class="highlight"><pre><span></span><code><span class="c">-- Cargar el archivo &#39;usuarios.csv&#39; desde el sistema de archivos local, usando comas como delimitador.</span>
+<span class="c">-- Definir los campos con sus respectivos tipos de datos: &#39;nombre&#39; como cadena de caracteres (chararray),</span>
+<span class="c">-- &#39;edad&#39; como entero (int), &#39;localidad&#39; como cadena de caracteres y &#39;publicaciones&#39; como entero.</span>
+usuarios<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">LOAD</span><span class="w"> </span><span class="s">&#39;usuarios.csv&#39;</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="nb">PigStorage</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="p">(</span>nombre:<span class="kt">chararray</span><span class="o">,</span><span class="w"> </span>edad:<span class="kt">int</span><span class="o">,</span><span class="w"> </span>localidad:<span class="kt">chararray</span><span class="o">,</span><span class="w"> </span>publicaciones:<span class="kt">int</span><span class="p">);</span>
+
+<span class="c">-- Verificar que los datos se hayan cargado correctamente</span>
+<span class="k">DUMP</span><span class="w"> </span>usuarios;
+</code></pre></div>
+<h4 id="filtrar-usuarios-con-mas-de-10-publicaciones">Filtrar usuarios con más de 10 publicaciones</h4>
+<div class="highlight"><pre><span></span><code><span class="c">-- Filtrar los registros de la relacion &#39;usuarios&#39; para obtener solo aquellos que tienen</span>
+<span class="c">-- mas de 10 publicaciones. Esto crea una nueva relacion llamada &#39;usuarios_activos&#39;.</span>
+usuarios_activos<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">FILTER</span><span class="w"> </span>usuarios<span class="w"> </span><span class="k">BY</span><span class="w"> </span>publicaciones<span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+
+<span class="c">-- Verificar que el filtro ha funcionado</span>
+<span class="k">DUMP</span><span class="w"> </span>usuarios_activos;
+</code></pre></div>
+<h4 id="ordenar-por-numero-de-publicaciones">Ordenar por número de publicaciones</h4>
+<div class="highlight"><pre><span></span><code><span class="c">-- Ordenar la relacion &#39;usuarios_activos&#39; en funcion del numero de publicaciones en orden descendente.</span>
+usuarios_ordenados<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span>usuarios_activos<span class="w"> </span><span class="k">BY</span><span class="w"> </span>publicaciones<span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+
+<span class="c">-- Verificar que los datos estan ordenados</span>
+<span class="k">DUMP</span><span class="w"> </span>usuarios_ordenados;
+</code></pre></div>
+<h4 id="guardar-los-resultados">Guardar los resultados</h4>
+<div class="highlight"><pre><span></span><code><span class="c">-- Almacenar los resultados de &#39;usuarios_activos&#39; en el sistema de archivos local en un directorio</span>
+<span class="c">-- llamado &#39;salida/usuarios_activos&#39;, usando comas como delimitador.</span>
+<span class="k">STORE</span><span class="w"> </span>usuarios_activos<span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="s">&#39;salida/usuarios_activos&#39;</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="nb">PigStorage</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">);</span>
+
+<span class="c">-- Almacenar los resultados de &#39;usuarios_ordenados&#39; en el sistema de archivos local en un directorio</span>
+<span class="c">-- llamado &#39;salida/usuarios_ordenados&#39;, usando comas como delimitador.</span>
+<span class="k">STORE</span><span class="w"> </span>usuarios_ordenados<span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="s">&#39;salida/usuarios_ordenados&#39;</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="nb">PigStorage</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h3 id="4-verificar-los-resultados-en-el-sistema-de-archivos-local">4. Verificar los resultados en el sistema de archivos local</h3>
+<p>Para confirmar que los datos se han almacenado correctamente, revisa los archivos de salida en el sistema de archivos local:</p>
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>salida/usuarios_activos
+cat<span class="w"> </span>salida/usuarios_activos/part-m-00000
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>salida/usuarios_ordenados
+cat<span class="w"> </span>salida/usuarios_ordenados/part-m-00000
+</code></pre></div>
+<hr />
+<h2 id="script-de-pig-completo">Script de Pig Completo</h2>
+<div class="highlight"><pre><span></span><code>usuarios<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">LOAD</span><span class="w"> </span><span class="s">&#39;usuarios.csv&#39;</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="nb">PigStorage</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="p">(</span>nombre:<span class="kt">chararray</span><span class="o">,</span><span class="w"> </span>edad:<span class="kt">int</span><span class="o">,</span><span class="w"> </span>localidad:<span class="kt">chararray</span><span class="o">,</span><span class="w"> </span>publicaciones:<span class="kt">int</span><span class="p">);</span>
+<span class="k">DUMP</span><span class="w"> </span>usuarios;
+
+usuarios_activos<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">FILTER</span><span class="w"> </span>usuarios<span class="w"> </span><span class="k">BY</span><span class="w"> </span>publicaciones<span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="k">DUMP</span><span class="w"> </span>usuarios_activos;
+
+usuarios_ordenados<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span>usuarios_activos<span class="w"> </span><span class="k">BY</span><span class="w"> </span>publicaciones<span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+<span class="k">DUMP</span><span class="w"> </span>usuarios_ordenados;
+
+<span class="k">STORE</span><span class="w"> </span>usuarios_activos<span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="s">&#39;salida/usuarios_activos&#39;</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="nb">PigStorage</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">);</span>
+<span class="k">STORE</span><span class="w"> </span>usuarios_ordenados<span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="s">&#39;salida/usuarios_ordenados&#39;</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="nb">PigStorage</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h2 id="posibles-errores-y-soluciones">Posibles errores y soluciones</h2>
+<h3 id="1-error-output-directory-already-exists">1. Error: <code>output directory already exists</code></h3>
+<ul>
+<li><strong>Descripción</strong>: Este error ocurre cuando intentas almacenar resultados en un directorio que ya existe.</li>
+<li><strong>Solución</strong>: Elimina el directorio de salida existente antes de volver a ejecutar el script.
+     <div class="highlight"><pre><span></span><code>rm<span class="w"> </span>-r<span class="w"> </span>salida/usuarios_activos
+rm<span class="w"> </span>-r<span class="w"> </span>salida/usuarios_ordenados
+</code></pre></div></li>
 </ul>
-</li>
-</ol>
-<h2 id="tareas">Tareas</h2>
-<p>Las tareas son ejercicios que complementan las prácticas guiadas y tienen como objetivo reforzar los conocimientos adquiridos. Algunas tareas requerirán investigación adicional y la implementación de soluciones más avanzadas.</p>
-<ol>
-<li><a href="/site/bda-apuntes/ut1-introduccion-a-hadoop/tareas/1tareaintroductoria"><strong>Introducción al Big Data</strong></a><ul>
-<li><strong>Descripción:</strong> Esta tarea introductoria cubre los conceptos clave de Big Data, sus desafíos, y las tecnologías fundamentales en el ecosistema Hadoop.</li>
-<li><strong>Objetivos:</strong><ul>
-<li>Definir Big Data y sus características (volumen, velocidad, variedad, etc.).</li>
-<li>Explicar la importancia de Hadoop en el procesamiento de grandes volúmenes de datos.</li>
-<li>Realizar una breve investigación sobre casos de uso de Big Data en la industria.</li>
+<h3 id="2-error-cannot-cast-from-chararray-to-int">2. Error: <code>Cannot cast from chararray to int</code></h3>
+<ul>
+<li><strong>Descripción</strong>: Puede ocurrir si hay valores no enteros en las columnas <code>edad</code> o <code>publicaciones</code>.</li>
+<li><strong>Solución</strong>: Verifica que los datos en estas columnas son numéricos y están correctamente formateados en el archivo CSV.</li>
 </ul>
-</li>
+<h3 id="3-error-file-not-found-usuarioscsv">3. Error: <code>File not found: usuarios.csv</code></h3>
+<ul>
+<li><strong>Descripción</strong>: Ocurre cuando Pig no encuentra el archivo especificado en la ruta indicada.</li>
+<li><strong>Solución</strong>: Confirma que <code>usuarios.csv</code> está en el directorio desde el cual estás ejecutando el script o proporciona la ruta completa.</li>
 </ul>
-</li>
-</ol>
 
 
 
@@ -945,44 +1102,6 @@
       <footer class="md-footer">
   
     
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../23arquitectura/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2.3. Arquitectura">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                2.3. Arquitectura
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../../ut2-almacenamiento-y-procesamiento-en-hadoop/1hdfs/" class="md-footer__link md-footer__link--next" aria-label="Next: 1. HDFS">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                1. HDFS
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1006,10 +1125,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.footer"], "search": "../../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-    <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+    <script src="../../../../assets/javascripts/bundle.56dfad97.min.js"></script>
     
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
