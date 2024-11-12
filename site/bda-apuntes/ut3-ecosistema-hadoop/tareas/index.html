@@ -748,6 +748,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tareas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tareas
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -799,6 +808,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tareas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tareas
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -832,6 +850,52 @@
 <li><strong>Directorio de salida existente</strong>: si el directorio de salida ya existe, debes eliminarlo antes de ejecutar el script.</li>
 <li><strong>Errores de tipo de datos</strong>: asegura que los datos numéricos estén en el formato correcto.</li>
 <li><strong>Archivo no encontrado</strong>: verifica que el archivo <code>usuarios.csv</code> esté en la ruta correcta al ejecutar el script.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="tareas">Tareas</h2>
+<p>Las tareas son actividades prácticas donde aplicarás tus conocimientos y resolverás problemas utilizando Apache Pig sobre datos simulados. Sigue las instrucciones y asegúrate de entregar el código y resultados correctos.</p>
+<ul>
+<li>
+<p><a href="pig/2_ventas/"><strong>Tarea Básica de Pig para Ventas</strong></a></p>
+<ul>
+<li><strong>Descripción:</strong> En esta tarea trabajarás con un archivo CSV de datos de ventas, usando Apache Pig para realizar consultas de filtrado y ordenación.</li>
+<li><strong>Objetivos:</strong><ul>
+<li>Cargar y explorar el archivo de ventas <code>ventas.csv</code>.</li>
+<li>Filtrar y ordenar los datos de acuerdo a los criterios de cada ejercicio.</li>
+<li>Practicar la manipulación de datos en Pig mediante el uso de operadores de filtrado y ordenación.</li>
+</ul>
+</li>
+<li>
+<p><strong>Ejercicios:</strong></p>
+<ol>
+<li><strong>Filtrar ventas de productos específicos y ordenar por cantidad vendida</strong></li>
+<li>
+<p>Filtra las ventas de los productos <code>laptop</code> y <code>tablet</code>, y ordénalas de mayor a menor por la cantidad vendida.</p>
+</li>
+<li>
+<p><strong>Filtrar ventas que superen un valor de ingreso específico y ordenar por ingreso</strong></p>
+</li>
+<li>
+<p>Filtra las ventas con ingresos superiores a <code>$400</code> y ordénalas de mayor a menor según el ingreso total.</p>
+</li>
+<li>
+<p><strong>Filtrar por fecha específica y ordenar por precio unitario</strong></p>
+</li>
+<li>Filtra las ventas realizadas en la fecha <code>2024-01-03</code> y ordénalas de menor a mayor por el <code>precio_unitario</code>.</li>
+</ol>
+</li>
+<li>
+<p><strong>Pista:</strong> Para el cálculo de ingresos en el segundo ejercicio, usa:
+  <div class="highlight"><pre><span></span><code>ventas_con_ingreso<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">FOREACH</span><span class="w"> </span>ventas<span class="w"> </span><span class="k">GENERATE</span><span class="w"> </span>fecha,<span class="w"> </span>id_cliente,<span class="w"> </span>producto,<span class="w"> </span>cantidad,<span class="w"> </span>precio_unitario,<span class="w"> </span><span class="p">(</span>cantidad<span class="w"> </span>*<span class="w"> </span>precio_unitario<span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span>ingreso;
+</code></pre></div></p>
+</li>
+<li><strong>Posibles errores:</strong><ul>
+<li><strong>Formato de fechas incorrecto</strong>: asegúrate de que las fechas en el archivo coincidan con el formato esperado.</li>
+<li><strong>Errores en el cálculo de ingreso</strong>: verifica que el cálculo <code>(cantidad * precio_unitario)</code> sea correcto y que los tipos de datos sean compatibles.</li>
+<li><strong>Directorio de salida existente</strong>: si el directorio de salida ya existe, debes eliminarlo antes de ejecutar el script.</li>
 </ul>
 </li>
 </ul>
