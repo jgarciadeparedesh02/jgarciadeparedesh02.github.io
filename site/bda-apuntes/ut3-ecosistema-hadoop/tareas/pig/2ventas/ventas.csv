@@ -1,0 +1,17 @@
+fecha,id_cliente,producto,cantidad,precio_unitario
+2024-01-01,1,televisor,1,500
+2024-01-01,2,laptop,1,800
+2024-01-02,3,tablet,2,200
+2024-01-02,1,smartphone,1,300
+2024-01-03,4,televisor,1,500
+2024-01-03,5,laptop,1,800
+2024-01-03,2,tablet,3,200
+2024-01-04,3,smartphone,2,300
+
+
+Filtrar ventas de productos específicos y ordenar por cantidad vendida. Filtra las ventas de productos específicos, por ejemplo, laptop y tablet, y ordénalos por cantidad vendida de mayor a menor.
+Filtrar ventas que superen un valor de ingreso específico y ordenar por ingreso. Filtra las ventas que generaron ingresos superiores a $400 y ordénalas de mayor a menor según el ingreso total (cantidad * precio_unitario).
+Pista: ventas_con_ingreso = FOREACH ventas GENERATE fecha, id_cliente, producto, cantidad, precio_unitario, (cantidad * precio_unitario) AS ingreso;
+Filtrar por fecha específica y ordenar por precio unitario.Filtra las ventas realizadas en una fecha específica, por ejemplo, 2024-01-03, y ordénalas de menor a mayor según el precio_unitario.
+
+
