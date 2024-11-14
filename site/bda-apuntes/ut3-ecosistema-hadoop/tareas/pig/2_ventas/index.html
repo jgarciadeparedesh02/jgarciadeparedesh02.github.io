@@ -20,7 +20,7 @@
   
   
   
-  <title>Tarea: Análisis de Datos de Ventas usando Apache Pig - Big Data Aplicado</title>
+  <title>2 ventas - Big Data Aplicado</title>
   
   
   
@@ -136,7 +136,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tarea: Análisis de Datos de Ventas usando Apache Pig
+              2 ventas
             
           </span>
         </div>
@@ -764,6 +764,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ejercicios-de-ampliacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios de Ampliación
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -779,6 +788,8 @@
               
 
 
+<p>Aquí tienes la tarea ampliada con los nuevos ejercicios de ampliación:</p>
+<hr />
 <h1 id="tarea-analisis-de-datos-de-ventas-usando-apache-pig">Tarea: Análisis de Datos de Ventas usando Apache Pig</h1>
 <h3 id="objetivo">Objetivo</h3>
 <p>En esta tarea, usarás <strong>Apache Pig</strong> para analizar un conjunto de datos de ventas de una tienda. El objetivo es realizar filtrado y ordenación de los datos a partir de un archivo CSV proporcionado. Este archivo contiene información sobre las transacciones diarias de la tienda, incluyendo detalles como fecha, cliente, producto, cantidad y precio unitario.</p>
@@ -840,6 +851,77 @@
 </ul>
 </li>
 </ol>
+<hr />
+<h3 id="ejercicios-de-ampliacion">Ejercicios de Ampliación</h3>
+<ol>
+<li>
+<p><strong>Ventas Totales por Cliente</strong></p>
+<p>Calcula el total de ventas realizadas por cada cliente, sumando el ingreso total generado por cada uno.</p>
+<ul>
+<li><strong>Instrucciones:</strong><ul>
+<li>Calcula una columna <code>ingreso</code> como <code>cantidad * precio_unitario</code>.</li>
+<li>Agrupa las ventas por <code>id_cliente</code> y suma el <code>ingreso</code> para cada cliente.</li>
+<li>Ordena los resultados en orden descendente de acuerdo con el ingreso total por cliente.</li>
+</ul>
+</li>
+<li><strong>Resultado esperado:</strong> Una lista de clientes con el total de ingresos que han generado, ordenada de mayor a menor.</li>
+</ul>
+</li>
+<li>
+<p><strong>Producto Más Vendido por Mes</strong></p>
+<p>Determina el producto más vendido por mes basado en la cantidad total.</p>
+<ul>
+<li><strong>Instrucciones:</strong><ul>
+<li>Extrae el mes de la columna <code>fecha</code> para agrupar los datos mensualmente.</li>
+<li>Agrupa las ventas por <code>mes</code> y <code>producto</code>.</li>
+<li>Calcula la cantidad total vendida de cada producto por mes.</li>
+<li>Ordena los resultados para mostrar el producto más vendido primero para cada mes.</li>
+</ul>
+</li>
+<li><strong>Resultado esperado:</strong> Una lista de productos agrupados por mes, con el producto más vendido de cada mes en la parte superior.</li>
+</ul>
+</li>
+<li>
+<p><strong>Promedio de Ingresos por Día de la Semana</strong></p>
+<p>Calcula el ingreso promedio por cada día de la semana para identificar patrones de ventas.</p>
+<ul>
+<li><strong>Instrucciones:</strong><ul>
+<li>Calcula una columna <code>ingreso</code> como <code>cantidad * precio_unitario</code>.</li>
+<li>Extrae el día de la semana de la columna <code>fecha</code>.</li>
+<li>Agrupa las ventas por día de la semana y calcula el promedio de <code>ingreso</code>.</li>
+</ul>
+</li>
+<li><strong>Resultado esperado:</strong> Una lista con el ingreso promedio para cada día de la semana.</li>
+</ul>
+</li>
+<li>
+<p><strong>Top 3 Clientes por Ingreso</strong></p>
+<p>Identifica los tres clientes que generaron el mayor ingreso total en el periodo registrado en el archivo.</p>
+<ul>
+<li><strong>Instrucciones:</strong><ul>
+<li>Calcula una columna <code>ingreso</code> como <code>cantidad * precio_unitario</code>.</li>
+<li>Agrupa las ventas por <code>id_cliente</code> y suma el <code>ingreso</code> para cada cliente.</li>
+<li>Ordena los resultados en orden descendente y selecciona los tres primeros clientes.</li>
+</ul>
+</li>
+<li><strong>Resultado esperado:</strong> Una lista con los tres clientes que generaron el mayor ingreso total.</li>
+</ul>
+</li>
+<li>
+<p><strong>Análisis de Productos No Vendidos</strong></p>
+<p>Identifica qué productos no se vendieron en un rango de fechas específico, por ejemplo, entre <code>2024-01-01</code> y <code>2024-01-04</code>.</p>
+<ul>
+<li><strong>Instrucciones:</strong><ul>
+<li>Lista todos los productos disponibles en el archivo usando <code>DISTINCT</code>.</li>
+<li>Filtra las ventas dentro del rango de fechas especificado.</li>
+<li>Encuentra los productos que no aparecen en las ventas del rango de fechas.</li>
+</ul>
+</li>
+<li><strong>Resultado esperado:</strong> Una lista de productos que no tuvieron ninguna venta en el rango de fechas dado.</li>
+</ul>
+</li>
+</ol>
+<hr />
 <p>Para cada ejercicio, proporciona el código de Pig que hayas utilizado y una captura de pantalla o salida de los resultados obtenidos. Asegúrate de que el código esté documentado y se entienda claramente.</p>
 
 
