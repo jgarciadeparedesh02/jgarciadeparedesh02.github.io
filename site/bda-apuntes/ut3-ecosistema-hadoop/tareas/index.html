@@ -13,7 +13,7 @@
   
   
   
-  <link rel="prev" href="../2componentes-acceso-procesamiento/21apache-pig/">
+  <link rel="prev" href="../2componentes-acceso-procesamiento/22apache-hive/">
   
   
   
@@ -679,6 +679,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2componentes-acceso-procesamiento/22apache-hive/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2. Apache Hive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -837,13 +858,13 @@
 <h2 id="practicas-guiadas">Prácticas guiadas</h2>
 <p>Las prácticas guiadas están diseñadas para que sigas un conjunto de instrucciones paso a paso y te familiarices con el entorno y las herramientas utilizadas en Big Data. Cada práctica cubre un aspecto clave del entorno de Hadoop y su ecosistema.</p>
 <ul>
-<li><a href="pig/1_introduccion_apache_pig_local/"><strong>Introducción a Apache Pig en Modo Local</strong></a><ul>
-<li><strong>Descripción:</strong> En esta práctica aprenderás a utilizar Apache Pig en modo local para procesar un archivo CSV de ejemplo. Ejecutarás un conjunto de instrucciones línea por línea para cargar, filtrar, ordenar y guardar datos en el sistema de archivos local.</li>
+<li><a href="pig/1_introduccion_apache_pig_local/"><strong>Introducción a Apache Pig en Modo Local</strong></a>  <ul>
+<li><strong>Descripción:</strong> En esta práctica aprenderás a utilizar Apache Pig en modo local para procesar un archivo CSV de ejemplo. Ejecutarás un conjunto de instrucciones línea por línea para cargar, filtrar, ordenar y guardar datos en el sistema de archivos local.  </li>
 <li><strong>Objetivos:</strong><ul>
 <li>Cargar un archivo CSV en Pig.</li>
 <li>Filtrar registros de usuarios según un criterio de publicaciones.</li>
 <li>Ordenar los usuarios en función del número de publicaciones.</li>
-<li>Guardar los resultados filtrados y ordenados en el sistema de archivos local.</li>
+<li>Guardar los resultados filtrados y ordenados en el sistema de archivos local.  </li>
 </ul>
 </li>
 <li><strong>Posibles errores:</strong><ul>
@@ -859,43 +880,37 @@
 <p>Las tareas son actividades prácticas donde aplicarás tus conocimientos y resolverás problemas utilizando Apache Pig sobre datos simulados. Sigue las instrucciones y asegúrate de entregar el código y resultados correctos.</p>
 <ul>
 <li>
-<p><a href="pig/2_ventas/"><strong>Tarea Básica de Pig para Ventas</strong></a></p>
+<p><a href="pig/2_ventas/"><strong>Tarea Básica de Pig para Ventas</strong></a>  </p>
 <ul>
-<li><strong>Descripción:</strong> En esta tarea trabajarás con un archivo CSV de datos de ventas, usando Apache Pig para realizar consultas de filtrado y ordenación.</li>
+<li><strong>Descripción:</strong> Trabajarás con un archivo CSV de datos de ventas, usando Apache Pig para realizar consultas de filtrado y ordenación.  </li>
 <li><strong>Objetivos:</strong><ul>
-<li>Cargar y explorar el archivo de ventas <code>ventas.csv</code>.</li>
+<li>Cargar y explorar el archivo <code>ventas.csv</code>.</li>
 <li>Filtrar y ordenar los datos de acuerdo a los criterios de cada ejercicio.</li>
-<li>Practicar la manipulación de datos en Pig mediante el uso de operadores de filtrado y ordenación.</li>
+<li>Practicar la manipulación de datos en Pig mediante operadores de filtrado y ordenación.  </li>
 </ul>
-</li>
-<li>
-<p><strong>Ejercicios:</strong></p>
-<ol>
-<li><strong>Filtrar ventas de productos específicos y ordenar por cantidad vendida</strong></li>
-<li>
-<p>Filtra las ventas de los productos <code>laptop</code> y <code>tablet</code>, y ordénalas de mayor a menor por la cantidad vendida.</p>
-</li>
-<li>
-<p><strong>Filtrar ventas que superen un valor de ingreso específico y ordenar por ingreso</strong></p>
-</li>
-<li>
-<p>Filtra las ventas con ingresos superiores a <code>$400</code> y ordénalas de mayor a menor según el ingreso total.</p>
-</li>
-<li>
-<p><strong>Filtrar por fecha específica y ordenar por precio unitario</strong></p>
-</li>
-<li>Filtra las ventas realizadas en la fecha <code>2024-01-03</code> y ordénalas de menor a mayor por el <code>precio_unitario</code>.</li>
-</ol>
-</li>
-<li>
-<p><strong>Pista:</strong> Para el cálculo de ingresos en el segundo ejercicio, usa:
-  <div class="highlight"><pre><span></span><code>ventas_con_ingreso<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">FOREACH</span><span class="w"> </span>ventas<span class="w"> </span><span class="k">GENERATE</span><span class="w"> </span>fecha,<span class="w"> </span>id_cliente,<span class="w"> </span>producto,<span class="w"> </span>cantidad,<span class="w"> </span>precio_unitario,<span class="w"> </span><span class="p">(</span>cantidad<span class="w"> </span>*<span class="w"> </span>precio_unitario<span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span>ingreso;
-</code></pre></div></p>
 </li>
 <li><strong>Posibles errores:</strong><ul>
 <li><strong>Formato de fechas incorrecto</strong>: asegúrate de que las fechas en el archivo coincidan con el formato esperado.</li>
-<li><strong>Errores en el cálculo de ingreso</strong>: verifica que el cálculo <code>(cantidad * precio_unitario)</code> sea correcto y que los tipos de datos sean compatibles.</li>
-<li><strong>Directorio de salida existente</strong>: si el directorio de salida ya existe, debes eliminarlo antes de ejecutar el script.</li>
+<li><strong>Errores en el cálculo de ingreso</strong>: verifica que <code>(cantidad * precio_unitario)</code> sea correcto.</li>
+<li><strong>Directorio de salida existente</strong>: elimina el directorio de salida si ya existe.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="pig/3_peliculas/"><strong>Tarea de Pig para Películas</strong></a>  </p>
+<ul>
+<li><strong>Descripción:</strong> Usarás un archivo CSV de películas para realizar consultas de análisis utilizando Apache Pig.  </li>
+<li><strong>Objetivos:</strong><ul>
+<li>Cargar el archivo <code>peliculas_streaming.csv</code>.</li>
+<li>Filtrar y agrupar datos por atributos como género, puntuación y vistas.</li>
+<li>Realizar cálculos como promedios y totales por grupos.  </li>
+</ul>
+</li>
+<li><strong>Posibles errores:</strong><ul>
+<li><strong>Errores en el formato de datos</strong>: verifica que las columnas del archivo sean consistentes.</li>
+<li><strong>Falta de archivo</strong>: asegúrate de que <code>peliculas_streaming.csv</code> esté en la ubicación correcta.</li>
+<li><strong>Directorio de salida existente</strong>: elimina el directorio de salida antes de guardar resultados.</li>
 </ul>
 </li>
 </ul>
@@ -972,7 +987,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../2componentes-acceso-procesamiento/21apache-pig/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2.1. Apache Pig">
+          <a href="../2componentes-acceso-procesamiento/22apache-hive/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2.2. Apache Hive">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -982,7 +997,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                2.1. Apache Pig
+                2.2. Apache Hive
               </div>
             </div>
           </a>

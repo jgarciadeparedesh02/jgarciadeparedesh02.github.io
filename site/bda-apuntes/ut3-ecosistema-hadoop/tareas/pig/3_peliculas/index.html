@@ -14,22 +14,20 @@
   
   
   
-  <link rel="next" href="ut1-introduccion-a-hadoop/1motivacionyorigen/">
   
-  
-  <link rel="icon" href="assets/images/favicon.png">
+  <link rel="icon" href="../../../../assets/images/favicon.png">
   <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
   
   
   
-  <title>Big Data Aplicado</title>
+  <title>Archivo CSV: peliculas_streaming.csv - Big Data Aplicado</title>
   
   
   
-  <link rel="stylesheet" href="assets/stylesheets/main.35f28582.min.css">
+  <link rel="stylesheet" href="../../../../assets/stylesheets/main.35f28582.min.css">
   
   
-  <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+  <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
   
   
 
@@ -53,9 +51,9 @@
   
   
   
-  <link rel="stylesheet" href="stylesheets/extra.css">
+  <link rel="stylesheet" href="../../../../stylesheets/extra.css">
   
-  <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+  <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
   
   
   
@@ -72,7 +70,7 @@
   
   
   
- <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+ <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -81,7 +79,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
 
 
 
@@ -102,7 +100,7 @@
     <div data-md-component="skip">
       
       
-      <a href="#bienvenidos-a-big-data-aplicado" class="md-skip">
+      <a href="#archivo-csv-peliculas_streamingcsv" class="md-skip">
         Skip to content
       </a>
       
@@ -118,7 +116,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Big Data Aplicado" class="md-header__button md-logo" aria-label="Big Data Aplicado" data-md-component="logo">
+    <a href="../../../.." title="Big Data Aplicado" class="md-header__button md-logo" aria-label="Big Data Aplicado" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -138,7 +136,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Inicio
+              Archivo CSV: peliculas_streaming.csv
             
           </span>
         </div>
@@ -239,7 +237,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Big Data Aplicado" class="md-nav__button md-logo" aria-label="Big Data Aplicado" data-md-component="logo">
+    <a href="../../../.." title="Big Data Aplicado" class="md-nav__button md-logo" aria-label="Big Data Aplicado" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -254,30 +252,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Inicio
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -286,95 +264,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#que-aprenderemos" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎯 ¿Qué aprenderemos?
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🎯 ¿Qué aprenderemos?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#unidad-1-introduccion-a-apache-hadoop" class="md-nav__link">
-    <span class="md-ellipsis">
-      Unidad 1: Introducción a Apache Hadoop
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#unidad-2-almacenamiento-y-procesamiento-en-hadoop" class="md-nav__link">
-    <span class="md-ellipsis">
-      Unidad 2: Almacenamiento y Procesamiento en Hadoop
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#unidad-3-ecosistema-hadoop" class="md-nav__link">
-    <span class="md-ellipsis">
-      Unidad 3: Ecosistema Hadoop
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#unidad-4-administracion-y-monitorizacion-de-sistemas-hadoop" class="md-nav__link">
-    <span class="md-ellipsis">
-      Unidad 4: Administración y Monitorización de Sistemas Hadoop
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#unidad-5-aplicacion-practica-de-tecnologias-big-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Unidad 5: Aplicación Práctica de Tecnologías Big Data
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#a-por-ello" class="md-nav__link">
-    <span class="md-ellipsis">
-      ¡A por ello!
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -421,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut1-introduccion-a-hadoop/1motivacionyorigen/" class="md-nav__link">
+      <a href="../../../../ut1-introduccion-a-hadoop/1motivacionyorigen/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -477,7 +366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut1-introduccion-a-hadoop/21queesapachehadoop/" class="md-nav__link">
+      <a href="../../../../ut1-introduccion-a-hadoop/21queesapachehadoop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -498,7 +387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut1-introduccion-a-hadoop/22ecosistemahadoopydistribuciones/" class="md-nav__link">
+      <a href="../../../../ut1-introduccion-a-hadoop/22ecosistemahadoopydistribuciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -519,7 +408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut1-introduccion-a-hadoop/23arquitectura/" class="md-nav__link">
+      <a href="../../../../ut1-introduccion-a-hadoop/23arquitectura/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -548,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut1-introduccion-a-hadoop/indicedetareas/" class="md-nav__link">
+      <a href="../../../../ut1-introduccion-a-hadoop/indicedetareas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -611,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut2-almacenamiento-y-procesamiento-en-hadoop/1hdfs/" class="md-nav__link">
+      <a href="../../../../ut2-almacenamiento-y-procesamiento-en-hadoop/1hdfs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -632,7 +521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut2-almacenamiento-y-procesamiento-en-hadoop/2mapreduce/" class="md-nav__link">
+      <a href="../../../../ut2-almacenamiento-y-procesamiento-en-hadoop/2mapreduce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -653,7 +542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut2-almacenamiento-y-procesamiento-en-hadoop/tareas/" class="md-nav__link">
+      <a href="../../../../ut2-almacenamiento-y-procesamiento-en-hadoop/tareas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -716,7 +605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut3-ecosistema-hadoop/1introduccion/" class="md-nav__link">
+      <a href="../../../1introduccion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -772,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut3-ecosistema-hadoop/2componentes-acceso-procesamiento/21apache-pig/" class="md-nav__link">
+      <a href="../../../2componentes-acceso-procesamiento/21apache-pig/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -793,7 +682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut3-ecosistema-hadoop/2componentes-acceso-procesamiento/22apache-hive/" class="md-nav__link">
+      <a href="../../../2componentes-acceso-procesamiento/22apache-hive/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -822,7 +711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut3-ecosistema-hadoop/tareas/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -870,55 +759,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#que-aprenderemos" class="md-nav__link">
+  <a href="#consultas-con-ejemplos-y-comandos-de-pig" class="md-nav__link">
     <span class="md-ellipsis">
-      🎯 ¿Qué aprenderemos?
+      Consultas con ejemplos y comandos de Pig
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🎯 ¿Qué aprenderemos?">
+    <nav class="md-nav" aria-label="Consultas con ejemplos y comandos de Pig">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#unidad-1-introduccion-a-apache-hadoop" class="md-nav__link">
+  <a href="#consulta-1-filtrar-por-alta-puntuacion-y-popularidad" class="md-nav__link">
     <span class="md-ellipsis">
-      Unidad 1: Introducción a Apache Hadoop
+      Consulta 1: Filtrar por alta puntuación y popularidad
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#unidad-2-almacenamiento-y-procesamiento-en-hadoop" class="md-nav__link">
+  <a href="#consulta-2-duracion-promedio-por-genero" class="md-nav__link">
     <span class="md-ellipsis">
-      Unidad 2: Almacenamiento y Procesamiento en Hadoop
+      Consulta 2: Duración promedio por género
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#unidad-3-ecosistema-hadoop" class="md-nav__link">
+  <a href="#consulta-3-top-5-de-canciones-mas-reproducidas" class="md-nav__link">
     <span class="md-ellipsis">
-      Unidad 3: Ecosistema Hadoop
+      Consulta 3: Top 5 de canciones más reproducidas
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#unidad-4-administracion-y-monitorizacion-de-sistemas-hadoop" class="md-nav__link">
+  <a href="#consulta-4-analisis-por-ano" class="md-nav__link">
     <span class="md-ellipsis">
-      Unidad 4: Administración y Monitorización de Sistemas Hadoop
+      Consulta 4: Análisis por año
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#unidad-5-aplicacion-practica-de-tecnologias-big-data" class="md-nav__link">
+  <a href="#consulta-5-comparativa-entre-generos" class="md-nav__link">
     <span class="md-ellipsis">
-      Unidad 5: Aplicación Práctica de Tecnologías Big Data
+      Consulta 5: Comparativa entre géneros
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consulta-6-distribucion-de-peliculas-por-duracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consulta 6: Distribución de películas por duración
     </span>
   </a>
   
@@ -926,15 +824,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#a-por-ello" class="md-nav__link">
-    <span class="md-ellipsis">
-      ¡A por ello!
-    </span>
-  </a>
   
 </li>
       
@@ -953,70 +842,120 @@
               
 
 
-<h1 id="bienvenidos-a-big-data-aplicado">🎉 ¡Bienvenidos a Big Data Aplicado! 🌟</h1>
-<p>🚀 <strong>Especialización en Inteligencia Artificial y Big Data</strong></p>
-<p>¡Hola a todos! 👋 Me complace darles la bienvenida al <strong>módulo de Big Data Aplicado</strong> dentro del curso de especialización en Inteligencia Artificial y Big Data. En este módulo, nos adentraremos en el fascinante mundo del <strong>Big Data</strong> y aprenderemos a usar herramientas clave como <strong>Apache Hadoop</strong> para manejar y analizar grandes volúmenes de datos. 🌐📊</p>
-<p><a class="glightbox" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTt_NmX8fT7DhkwK2G9tv940JJ2v6toYrddw&amp;s" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Hadoop" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTt_NmX8fT7DhkwK2G9tv940JJ2v6toYrddw&amp;s" /></a></p>
-<h2 id="que-aprenderemos">🎯 ¿Qué aprenderemos?</h2>
-<p>En este curso, exploraremos cómo almacenar, procesar y analizar grandes cantidades de información utilizando <strong>Hadoop</strong> y su extenso ecosistema. Estas tecnologías están revolucionando industrias, permitiendo que las empresas aprovechen al máximo sus datos. ¡Prepárate para convertirte en un experto en Big Data! 🚀</p>
-<p>📚 <strong>Índice de Contenidos</strong><br />
-A lo largo de este módulo, profundizaremos en varias áreas clave del Big Data, desde conceptos introductorios hasta aplicaciones prácticas. Aquí te dejamos una visión general de los contenidos:</p>
+<h1 id="archivo-csv-peliculas_streamingcsv"><strong>Archivo CSV: <code>peliculas_streaming.csv</code></strong></h1>
+<div class="highlight"><pre><span></span><code>id_pelicula,titulo,genero,anio,duracion_min,puntuacion,vistas
+1,Inception,Ciencia Ficción,2010,148,8.8,2000000
+2,The Dark Knight,Acción,2008,152,9.0,2500000
+3,Interstellar,Ciencia Ficción,2014,169,8.6,1800000
+4,Parasite,Drama,2019,132,8.6,3000000
+5,Avengers: Endgame,Acción,2019,181,8.4,4000000
+6,La La Land,Musical,2016,128,8.0,1500000
+7,The Matrix,Ciencia Ficción,1999,136,8.7,2200000
+8,The Godfather,Drama,1972,175,9.2,3500000
+9,Spirited Away,Animación,2001,125,8.6,1200000
+10,The Lion King,Animación,1994,88,8.5,1800000
+</code></pre></div>
+<h3 id="consultas-con-ejemplos-y-comandos-de-pig"><strong>Consultas con ejemplos y comandos de Pig</strong></h3>
 <hr />
-<h3 id="unidad-1-introduccion-a-apache-hadoop"><strong>Unidad 1: Introducción a Apache Hadoop</strong></h3>
-<p>Comenzamos por lo básico: ¿Qué es <strong>Hadoop</strong> y por qué es tan importante para el procesamiento de grandes datos?</p>
+<h4 id="consulta-1-filtrar-por-alta-puntuacion-y-popularidad"><strong>Consulta 1: Filtrar por alta puntuación y popularidad</strong></h4>
 <ul>
-<li><strong>Motivación y origen:</strong> Exploramos los problemas que dieron origen a Hadoop y cómo se convirtió en una solución para el manejo de grandes volúmenes de datos.</li>
-<li><strong>Apache Hadoop a alto nivel:</strong> Nos familiarizamos con los conceptos clave de Hadoop y sus componentes principales.</li>
-<li><strong>¿Qué es Apache Hadoop?</strong> Conoce qué es y por qué es crucial para el almacenamiento y procesamiento de grandes cantidades de datos.</li>
-<li><strong>Ecosistema Hadoop y distribuciones:</strong> Descubre cómo Hadoop es solo el núcleo de un ecosistema más amplio, que incluye herramientas como <strong>Hive</strong>, <strong>Pig</strong>, y <strong>HBase</strong>.</li>
-<li><strong>Arquitectura de Hadoop:</strong> Examinamos cómo Hadoop organiza el procesamiento distribuido a través de <strong>HDFS</strong> (Hadoop Distributed File System) y <strong>MapReduce</strong>.</li>
-<li><strong>Beneficios, desventajas y dificultades:</strong> Analizamos las ventajas que ofrece Hadoop, pero también sus limitaciones y retos.</li>
+<li><strong>Consulta original:</strong> Encuentra las películas con una <strong>puntuación mayor a 8.5</strong> y más de <strong>2 millones de vistas</strong>.  </li>
+<li><strong>Ejemplo similar:</strong><br />
+En un archivo de canciones de Spotify con columnas <code>id_cancion</code>, <code>titulo</code>, <code>artista</code>, <code>duracion_seg</code>, <code>puntuacion</code>, <code>reproducciones</code>, filtra las canciones con una puntuación mayor a <strong>4.5</strong> y más de <strong>1 millón de reproducciones</strong>.
+<div class="highlight"><pre><span></span><code>canciones<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">LOAD</span><span class="w"> </span><span class="s">&#39;canciones_spotify.csv&#39;</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="nb">PigStorage</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">)</span><span class="w"> </span>
+<span class="w">            </span><span class="k">AS</span><span class="w"> </span><span class="p">(</span>id_cancion:<span class="kt">INT</span><span class="o">,</span><span class="w"> </span>titulo:<span class="kt">CHARARRAY</span><span class="o">,</span><span class="w"> </span>artista:<span class="kt">CHARARRAY</span><span class="o">,</span><span class="w"> </span>duracion_seg:<span class="kt">INT</span><span class="o">,</span><span class="w"> </span>puntuacion:<span class="kt">FLOAT</span><span class="o">,</span><span class="w"> </span>reproducciones:<span class="kt">INT</span><span class="p">);</span>
+filtradas<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">FILTER</span><span class="w"> </span>canciones<span class="w"> </span><span class="k">BY</span><span class="w"> </span>puntuacion<span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">4.5</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span>reproducciones<span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1000000</span><span class="p">;</span>
+<span class="k">DUMP</span><span class="w"> </span>filtradas;
+</code></pre></div></li>
 </ul>
 <hr />
-<h3 id="unidad-2-almacenamiento-y-procesamiento-en-hadoop"><strong>Unidad 2: Almacenamiento y Procesamiento en Hadoop</strong></h3>
-<p>Profundizamos en cómo Hadoop almacena y procesa datos utilizando <strong>HDFS</strong>, <strong>YARN</strong> y <strong>MapReduce</strong>.</p>
+<h4 id="consulta-2-duracion-promedio-por-genero"><strong>Consulta 2: Duración promedio por género</strong></h4>
 <ul>
-<li><strong>HDFS (Hadoop Distributed File System):</strong> Es el sistema de archivos distribuido que permite almacenar grandes volúmenes de datos de manera eficiente. Explicaremos cómo funciona la lectura y escritura de datos en HDFS.</li>
-<li><strong>Arquitectura de HDFS:</strong> Conoceremos la estructura interna de HDFS y cómo los <strong>NameNodes</strong> y <strong>DataNodes</strong> se comunican para mantener la integridad de los datos.</li>
-<li><strong>YARN (Yet Another Resource Negotiator):</strong> Esta herramienta gestiona los recursos dentro del clúster de Hadoop, permitiendo ejecutar múltiples tareas en paralelo.</li>
-<li><strong>MapReduce:</strong> Modelo de programación distribuida que divide las tareas en "Map" y "Reduce". Veremos cómo se utiliza para procesar grandes cantidades de datos de manera eficiente y escalable.</li>
+<li><strong>Consulta original:</strong> Calcula la <strong>duración promedio</strong> de las películas agrupadas por su <strong>género</strong>.  </li>
+<li><strong>Ejemplo similar:</strong><br />
+En un archivo de podcasts con columnas <code>id_podcast</code>, <code>titulo</code>, <code>categoria</code>, <code>duracion_min</code>, <code>puntuacion</code> y <code>oyentes</code>, agrupa por <strong>categoría</strong> y calcula la duración promedio de los episodios.
+<div class="highlight"><pre><span></span><code>podcasts<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">LOAD</span><span class="w"> </span><span class="s">&#39;podcasts.csv&#39;</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="nb">PigStorage</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">)</span><span class="w"> </span>
+<span class="w">           </span><span class="k">AS</span><span class="w"> </span><span class="p">(</span>id_podcast:<span class="kt">INT</span><span class="o">,</span><span class="w"> </span>titulo:<span class="kt">CHARARRAY</span><span class="o">,</span><span class="w"> </span>categoria:<span class="kt">CHARARRAY</span><span class="o">,</span><span class="w"> </span>duracion_min:<span class="kt">INT</span><span class="o">,</span><span class="w"> </span>puntuacion:<span class="kt">FLOAT</span><span class="o">,</span><span class="w"> </span>oyentes:<span class="kt">INT</span><span class="p">);</span>
+agrupados<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">GROUP</span><span class="w"> </span>podcasts<span class="w"> </span><span class="k">BY</span><span class="w"> </span>categoria;
+promedio_duracion<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">FOREACH</span><span class="w"> </span>agrupados<span class="w"> </span><span class="k">GENERATE</span><span class="w"> </span><span class="k">group</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span>categoria,<span class="w"> </span><span class="nb">AVG</span><span class="p">(</span>podcasts.duracion_min<span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span>duracion_promedio;
+<span class="k">DUMP</span><span class="w"> </span>promedio_duracion;
+</code></pre></div></li>
 </ul>
 <hr />
-<h3 id="unidad-3-ecosistema-hadoop"><strong>Unidad 3: Ecosistema Hadoop</strong></h3>
-<p>El ecosistema Hadoop es vasto y está lleno de herramientas diseñadas para facilitar el procesamiento y análisis de datos.</p>
+<h4 id="consulta-3-top-5-de-canciones-mas-reproducidas"><strong>Consulta 3: Top 5 de canciones más reproducidas</strong></h4>
 <ul>
-<li><strong>Apache Pig:</strong> Un lenguaje de scripting diseñado para analizar grandes conjuntos de datos de manera simple y eficiente.</li>
-<li><strong>Apache Hive:</strong> Un sistema de data warehousing que permite realizar consultas sobre datos almacenados en Hadoop mediante un lenguaje similar a SQL, llamado <strong>HQL</strong>.</li>
-<li><strong>Apache Impala:</strong> Herramienta de análisis que permite realizar consultas en tiempo real sobre grandes volúmenes de datos.</li>
-<li><strong>Apache HBase:</strong> Una base de datos NoSQL que permite el almacenamiento y acceso a datos estructurados de manera distribuida.</li>
-<li><strong>Apache Spark:</strong> Un motor de procesamiento rápido y general para grandes volúmenes de datos, ideal para aplicaciones en tiempo real.</li>
-<li><strong>Componentes de Ingesta de Datos:</strong> Exploraremos herramientas como <strong>Apache Sqoop</strong> y <strong>Apache Flume</strong>, diseñadas para la ingesta eficiente de datos desde fuentes externas a Hadoop.</li>
-<li><strong>Apache Oozie:</strong> Una herramienta de flujo de trabajo que permite coordinar y programar trabajos dentro del ecosistema Hadoop.</li>
-<li><strong>Procesamiento en Streaming:</strong> Veremos cómo tecnologías como <strong>Apache Spark (Structured Streaming)</strong>, <strong>Apache Flink</strong>, y <strong>Apache Storm</strong> manejan datos en tiempo real, permitiendo análisis continuos.</li>
+<li><strong>Consulta original:</strong> Lista las 5 películas con mayor cantidad de vistas, ordenadas de forma descendente.  </li>
+<li><strong>Ejemplo similar:</strong><br />
+En un archivo de canciones de Spotify, encuentra las 5 canciones con más reproducciones.
+<div class="highlight"><pre><span></span><code>canciones<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">LOAD</span><span class="w"> </span><span class="s">&#39;canciones_spotify.csv&#39;</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="nb">PigStorage</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">)</span><span class="w"> </span>
+<span class="w">            </span><span class="k">AS</span><span class="w"> </span><span class="p">(</span>id_cancion:<span class="kt">INT</span><span class="o">,</span><span class="w"> </span>titulo:<span class="kt">CHARARRAY</span><span class="o">,</span><span class="w"> </span>artista:<span class="kt">CHARARRAY</span><span class="o">,</span><span class="w"> </span>duracion_seg:<span class="kt">INT</span><span class="o">,</span><span class="w"> </span>puntuacion:<span class="kt">FLOAT</span><span class="o">,</span><span class="w"> </span>reproducciones:<span class="kt">INT</span><span class="p">);</span>
+ordenadas<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span>canciones<span class="w"> </span><span class="k">BY</span><span class="w"> </span>reproducciones<span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+top_5<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span>ordenadas<span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="k">DUMP</span><span class="w"> </span>top_5;
+</code></pre></div></li>
 </ul>
 <hr />
-<h3 id="unidad-4-administracion-y-monitorizacion-de-sistemas-hadoop"><strong>Unidad 4: Administración y Monitorización de Sistemas Hadoop</strong></h3>
-<p>Gestionar un clúster Hadoop es crucial para asegurar que todo funcione correctamente, y en esta unidad aprenderemos las mejores prácticas y herramientas.</p>
+<h4 id="consulta-4-analisis-por-ano"><strong>Consulta 4: Análisis por año</strong></h4>
 <ul>
-<li><strong>Interfaz de HDFS y YARN:</strong> Exploraremos las interfaces de usuario que permiten monitorizar el funcionamiento del sistema de archivos y la gestión de recursos.</li>
-<li><strong>Apache Ambari y Cloudera Manager:</strong> Dos herramientas poderosas que facilitan la administración de clústeres Hadoop.</li>
-<li><strong>Ganglia:</strong> Un sistema de monitorización diseñado para analizar el rendimiento y la eficiencia de un clúster Hadoop en tiempo real.</li>
+<li><strong>Consulta original:</strong> Agrupa las películas por año de estreno y calcula estadísticas.  </li>
+<li><strong>Ejemplo similar:</strong><br />
+En un archivo de videojuegos con columnas <code>id_juego</code>, <code>titulo</code>, <code>genero</code>, <code>anio_lanzamiento</code>, <code>ventas</code> y <code>calificacion</code>, agrupa por <strong>año de lanzamiento</strong> y calcula:  <ul>
+<li>El número total de juegos por año.  </li>
+<li>El promedio de calificación.  </li>
+<li>El juego más vendido de cada año.
+<div class="highlight"><pre><span></span><code>videojuegos<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">LOAD</span><span class="w"> </span><span class="s">&#39;videojuegos.csv&#39;</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="nb">PigStorage</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">)</span><span class="w"> </span>
+<span class="w">              </span><span class="k">AS</span><span class="w"> </span><span class="p">(</span>id_juego:<span class="kt">INT</span><span class="o">,</span><span class="w"> </span>titulo:<span class="kt">CHARARRAY</span><span class="o">,</span><span class="w"> </span>genero:<span class="kt">CHARARRAY</span><span class="o">,</span><span class="w"> </span>anio_lanzamiento:<span class="kt">INT</span><span class="o">,</span><span class="w"> </span>ventas:<span class="kt">INT</span><span class="o">,</span><span class="w"> </span>calificacion:<span class="kt">FLOAT</span><span class="p">);</span>
+agrupados_anio<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">GROUP</span><span class="w"> </span>videojuegos<span class="w"> </span><span class="k">BY</span><span class="w"> </span>anio_lanzamiento;
+estadisticas<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">FOREACH</span><span class="w"> </span>agrupados_anio<span class="w"> </span><span class="k">GENERATE</span><span class="w"> </span>
+<span class="w">               </span><span class="k">group</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span>anio,<span class="w"> </span>
+<span class="w">               </span><span class="nb">COUNT</span><span class="p">(</span>videojuegos<span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span>total_juegos,
+<span class="w">               </span><span class="nb">AVG</span><span class="p">(</span>videojuegos.calificacion<span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span>promedio_calificacion,
+<span class="w">               </span><span class="nb">MAX</span><span class="p">(</span>videojuegos.ventas<span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span>ventas_maximas;
+<span class="k">DUMP</span><span class="w"> </span>estadisticas;
+</code></pre></div></li>
+</ul>
+</li>
 </ul>
 <hr />
-<h3 id="unidad-5-aplicacion-practica-de-tecnologias-big-data"><strong>Unidad 5: Aplicación Práctica de Tecnologías Big Data</strong></h3>
-<p>Finalmente, aplicaremos los conocimientos adquiridos para resolver problemas reales utilizando tecnologías Big Data.</p>
+<h4 id="consulta-5-comparativa-entre-generos"><strong>Consulta 5: Comparativa entre géneros</strong></h4>
 <ul>
-<li><strong>Arquitecturas y Modelos de Despliegue:</strong> Exploraremos diferentes arquitecturas de sistemas Big Data y sus modelos de despliegue, incluyendo soluciones on-premise y en la nube.</li>
-<li><strong>Hadoop en la Práctica:</strong> Veremos ejemplos de implementación práctica de Hadoop en diversos sectores y casos de uso.</li>
-<li><strong>Soluciones Hadoop-as-a-Service:</strong> Exploraremos plataformas como <strong>Amazon EMR</strong> y <strong>Microsoft Azure HDInsight</strong>, que permiten implementar y gestionar soluciones Hadoop en la nube.</li>
+<li><strong>Consulta original:</strong> Calcula el total de <strong>vistas acumuladas</strong> para cada género y ordénalos de mayor a menor.  </li>
+<li><strong>Ejemplo similar:</strong><br />
+En un archivo de aplicaciones móviles con columnas <code>id_app</code>, <code>nombre</code>, <code>categoria</code>, <code>descargas</code>, calcula las descargas totales por cada categoría y ordénalas en orden descendente.
+<div class="highlight"><pre><span></span><code>apps<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">LOAD</span><span class="w"> </span><span class="s">&#39;apps.csv&#39;</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="nb">PigStorage</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">)</span><span class="w"> </span>
+<span class="w">       </span><span class="k">AS</span><span class="w"> </span><span class="p">(</span>id_app:<span class="kt">INT</span><span class="o">,</span><span class="w"> </span>nombre:<span class="kt">CHARARRAY</span><span class="o">,</span><span class="w"> </span>categoria:<span class="kt">CHARARRAY</span><span class="o">,</span><span class="w"> </span>descargas:<span class="kt">INT</span><span class="p">);</span>
+agrupados_categoria<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">GROUP</span><span class="w"> </span>apps<span class="w"> </span><span class="k">BY</span><span class="w"> </span>categoria;
+descargas_totales<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">FOREACH</span><span class="w"> </span>agrupados_categoria<span class="w"> </span><span class="k">GENERATE</span><span class="w"> </span><span class="k">group</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span>categoria,<span class="w"> </span><span class="nb">SUM</span><span class="p">(</span>apps.descargas<span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span>total_descargas;
+ordenadas<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span>descargas_totales<span class="w"> </span><span class="k">BY</span><span class="w"> </span>total_descargas<span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+<span class="k">DUMP</span><span class="w"> </span>ordenadas;
+</code></pre></div></li>
 </ul>
 <hr />
-<h2 id="a-por-ello">¡A por ello!</h2>
-<p>Este curso te proporcionará las habilidades y conocimientos necesarios para diseñar, implementar y administrar sistemas de Big Data. Al finalizar, serás capaz de gestionar grandes volúmenes de datos de manera eficiente, desde el almacenamiento hasta el procesamiento avanzado. 🏆</p>
-<p>💡 <strong>Consejo del día:</strong><br />
-El mundo del Big Data está lleno de oportunidades. No dudes en preguntar, explorar y experimentar a lo largo del curso. ¡Estamos aquí para ayudarte a cada paso del camino!</p>
-<p>🔥 <strong>¡Vamos a dominar el Big Data, un clúster a la vez!</strong> 💪<br />
-Espero que estés tan emocionado como yo para comenzar este viaje en el mundo del Big Data. ¡Es hora de hacer que los datos trabajen para nosotros! 🌍🎓</p>
+<h4 id="consulta-6-distribucion-de-peliculas-por-duracion"><strong>Consulta 6: Distribución de películas por duración</strong></h4>
+<ul>
+<li><strong>Consulta original:</strong> Clasifica las películas según su duración.  </li>
+<li><strong>Ejemplo similar:</strong><br />
+En un archivo de videos de YouTube con columnas <code>id_video</code>, <code>titulo</code>, <code>duracion_min</code>, clasifica los videos en:  <ul>
+<li><strong>Cortos:</strong> Menos de 5 minutos.  </li>
+<li><strong>Medios:</strong> Entre 5 y 20 minutos.  </li>
+<li><strong>Largos:</strong> Más de 20 minutos.
+<div class="highlight"><pre><span></span><code>videos<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">LOAD</span><span class="w"> </span><span class="s">&#39;videos_youtube.csv&#39;</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="nb">PigStorage</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">)</span><span class="w"> </span>
+<span class="w">         </span><span class="k">AS</span><span class="w"> </span><span class="p">(</span>id_video:<span class="kt">INT</span><span class="o">,</span><span class="w"> </span>titulo:<span class="kt">CHARARRAY</span><span class="o">,</span><span class="w"> </span>duracion_min:<span class="kt">INT</span><span class="p">);</span>
+clasificados<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">FOREACH</span><span class="w"> </span>videos<span class="w"> </span><span class="k">GENERATE</span><span class="w"> </span>
+<span class="w">               </span>id_video,<span class="w"> </span>
+<span class="w">               </span>titulo,<span class="w"> </span>
+<span class="w">               </span><span class="p">(</span><span class="k">CASE</span><span class="w"> </span>
+<span class="w">                 </span>WHEN<span class="w"> </span>duracion_min<span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span>THEN<span class="w"> </span><span class="s">&#39;Corto&#39;</span>
+<span class="w">                 </span>WHEN<span class="w"> </span>duracion_min<span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span>duracion_min<span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span>THEN<span class="w"> </span><span class="s">&#39;Medio&#39;</span>
+<span class="w">                 </span>ELSE<span class="w"> </span><span class="s">&#39;Largo&#39;</span><span class="w"> </span>
+<span class="w">               </span>END<span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span>categoria_duracion;
+agrupados_duracion<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">GROUP</span><span class="w"> </span>clasificados<span class="w"> </span><span class="k">BY</span><span class="w"> </span>categoria_duracion;
+conteo<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">FOREACH</span><span class="w"> </span>agrupados_duracion<span class="w"> </span><span class="k">GENERATE</span><span class="w"> </span><span class="k">group</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span>categoria,<span class="w"> </span><span class="nb">COUNT</span><span class="p">(</span>clasificados<span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span>total_videos;
+<span class="k">DUMP</span><span class="w"> </span>conteo;
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
 
 
 
@@ -1084,28 +1023,6 @@ Espero que estés tan emocionado como yo para comenzar este viaje en el mundo de
       <footer class="md-footer">
   
     
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-        
-          
-          <a href="ut1-introduccion-a-hadoop/1motivacionyorigen/" class="md-footer__link md-footer__link--next" aria-label="Next: 1. Motivación y Origen">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                1. Motivación y Origen
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1129,10 +1046,10 @@ Espero que estés tan emocionado como yo para comenzar este viaje en el mundo de
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.footer"], "search": "assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.footer"], "search": "../../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-    <script src="assets/javascripts/bundle.56dfad97.min.js"></script>
+    <script src="../../../../assets/javascripts/bundle.56dfad97.min.js"></script>
     
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});

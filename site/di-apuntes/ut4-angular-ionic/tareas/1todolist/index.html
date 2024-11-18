@@ -14,22 +14,20 @@
   
   
   
-  <link rel="next" href="ut1-desarrollodeinterfacesdeusuario-usabilidad/1introduccionalausabilidad/">
   
-  
-  <link rel="icon" href="assets/images/favicon.png">
+  <link rel="icon" href="../../../assets/images/favicon.png">
   <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
   
   
   
-  <title>Desarrollo de Interfaces</title>
+  <title>Práctica Guiada: Crear una Lista de Tareas con Ionic y Angular - Desarrollo de Interfaces</title>
   
   
   
-  <link rel="stylesheet" href="assets/stylesheets/main.35f28582.min.css">
+  <link rel="stylesheet" href="../../../assets/stylesheets/main.35f28582.min.css">
   
   
-  <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+  <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
   
   
 
@@ -53,9 +51,9 @@
   
   
   
-  <link rel="stylesheet" href="stylesheets/extra.css">
+  <link rel="stylesheet" href="../../../stylesheets/extra.css">
   
-  <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+  <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
   
   
   
@@ -72,7 +70,7 @@
   
   
   
- <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+ <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -81,7 +79,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
 
 
 
@@ -102,7 +100,7 @@
     <div data-md-component="skip">
       
       
-      <a href="#bienvenidos-a-desarrollo-de-interfaces" class="md-skip">
+      <a href="#practica-guiada-crear-una-lista-de-tareas-con-ionic-y-angular" class="md-skip">
         Skip to content
       </a>
       
@@ -118,7 +116,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Desarrollo de Interfaces" class="md-header__button md-logo" aria-label="Desarrollo de Interfaces" data-md-component="logo">
+    <a href="../../.." title="Desarrollo de Interfaces" class="md-header__button md-logo" aria-label="Desarrollo de Interfaces" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -138,7 +136,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Inicio
+              Práctica Guiada: Crear una Lista de Tareas con Ionic y Angular
             
           </span>
         </div>
@@ -239,7 +237,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Desarrollo de Interfaces" class="md-nav__button md-logo" aria-label="Desarrollo de Interfaces" data-md-component="logo">
+    <a href="../../.." title="Desarrollo de Interfaces" class="md-nav__button md-logo" aria-label="Desarrollo de Interfaces" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -254,30 +252,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Inicio
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -286,77 +264,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#desarrollo-de-aplicaciones-multiplataforma" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 Desarrollo de Aplicaciones Multiplataforma
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🚀 Desarrollo de Aplicaciones Multiplataforma">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#que-aprenderemos" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎯 ¿Qué aprenderemos?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#indice-de-contenidos" class="md-nav__link">
-    <span class="md-ellipsis">
-      📚 Índice de Contenidos
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a-por-ello" class="md-nav__link">
-    <span class="md-ellipsis">
-      🌈 ¡A por ello!
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vamos-a-construir-el-futuro-una-interfaz-a-la-vez" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔥 ¡Vamos a construir el futuro, una interfaz a la vez! 💪
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -403,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut1-desarrollodeinterfacesdeusuario-usabilidad/1introduccionalausabilidad/" class="md-nav__link">
+      <a href="../../../ut1-desarrollodeinterfacesdeusuario-usabilidad/1introduccionalausabilidad/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -424,7 +331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut1-desarrollodeinterfacesdeusuario-usabilidad/2dise%C3%B1ocentradoenelusuario/" class="md-nav__link">
+      <a href="../../../ut1-desarrollodeinterfacesdeusuario-usabilidad/2dise%C3%B1ocentradoenelusuario/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -445,7 +352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut1-desarrollodeinterfacesdeusuario-usabilidad/3principiosdeusabilidad/" class="md-nav__link">
+      <a href="../../../ut1-desarrollodeinterfacesdeusuario-usabilidad/3principiosdeusabilidad/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -466,7 +373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut1-desarrollodeinterfacesdeusuario-usabilidad/4patronesdedise%C3%B1odeinterfaces/" class="md-nav__link">
+      <a href="../../../ut1-desarrollodeinterfacesdeusuario-usabilidad/4patronesdedise%C3%B1odeinterfaces/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -487,7 +394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut1-desarrollodeinterfacesdeusuario-usabilidad/5evaluacionheuristica/" class="md-nav__link">
+      <a href="../../../ut1-desarrollodeinterfacesdeusuario-usabilidad/5evaluacionheuristica/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -508,7 +415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut1-desarrollodeinterfacesdeusuario-usabilidad/6interfacesmultidispositivo/" class="md-nav__link">
+      <a href="../../../ut1-desarrollodeinterfacesdeusuario-usabilidad/6interfacesmultidispositivo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -529,7 +436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut1-desarrollodeinterfacesdeusuario-usabilidad/7elementosdeinteraccioneninterfaces/" class="md-nav__link">
+      <a href="../../../ut1-desarrollodeinterfacesdeusuario-usabilidad/7elementosdeinteraccioneninterfaces/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -550,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut1-desarrollodeinterfacesdeusuario-usabilidad/8flujosdeusuario/" class="md-nav__link">
+      <a href="../../../ut1-desarrollodeinterfacesdeusuario-usabilidad/8flujosdeusuario/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -571,7 +478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut1-desarrollodeinterfacesdeusuario-usabilidad/9prototipadoywireframing/" class="md-nav__link">
+      <a href="../../../ut1-desarrollodeinterfacesdeusuario-usabilidad/9prototipadoywireframing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -592,7 +499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut1-desarrollodeinterfacesdeusuario-usabilidad/10accesibilidadeinterfacesdeusuario/" class="md-nav__link">
+      <a href="../../../ut1-desarrollodeinterfacesdeusuario-usabilidad/10accesibilidadeinterfacesdeusuario/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -655,7 +562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut2-introduccionatypescript/1queestypescript/" class="md-nav__link">
+      <a href="../../../ut2-introduccionatypescript/1queestypescript/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -676,7 +583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut2-introduccionatypescript/2ventajasdeusartypescript/" class="md-nav__link">
+      <a href="../../../ut2-introduccionatypescript/2ventajasdeusartypescript/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -697,7 +604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut2-introduccionatypescript/3instalacionyconfiguraciondetypescript/" class="md-nav__link">
+      <a href="../../../ut2-introduccionatypescript/3instalacionyconfiguraciondetypescript/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -718,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut2-introduccionatypescript/4primerproyecto/" class="md-nav__link">
+      <a href="../../../ut2-introduccionatypescript/4primerproyecto/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -739,7 +646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut2-introduccionatypescript/5tiposbasicos/" class="md-nav__link">
+      <a href="../../../ut2-introduccionatypescript/5tiposbasicos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -760,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut2-introduccionatypescript/6condicionales/" class="md-nav__link">
+      <a href="../../../ut2-introduccionatypescript/6condicionales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -781,7 +688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut2-introduccionatypescript/7bucles/" class="md-nav__link">
+      <a href="../../../ut2-introduccionatypescript/7bucles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -802,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut2-introduccionatypescript/8objetos/" class="md-nav__link">
+      <a href="../../../ut2-introduccionatypescript/8objetos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -823,7 +730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut2-introduccionatypescript/9funcionesyparametros/" class="md-nav__link">
+      <a href="../../../ut2-introduccionatypescript/9funcionesyparametros/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -844,7 +751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut2-introduccionatypescript/10interfacesyobjetos/" class="md-nav__link">
+      <a href="../../../ut2-introduccionatypescript/10interfacesyobjetos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -865,7 +772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut2-introduccionatypescript/11clasesyherencia/" class="md-nav__link">
+      <a href="../../../ut2-introduccionatypescript/11clasesyherencia/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -886,7 +793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut2-introduccionatypescript/12modularizaciondecodigo/" class="md-nav__link">
+      <a href="../../../ut2-introduccionatypescript/12modularizaciondecodigo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -907,7 +814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut2-introduccionatypescript/13recursos/" class="md-nav__link">
+      <a href="../../../ut2-introduccionatypescript/13recursos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -970,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut3-introduccionaangular/1introduccion/" class="md-nav__link">
+      <a href="../../../ut3-introduccionaangular/1introduccion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -991,7 +898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut3-introduccionaangular/2conceptosbasicos/" class="md-nav__link">
+      <a href="../../../ut3-introduccionaangular/2conceptosbasicos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1012,7 +919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut3-introduccionaangular/3ruteoynavegacion/" class="md-nav__link">
+      <a href="../../../ut3-introduccionaangular/3ruteoynavegacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1033,7 +940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut3-introduccionaangular/4comunicacionentrecomponentes/" class="md-nav__link">
+      <a href="../../../ut3-introduccionaangular/4comunicacionentrecomponentes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1054,7 +961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut3-introduccionaangular/5formularios/" class="md-nav__link">
+      <a href="../../../ut3-introduccionaangular/5formularios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1075,7 +982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut3-introduccionaangular/6consumodeapis/" class="md-nav__link">
+      <a href="../../../ut3-introduccionaangular/6consumodeapis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1096,7 +1003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut3-introduccionaangular/7pipesyfiltros/" class="md-nav__link">
+      <a href="../../../ut3-introduccionaangular/7pipesyfiltros/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1117,7 +1024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut3-introduccionaangular/8recursosyfaq/" class="md-nav__link">
+      <a href="../../../ut3-introduccionaangular/8recursosyfaq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1138,7 +1045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut3-introduccionaangular/9explicacionproyectotodolist/" class="md-nav__link">
+      <a href="../../../ut3-introduccionaangular/9explicacionproyectotodolist/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1201,7 +1108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut4-angular-ionic/1introduccion/" class="md-nav__link">
+      <a href="../../1introduccion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1257,7 +1164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut4-angular-ionic/2creacionprimeraapp/21creaciondelaappeinicializaci%C3%B3n/" class="md-nav__link">
+      <a href="../../2creacionprimeraapp/21creaciondelaappeinicializaci%C3%B3n/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1278,7 +1185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut4-angular-ionic/2creacionprimeraapp/22tomadefotos/" class="md-nav__link">
+      <a href="../../2creacionprimeraapp/22tomadefotos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1299,7 +1206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut4-angular-ionic/2creacionprimeraapp/23guardadodefotos/" class="md-nav__link">
+      <a href="../../2creacionprimeraapp/23guardadodefotos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1320,7 +1227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut4-angular-ionic/2creacionprimeraapp/24cargadefotosdelsistema/" class="md-nav__link">
+      <a href="../../2creacionprimeraapp/24cargadefotosdelsistema/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1341,7 +1248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut4-angular-ionic/2creacionprimeraapp/25versionmovil/" class="md-nav__link">
+      <a href="../../2creacionprimeraapp/25versionmovil/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1362,7 +1269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut4-angular-ionic/2creacionprimeraapp/26despligueandroidyios/" class="md-nav__link">
+      <a href="../../2creacionprimeraapp/26despligueandroidyios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1391,7 +1298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ut4-angular-ionic/tareas/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1439,53 +1346,83 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#desarrollo-de-aplicaciones-multiplataforma" class="md-nav__link">
+  <a href="#1-preparacion-del-entorno" class="md-nav__link">
     <span class="md-ellipsis">
-      🚀 Desarrollo de Aplicaciones Multiplataforma
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🚀 Desarrollo de Aplicaciones Multiplataforma">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#que-aprenderemos" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎯 ¿Qué aprenderemos?
+      1. Preparación del entorno
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#indice-de-contenidos" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#2-crear-la-pagina-tasks" class="md-nav__link">
     <span class="md-ellipsis">
-      📚 Índice de Contenidos
+      2. Crear la página tasks
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#a-por-ello" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#3-configurar-la-navegacion-inicial" class="md-nav__link">
     <span class="md-ellipsis">
-      🌈 ¡A por ello!
+      3. Configurar la navegación inicial
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#vamos-a-construir-el-futuro-una-interfaz-a-la-vez" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#4-disenar-la-interfaz-de-usuario" class="md-nav__link">
     <span class="md-ellipsis">
-      🔥 ¡Vamos a construir el futuro, una interfaz a la vez! 💪
+      4. Diseñar la interfaz de usuario
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#5-implementar-la-logica" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Implementar la lógica
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-habilitar-el-uso-de-ngmodel" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Habilitar el uso de ngModel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-probar-la-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Probar la aplicación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcionalidad-esperada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funcionalidad esperada
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reto-adicional-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reto adicional (opcional)
+    </span>
+  </a>
   
 </li>
       
@@ -1504,58 +1441,160 @@
               
 
 
-<h1 id="bienvenidos-a-desarrollo-de-interfaces">🎉 ¡Bienvenidos a Desarrollo de Interfaces! 🌟</h1>
-<h2 id="desarrollo-de-aplicaciones-multiplataforma">🚀 Desarrollo de Aplicaciones Multiplataforma</h2>
-<p>¡Hola a todos! 👋 Me alegra daros la bienvenida a la asignatura de <strong>Desarrollo de Interfaces</strong> del grado superior de <strong>Desarrollo de Aplicaciones Multiplataforma</strong>. Este curso es donde <strong>creatividad</strong> y <strong>tecnología</strong> se encuentran para crear experiencias digitales increíbles. A lo largo de esta asignatura, vamos a sumergirnos en el fascinante mundo del diseño y desarrollo de <strong>interfaces de usuario</strong> efectivas y usables, utilizando las herramientas más punteras en desarrollo web y móvil. 📱💻</p>
-<h3 id="que-aprenderemos">🎯 <strong>¿Qué aprenderemos?</strong></h3>
-<p>En este curso, nos enfocaremos en construir interfaces que sean visualmente atractivas y fáciles de usar, con un fuerte enfoque en la <strong>usabilidad</strong> y la <strong>experiencia del usuario</strong> (UX). Desde la configuración de entornos de desarrollo hasta la creación de componentes avanzados con <strong>Angular</strong> e <strong>Ionic</strong>, aprenderemos a manejar las herramientas clave para el desarrollo de aplicaciones modernas. ¡Prepárate para llevar tus habilidades de desarrollo al siguiente nivel! 🚀</p>
-<h3 id="indice-de-contenidos">📚 <strong>Índice de Contenidos</strong></h3>
+<h1 id="practica-guiada-crear-una-lista-de-tareas-con-ionic-y-angular">Práctica Guiada: Crear una Lista de Tareas con Ionic y Angular</h1>
+<p>Esta práctica te guiará paso a paso para crear una aplicación con Ionic y Angular que permita gestionar una lista de tareas. Sigue los pasos y al final tendrás una aplicación funcional que puedes ampliar y personalizar.</p>
+<hr />
+<h4 id="1-preparacion-del-entorno"><strong>1. Preparación del entorno</strong></h4>
 <ol>
 <li>
-<p><strong>Unidad 1: Diseñamos Nuestra Interfaz. Usabilidad</strong> 🎨<br />
-   Descubriremos los principios y mejores prácticas del diseño centrado en el usuario, para crear interfaces intuitivas, atractivas y que mejoren la experiencia del usuario. ¡Vamos a hacer que nuestros usuarios se enamoren de nuestras aplicaciones! 😍</p>
+<p><strong>Instalar Ionic CLI</strong>:<br />
+   Asegúrate de tener instalado <strong>Node.js</strong>. Luego, instala Ionic CLI globalmente:<br />
+   <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>@ionic/cli
+</code></pre></div></p>
 </li>
 <li>
-<p><strong>Unidad 2: Programación con TypeScript</strong> 🔧<br />
-   Nos sumergiremos en <strong>TypeScript</strong>, el superhéroe del desarrollo web que aporta seguridad y eficiencia al escribir código limpio y manejable. ¡Súmate a la legión de desarrolladores que ya usan TypeScript!</p>
+<p><strong>Crear un proyecto con la plantilla "blank"</strong>:<br />
+   Genera un nuevo proyecto Ionic. Usaremos la plantilla en blanco:<br />
+   <div class="highlight"><pre><span></span><code>ionic<span class="w"> </span>start<span class="w"> </span>TodoApp<span class="w"> </span>blank<span class="w"> </span>--type<span class="o">=</span>angular
+</code></pre></div></p>
 </li>
 <li>
-<p><strong>Unidad 3: Introducción a Angular</strong> ⚙️<br />
-   Aprende a dominar <strong>Angular</strong>, uno de los frameworks más poderosos para la construcción de aplicaciones web robustas. Veremos cómo integrar <strong>XML</strong> y manejar datos de forma eficiente en nuestras aplicaciones.</p>
-</li>
-<li>
-<p><strong>Unidad 4: Creación y Manejo de Componentes con Angular-Ionic</strong> 🛠️<br />
-   Descubre cómo construir y gestionar <strong>componentes reutilizables</strong> que serán la base para desarrollar interfaces modulares y eficientes con <strong>Angular</strong> e <strong>Ionic</strong>. ¡Todo comienza con un buen componente!</p>
-</li>
-<li>Soluciones híbridas de desarrollo web, IONIC</li>
-<li>Introducción a IONIC. Introducir link a la documentación: https://ionicframework.com/docs</li>
-<li>Instalación https://ionicframework.com/docs/intro/cli</li>
-<li>
-<p>Crear un template desde la web: https://dashboard.ionicframework.com/org/485acdef-b97f-4e2a-b24f-bd63214179c4/build-app</p>
-</li>
-<li>
-<p><strong>Unidad 5: Reportes en Angular</strong> 📊<br />
-   Aprende a generar <strong>reportes dinámicos</strong> para aplicaciones que manejan grandes volúmenes de datos. Estos reportes no solo son informativos sino que también brindan valor a la experiencia del usuario.</p>
-</li>
-<li>
-<p><strong>Unidad 6: Angular y StoryBook</strong> 📘<br />
-   Conoce <strong>StoryBook</strong>, la herramienta que te permitirá crear, visualizar y documentar componentes de <strong>Angular</strong> de manera independiente, facilitando el desarrollo y el mantenimiento de proyectos a largo plazo.</p>
-</li>
-<li>
-<p><strong>Unidad 7: Empaquetado e Instalación de Aplicaciones</strong> 📦<br />
-   Descubre cómo empaquetar tus aplicaciones y proceder con la instalación en diversos dispositivos y plataformas. ¡Llegó la hora de que tus aplicaciones conquisten el mundo!</p>
-</li>
-<li>
-<p><strong>Unidad 8: Realización de Pruebas</strong> 🧪<br />
-   Comprenderemos la importancia de las <strong>pruebas de calidad</strong> en nuestras aplicaciones. Veremos cómo garantizar que todo funcione a la perfección antes del gran lanzamiento. ¡No queremos sorpresas desagradables! </p>
+<p><strong>Accede al directorio del proyecto</strong>:<br />
+   Cambia al directorio del proyecto creado:<br />
+   <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>TodoApp
+</code></pre></div></p>
 </li>
 </ol>
 <hr />
-<h3 id="a-por-ello">🌈 <strong>¡A por ello!</strong></h3>
-<p>Estoy convencido de que este curso será una <strong>aventura educativa</strong> llena de aprendizaje y creatividad. Al finalizar, tendrás las habilidades necesarias para diseñar y desarrollar <strong>interfaces de usuario interactivas y modernas</strong>, que no solo sean funcionales, sino que también sean una <strong>delicia de usar</strong>. 🏆</p>
-<p>💡 <strong>Consejo del día:</strong> No dudes en preguntar, experimentar y colaborar con tus compañeros. ¡Estoy aquí para apoyarte en cada paso de este emocionante camino!</p>
-<h3 id="vamos-a-construir-el-futuro-una-interfaz-a-la-vez">🔥 <strong>¡Vamos a construir el futuro, una interfaz a la vez!</strong> 💪</h3>
-<p>¡Espero que estés tan emocionado como yo por comenzar! ¡A crear interfaces espectaculares! 🎨💻</p>
+<h4 id="2-crear-la-pagina-tasks"><strong>2. Crear la página <code>tasks</code></strong></h4>
+<ol>
+<li>Genera una página para la lista de tareas:<br />
+   <div class="highlight"><pre><span></span><code>ionic<span class="w"> </span>generate<span class="w"> </span>page<span class="w"> </span>tasks
+</code></pre></div></li>
+</ol>
+<p>Esto creará automáticamente los archivos necesarios en la carpeta <code>src/app/tasks</code>.</p>
+<hr />
+<h4 id="3-configurar-la-navegacion-inicial"><strong>3. Configurar la navegación inicial</strong></h4>
+<ol>
+<li>Abre el archivo <code>src/app/app-routing.module.ts</code> y establece la página <code>tasks</code> como la página inicial. Actualiza el contenido del archivo así:  </li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">NgModule</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">PreloadAllModules</span><span class="p">,</span><span class="w"> </span><span class="nx">RouterModule</span><span class="p">,</span><span class="w"> </span><span class="nx">Routes</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/router&#39;</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">routes</span><span class="o">:</span><span class="w"> </span><span class="kt">Routes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">redirectTo</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;tasks&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">pathMatch</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;full&#39;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;tasks&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">loadChildren</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="k">import</span><span class="p">(</span><span class="s1">&#39;./tasks/tasks.module&#39;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">m</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">m</span><span class="p">.</span><span class="nx">TasksPageModule</span><span class="p">)</span><span class="w"> </span><span class="p">},</span>
+<span class="p">];</span>
+
+<span class="kd">@NgModule</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">imports</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">RouterModule</span><span class="p">.</span><span class="nx">forRoot</span><span class="p">(</span><span class="nx">routes</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">preloadingStrategy</span><span class="o">:</span><span class="w"> </span><span class="kt">PreloadAllModules</span><span class="w"> </span><span class="p">})],</span>
+<span class="w">  </span><span class="nx">exports</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">RouterModule</span><span class="p">]</span>
+<span class="p">})</span>
+<span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">AppRoutingModule</span><span class="w"> </span><span class="p">{}</span>
+</code></pre></div>
+<hr />
+<h4 id="4-disenar-la-interfaz-de-usuario"><strong>4. Diseñar la interfaz de usuario</strong></h4>
+<ol>
+<li>Abre el archivo <code>src/app/tasks/tasks.page.html</code>.<br />
+   Sustituye el contenido existente por el siguiente código:  </li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ion-header</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">ion-toolbar</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">ion-title</span><span class="p">&gt;</span>Lista de Tareas<span class="p">&lt;/</span><span class="nt">ion-title</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">ion-toolbar</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ion-header</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">ion-content</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">ion-list</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">ion-item</span> <span class="err">*</span><span class="na">ngFor</span><span class="o">=</span><span class="s">&quot;let task of tasks&quot;</span><span class="p">&gt;</span>{{ task }}<span class="p">&lt;/</span><span class="nt">ion-item</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">ion-list</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">ion-item</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">ion-input</span> <span class="err">[(</span><span class="na">ngModel</span><span class="err">)]=&quot;</span><span class="na">newTask</span><span class="err">&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Nueva tarea&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">ion-input</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">ion-item</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">ion-button</span> <span class="na">expand</span><span class="o">=</span><span class="s">&quot;full&quot;</span> <span class="err">(</span><span class="na">click</span><span class="err">)=&quot;</span><span class="na">addTask</span><span class="err">()&quot;</span><span class="p">&gt;</span>Agregar Tarea<span class="p">&lt;/</span><span class="nt">ion-button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ion-content</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr />
+<h4 id="5-implementar-la-logica"><strong>5. Implementar la lógica</strong></h4>
+<ol>
+<li>Abre el archivo <code>src/app/tasks/tasks.page.ts</code>.<br />
+   Sustituye el contenido existente por el siguiente código:  </li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Component</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+
+<span class="kd">@Component</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">selector</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;app-tasks&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">templateUrl</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;./tasks.page.html&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">styleUrls</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;./tasks.page.scss&#39;</span><span class="p">],</span>
+<span class="p">})</span>
+<span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">TasksPage</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">tasks</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span><span class="w"> </span><span class="c1">// Lista de tareas</span>
+<span class="w">  </span><span class="nx">newTask</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Nueva tarea a agregar</span>
+
+<span class="w">  </span><span class="kr">constructor</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+
+<span class="w">  </span><span class="nx">addTask</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">newTask</span><span class="p">.</span><span class="nx">trim</span><span class="p">().</span><span class="nx">length</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">tasks</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">newTask</span><span class="p">.</span><span class="nx">trim</span><span class="p">());</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">newTask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Limpia el campo de entrada</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h4 id="6-habilitar-el-uso-de-ngmodel"><strong>6. Habilitar el uso de <code>ngModel</code></strong></h4>
+<ol>
+<li>Abre <code>src/app/tasks/tasks.module.ts</code>.<br />
+   Asegúrate de importar el módulo <code>FormsModule</code> y agregarlo en los módulos de importación:  </li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">NgModule</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">CommonModule</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/common&#39;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">FormsModule</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/forms&#39;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">IonicModule</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@ionic/angular&#39;</span><span class="p">;</span>
+
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">TasksPageRoutingModule</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./tasks-routing.module&#39;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">TasksPage</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./tasks.page&#39;</span><span class="p">;</span>
+
+<span class="kd">@NgModule</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">imports</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="nx">CommonModule</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">FormsModule</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">IonicModule</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">TasksPageRoutingModule</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nx">declarations</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">TasksPage</span><span class="p">]</span>
+<span class="p">})</span>
+<span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">TasksPageModule</span><span class="w"> </span><span class="p">{}</span>
+</code></pre></div>
+<hr />
+<h4 id="7-probar-la-aplicacion"><strong>7. Probar la aplicación</strong></h4>
+<ol>
+<li>
+<p><strong>Ejecuta la aplicación</strong>:<br />
+   Ejecuta el servidor de desarrollo:<br />
+   <div class="highlight"><pre><span></span><code>ionic<span class="w"> </span>serve
+</code></pre></div></p>
+</li>
+<li>
+<p>Abre la aplicación en tu navegador (normalmente en <a href="http://localhost:8100">http://localhost:8100</a>).</p>
+</li>
+</ol>
+<hr />
+<h4 id="funcionalidad-esperada"><strong>Funcionalidad esperada</strong></h4>
+<ul>
+<li>Una interfaz que muestra una lista vacía de tareas al inicio.</li>
+<li>Un campo de entrada para escribir una nueva tarea.</li>
+<li>Un botón para agregar la tarea. Al hacer clic, la tarea aparecerá en la lista.</li>
+</ul>
+<hr />
+<h4 id="reto-adicional-opcional"><strong>Reto adicional (opcional)</strong></h4>
+<ul>
+<li>Añade la posibilidad de eliminar tareas.</li>
+<li>Guarda la lista de tareas en el almacenamiento local del navegador utilizando <code>localStorage</code>.</li>
+</ul>
+<p>Con esta guía, tendrás una base sólida para trabajar con Ionic y Angular. 🚀</p>
 
 
 
@@ -1623,28 +1662,6 @@
       <footer class="md-footer">
   
     
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-        
-          
-          <a href="ut1-desarrollodeinterfacesdeusuario-usabilidad/1introduccionalausabilidad/" class="md-footer__link md-footer__link--next" aria-label="Next: 1. Introducción a la Usabilidad">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                1. Introducción a la Usabilidad
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1668,10 +1685,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.footer", "navigation.path"], "search": "assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.path"], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-    <script src="assets/javascripts/bundle.56dfad97.min.js"></script>
+    <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
     
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
