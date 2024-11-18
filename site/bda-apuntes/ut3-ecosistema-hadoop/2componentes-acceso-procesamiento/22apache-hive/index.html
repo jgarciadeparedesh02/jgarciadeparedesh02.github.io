@@ -13,6 +13,10 @@
   
   
   
+  <link rel="prev" href="../21apache-pig/">
+  
+  
+  <link rel="next" href="../../tareas/">
   
   
   <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +24,7 @@
   
   
   
-  <title>22apache hive - Big Data Aplicado</title>
+  <title>2.2. Apache Hive - Big Data Aplicado</title>
   
   
   
@@ -99,6 +103,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+      
+      <a href="#introduccion-a-apache-hive-en-javascript" class="md-skip">
+        Skip to content
+      </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -131,7 +140,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              22apache hive
+              2.2. Apache Hive
             
           </span>
         </div>
@@ -562,17 +571,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -586,7 +597,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             UT3. Ecosistema de Hadoop
@@ -618,17 +629,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
         
           
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
@@ -642,7 +655,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             2. Componentes de Acceso y Procesamiento
@@ -665,6 +678,154 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2.2. Apache Hive
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    2.2. Apache Hive
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-apache-hive" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es Apache Hive? 🐝
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caracteristicas-principales-de-hive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características Principales de Hive 🔍
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitaciones-de-apache-hive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitaciones de Apache Hive ⚠️
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-que-se-usa-apache-hive" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Para qué se usa Apache Hive? 📊
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hiveql-el-lenguaje-de-consultas-de-hive" class="md-nav__link">
+    <span class="md-ellipsis">
+      HiveQL: El Lenguaje de Consultas de Hive 📝
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HiveQL: El Lenguaje de Consultas de Hive 📝">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acciones-posibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acciones Posibles 🛠️
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-en-javascript-de-una-simulacion-de-consulta-en-hiveql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo en JavaScript de una Simulación de Consulta en HiveQL 💻
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-visual-de-hive-en-diagrama" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resumen Visual de Hive en Diagrama
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listo-para-explorar-el-poder-de-hive" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Listo para explorar el poder de Hive? 🐝
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -723,6 +884,103 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-apache-hive" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es Apache Hive? 🐝
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caracteristicas-principales-de-hive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características Principales de Hive 🔍
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitaciones-de-apache-hive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitaciones de Apache Hive ⚠️
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-que-se-usa-apache-hive" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Para qué se usa Apache Hive? 📊
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hiveql-el-lenguaje-de-consultas-de-hive" class="md-nav__link">
+    <span class="md-ellipsis">
+      HiveQL: El Lenguaje de Consultas de Hive 📝
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HiveQL: El Lenguaje de Consultas de Hive 📝">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acciones-posibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acciones Posibles 🛠️
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-en-javascript-de-una-simulacion-de-consulta-en-hiveql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo en JavaScript de una Simulación de Consulta en HiveQL 💻
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-visual-de-hive-en-diagrama" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resumen Visual de Hive en Diagrama
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listo-para-explorar-el-poder-de-hive" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Listo para explorar el poder de Hive? 🐝
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
               </div>
@@ -737,9 +995,76 @@
               
 
 
-  <h1>22apache hive</h1>
+<h1 id="introduccion-a-apache-hive-en-javascript">Introducción a Apache Hive en JavaScript 🚀</h1>
+<p><a class="glightbox" href="https://hive.apache.org/images/hive.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" height="150px" src="https://hive.apache.org/images/hive.svg" width="150px" /></a></p>
+<h3 id="que-es-apache-hive">¿Qué es Apache Hive? 🐝</h3>
+<p>Apache Hive es una plataforma de <strong>procesamiento y almacenamiento de datos en grandes volúmenes</strong> desarrollada inicialmente por Facebook, ahora parte del ecosistema Apache. Su principal propósito es simplificar el acceso y análisis de grandes datos almacenados en <strong>Apache Hadoop</strong>, permitiendo a los usuarios usar una sintaxis similar a SQL a través de su propio lenguaje: <strong>HiveQL</strong>. </p>
+<p>Hive transforma el <strong>almacenamiento distribuido en Hadoop</strong> en una base de datos relacional accesible para quienes prefieren un enfoque SQL. Esto permite consultas complejas y análisis sin tener que lidiar con los detalles técnicos de Hadoop o MapReduce.</p>
+<h3 id="caracteristicas-principales-de-hive">Características Principales de Hive 🔍</h3>
+<ul>
+<li><strong>Acceso SQL</strong>: Permite ejecutar consultas SQL (HiveQL) en datos almacenados en Hadoop.</li>
+<li><strong>Escalabilidad</strong>: Maneja conjuntos de datos extremadamente grandes con facilidad.</li>
+<li><strong>Integración con Hadoop</strong>: Hive corre sobre Hadoop, lo que facilita la utilización de su infraestructura para tareas de procesamiento masivo.</li>
+<li><strong>Esquema de Lectura</strong>: Los datos se estructuran durante la consulta, lo cual es ideal para datos semi-estructurados y no estructurados.</li>
+</ul>
+<h3 id="limitaciones-de-apache-hive">Limitaciones de Apache Hive ⚠️</h3>
+<p>A pesar de sus ventajas, Hive tiene algunas limitaciones:</p>
+<ol>
+<li><strong>No es ideal para consultas en tiempo real</strong>: Las consultas pueden tardar debido al procesamiento en Hadoop.</li>
+<li><strong>No soporta transacciones completas</strong>: Está orientado a <strong>lecturas</strong> y <strong>análisis</strong>, no tanto a <strong>escrituras transaccionales</strong>.</li>
+<li><strong>Latencia en el rendimiento</strong>: Al depender de MapReduce, algunas operaciones pueden ser lentas comparado con bases de datos en tiempo real.</li>
+</ol>
+<h3 id="para-que-se-usa-apache-hive">¿Para qué se usa Apache Hive? 📊</h3>
+<p>Hive se utiliza principalmente para:</p>
+<ul>
+<li><strong>Análisis de grandes volúmenes de datos</strong> en ambientes empresariales.</li>
+<li><strong>Informes y visualización</strong> de datos históricos.</li>
+<li><strong>Procesamiento por lotes</strong> para transformar y limpiar datos.</li>
+</ul>
+<p>Su diseño es ideal para <strong>Data Warehousing</strong> y proyectos de <strong>Big Data</strong> donde se requiere manipular y analizar grandes volúmenes de datos.</p>
+<h3 id="hiveql-el-lenguaje-de-consultas-de-hive">HiveQL: El Lenguaje de Consultas de Hive 📝</h3>
+<p><strong>HiveQL</strong> es el lenguaje de consultas de Apache Hive, similar a SQL, diseñado para facilitar la extracción de datos en Hadoop. <strong>HiveQL</strong> permite a los usuarios <strong>crear tablas</strong>, <strong>consultar datos</strong>, <strong>hacer agregaciones</strong> y <strong>uniones</strong>, entre otras acciones.</p>
+<h4 id="acciones-posibles">Acciones Posibles 🛠️</h4>
+<ul>
+<li><strong>SELECT</strong>: Extrae datos.</li>
+<li><strong>INSERT</strong>: Inserta datos en tablas.</li>
+<li><strong>CREATE TABLE</strong>: Define la estructura de los datos.</li>
+<li><strong>JOIN</strong>: Permite combinar datos de varias tablas.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Ejemplo de sintaxis básica en HiveQL</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">estudiantes</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">nombre</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="w">  </span><span class="n">edad</span><span class="w"> </span><span class="nb">INT</span>
+<span class="p">);</span>
 
+<span class="c1">-- Consultar datos</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">estudiantes</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
+</code></pre></div>
+<h4 id="ejemplo-en-javascript-de-una-simulacion-de-consulta-en-hiveql">Ejemplo en JavaScript de una Simulación de Consulta en HiveQL 💻</h4>
+<p>Para ilustrar la interacción con Hive, aquí tienes una representación en JavaScript de cómo estructurar y ejecutar una consulta en HiveQL. En este caso, simularemos una simple selección y filtrado.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Definimos un dataset simulado</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">estudiantes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">edad</span><span class="o">:</span><span class="w"> </span><span class="mf">22</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">edad</span><span class="o">:</span><span class="w"> </span><span class="mf">17</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Marta&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">edad</span><span class="o">:</span><span class="w"> </span><span class="mf">19</span><span class="w"> </span><span class="p">},</span>
+<span class="p">];</span>
 
+<span class="c1">// Simulación de una consulta en HiveQL</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">consulta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">estudiantes</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">estudiante</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">estudiante</span><span class="p">.</span><span class="nx">edad</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">18</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Estudiantes mayores de 18 años:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">consulta</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="resumen-visual-de-hive-en-diagrama">Resumen Visual de Hive en Diagrama</h3>
+<pre class="mermaid"><code>graph TD;
+    A[Usuario] --&gt;|Consulta SQL| B[HiveQL]
+    B --&gt; C[MapReduce]
+    C --&gt; D[Datos en Hadoop]
+    D --&gt;|Resultados| A</code></pre>
+<blockquote>
+<p><strong>Apache Hive</strong> transforma las consultas de alto nivel en código MapReduce, y estos procesos son ejecutados en <strong>Hadoop</strong>, lo que hace que el procesamiento sea eficiente y escalable.</p>
+</blockquote>
+<h3 id="listo-para-explorar-el-poder-de-hive">¿Listo para explorar el poder de Hive? 🐝</h3>
+<p>Apache Hive convierte las bases de datos masivas en fuentes accesibles para análisis y datos. A través de <strong>HiveQL</strong>, los usuarios pueden aprovechar al máximo el potencial de <strong>Big Data</strong> sin necesidad de ser expertos en programación distribuida.</p>
 
 
 
@@ -806,6 +1131,44 @@
       
       <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../21apache-pig/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2.1. Apache Pig">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                2.1. Apache Pig
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../tareas/" class="md-footer__link md-footer__link--next" aria-label="Next: Prácticas y Tareas">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Prácticas y Tareas
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
