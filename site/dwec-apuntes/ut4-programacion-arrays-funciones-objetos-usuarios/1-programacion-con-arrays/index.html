@@ -1,0 +1,1994 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9372656274060799"
+    crossorigin="anonymous"></script>
+
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+  
+  
+  
+  <link rel="prev" href="../../ut3-objetos-predefinidos-del-lenguaje/9draganddrop/">
+  
+  
+  <link rel="next" href="../z-practicas-y-tareas/">
+  
+  
+  <link rel="icon" href="../../assets/images/favicon.png">
+  <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+  
+  
+  
+  <title>1. Programación con arrays - Desarrollo Web en Entorno Cliente</title>
+  
+  
+  
+  <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
+  
+  
+  <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+  
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+  <style>
+    :root {
+      --md-text-font:"Roboto";
+      --md-code-font:"Roboto Mono"
+    }
+  </style>
+  
+  
+  
+  <link rel="stylesheet" href="../../stylesheets/extra.css">
+  
+  <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+  
+  
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-3VWRJDCQS9"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-3VWRJDCQS9",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-3VWRJDCQS9",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+  
+  
+  
+ <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+
+
+
+
+
+
+
+
+
+
+<body dir="ltr" data-md-color-scheme="default"
+  data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+      
+      <a href="#dominando-arrays-en-javascript" class="md-skip">
+        Skip to content
+      </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+    
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Desarrollo Web en Entorno Cliente" class="md-header__button md-logo" aria-label="Desarrollo Web en Entorno Cliente" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Desarrollo Web en Entorno Cliente
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1. Programación con arrays
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Quitar modo oscuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Quitar modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+      
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+          
+          
+          <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Desarrollo Web en Entorno Cliente" class="md-nav__button md-logo" aria-label="Desarrollo Web en Entorno Cliente" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Desarrollo Web en Entorno Cliente
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../planificacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Planificación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT 1. Selección de arquitecturas y herramientas de programación
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            UT 1. Selección de arquitecturas y herramientas de programación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut1-seleccionarquitecturasyherramientasprogramacion/1desarrollodesoftware/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Desarrollo de Software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut1-seleccionarquitecturasyherramientasprogramacion/2tiposdeaplicaciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Tipos de aplicaciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut1-seleccionarquitecturasyherramientasprogramacion/3desarrollodeaplicacionesweb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Desarrollo de aplicaciones Web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut1-seleccionarquitecturasyherramientasprogramacion/4entornodedesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Entorno de desarrollo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut1-seleccionarquitecturasyherramientasprogramacion/5integrarcodigojsenhtml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Integrar código JavaScript en HTML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut1-seleccionarquitecturasyherramientasprogramacion/6recursosyfaq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Recursos y FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT 2. Manejo de la sintaxis del lenguaje
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            UT 2. Manejo de la sintaxis del lenguaje
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut2-manejo-de-la-sintaxis-del-lenguaje/1variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut2-manejo-de-la-sintaxis-del-lenguaje/2tiposdedatosyconversiones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Tipos de Datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut2-manejo-de-la-sintaxis-del-lenguaje/3asignaciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Asignaciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut2-manejo-de-la-sintaxis-del-lenguaje/4operadores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Operadores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut2-manejo-de-la-sintaxis-del-lenguaje/5comentarios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Comentarios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut2-manejo-de-la-sintaxis-del-lenguaje/6condicionales/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Condicionales
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut2-manejo-de-la-sintaxis-del-lenguaje/7bucles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Bucles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut2-manejo-de-la-sintaxis-del-lenguaje/8funciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Funciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut2-manejo-de-la-sintaxis-del-lenguaje/9objetosyarrays/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Arrays
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut2-manejo-de-la-sintaxis-del-lenguaje/10clases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Clases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut2-manejo-de-la-sintaxis-del-lenguaje/11recursosyfaq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Recursos y FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT 3. Objetos predefinidos del lenguaje
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            UT 3. Objetos predefinidos del lenguaje
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut3-objetos-predefinidos-del-lenguaje/1introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Introducción a los Objetos Predefinidos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut3-objetos-predefinidos-del-lenguaje/2objetosnativosdellenguaje/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Objetos Nativos del Lenguaje
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut3-objetos-predefinidos-del-lenguaje/3interaccionconelnavegador/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Interacción con el Navegador
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut3-objetos-predefinidos-del-lenguaje/4generaciondehtmldesdecodigo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Generación de HTML desde código
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut3-objetos-predefinidos-del-lenguaje/5aplicacionespracticasdelosmarcos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Aplicaciones Prácticas de los Marcos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut3-objetos-predefinidos-del-lenguaje/6gestiondelaaparienciadelaventana/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Gestión de la apariencia de la ventana
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut3-objetos-predefinidos-del-lenguaje/7nuevasventanasycomunicacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Creación de ventanas y comunicación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut3-objetos-predefinidos-del-lenguaje/8cookies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Cookies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ut3-objetos-predefinidos-del-lenguaje/9draganddrop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Drag and Drop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT 4. Programación con arrays, funciones y objetos definidos por el usuario
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            UT 4. Programación con arrays, funciones y objetos definidos por el usuario
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    1. Programación con arrays
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    1. Programación con arrays
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#programacion-con-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programación con Arrays
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Programación con Arrays">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduccion-a-los-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      📖 Introducción a los Arrays
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📖 Introducción a los Arrays">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características clave:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definicion-y-creacion-de-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Definición y Creación de Arrays
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✨ Definición y Creación de Arrays">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formas-de-crear-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Formas de crear arrays:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-indice-y-longitud" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 Tip: Índice y longitud
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-basicos-de-manipulacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Métodos Básicos de Manipulación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Métodos Básicos de Manipulación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agregar-elementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      📥 Agregar elementos:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminar-elementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗑️ Eliminar elementos:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificar-y-acceder" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✏️ Modificar y acceder:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iteracion-de-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Iteración de Arrays
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Iteración de Arrays">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodos-modernos" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ Métodos modernos:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformacion-de-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 Transformación de Arrays
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ordenacion-y-reorganizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Ordenación y Reorganización
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#busqueda-avanzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Búsqueda Avanzada
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arrays-multidimensionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌌 Arrays Multidimensionales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-de-metodos-comunes" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Diagrama de Métodos Comunes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buenas-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ Buenas Prácticas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../z-practicas-y-tareas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prácticas y tareas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+          
+          
+          
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#programacion-con-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programación con Arrays
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Programación con Arrays">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduccion-a-los-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      📖 Introducción a los Arrays
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📖 Introducción a los Arrays">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características clave:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definicion-y-creacion-de-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Definición y Creación de Arrays
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✨ Definición y Creación de Arrays">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formas-de-crear-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Formas de crear arrays:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-indice-y-longitud" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 Tip: Índice y longitud
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-basicos-de-manipulacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Métodos Básicos de Manipulación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Métodos Básicos de Manipulación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agregar-elementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      📥 Agregar elementos:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminar-elementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗑️ Eliminar elementos:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificar-y-acceder" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✏️ Modificar y acceder:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iteracion-de-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Iteración de Arrays
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Iteración de Arrays">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodos-modernos" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ Métodos modernos:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformacion-de-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 Transformación de Arrays
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ordenacion-y-reorganizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Ordenación y Reorganización
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#busqueda-avanzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Búsqueda Avanzada
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arrays-multidimensionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌌 Arrays Multidimensionales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-de-metodos-comunes" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Diagrama de Métodos Comunes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buenas-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ Buenas Prácticas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+              </div>
+            </div>
+          </div>
+          
+          
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+              
+
+
+<h1 id="dominando-arrays-en-javascript">🌟 Dominando Arrays en JavaScript 🚀</h1>
+<h2 id="programacion-con-arrays"><strong>Programación con Arrays</strong></h2>
+<h3 id="introduccion-a-los-arrays">📖 Introducción a los Arrays</h3>
+<p>Los arrays son estructuras de datos fundamentales en JavaScript que permiten almacenar múltiples valores en una sola variable. ¡Piénsalo como una lista mágica donde puedes guardar lo que quieras! 🌟</p>
+<h4 id="caracteristicas-clave">Características clave:</h4>
+<ul>
+<li>📂 <strong>Versatilidad:</strong> Maneja datos heterogéneos (números, cadenas, objetos).</li>
+<li>🚀 <strong>Flexibilidad:</strong> Crece o decrece dinámicamente.</li>
+<li>🔗 <strong>Eficiencia:</strong> Ideal para iteraciones y manipulaciones.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">frutas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;manzana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;naranja&quot;</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">frutas</span><span class="p">[</span><span class="mf">0</span><span class="p">]);</span><span class="w"> </span><span class="c1">// manzana</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">frutas</span><span class="p">);</span><span class="w"> </span><span class="c1">// [&quot;manzana&quot;, &quot;banana&quot;, &quot;naranja&quot;]</span>
+</code></pre></div>
+<hr />
+<h3 id="definicion-y-creacion-de-arrays">✨ Definición y Creación de Arrays</h3>
+<h4 id="formas-de-crear-arrays">🛠️ Formas de crear arrays:</h4>
+<ol>
+<li>
+<p><strong>Con literales (<code>[]</code>):</strong>
+   <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">mezcla</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;texto&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">42</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="w"> </span><span class="p">}];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numeros</span><span class="p">);</span><span class="w"> </span><span class="c1">// [1, 2, 3, 4, 5]</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">mezcla</span><span class="p">);</span><span class="w"> </span><span class="c1">// [&quot;texto&quot;, 42, true, { key: &quot;value&quot; }]</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Con el constructor <code>Array()</code>:</strong>
+   <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">vacio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Array</span><span class="p">(</span><span class="mf">5</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">inicializado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Array</span><span class="p">(</span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">6</span><span class="p">,</span><span class="w"> </span><span class="mf">9</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">vacio</span><span class="p">);</span><span class="w"> </span><span class="c1">// [ &lt;5 empty items&gt; ]</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">inicializado</span><span class="p">);</span><span class="w"> </span><span class="c1">// [3, 6, 9]</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Con <code>Array.of</code> y <code>Array.from</code>:</strong>
+   <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">elementos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Array</span><span class="p">.</span><span class="k">of</span><span class="p">(</span><span class="mf">7</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;JS&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">desdeIterador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Array</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span><span class="s2">&quot;Hola Mundo&quot;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">elementos</span><span class="p">);</span><span class="w"> </span><span class="c1">// [7, &quot;JS&quot;, true]</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">desdeIterador</span><span class="p">);</span><span class="w"> </span><span class="c1">// [&quot;H&quot;, &quot;o&quot;, &quot;l&quot;, &quot;a&quot;, &quot; &quot;, &quot;M&quot;, &quot;u&quot;, &quot;n&quot;, &quot;d&quot;, &quot;o&quot;]</span>
+</code></pre></div></p>
+</li>
+</ol>
+<h4 id="tip-indice-y-longitud">💡 Tip: Índice y longitud</h4>
+<p>Los índices comienzan en <code>0</code>. Puedes acceder a la longitud del array con <code>.length</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">array</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span><span class="w"> </span><span class="c1">// 3</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nx">array</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">]);</span><span class="w"> </span><span class="c1">// 30 (último elemento)</span>
+</code></pre></div>
+<hr />
+<h3 id="metodos-basicos-de-manipulacion">🔧 Métodos Básicos de Manipulación</h3>
+<h4 id="agregar-elementos">📥 Agregar elementos:</h4>
+<ol>
+<li>
+<p><strong><code>push(...elementos)</code></strong></p>
+<ul>
+<li><strong>Parámetros:</strong> Uno o más elementos para añadir al final del array.</li>
+<li><strong>Retorna:</strong> La nueva longitud del array.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">colores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;rojo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;azul&quot;</span><span class="p">];</span>
+<span class="nx">colores</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&quot;verde&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;morado&quot;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">colores</span><span class="p">);</span><span class="w"> </span><span class="c1">// [&quot;rojo&quot;, &quot;azul&quot;, &quot;verde&quot;, &quot;morado&quot;]</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong><code>unshift(...elementos)</code></strong></p>
+<ul>
+<li><strong>Parámetros:</strong> Uno o más elementos para añadir al inicio del array.</li>
+<li><strong>Retorna:</strong> La nueva longitud del array.
+<div class="highlight"><pre><span></span><code><span class="nx">colores</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="s2">&quot;amarillo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;naranja&quot;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">colores</span><span class="p">);</span><span class="w"> </span><span class="c1">// [&quot;amarillo&quot;, &quot;naranja&quot;, &quot;rojo&quot;, &quot;azul&quot;, &quot;verde&quot;, &quot;morado&quot;]</span>
+</code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h4 id="eliminar-elementos">🗑️ Eliminar elementos:</h4>
+<ol>
+<li>
+<p><strong><code>pop()</code></strong></p>
+<ul>
+<li><strong>Parámetros:</strong> Ninguno.</li>
+<li><strong>Retorna:</strong> El elemento eliminado (último del array).
+<div class="highlight"><pre><span></span><code><span class="nx">colores</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span><span class="w"> </span><span class="c1">// Elimina &quot;morado&quot;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">colores</span><span class="p">);</span><span class="w"> </span><span class="c1">// [&quot;amarillo&quot;, &quot;naranja&quot;, &quot;rojo&quot;, &quot;azul&quot;, &quot;verde&quot;]</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong><code>shift()</code></strong></p>
+<ul>
+<li><strong>Parámetros:</strong> Ninguno.</li>
+<li><strong>Retorna:</strong> El elemento eliminado (primero del array).
+<div class="highlight"><pre><span></span><code><span class="nx">colores</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span><span class="w"> </span><span class="c1">// Elimina &quot;amarillo&quot;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">colores</span><span class="p">);</span><span class="w"> </span><span class="c1">// [&quot;naranja&quot;, &quot;rojo&quot;, &quot;azul&quot;, &quot;verde&quot;]</span>
+</code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h4 id="modificar-y-acceder">✏️ Modificar y acceder:</h4>
+<ol>
+<li>
+<p><strong><code>splice(inicio, cantidad, ...elementosNuevos)</code></strong></p>
+<ul>
+<li><strong>Parámetros:</strong><ul>
+<li><code>inicio</code>: Índice desde el cual iniciar.</li>
+<li><code>cantidad</code>: Número de elementos a eliminar.</li>
+<li><code>...elementosNuevos</code> (opcional): Elementos a insertar.</li>
+</ul>
+</li>
+<li><strong>Retorna:</strong> Un array con los elementos eliminados.
+<div class="highlight"><pre><span></span><code><span class="nx">colores</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;rosa&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Inserta &quot;rosa&quot; en el índice 1</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">colores</span><span class="p">);</span><span class="w"> </span><span class="c1">// [&quot;naranja&quot;, &quot;rosa&quot;, &quot;rojo&quot;, &quot;azul&quot;, &quot;verde&quot;]</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong><code>indexOf(valor, inicio)</code></strong></p>
+<ul>
+<li><strong>Parámetros:</strong><ul>
+<li><code>valor</code>: Elemento a buscar.</li>
+<li><code>inicio</code> (opcional): Índice desde donde iniciar la búsqueda.</li>
+</ul>
+</li>
+<li><strong>Retorna:</strong> El índice del primer elemento encontrado, o <code>-1</code> si no existe.
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">colores</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;azul&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// 3</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong><code>includes(valor, inicio)</code></strong></p>
+<ul>
+<li><strong>Parámetros:</strong><ul>
+<li><code>valor</code>: Elemento a buscar.</li>
+<li><code>inicio</code> (opcional): Índice desde donde iniciar la búsqueda.</li>
+</ul>
+</li>
+<li><strong>Retorna:</strong> <code>true</code> si el elemento existe, de lo contrario, <code>false</code>.
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">colores</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="s2">&quot;negro&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// false</span>
+</code></pre></div></li>
+</ul>
+</li>
+</ol>
+<hr />
+<h3 id="iteracion-de-arrays">🔄 Iteración de Arrays</h3>
+<h4 id="metodos-modernos">⚡ Métodos modernos:</h4>
+<ol>
+<li><strong><code>forEach(callback(elemento, indice, array))</code></strong><ul>
+<li><strong>Parámetros:</strong><ul>
+<li><code>callback</code>: Una función que se ejecuta para cada elemento.</li>
+<li><code>elemento</code>: El valor actual.</li>
+<li><code>indice</code> (opcional): El índice del elemento.</li>
+<li><code>array</code> (opcional): El array completo.
+<div class="highlight"><pre><span></span><code><span class="nx">colores</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">color</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Color </span><span class="si">${</span><span class="nx">index</span><span class="si">}</span><span class="sb">: </span><span class="si">${</span><span class="nx">color</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h3 id="transformacion-de-arrays">🎨 Transformación de Arrays</h3>
+<ol>
+<li>
+<p><strong><code>map(callback(elemento, indice, array))</code></strong></p>
+<ul>
+<li><strong>Parámetros:</strong> Igual que <code>forEach</code>.</li>
+<li><strong>Retorna:</strong> Un nuevo array con los resultados de <code>callback</code>.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">duplicados</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numeros</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">num</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">duplicados</span><span class="p">);</span><span class="w"> </span><span class="c1">// [2, 4, 6, 8]</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong><code>filter(callback(elemento, indice, array))</code></strong></p>
+<ul>
+<li><strong>Retorna:</strong> Un nuevo array con los elementos que cumplen la condición.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">mayores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numeros</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">num</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">mayores</span><span class="p">);</span><span class="w"> </span><span class="c1">// [3, 4]</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong><code>reduce(callback(acumulador, elemento, indice, array), valorInicial)</code></strong></p>
+<ul>
+<li><strong>Parámetros adicionales:</strong><ul>
+<li><code>acumulador</code>: Valor acumulado.</li>
+<li><code>valorInicial</code>: Valor opcional para iniciar la acumulación.</li>
+</ul>
+</li>
+<li><strong>Retorna:</strong> El valor acumulado final.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numeros</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span><span class="w"> </span><span class="nx">num</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">acc</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">suma</span><span class="p">);</span><span class="w"> </span><span class="c1">// 10</span>
+</code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h3 id="ordenacion-y-reorganizacion">🔧 Ordenación y Reorganización</h3>
+<ol>
+<li>
+<p><strong><code>sort(callback(a, b))</code></strong></p>
+<ul>
+<li><strong>Descripción:</strong> Ordena los elementos de un array. Si no se proporciona una función de comparación (<code>callback</code>), los elementos se ordenan como cadenas de texto en orden lexicográfico.</li>
+<li><strong>Parámetros:</strong><ul>
+<li><code>a</code> y <code>b</code>: Dos elementos del array que se comparan. La función debe retornar:</li>
+<li>Un número negativo si <code>a</code> debe aparecer antes que <code>b</code>.</li>
+<li>Un número positivo si <code>a</code> debe aparecer después de <code>b</code>.</li>
+<li>Cero si son iguales.</li>
+</ul>
+</li>
+<li><strong>Ejemplo:</strong>
+    <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">desc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numeros</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">a</span><span class="p">);</span><span class="w"> </span><span class="c1">// Ordena de mayor a menor</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">desc</span><span class="p">);</span><span class="w"> </span><span class="c1">// [4, 3, 2, 1]</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong><code>reverse()</code></strong></p>
+<ul>
+<li><strong>Descripción:</strong> Invierte el orden de los elementos en el array.</li>
+<li><strong>Parámetros:</strong> Ninguno.</li>
+<li><strong>Ejemplo:</strong>
+    <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">invertido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">desc</span><span class="p">.</span><span class="nx">reverse</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">invertido</span><span class="p">);</span><span class="w"> </span><span class="c1">// [1, 2, 3, 4]</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong><code>join(separador)</code></strong></p>
+<ul>
+<li><strong>Descripción:</strong> Crea una cadena de texto a partir de los elementos de un array, separados por el valor del parámetro <code>separador</code>.</li>
+<li><strong>Parámetros:</strong><ul>
+<li><code>separador</code> (opcional): Cadena que se utiliza para separar los elementos. Si se omite, se usa una coma por defecto.</li>
+</ul>
+</li>
+<li><strong>Ejemplo:</strong>
+    <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numeros</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&quot; - &quot;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">texto</span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;1 - 2 - 3 - 4&quot;</span>
+</code></pre></div></li>
+</ul>
+</li>
+</ol>
+<hr />
+<h3 id="busqueda-avanzada">🔍 Búsqueda Avanzada</h3>
+<ol>
+<li>
+<p><strong><code>find(callback(elemento, indice, array))</code></strong></p>
+<ul>
+<li><strong>Descripción:</strong> Retorna el primer elemento del array que cumple la condición especificada en el <code>callback</code>.</li>
+<li><strong>Parámetros:</strong><ul>
+<li><code>callback</code>: Una función que se ejecuta para cada elemento.</li>
+<li><code>elemento</code>: El valor actual del array.</li>
+<li><code>indice</code> (opcional): El índice del elemento actual.</li>
+<li><code>array</code> (opcional): El array completo.</li>
+</ul>
+</li>
+<li><strong>Ejemplo:</strong>
+    <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">primero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numeros</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">num</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">primero</span><span class="p">);</span><span class="w"> </span><span class="c1">// 3</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong><code>findIndex(callback(elemento, indice, array))</code></strong></p>
+<ul>
+<li><strong>Descripción:</strong> Similar a <code>find</code>, pero retorna el índice del primer elemento que cumple la condición, o <code>-1</code> si no se encuentra ninguno.</li>
+<li><strong>Ejemplo:</strong>
+    <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">indice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numeros</span><span class="p">.</span><span class="nx">findIndex</span><span class="p">(</span><span class="nx">num</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">indice</span><span class="p">);</span><span class="w"> </span><span class="c1">// 2</span>
+</code></pre></div></li>
+</ul>
+</li>
+</ol>
+<hr />
+<h3 id="arrays-multidimensionales">🌌 Arrays Multidimensionales</h3>
+<ol>
+<li>
+<p><strong>Descripción:</strong> Los arrays multidimensionales son arrays que contienen otros arrays como elementos, permitiendo almacenar estructuras complejas como matrices o tablas.</p>
+</li>
+<li>
+<p><strong>Acceso a elementos:</strong>
+   <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">matriz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">],</span>
+<span class="w">  </span><span class="p">[</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">6</span><span class="p">],</span>
+<span class="w">  </span><span class="p">[</span><span class="mf">7</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span><span class="w"> </span><span class="mf">9</span><span class="p">]</span>
+<span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">matriz</span><span class="p">[</span><span class="mf">2</span><span class="p">][</span><span class="mf">1</span><span class="p">]);</span><span class="w"> </span><span class="c1">// 8 (fila 3, columna 2)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Aplanar arrays multidimensionales:</strong></p>
+<ul>
+<li><strong><code>flat(profundidad)</code></strong><ul>
+<li><strong>Descripción:</strong> Retorna un nuevo array con los elementos de los subarrays concatenados hasta la profundidad especificada.</li>
+<li><strong>Parámetros:</strong></li>
+<li><code>profundidad</code> (opcional): Nivel de profundidad a aplanar. Por defecto es 1.
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">plano</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">matriz</span><span class="p">.</span><span class="nx">flat</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">plano</span><span class="p">);</span><span class="w"> </span><span class="c1">// [1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h3 id="diagrama-de-metodos-comunes">📊 Diagrama de Métodos Comunes</h3>
+<pre class="mermaid"><code>graph TD
+  A[Arrays] --&gt;|Iterar| B[forEach]
+  A --&gt;|Transformar| C[map]
+  A --&gt;|Filtrar| D[filter]
+  A --&gt;|Reducir| E[reduce]
+  A --&gt;|Ordenar| F[sort]
+  A --&gt;|Buscar| G[find]</code></pre>
+<hr />
+<h3 id="buenas-practicas">⚡ Buenas Prácticas</h3>
+<ol>
+<li>
+<p><strong>Usa métodos funcionales en lugar de bucles:</strong>
+   Los métodos como <code>map</code>, <code>filter</code> y <code>reduce</code> son más declarativos y concisos que los bucles tradicionales.</p>
+</li>
+<li>
+<p><strong>Evita mutar arrays originales:</strong>
+   Usa copias con el operador de propagación (<code>...</code>) o métodos como <code>slice</code> para preservar el array original.
+   <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">original</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">copia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[...</span><span class="nx">original</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">copia</span><span class="p">);</span><span class="w"> </span><span class="c1">// [1, 2, 3, 4]</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Depura con herramientas como <code>console.table</code>:</strong>
+   Muestra arrays y objetos en un formato tabular para una mejor visualización.
+   <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">datos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="p">}];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">table</span><span class="p">(</span><span class="nx">datos</span><span class="p">);</span>
+</code></pre></div></p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        <a href='https://ko-fi.com/jgarciadeparedesh02' title='Invítame a un café en ko-fi.com' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi2.png?v=3' border='0' alt='Invítame a un café en ko-fi.com' /></a>
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="Esta página es genial" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="Podría mejorar" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+              
+            </article>
+          </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+      <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../ut3-objetos-predefinidos-del-lenguaje/9draganddrop/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 9. Drag and Drop">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                9. Drag and Drop
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../z-practicas-y-tareas/" class="md-footer__link md-footer__link--next" aria-label="Next: Prácticas y tareas">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Prácticas y tareas
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+    <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+    
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+
+</html>
