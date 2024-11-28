@@ -13,25 +13,25 @@
   
   
   
-  <link rel="prev" href="../21apache-pig/">
+  <link rel="prev" href="../1conceptos-fundamentales/">
   
   
-  <link rel="next" href="../../tareas/">
+  <link rel="next" href="../3consulta-y-optimizacion/">
   
   
-  <link rel="icon" href="../../../assets/images/favicon.png">
+  <link rel="icon" href="../../../../assets/images/favicon.png">
   <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
   
   
   
-  <title>2.2. Apache Hive - Big Data Aplicado</title>
+  <title>2.2.3. Gestión de Bases de Datos - Big Data Aplicado</title>
   
   
   
-  <link rel="stylesheet" href="../../../assets/stylesheets/main.35f28582.min.css">
+  <link rel="stylesheet" href="../../../../assets/stylesheets/main.35f28582.min.css">
   
   
-  <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+  <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
   
   
 
@@ -55,9 +55,9 @@
   
   
   
-  <link rel="stylesheet" href="../../../stylesheets/extra.css">
+  <link rel="stylesheet" href="../../../../stylesheets/extra.css">
   
-  <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+  <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
   
   
   
@@ -74,7 +74,7 @@
   
   
   
- <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+ <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -83,7 +83,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
 
 
 
@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
       
-      <a href="#introduccion-a-apache-hive-en-javascript" class="md-skip">
+      <a href="#gestion-de-datos-en-apache-hive-una-guia-atractiva-para-desarrolladores" class="md-skip">
         Skip to content
       </a>
       
@@ -120,7 +120,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Big Data Aplicado" class="md-header__button md-logo" aria-label="Big Data Aplicado" data-md-component="logo">
+    <a href="../../../.." title="Big Data Aplicado" class="md-header__button md-logo" aria-label="Big Data Aplicado" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -140,7 +140,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2.2. Apache Hive
+              2.2.3. Gestión de Bases de Datos
             
           </span>
         </div>
@@ -241,7 +241,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Big Data Aplicado" class="md-nav__button md-logo" aria-label="Big Data Aplicado" data-md-component="logo">
+    <a href="../../../.." title="Big Data Aplicado" class="md-nav__button md-logo" aria-label="Big Data Aplicado" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -259,7 +259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -314,7 +314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ut1-introduccion-a-hadoop/1motivacionyorigen/" class="md-nav__link">
+      <a href="../../../../ut1-introduccion-a-hadoop/1motivacionyorigen/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -370,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ut1-introduccion-a-hadoop/21queesapachehadoop/" class="md-nav__link">
+      <a href="../../../../ut1-introduccion-a-hadoop/21queesapachehadoop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -391,7 +391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ut1-introduccion-a-hadoop/22ecosistemahadoopydistribuciones/" class="md-nav__link">
+      <a href="../../../../ut1-introduccion-a-hadoop/22ecosistemahadoopydistribuciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -412,7 +412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ut1-introduccion-a-hadoop/23arquitectura/" class="md-nav__link">
+      <a href="../../../../ut1-introduccion-a-hadoop/23arquitectura/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -441,7 +441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ut1-introduccion-a-hadoop/indicedetareas/" class="md-nav__link">
+      <a href="../../../../ut1-introduccion-a-hadoop/indicedetareas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -504,7 +504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ut2-almacenamiento-y-procesamiento-en-hadoop/1hdfs/" class="md-nav__link">
+      <a href="../../../../ut2-almacenamiento-y-procesamiento-en-hadoop/1hdfs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -525,7 +525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ut2-almacenamiento-y-procesamiento-en-hadoop/2mapreduce/" class="md-nav__link">
+      <a href="../../../../ut2-almacenamiento-y-procesamiento-en-hadoop/2mapreduce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -546,7 +546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ut2-almacenamiento-y-procesamiento-en-hadoop/tareas/" class="md-nav__link">
+      <a href="../../../../ut2-almacenamiento-y-procesamiento-en-hadoop/tareas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -611,7 +611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1introduccion/" class="md-nav__link">
+      <a href="../../../1introduccion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -669,11 +669,90 @@
   
   
     <li class="md-nav__item">
-      <a href="../21apache-pig/" class="md-nav__link">
+      <a href="../../21apache-pig/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     2.1. Apache Pig
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_2" id="__nav_4_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2.2. Apache Hive
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            2.2. Apache Hive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2.1. Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1conceptos-fundamentales/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2.2. Conceptos Fundamentales
   </span>
   
 
@@ -703,7 +782,7 @@
           
   
   <span class="md-ellipsis">
-    2.2. Apache Hive
+    2.2.3. Gestión de Bases de Datos
   </span>
   
 
@@ -714,7 +793,7 @@
         
   
   <span class="md-ellipsis">
-    2.2. Apache Hive
+    2.2.3. Gestión de Bases de Datos
   </span>
   
 
@@ -736,64 +815,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#que-es-apache-hive" class="md-nav__link">
+  <a href="#1-creacion-de-bases-de-datos-y-tablas" class="md-nav__link">
     <span class="md-ellipsis">
-      ¿Qué es Apache Hive? 🐝
+      1. Creación de Bases de Datos y Tablas 🏗️
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#caracteristicas-principales-de-hive" class="md-nav__link">
-    <span class="md-ellipsis">
-      Características Principales de Hive 🔍
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limitaciones-de-apache-hive" class="md-nav__link">
-    <span class="md-ellipsis">
-      Limitaciones de Apache Hive ⚠️
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#para-que-se-usa-apache-hive" class="md-nav__link">
-    <span class="md-ellipsis">
-      ¿Para qué se usa Apache Hive? 📊
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hiveql-el-lenguaje-de-consultas-de-hive" class="md-nav__link">
-    <span class="md-ellipsis">
-      HiveQL: El Lenguaje de Consultas de Hive 📝
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="HiveQL: El Lenguaje de Consultas de Hive 📝">
+    <nav class="md-nav" aria-label="1. Creación de Bases de Datos y Tablas 🏗️">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#acciones-posibles" class="md-nav__link">
+  <a href="#tipos-de-tablas-internas-vs-externas" class="md-nav__link">
     <span class="md-ellipsis">
-      Acciones Posibles 🛠️
+      Tipos de Tablas: Internas vs Externas
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejemplo-en-javascript-de-una-simulacion-de-consulta-en-hiveql" class="md-nav__link">
+  <a href="#sintaxis-basica-para-crear-tablas" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejemplo en JavaScript de una Simulación de Consulta en HiveQL 💻
+      Sintaxis Básica para Crear Tablas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-ubicaciones-en-s3-o-hdfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración de Ubicaciones en S3 o HDFS 🌍
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuración de Ubicaciones en S3 o HDFS 🌍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-almacenar-en-s3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo: Almacenar en S3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-almacenar-en-hdfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo: Almacenar en HDFS
     </span>
   </a>
   
@@ -803,28 +874,164 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#resumen-visual-de-hive-en-diagrama" class="md-nav__link">
-    <span class="md-ellipsis">
-      Resumen Visual de Hive en Diagrama
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#listo-para-explorar-el-poder-de-hive" class="md-nav__link">
+  <a href="#2-formatos-de-datos-soportados" class="md-nav__link">
     <span class="md-ellipsis">
-      ¿Listo para explorar el poder de Hive? 🐝
+      2. Formatos de Datos Soportados 📦
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="2. Formatos de Datos Soportados 📦">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-elegir-el-formato-adecuado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cómo Elegir el Formato Adecuado
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cómo Elegir el Formato Adecuado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparacion-visual-de-formatos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparación Visual de Formatos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-cargar-datos-en-tablas" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Cargar Datos en Tablas 📥
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Cargar Datos en Tablas 📥">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comando-load-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comando LOAD DATA
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comando LOAD DATA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#desde-hdfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desde HDFS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desde-el-sistema-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desde el Sistema Local
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importar-datos-desde-s3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importar Datos desde S3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-tablas-a-partir-de-archivos-existentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación de Tablas a Partir de Archivos Existentes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creación de Tablas a Partir de Archivos Existentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-del-proceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagrama del Proceso
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3consulta-y-optimizacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2.4. Consultas y Optimizaciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -846,7 +1053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tareas/" class="md-nav__link">
+      <a href="../../../tareas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -894,64 +1101,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#que-es-apache-hive" class="md-nav__link">
+  <a href="#1-creacion-de-bases-de-datos-y-tablas" class="md-nav__link">
     <span class="md-ellipsis">
-      ¿Qué es Apache Hive? 🐝
+      1. Creación de Bases de Datos y Tablas 🏗️
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#caracteristicas-principales-de-hive" class="md-nav__link">
-    <span class="md-ellipsis">
-      Características Principales de Hive 🔍
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limitaciones-de-apache-hive" class="md-nav__link">
-    <span class="md-ellipsis">
-      Limitaciones de Apache Hive ⚠️
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#para-que-se-usa-apache-hive" class="md-nav__link">
-    <span class="md-ellipsis">
-      ¿Para qué se usa Apache Hive? 📊
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hiveql-el-lenguaje-de-consultas-de-hive" class="md-nav__link">
-    <span class="md-ellipsis">
-      HiveQL: El Lenguaje de Consultas de Hive 📝
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="HiveQL: El Lenguaje de Consultas de Hive 📝">
+    <nav class="md-nav" aria-label="1. Creación de Bases de Datos y Tablas 🏗️">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#acciones-posibles" class="md-nav__link">
+  <a href="#tipos-de-tablas-internas-vs-externas" class="md-nav__link">
     <span class="md-ellipsis">
-      Acciones Posibles 🛠️
+      Tipos de Tablas: Internas vs Externas
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejemplo-en-javascript-de-una-simulacion-de-consulta-en-hiveql" class="md-nav__link">
+  <a href="#sintaxis-basica-para-crear-tablas" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejemplo en JavaScript de una Simulación de Consulta en HiveQL 💻
+      Sintaxis Básica para Crear Tablas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-ubicaciones-en-s3-o-hdfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración de Ubicaciones en S3 o HDFS 🌍
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuración de Ubicaciones en S3 o HDFS 🌍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-almacenar-en-s3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo: Almacenar en S3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-almacenar-en-hdfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo: Almacenar en HDFS
     </span>
   </a>
   
@@ -961,22 +1160,129 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#resumen-visual-de-hive-en-diagrama" class="md-nav__link">
-    <span class="md-ellipsis">
-      Resumen Visual de Hive en Diagrama
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#listo-para-explorar-el-poder-de-hive" class="md-nav__link">
+  <a href="#2-formatos-de-datos-soportados" class="md-nav__link">
     <span class="md-ellipsis">
-      ¿Listo para explorar el poder de Hive? 🐝
+      2. Formatos de Datos Soportados 📦
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="2. Formatos de Datos Soportados 📦">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-elegir-el-formato-adecuado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cómo Elegir el Formato Adecuado
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cómo Elegir el Formato Adecuado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparacion-visual-de-formatos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparación Visual de Formatos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-cargar-datos-en-tablas" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Cargar Datos en Tablas 📥
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Cargar Datos en Tablas 📥">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comando-load-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comando LOAD DATA
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comando LOAD DATA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#desde-hdfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desde HDFS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desde-el-sistema-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desde el Sistema Local
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importar-datos-desde-s3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importar Datos desde S3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-tablas-a-partir-de-archivos-existentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación de Tablas a Partir de Archivos Existentes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creación de Tablas a Partir de Archivos Existentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-del-proceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagrama del Proceso
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -995,76 +1301,163 @@
               
 
 
-<h1 id="introduccion-a-apache-hive-en-javascript">Introducción a Apache Hive en JavaScript 🚀</h1>
-<p><a class="glightbox" href="https://hive.apache.org/images/hive.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" height="150px" src="https://hive.apache.org/images/hive.svg" width="150px" /></a></p>
-<h3 id="que-es-apache-hive">¿Qué es Apache Hive? 🐝</h3>
-<p>Apache Hive es una plataforma de <strong>procesamiento y almacenamiento de datos en grandes volúmenes</strong> desarrollada inicialmente por Facebook, ahora parte del ecosistema Apache. Su principal propósito es simplificar el acceso y análisis de grandes datos almacenados en <strong>Apache Hadoop</strong>, permitiendo a los usuarios usar una sintaxis similar a SQL a través de su propio lenguaje: <strong>HiveQL</strong>. </p>
-<p>Hive transforma el <strong>almacenamiento distribuido en Hadoop</strong> en una base de datos relacional accesible para quienes prefieren un enfoque SQL. Esto permite consultas complejas y análisis sin tener que lidiar con los detalles técnicos de Hadoop o MapReduce.</p>
-<h3 id="caracteristicas-principales-de-hive">Características Principales de Hive 🔍</h3>
-<ul>
-<li><strong>Acceso SQL</strong>: Permite ejecutar consultas SQL (HiveQL) en datos almacenados en Hadoop.</li>
-<li><strong>Escalabilidad</strong>: Maneja conjuntos de datos extremadamente grandes con facilidad.</li>
-<li><strong>Integración con Hadoop</strong>: Hive corre sobre Hadoop, lo que facilita la utilización de su infraestructura para tareas de procesamiento masivo.</li>
-<li><strong>Esquema de Lectura</strong>: Los datos se estructuran durante la consulta, lo cual es ideal para datos semi-estructurados y no estructurados.</li>
-</ul>
-<h3 id="limitaciones-de-apache-hive">Limitaciones de Apache Hive ⚠️</h3>
-<p>A pesar de sus ventajas, Hive tiene algunas limitaciones:</p>
+<h1 id="gestion-de-datos-en-apache-hive-una-guia-atractiva-para-desarrolladores"><strong>Gestión de Datos en Apache Hive: Una Guía Atractiva para Desarrolladores</strong></h1>
+<h2 id="1-creacion-de-bases-de-datos-y-tablas"><strong>1. Creación de Bases de Datos y Tablas</strong> 🏗️</h2>
+<h3 id="tipos-de-tablas-internas-vs-externas"><strong>Tipos de Tablas: Internas vs Externas</strong></h3>
+<p>En Apache Hive, puedes trabajar con dos tipos principales de tablas:  </p>
 <ol>
-<li><strong>No es ideal para consultas en tiempo real</strong>: Las consultas pueden tardar debido al procesamiento en Hadoop.</li>
-<li><strong>No soporta transacciones completas</strong>: Está orientado a <strong>lecturas</strong> y <strong>análisis</strong>, no tanto a <strong>escrituras transaccionales</strong>.</li>
-<li><strong>Latencia en el rendimiento</strong>: Al depender de MapReduce, algunas operaciones pueden ser lentas comparado con bases de datos en tiempo real.</li>
-</ol>
-<h3 id="para-que-se-usa-apache-hive">¿Para qué se usa Apache Hive? 📊</h3>
-<p>Hive se utiliza principalmente para:</p>
+<li>
+<p><strong>Tablas Internas (Gestionadas)</strong> 🛠️  </p>
 <ul>
-<li><strong>Análisis de grandes volúmenes de datos</strong> en ambientes empresariales.</li>
-<li><strong>Informes y visualización</strong> de datos históricos.</li>
-<li><strong>Procesamiento por lotes</strong> para transformar y limpiar datos.</li>
+<li>Hive controla tanto el esquema como los datos.  </li>
+<li>Los datos se almacenan en la ubicación predeterminada del warehouse de Hive (<code>/user/hive/warehouse/</code>).  </li>
+<li><strong>Advertencia:</strong> Si eliminas la tabla, ¡los datos también se eliminan!  </li>
 </ul>
-<p>Su diseño es ideal para <strong>Data Warehousing</strong> y proyectos de <strong>Big Data</strong> donde se requiere manipular y analizar grandes volúmenes de datos.</p>
-<h3 id="hiveql-el-lenguaje-de-consultas-de-hive">HiveQL: El Lenguaje de Consultas de Hive 📝</h3>
-<p><strong>HiveQL</strong> es el lenguaje de consultas de Apache Hive, similar a SQL, diseñado para facilitar la extracción de datos en Hadoop. <strong>HiveQL</strong> permite a los usuarios <strong>crear tablas</strong>, <strong>consultar datos</strong>, <strong>hacer agregaciones</strong> y <strong>uniones</strong>, entre otras acciones.</p>
-<h4 id="acciones-posibles">Acciones Posibles 🛠️</h4>
-<ul>
-<li><strong>SELECT</strong>: Extrae datos.</li>
-<li><strong>INSERT</strong>: Inserta datos en tablas.</li>
-<li><strong>CREATE TABLE</strong>: Define la estructura de los datos.</li>
-<li><strong>JOIN</strong>: Permite combinar datos de varias tablas.</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="c1">-- Ejemplo de sintaxis básica en HiveQL</span>
-<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">estudiantes</span><span class="w"> </span><span class="p">(</span>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">empleados</span><span class="w"> </span><span class="p">(</span>
 <span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
 <span class="w">  </span><span class="n">nombre</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
-<span class="w">  </span><span class="n">edad</span><span class="w"> </span><span class="nb">INT</span>
+<span class="w">  </span><span class="n">salario</span><span class="w"> </span><span class="nb">FLOAT</span>
 <span class="p">);</span>
-
-<span class="c1">-- Consultar datos</span>
-<span class="k">SELECT</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">estudiantes</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
 </code></pre></div>
-<h4 id="ejemplo-en-javascript-de-una-simulacion-de-consulta-en-hiveql">Ejemplo en JavaScript de una Simulación de Consulta en HiveQL 💻</h4>
-<p>Para ilustrar la interacción con Hive, aquí tienes una representación en JavaScript de cómo estructurar y ejecutar una consulta en HiveQL. En este caso, simularemos una simple selección y filtrado.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Definimos un dataset simulado</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">estudiantes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
-<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">edad</span><span class="o">:</span><span class="w"> </span><span class="mf">22</span><span class="w"> </span><span class="p">},</span>
-<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">edad</span><span class="o">:</span><span class="w"> </span><span class="mf">17</span><span class="w"> </span><span class="p">},</span>
-<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Marta&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">edad</span><span class="o">:</span><span class="w"> </span><span class="mf">19</span><span class="w"> </span><span class="p">},</span>
-<span class="p">];</span>
-
-<span class="c1">// Simulación de una consulta en HiveQL</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">consulta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">estudiantes</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">estudiante</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">estudiante</span><span class="p">.</span><span class="nx">edad</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">18</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Estudiantes mayores de 18 años:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">consulta</span><span class="p">);</span>
+<p><strong>Úsalo cuando Hive deba gestionar completamente los datos.</strong></p>
+</li>
+<li>
+<p><strong>Tablas Externas</strong> 🌐  </p>
+<ul>
+<li>Hive solo administra el esquema, pero los datos permanecen en una ubicación externa como S3 o HDFS.  </li>
+<li>Al eliminar la tabla, los datos <strong>no se borran</strong>.  </li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">EXTERNAL</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ventas</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">producto</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="w">  </span><span class="n">cantidad</span><span class="w"> </span><span class="nb">INT</span>
+<span class="p">)</span>
+<span class="n">STORED</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">TEXTFILE</span>
+<span class="k">LOCATION</span><span class="w"> </span><span class="s1">&#39;/data/ventas/&#39;</span><span class="p">;</span>
 </code></pre></div>
-<h3 id="resumen-visual-de-hive-en-diagrama">Resumen Visual de Hive en Diagrama</h3>
+<p><strong>Perfecto para datos que ya existen y no deseas duplicar.</strong></p>
+</li>
+</ol>
+<hr />
+<h3 id="sintaxis-basica-para-crear-tablas"><strong>Sintaxis Básica para Crear Tablas</strong></h3>
+<p>Crear tablas en Hive es similar a SQL, pero con soporte para particiones y formatos avanzados.</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">productos</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">nombre</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="w">  </span><span class="n">precio</span><span class="w"> </span><span class="nb">FLOAT</span>
+<span class="p">)</span>
+<span class="n">PARTITIONED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="p">(</span><span class="n">categoria</span><span class="w"> </span><span class="n">STRING</span><span class="p">)</span>
+<span class="n">STORED</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">PARQUET</span><span class="p">;</span>
+</code></pre></div>
+<ul>
+<li><strong><code>PARTITIONED BY</code></strong>: Divide los datos por columnas específicas, como <code>categoria</code>.</li>
+<li><strong><code>STORED AS PARQUET</code></strong>: Especifica el formato de almacenamiento.</li>
+</ul>
+<hr />
+<h3 id="configuracion-de-ubicaciones-en-s3-o-hdfs"><strong>Configuración de Ubicaciones en S3 o HDFS</strong> 🌍</h3>
+<p>Hive puede trabajar con datos en diferentes ubicaciones.  </p>
+<h4 id="ejemplo-almacenar-en-s3"><strong>Ejemplo: Almacenar en S3</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">EXTERNAL</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">logs</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">fecha</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="w">  </span><span class="n">nivel</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="w">  </span><span class="n">mensaje</span><span class="w"> </span><span class="n">STRING</span>
+<span class="p">)</span>
+<span class="n">STORED</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">TEXTFILE</span>
+<span class="k">LOCATION</span><span class="w"> </span><span class="s1">&#39;s3://mi-bucket/logs/&#39;</span><span class="p">;</span>
+</code></pre></div>
+<h4 id="ejemplo-almacenar-en-hdfs"><strong>Ejemplo: Almacenar en HDFS</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">EXTERNAL</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">transacciones</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">monto</span><span class="w"> </span><span class="nb">FLOAT</span>
+<span class="p">)</span>
+<span class="n">STORED</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">ORC</span>
+<span class="k">LOCATION</span><span class="w"> </span><span class="s1">&#39;/data/warehouse/transacciones/&#39;</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<h2 id="2-formatos-de-datos-soportados"><strong>2. Formatos de Datos Soportados</strong> 📦</h2>
+<p>Apache Hive soporta varios formatos para optimizar el almacenamiento y la consulta. Aquí están los más comunes:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Formato</strong></th>
+<th><strong>Ventajas</strong></th>
+<th><strong>Desventajas</strong></th>
+<th><strong>Ideal Para</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TextFile</strong></td>
+<td>Simple, ampliamente compatible.</td>
+<td>Ineficiente en espacio y procesamiento.</td>
+<td>Datos crudos o pequeños.</td>
+</tr>
+<tr>
+<td><strong>Parquet</strong></td>
+<td>Almacenamiento columnar, compresión eficiente, rápido en lectura.</td>
+<td>Costoso en actualizaciones.</td>
+<td>Consultas analíticas.</td>
+</tr>
+<tr>
+<td><strong>ORC</strong></td>
+<td>Optimizado para Hive, excelente compresión.</td>
+<td>Limitado fuera del ecosistema Hadoop.</td>
+<td>Data Warehousing.</td>
+</tr>
+<tr>
+<td><strong>Avro</strong></td>
+<td>Compatible con esquemas, ideal para intercambio entre sistemas.</td>
+<td>Menos eficiente para consultas analíticas.</td>
+<td>Interoperabilidad.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="como-elegir-el-formato-adecuado"><strong>Cómo Elegir el Formato Adecuado</strong></h3>
+<ul>
+<li><strong>Datos pequeños y simples</strong>: Usa <strong>TextFile</strong>.  </li>
+<li><strong>Consultas analíticas rápidas</strong>: Prefiere <strong>Parquet</strong> o <strong>ORC</strong>.  </li>
+<li><strong>Intercambio entre sistemas</strong>: Opta por <strong>Avro</strong>.  </li>
+</ul>
+<h4 id="comparacion-visual-de-formatos"><strong>Comparación Visual de Formatos</strong></h4>
 <pre class="mermaid"><code>graph TD;
-    A[Usuario] --&gt;|Consulta SQL| B[HiveQL]
-    B --&gt; C[MapReduce]
-    C --&gt; D[Datos en Hadoop]
-    D --&gt;|Resultados| A</code></pre>
-<blockquote>
-<p><strong>Apache Hive</strong> transforma las consultas de alto nivel en código MapReduce, y estos procesos son ejecutados en <strong>Hadoop</strong>, lo que hace que el procesamiento sea eficiente y escalable.</p>
-</blockquote>
-<h3 id="listo-para-explorar-el-poder-de-hive">¿Listo para explorar el poder de Hive? 🐝</h3>
-<p>Apache Hive convierte las bases de datos masivas en fuentes accesibles para análisis y datos. A través de <strong>HiveQL</strong>, los usuarios pueden aprovechar al máximo el potencial de <strong>Big Data</strong> sin necesidad de ser expertos en programación distribuida.</p>
+    A[TextFile] --&gt;|Flexible| B[General];
+    C[Parquet] --&gt;|Rápido y Eficiente| B;
+    D[ORC] --&gt;|Compacto y Optimizado| B;
+    E[Avro] --&gt;|Compatibilidad| B;</code></pre>
+<hr />
+<h2 id="3-cargar-datos-en-tablas"><strong>3. Cargar Datos en Tablas</strong> 📥</h2>
+<h3 id="comando-load-data"><strong>Comando <code>LOAD DATA</code></strong></h3>
+<p>El comando <code>LOAD DATA</code> permite cargar datos desde HDFS o el sistema local directamente en una tabla de Hive.</p>
+<h4 id="desde-hdfs"><strong>Desde HDFS</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="k">LOAD</span><span class="w"> </span><span class="k">DATA</span><span class="w"> </span><span class="n">INPATH</span><span class="w"> </span><span class="s1">&#39;/hdfs/datos/ventas.csv&#39;</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ventas</span><span class="p">;</span>
+</code></pre></div>
+<h4 id="desde-el-sistema-local"><strong>Desde el Sistema Local</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="k">LOAD</span><span class="w"> </span><span class="k">DATA</span><span class="w"> </span><span class="k">LOCAL</span><span class="w"> </span><span class="n">INPATH</span><span class="w"> </span><span class="s1">&#39;/local/datos/ventas.csv&#39;</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ventas</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<h3 id="importar-datos-desde-s3"><strong>Importar Datos desde S3</strong></h3>
+<p>Hive también puede cargar datos almacenados en S3. Asegúrate de configurar las credenciales de AWS correctamente.  </p>
+<div class="highlight"><pre><span></span><code><span class="k">LOAD</span><span class="w"> </span><span class="k">DATA</span><span class="w"> </span><span class="n">INPATH</span><span class="w"> </span><span class="s1">&#39;s3://mi-bucket/ventas.csv&#39;</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ventas</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<h3 id="creacion-de-tablas-a-partir-de-archivos-existentes"><strong>Creación de Tablas a Partir de Archivos Existentes</strong></h3>
+<p>Hive puede crear automáticamente una tabla basada en la estructura de un archivo existente.</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">EXTERNAL</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">logs</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">fecha</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="w">  </span><span class="n">nivel</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="w">  </span><span class="n">mensaje</span><span class="w"> </span><span class="n">STRING</span>
+<span class="p">)</span>
+<span class="n">STORED</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">TEXTFILE</span>
+<span class="k">LOCATION</span><span class="w"> </span><span class="s1">&#39;/hdfs/logs/&#39;</span><span class="p">;</span>
+</code></pre></div>
+<h4 id="diagrama-del-proceso"><strong>Diagrama del Proceso</strong></h4>
+<pre class="mermaid"><code>graph TD;
+    A[Archivos Existentes] --&gt; B[Crear Tabla];
+    B --&gt; C[Definir Esquema];
+    C --&gt; D[Consultar con HiveQL];</code></pre>
+<hr />
+<p>¡Con estas herramientas, puedes gestionar datos en Apache Hive de manera eficiente y optimizada, ya sea que trabajes con datos locales, en HDFS o S3! 🚀</p>
 
 
 
@@ -1136,7 +1529,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../21apache-pig/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2.1. Apache Pig">
+          <a href="../1conceptos-fundamentales/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2.2.2. Conceptos Fundamentales">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1146,20 +1539,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                2.1. Apache Pig
+                2.2.2. Conceptos Fundamentales
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../tareas/" class="md-footer__link md-footer__link--next" aria-label="Next: Prácticas y Tareas">
+          <a href="../3consulta-y-optimizacion/" class="md-footer__link md-footer__link--next" aria-label="Next: 2.2.4. Consultas y Optimizaciones">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Prácticas y Tareas
+                2.2.4. Consultas y Optimizaciones
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1193,10 +1586,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer"], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.footer"], "search": "../../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-    <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
+    <script src="../../../../assets/javascripts/bundle.56dfad97.min.js"></script>
     
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
