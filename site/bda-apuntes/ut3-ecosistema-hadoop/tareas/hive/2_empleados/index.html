@@ -20,7 +20,7 @@
   
   
   
-  <title>Tarea: Manejo de Datos en Apache Hive 🐝 - Big Data Aplicado</title>
+  <title>Práctica: Consultas sobre empleados - Big Data Aplicado</title>
   
   
   
@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
       
-      <a href="#tarea-manejo-de-datos-en-apache-hive" class="md-skip">
+      <a href="#practica-consultas-sobre-empleados" class="md-skip">
         Skip to content
       </a>
       
@@ -136,7 +136,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tarea: Manejo de Datos en Apache Hive 🐝
+              Práctica: Consultas sobre empleados
             
           </span>
         </div>
@@ -865,63 +865,171 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objetivo" class="md-nav__link">
+  <a href="#csv-de-ejemplo" class="md-nav__link">
     <span class="md-ellipsis">
-      Objetivo:
+      CSV de Ejemplo
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#parte-1-creacion-de-la-base-de-datos" class="md-nav__link">
+  <a href="#parte-1-crear-tablas-y-cargar-datos-en-hive" class="md-nav__link">
     <span class="md-ellipsis">
-      Parte 1: Creación de la Base de Datos
+      Parte 1: Crear tablas y cargar datos en Hive
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 1: Crear tablas y cargar datos en Hive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-iniciar-el-cliente-hive" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Iniciar el cliente Hive
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#parte-2-creacion-de-tablas-con-particiones" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2-crear-una-base-de-datos" class="md-nav__link">
     <span class="md-ellipsis">
-      Parte 2: Creación de Tablas con Particiones
+      2. Crear una base de datos
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#parte-3-insertar-datos" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#3-crear-una-tabla-en-hive" class="md-nav__link">
     <span class="md-ellipsis">
-      Parte 3: Insertar Datos
+      3. Crear una tabla en Hive
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#parte-4-actualizacion-y-eliminacion-de-datos" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#4-validar-que-los-datos-se-han-cargado-correctamente" class="md-nav__link">
     <span class="md-ellipsis">
-      Parte 4: Actualización y Eliminación de Datos
+      4. Validar que los datos se han cargado correctamente
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#parte-5-ejecucion-de-consultas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parte 5: Ejecución de Consultas
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#parte-6-validacion-en-hdfs" class="md-nav__link">
+  <a href="#parte-2-consultas-basicas" class="md-nav__link">
     <span class="md-ellipsis">
-      Parte 6: Validación en HDFS
+      Parte 2: Consultas básicas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 2: Consultas básicas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-consultas-de-seleccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Consultas de selección
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-filtros" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Filtros
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-agrupaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Agrupaciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ordenacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Ordenación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-3-consultas-avanzadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parte 3: Consultas avanzadas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 3: Consultas avanzadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-subconsultas" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Subconsultas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-funciones-integradas" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Funciones integradas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-operaciones-con-fechas" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Operaciones con fechas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-uso-de-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Uso de CASE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-4-exportar-los-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parte 4: Exportar los resultados
     </span>
   </a>
   
@@ -942,110 +1050,131 @@
               
 
 
-<h1 id="tarea-manejo-de-datos-en-apache-hive"><strong>Tarea: Manejo de Datos en Apache Hive</strong> 🐝</h1>
-<h4 id="objetivo"><strong>Objetivo:</strong></h4>
-<p>Practicar la creación y gestión de bases de datos y tablas en Apache Hive, incluyendo el uso de particiones, ejecución de consultas básicas y avanzadas, y verificación de datos en HDFS.</p>
-<hr />
-<h4 id="parte-1-creacion-de-la-base-de-datos"><strong>Parte 1: Creación de la Base de Datos</strong></h4>
-<ol>
-<li>Crea una base de datos llamada <code>tienda_online</code>:
-   <div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">tienda_online</span><span class="p">;</span>
-</code></pre></div></li>
-<li>Comprueba que la base de datos se haya creado correctamente:
-   <div class="highlight"><pre><span></span><code><span class="k">SHOW</span><span class="w"> </span><span class="n">DATABASES</span><span class="p">;</span>
-</code></pre></div></li>
-</ol>
-<hr />
-<h4 id="parte-2-creacion-de-tablas-con-particiones"><strong>Parte 2: Creación de Tablas con Particiones</strong></h4>
-<ol>
-<li>Dentro de la base de datos <code>tienda_online</code>, crea una tabla llamada <code>ventas</code> con las siguientes columnas:</li>
-<li><code>id INT</code></li>
-<li><code>producto STRING</code></li>
-<li><code>cantidad INT</code></li>
-<li>Particionada por <code>fecha STRING</code>.</li>
-</ol>
-<div class="highlight"><pre><span></span><code><span class="n">USE</span><span class="w"> </span><span class="n">tienda_online</span><span class="p">;</span>
-
-<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ventas</span><span class="w"> </span><span class="p">(</span>
-<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
-<span class="w">  </span><span class="n">producto</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
-<span class="w">  </span><span class="n">cantidad</span><span class="w"> </span><span class="nb">INT</span>
+<h1 id="practica-consultas-sobre-empleados"><strong>Práctica: Consultas sobre empleados</strong></h1>
+<h3 id="csv-de-ejemplo">CSV de Ejemplo</h3>
+<div class="highlight"><pre><span></span><code>id,nombre,edad,departamento,salario
+1,Ana,30,IT,50000
+2,Luis,45,Finanzas,60000
+3,María,28,IT,55000
+4,Pablo,35,RH,45000
+5,Clara,50,Finanzas,70000
+6,Jorge,40,IT,52000
+7,Sofía,25,Ventas,48000
+8,Carlos,32,RH,46000
+9,Laura,29,IT,54000
+10,Marta,41,Ventas,47000
+11,Pedro,38,Finanzas,68000
+12,Isabel,27,RH,44000
+13,Antonio,33,IT,53000
+14,Lucía,26,RH,49000
+15,Fernando,48,Finanzas,72000
+16,Raquel,37,Ventas,56000
+17,Esteban,31,IT,51000
+18,Patricia,24,RH,45000
+19,Rosa,39,Ventas,58000
+20,Manuel,44,IT,60000
+</code></pre></div>
+<h3 id="parte-1-crear-tablas-y-cargar-datos-en-hive"><strong>Parte 1: Crear tablas y cargar datos en Hive</strong></h3>
+<h4 id="1-iniciar-el-cliente-hive"><strong>1. Iniciar el cliente Hive</strong></h4>
+<ul>
+<li>Abre la interfaz de línea de comandos de Hive.</li>
+</ul>
+<h4 id="2-crear-una-base-de-datos"><strong>2. Crear una base de datos</strong></h4>
+<ul>
+<li>Crea una nueva base de datos llamada <code>empresa</code> y selecciona esta base de datos para trabajar en ella.</li>
+</ul>
+<h4 id="3-crear-una-tabla-en-hive"><strong>3. Crear una tabla en Hive</strong></h4>
+<ul>
+<li>Crea una tabla externa que haga referencia al archivo CSV cargado en HDFS. Define los campos de la tabla basándote en los datos de ejemplo.<ul>
+<li><strong>Pista:</strong> Ejemplo de tabla externa guardada en un fichero en HDFS
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">EXTERNAL</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">productos</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">producto_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">nombre_producto</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="w">    </span><span class="n">categoria</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="w">    </span><span class="n">precio</span><span class="w"> </span><span class="nb">FLOAT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">cantidad_en_stock</span><span class="w"> </span><span class="nb">INT</span>
 <span class="p">)</span>
-<span class="n">PARTITIONED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="p">(</span><span class="n">fecha</span><span class="w"> </span><span class="n">STRING</span><span class="p">)</span>
-<span class="n">STORED</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">PARQUET</span><span class="p">;</span>
-</code></pre></div>
-<ol>
-<li>Comprueba que la tabla se haya creado correctamente:
-   <div class="highlight"><pre><span></span><code><span class="k">SHOW</span><span class="w"> </span><span class="n">TABLES</span><span class="p">;</span>
-<span class="k">DESCRIBE</span><span class="w"> </span><span class="n">FORMATTED</span><span class="w"> </span><span class="n">ventas</span><span class="p">;</span>
+<span class="k">ROW</span><span class="w"> </span><span class="n">FORMAT</span><span class="w"> </span><span class="n">DELIMITED</span>
+<span class="n">FIELDS</span><span class="w"> </span><span class="n">TERMINATED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;,&#39;</span>
+<span class="n">STORED</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">TEXTFILE</span>
+<span class="k">LOCATION</span><span class="w"> </span><span class="s1">&#39;/user/hive_data/productos/&#39;</span><span class="p">;</span>
 </code></pre></div></li>
-</ol>
+</ul>
+</li>
+</ul>
+<h4 id="4-validar-que-los-datos-se-han-cargado-correctamente"><strong>4. Validar que los datos se han cargado correctamente</strong></h4>
+<ul>
+<li>Realiza una consulta para verificar que los datos están disponibles en la tabla.</li>
+</ul>
 <hr />
-<h4 id="parte-3-insertar-datos"><strong>Parte 3: Insertar Datos</strong></h4>
+<h3 id="parte-2-consultas-basicas"><strong>Parte 2: Consultas básicas</strong></h3>
+<h4 id="1-consultas-de-seleccion"><strong>1. Consultas de selección</strong></h4>
 <ol>
-<li>Inserta los siguientes registros en las particiones correspondientes:</li>
-<li><code>(1, 'Laptop', 10, '2024-11-01')</code></li>
-<li><code>(2, 'Mouse', 25, '2024-11-02')</code></li>
-<li><code>(3, 'Teclado', 15, '2024-11-03')</code></li>
+<li>Lista todos los empleados.</li>
+<li>Selecciona solo los nombres y salarios de los empleados.</li>
+<li>Selecciona empleados que pertenecen al departamento "IT".</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ventas</span><span class="w"> </span><span class="n">PARTITION</span><span class="w"> </span><span class="p">(</span><span class="n">fecha</span><span class="o">=</span><span class="s1">&#39;2024-11-01&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Laptop&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
-<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ventas</span><span class="w"> </span><span class="n">PARTITION</span><span class="w"> </span><span class="p">(</span><span class="n">fecha</span><span class="o">=</span><span class="s1">&#39;2024-11-02&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Mouse&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">);</span>
-<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ventas</span><span class="w"> </span><span class="n">PARTITION</span><span class="w"> </span><span class="p">(</span><span class="n">fecha</span><span class="o">=</span><span class="s1">&#39;2024-11-03&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Teclado&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">);</span>
-</code></pre></div>
+<h4 id="2-filtros"><strong>2. Filtros</strong></h4>
+<ol>
+<li>Encuentra empleados mayores de 40 años.</li>
+<li>Encuentra empleados del departamento "Finanzas" que ganan más de 60000.</li>
+<li>Encuentra empleados cuyos nombres empiezan con la letra 'M'.</li>
+</ol>
+<h4 id="3-agrupaciones"><strong>3. Agrupaciones</strong></h4>
+<ol>
+<li>Calcula el salario promedio por departamento.</li>
+<li>Encuentra el número total de empleados por departamento.</li>
+<li>Encuentra el salario máximo y mínimo en cada departamento.</li>
+</ol>
+<h4 id="4-ordenacion"><strong>4. Ordenación</strong></h4>
+<ol>
+<li>Ordena a los empleados por salario en orden descendente.</li>
+<li>Ordena a los empleados por edad en orden ascendente y por salario en orden descendente.</li>
+</ol>
 <hr />
-<h4 id="parte-4-actualizacion-y-eliminacion-de-datos"><strong>Parte 4: Actualización y Eliminación de Datos</strong></h4>
+<h3 id="parte-3-consultas-avanzadas"><strong>Parte 3: Consultas avanzadas</strong></h3>
+<h4 id="1-subconsultas"><strong>1. Subconsultas</strong></h4>
+<ol>
+<li>Encuentra los empleados que ganan más que el salario promedio de su departamento.</li>
+<li>Encuentra los departamentos con un salario promedio mayor a 55000.</li>
+</ol>
+<h4 id="2-funciones-integradas"><strong>2. Funciones integradas</strong></h4>
+<ol>
+<li>Calcula la edad promedio de los empleados.</li>
+<li>Encuentra el total de salarios en toda la empresa.</li>
+<li>Encuentra el salario más alto y más bajo en toda la empresa.</li>
+<li>Calcula el porcentaje de empleados en cada departamento respecto al total.</li>
+</ol>
+<h4 id="3-operaciones-con-fechas"><strong>3. Operaciones con fechas</strong></h4>
+<ol>
+<li>Encuentra empleados contratados en los últimos 5 años.<ul>
+<li><strong>Pista:</strong> Usa funciones de fechas como <code>CURRENT_DATE</code> y operadores para calcular diferencias de años.</li>
+</ul>
+</li>
+</ol>
+<h4 id="4-uso-de-case"><strong>4. Uso de CASE</strong></h4>
+<ol>
+<li>Clasifica a los empleados en categorías como "Junior", "Mid-Level", y "Senior" según su salario.<ul>
+<li><strong>Pista:</strong> Usa la cláusula <code>CASE</code> para establecer rangos de clasificación.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h3 id="parte-4-exportar-los-resultados"><strong>Parte 4: Exportar los resultados</strong></h3>
 <ol>
 <li>
-<p><strong>Actualiza</strong> el registro del producto <code>Mouse</code> para cambiar la cantidad a <code>30</code>:
-   <div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">ventas</span>
-<span class="k">SET</span><span class="w"> </span><span class="n">cantidad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">producto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Mouse&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">fecha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;2024-11-02&#39;</span><span class="p">;</span>
-</code></pre></div></p>
+<p>Exporta los nombres y salarios de los empleados del departamento "IT" a un archivo en HDFS.</p>
+<ul>
+<li><strong>Pista:</strong> Usa <code>INSERT OVERWRITE DIRECTORY</code> junto con el formato de salida especificado.</li>
+</ul>
 </li>
 <li>
-<p><strong>Elimina</strong> el registro del producto <code>Teclado</code>:
-   <div class="highlight"><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">ventas</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">producto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Teclado&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">fecha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;2024-11-03&#39;</span><span class="p">;</span>
-</code></pre></div></p>
+<p>Exporta una consulta que agrupa datos por departamento, incluyendo el promedio de salario y el número total de empleados.</p>
+<ul>
+<li><strong>Pista:</strong> Combina la agrupación (<code>GROUP BY</code>) con la exportación usando <code>INSERT OVERWRITE</code>.</li>
+</ul>
 </li>
 </ol>
-<hr />
-<h4 id="parte-5-ejecucion-de-consultas"><strong>Parte 5: Ejecución de Consultas</strong></h4>
-<ol>
-<li>
-<p>Muestra todas las ventas realizadas en la fecha <code>2024-11-01</code>:
-   <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">ventas</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">fecha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;2024-11-01&#39;</span><span class="p">;</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>Muestra el total de productos vendidos agrupados por fecha:
-   <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">fecha</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">cantidad</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_cantidad</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">ventas</span>
-<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">fecha</span><span class="p">;</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>Ordena las ventas por cantidad en orden descendente:
-   <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">ventas</span>
-<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">cantidad</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
-</code></pre></div></p>
-</li>
-</ol>
-<hr />
-<h4 id="parte-6-validacion-en-hdfs"><strong>Parte 6: Validación en HDFS</strong></h4>
-<ol>
-<li>
-<p>Lista las particiones de la tabla <code>ventas</code> en HDFS:
-   <div class="highlight"><pre><span></span><code>hdfs<span class="w"> </span>dfs<span class="w"> </span>-ls<span class="w"> </span>/user/hive/warehouse/tienda_online.db/ventas
-</code></pre></div></p>
-</li>
-<li>
-<p>Toma capturas de pantalla del contenido del directorio de la base de datos y de las particiones de la tabla <code>ventas</code>. Por ejemplo:</p>
-</li>
-<li><code>/user/hive/warehouse/tienda_online.db/ventas/fecha=2024-11-01/</code></li>
-</ol>
-<hr />
-<p>¡Con estas instrucciones completas, estarás listo para manejar datos en Apache Hive de forma eficiente! 🐝</p>
 
 
 
