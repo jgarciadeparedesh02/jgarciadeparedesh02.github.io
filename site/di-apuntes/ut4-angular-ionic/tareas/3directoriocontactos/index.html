@@ -1373,33 +1373,39 @@
 <p>Crea una aplicación en <strong>Angular con Ionic</strong> para gestionar un directorio de contactos. La aplicación debe incluir funcionalidades de <strong>búsqueda dinámica</strong> y <strong>filtros rápidos</strong> para mejorar la experiencia del usuario.</p>
 <h2 id="requisitos-de-funcionalidad"><strong>Requisitos de Funcionalidad:</strong></h2>
 <ol>
-<li><strong>Routing:</strong></li>
+<li><strong>Routing:</strong><ul>
 <li><strong>Página Principal (home):</strong><ul>
 <li>Lista todos los contactos en formato de cards.</li>
 <li>Incluye una barra de búsqueda en la parte superior para filtrar los contactos por nombre o email.</li>
-<li>Agrega filtros rápidos (botones) para mostrar contactos etiquetados como:</li>
+<li>Agrega filtros rápidos (botones) para mostrar contactos etiquetados como:<ul>
 <li><strong>Amigos</strong></li>
 <li><strong>Familia</strong></li>
 <li><strong>Trabajo</strong></li>
+</ul>
+</li>
 <li>Combina búsqueda y filtros para refinar los resultados.</li>
 </ul>
 </li>
 <li><strong>Página de Detalles (contact-detail/:id):</strong><ul>
-<li>Muestra información detallada de un contacto seleccionado, incluyendo:</li>
+<li>Muestra información detallada de un contacto seleccionado, incluyendo:<ul>
 <li>Nombre</li>
 <li>Foto (o avatar si no tiene foto)</li>
 <li>Email</li>
 <li>Teléfono</li>
 <li>Notas adicionales</li>
-<li>Proporciona botones para acciones rápidas:</li>
+</ul>
+</li>
+<li>Proporciona botones para acciones rápidas:<ul>
 <li>Llamar</li>
 <li>Enviar correo</li>
 <li>Editar contacto</li>
 </ul>
 </li>
+</ul>
+</li>
 <li><strong>Página para Agregar Contacto (add-contact):</strong><ul>
 <li>Permite al usuario agregar un nuevo contacto.</li>
-<li>Los campos incluyen:</li>
+<li>Los campos incluyen:<ul>
 <li>Nombre</li>
 <li>Foto (subida desde el dispositivo o generada automáticamente)</li>
 <li>Email</li>
@@ -1408,63 +1414,55 @@
 <li>Notas opcionales.</li>
 </ul>
 </li>
+</ul>
+</li>
+</ul>
+</li>
 </ol>
 <hr />
-<p><strong>Diseño de Cards:</strong>
-- Cada contacto debe mostrarse como una <strong>IonCard</strong> que incluya:
-  - <strong>Foto circular</strong> o un avatar con las iniciales si no hay foto disponible.
-  - <strong>Nombre completo</strong> del contacto.
-  - <strong>Email</strong> y <strong>teléfono</strong> visibles.
-  - Íconos para acciones rápidas (llamar, editar) que se muestren al deslizar o interactuar con la card.
-- Añade <strong>animaciones</strong> suaves al cargarse o al realizar una acción (e.g., eliminar contacto).</p>
+<p><strong>Diseño de Cards:</strong></p>
+<ul>
+<li>Cada contacto debe mostrarse como una <strong>IonCard</strong> que incluya:<ul>
+<li><strong>Foto circular</strong> o un avatar con las iniciales si no hay foto disponible.</li>
+<li><strong>Nombre completo</strong> del contacto.</li>
+<li><strong>Email</strong> y <strong>teléfono</strong> visibles.</li>
+<li>Íconos para acciones rápidas (llamar, editar) que se muestren al deslizar o interactuar con la card.</li>
+</ul>
+</li>
+<li>Añade <strong>animaciones</strong> suaves al cargarse o al realizar una acción (e.g., eliminar contacto).</li>
+</ul>
 <hr />
-<p><strong>Funcionalidades Clave:</strong>
-1. <strong>Búsqueda Dinámica:</strong>
-   - La barra de búsqueda actualiza la lista en tiempo real según lo que el usuario escribe.
-   - Permite buscar por:
-     - Nombre
-     - Email</p>
+<p><strong>Funcionalidades Clave:</strong></p>
 <ol>
-<li><strong>Filtros Rápidos:</strong></li>
+<li>
+<p><strong>Búsqueda Dinámica:</strong></p>
+<ul>
+<li>La barra de búsqueda actualiza la lista en tiempo real según lo que el usuario escribe.</li>
+<li>Permite buscar por:<ul>
+<li>Nombre</li>
+<li>Email</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Filtros Rápidos:</strong></p>
+<ul>
 <li>Justo debajo de la barra de búsqueda, agrega botones para filtrar contactos:<ul>
 <li>"Amigos", "Familia", "Trabajo".</li>
 </ul>
 </li>
-<li>
-<p>Implementa la lógica para combinar los filtros con la búsqueda.</p>
+<li>Implementa la lógica para combinar los filtros con la búsqueda.</li>
+</ul>
 </li>
 <li>
 <p><strong>Categorías y Secciones:</strong></p>
-</li>
-<li>Agrupa los contactos en categorías con encabezados claros para "Amigos", "Familia" y "Trabajo".</li>
-<li>
-<p>Asegúrate de que los contactos estén organizados alfabéticamente dentro de cada sección.</p>
-</li>
-<li>
-<p><strong>Resaltado de Resultados:</strong></p>
-</li>
-<li>Al realizar una búsqueda, resalta los términos coincidentes dentro de las cards.</li>
-</ol>
-<hr />
-<p><strong>Tecnología y Detalles Técnicos:</strong>
-- <strong>Barra de Búsqueda:</strong>
-  - Usa un <code>(ionInput)</code> para capturar el texto ingresado y actualiza dinámicamente los resultados.
-  - Utiliza pipes o funciones en el componente principal para filtrar la lista.</p>
 <ul>
-<li><strong>Filtros Rápidos:</strong></li>
-<li>Implementa botones con eventos <code>(click)</code> que modifiquen una propiedad de filtro en el estado de la aplicación.</li>
-<li>
-<p>Combina la lógica de filtros con la búsqueda para devolver resultados refinados.</p>
-</li>
-<li>
-<p><strong>Diseño Responsivo:</strong></p>
-</li>
-<li>Asegúrate de que la aplicación funcione correctamente en dispositivos móviles y tablets.</li>
+<li>Agrupa los contactos en categorías con encabezados claros para "Amigos", "Familia" y "Trabajo".</li>
+<li>Asegúrate de que los contactos estén organizados alfabéticamente dentro de cada sección.</li>
 </ul>
-<hr />
-<p><strong>Resultado Esperado:</strong>
-Una aplicación funcional y estéticamente atractiva que permita a los usuarios gestionar fácilmente sus contactos con herramientas avanzadas como búsqueda en tiempo real, filtros intuitivos y acciones rápidas desde las cards.</p>
-<p>Usa <strong>Ionic Framework</strong> para los componentes de interfaz y asegúrate de aplicar buenas prácticas en el desarrollo con Angular. 🎯</p>
+</li>
+</ol>
 
 
 
